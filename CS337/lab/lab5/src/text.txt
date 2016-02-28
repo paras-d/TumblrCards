@@ -1,0 +1,4 @@
+Write a program that prompts the user first for a file (pathname),
+then for a search key.
+The program will check each line for the file for the given search key,
+and display a list of the line numbers were that search key was found. 

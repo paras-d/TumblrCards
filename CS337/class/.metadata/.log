@@ -1,0 +1,80 @@
+!SESSION 2016-02-09 14:12:53.611 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-09 14:16:12.998
+!MESSAGE Indexed 'lab3' (1 sources, 104 headers) in 2.83 sec: 8,375 declarations; 14,575 references; 0 unresolved inclusions; 0 syntax errors; 2 unresolved names (0.0087%)
+!SESSION 2016-02-09 17:09:03.447 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_74
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-02-09 17:09:10.802
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-02-09 17:09:54.105
+!MESSAGE Indexed 'hwk1' (1 sources, 104 headers) in 2.65 sec: 8,375 declarations; 14,573 references; 0 unresolved inclusions; 2 syntax errors; 4 unresolved names (0.017%)
+
+!ENTRY org.eclipse.ui.workbench 4 2 2016-02-09 17:50:57.524
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.ClassCastException: [Lorg.eclipse.swt.graphics.FontData; cannot be cast to java.lang.String
+	at org.eclipse.ui.internal.themes.Theme$1.propertyChange(Theme.java:124)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore$3.run(ScopedPreferenceStore.java:351)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.firePropertyChangeEvent(ScopedPreferenceStore.java:347)
+	at org.eclipse.jface.preference.PreferenceConverter.setValue(PreferenceConverter.java:463)
+	at org.eclipse.wst.jsdt.internal.ui.JavaScriptPlugin.ensurePreferenceStoreBackwardsCompatibility(JavaScriptPlugin.java:395)
+	at org.eclipse.wst.jsdt.internal.ui.JavaScriptPlugin.start(JavaScriptPlugin.java:336)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringContributionManager.populateCache(RefactoringContributionManager.java:174)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringContributionManager.getRefactoringContribution(RefactoringContributionManager.java:137)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringHistoryManager.getArgumentMap(RefactoringHistoryManager.java:178)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringHistoryService.checkDescriptor(RefactoringHistoryService.java:611)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringHistoryService.performHistoryNotification(RefactoringHistoryService.java:955)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringHistoryService.access$0(RefactoringHistoryService.java:949)
+	at org.eclipse.ltk.internal.core.refactoring.history.RefactoringHistoryService$2.historyNotification(RefactoringHistoryService.java:379)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory$2.run(DefaultOperationHistory.java:933)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.notifyListeners(DefaultOperationHistory.java:922)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.notifyAboutToExecute(DefaultOperationHistory.java:944)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.openOperation(DefaultOperationHistory.java:1307)
+	at org.eclipse.ltk.internal.core.refactoring.UndoManager2.aboutToPerformChange(UndoManager2.java:139)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:254)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:306)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:92)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:218)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:87)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)

@@ -1,0 +1,16 @@
+//============================================================================
+// Name        : hwk1.cpp
+// Author      : Nick Gaulke
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hwk1 in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	char alphabet [25];
+	cout << "Test" << endl; // prints "Test"
+	return 0;
+}

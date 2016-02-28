@@ -1,0 +1,31 @@
+//============================================================================
+// Name        : lab5.cpp
+// Author      : Nick Gaulke
+// Version     :
+// Copyright   : Your copyright notice
+// Description : lab5 in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+	cout << "Enter word to search: ";
+	string search;
+	cin >> search;
+	ifstream stream;
+	stream.open("text.txt");
+	string line;
+	int lineNumber = 0;
+	if(!stream.is_open())
+		cout << "stream is not open";
+	while(getline(stream, line)) {
+		if(line.find(search) != string::npos)
+			cout << search << "found in line " << lineNumber++;
+		else
+			cout << "not in line" << lineNumber++;
+	}
+	stream.close();
+	return 0;
+}

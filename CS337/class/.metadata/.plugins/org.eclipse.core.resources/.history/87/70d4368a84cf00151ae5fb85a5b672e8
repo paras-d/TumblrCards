@@ -1,0 +1,27 @@
+//============================================================================
+// Name        : hwk1.cpp
+// Author      : Nick Gaulke
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hwk1 in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+char alphabet [26];
+long longs [26];
+
+int main() {
+	char alphabet [26];
+	long longs [26];
+	for(int i = 0; i < 26; i++) {
+		longs[i] = 0;
+		alphabet[i] = 'a' + i;
+	}
+	cout << "Enter the cypher text (<Enter><Ctrl>-D to end): ";
+	string text;
+	cin >> text;
+
+	return 0;
+}

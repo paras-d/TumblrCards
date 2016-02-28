@@ -1,0 +1,41 @@
+//============================================================================
+// Name        : lab3.cpp
+// Author      : Nick Gaulke
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	// print program title
+	cout << "Statistic Program" << endl;
+	cout << "-----------------" << endl;
+	int size = 0;
+	// get number of inputs that must be within 1-100
+	while(size < 1 || size > 0) {
+		cout << "Please enter the size of the dataset of integers (1-100): ";
+		cin >> size;
+	}
+
+	// get the values for the calculation
+	int curr;
+	int min = 0;
+	int max = 0;
+	int mean = 0;
+	for(int i = 0; i < size; i++) {
+		cout << "Value "+i+":";
+		cin >> curr;
+		if(curr < min) min = curr;
+		if(curr > max) max = curr;
+		mean += curr;
+	}
+
+	// print the data
+	cout << "Minimum: "+min;
+	cout << "Maximum: "+max;
+	cout << "Mean: "+(mean/size);
+	return 0;
+}

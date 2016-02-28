@@ -1,0 +1,16 @@
+//============================================================================
+// Name        : lab5.cpp
+// Author      : Nick Gaulke
+// Version     :
+// Copyright   : Your copyright notice
+// Description : lab5 in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+
+	return 0;
+}

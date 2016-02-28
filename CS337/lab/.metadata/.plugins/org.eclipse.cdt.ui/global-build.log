@@ -1,0 +1,483 @@
+15:06:27 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+../src/lab5.cpp: In function 'int main()':
+../src/lab5.cpp:16:6: error: no match for 'operator<<' (operand types are 'std::istream {aka std::basic_istream<char>}' and 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}')
+  cin << search;
+      ^
+In file included from /usr/include/c++/5.3.0/string:52:0,
+                 from /usr/include/c++/5.3.0/bits/locale_classes.h:40,
+                 from /usr/include/c++/5.3.0/bits/ios_base.h:41,
+                 from /usr/include/c++/5.3.0/ios:42,
+                 from /usr/include/c++/5.3.0/ostream:38,
+                 from /usr/include/c++/5.3.0/iostream:39,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/bits/basic_string.h:5172:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5.3.0/bits/basic_string.h:5172:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/5.3.0/ostream:497:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5.3.0/ostream:502:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5.3.0/ostream:508:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+  cin << search;
+src/subdir.mk:18: recipe for target 'src/lab5.o' failed
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/5.3.0/ostream:514:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/5.3.0/ostream:519:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/5.3.0/ostream:539:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/ostream:638:0,
+                 from /usr/include/c++/5.3.0/iostream:39,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5.3.0/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<_CharT, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5.3.0/ostream:556:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/5.3.0/ostream:569:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+  cin << search;
+         ^
+In file included from /usr/include/c++/5.3.0/iostream:39:0,
+                 from ../src/lab5.cpp:9:
+/usr/include/c++/5.3.0/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/5.3.0/ostream:574:5: note:   template argument deduction/substitution failed:
+../src/lab5.cpp:16:9: note:   'std::istream {aka std::basic_istream<char>}' is not derived from 'std::basic_ostream<char, _Traits>'
+  cin << search;
+         ^
+make: *** [src/lab5.o] Error 1
+15:06:40 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:07:00 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:07:44 **** Clean-only build of configuration Debug for project lab3 ****
+make clean 
+rm -rf  ./src/lab3.o  ./src/lab3.d  lab3
+ 
+15:07:44 **** Build of configuration Debug for project lab3 ****
+make all 
+Building file: ../src/lab3.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab3.d" -MT"src/lab3.d" -o "src/lab3.o" "../src/lab3.cpp"
+Finished building: ../src/lab3.cpp
+ 
+Building target: lab3
+Invoking: GCC C++ Linker
+g++  -o "lab3"  ./src/lab3.o   
+Finished building target: lab3
+ 
+15:07:45 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:08:28 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:09:52 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:09:52 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:10:21 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:11:32 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:11:32 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:11:38 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:11:58 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:11:58 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:12:00 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:12:54 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:12:54 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:12:57 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:15:12 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:15:12 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:15:13 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:15:56 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:15:56 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:23 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:23 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:26 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:26 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:29 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:58 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:17:06 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:18:05 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:16 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:17 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:19 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:19 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:31 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:31 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:20:39 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:22:41 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:22:41 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:22:47 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:22:58 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:22:58 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:23:01 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:23:54 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:23:54 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:23:59 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:24:47 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:24:53 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:25:00 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:25:00 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:27:13 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:27:13 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:28:14 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:28:14 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:28:20 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:34:27 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:34:27 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:34:59 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:34:59 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:35:41 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:35:41 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:37:11 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:37:11 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+../src/lab5.cpp: In function 'int main()':
+../src/lab5.cpp:17:23: error: no matching function for call to 'std::basic_ifstream<char>::basic_ifstream(std::__cxx11::string&)'
+  ifstream stream (file);
+                       ^
+In file included from ../src/lab5.cpp:10:0:
+/usr/include/c++/5.3.0/fstream:495:7: note: candidate: std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const char*, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::ios_base::openmode = std::_Ios_Openmode]
+       basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+       ^
+/usr/include/c++/5.3.0/fstream:495:7: note:   no known conversion for argument 1 from 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' to 'const char*'
+/usr/include/c++/5.3.0/fstream:481:7: note: candidate: std::basic_ifstream<_CharT, _Traits>::basic_ifstream() [with _CharT = char; _Traits = std::char_traits<char>]
+       basic_ifstream() : __istream_type(), _M_filebuf()
+       ^
+/usr/include/c++/5.3.0/fstream:481:7: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/5.3.0/fstream:455:11: note: candidate: std::basic_ifstream<char>::basic_ifstream(const std::basic_ifstream<char>&)
+     class basic_ifstream : public basic_istream<_CharT, _Traits>
+           ^
+/usr/include/c++/5.3.0/fstream:455:11: note:   no known conversion for argument 1 from 'std::__cxx11::string {aka std::__cxx11::basic_string<char>}' to 'const std::basic_ifstream<char>&'
+src/subdir.mk:18: recipe for target 'src/lab5.o' failed
+make: *** [src/lab5.o] Error 1
+15:37:35 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:37:35 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+Building file: ../src/lab5.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lab5.d" -MT"src/lab5.d" -o "src/lab5.o" "../src/lab5.cpp"
+Finished building: ../src/lab5.cpp
+ 
+Building target: lab5
+Invoking: GCC C++ Linker
+g++  -o "lab5"  ./src/lab5.o   
+Finished building target: lab5
+ 
+15:40:01 **** Incremental Build of configuration Debug for project lab3 ****
+make all 
+make: Nothing to be done for 'all'.
+15:40:01 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:40:03 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
+15:40:11 **** Incremental Build of configuration Debug for project lab5 ****
+make all 
+make: Nothing to be done for 'all'.
