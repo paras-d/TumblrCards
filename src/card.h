@@ -16,6 +16,7 @@ private:
 	int health;
 	int currHP;
 	std::string name;
+	std::string ability;
 
 	// builds card base on input name
 	void buildCard();
@@ -24,7 +25,7 @@ public:
 	virtual ~Card();
 	Card(std::string name);
 	bool trigger();
-
+	std::string to_string();
 	// these will need to be edited later
 	// to handle effects from other cards
 	// as well as during combat
