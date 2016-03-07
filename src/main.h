@@ -1,5 +1,5 @@
-#ifndef _main
-#define _main
+#ifndef SRC_MAIN_H_
+#define SRC_MAIN_H_
 
 #include <iostream>
 
@@ -7,5 +7,4 @@ using namespace std;
 
 int main(int argc, char* argv[]);
 
-
-#endif
+#endif /* SRC_MAIN_H_ */
