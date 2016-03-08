@@ -42,6 +42,14 @@ void Card::buildCard() {
 	ability = "does a thing";
 }
 
+bool Card::trigger() {
+	// TODO have the card's ability work here
+	// so that at the start and end of each turn all cards
+	// in play can have their tigger() called and their
+	// ability checked.
+	return true;
+}
+
 string Card::to_string() {
 	string ret = name + "\n";
 	ret += ability + "\n";

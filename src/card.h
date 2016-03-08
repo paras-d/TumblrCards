@@ -25,7 +25,13 @@ public:
 	virtual ~Card();
 	Card(std::string name);
 	bool trigger();
+
+	// prints the card in the form:
+	// Name
+	// Description
+	// Atk / HP
 	std::string to_string();
+
 	// these will need to be edited later
 	// to handle effects from other cards
 	// as well as during combat
