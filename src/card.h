@@ -24,6 +24,9 @@ public:
 	Card();
 	virtual ~Card();
 	Card(std::string name);
+
+	// should return true if the trigger goes off
+	// false if it does not
 	bool trigger();
 
 	// prints the card in the form:

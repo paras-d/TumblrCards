@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/card.cpp \
-../src/main.cpp 
+../src/main.cpp \
+../src/mainMenu.cpp 
 
 OBJS += \
 ./src/card.o \
-./src/main.o 
+./src/main.o \
+./src/mainMenu.o 
 
 CPP_DEPS += \
 ./src/card.d \
-./src/main.d 
+./src/main.d \
+./src/mainMenu.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

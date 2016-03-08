@@ -30,13 +30,16 @@ Card::~Card() {
 
 void Card::buildCard() {
 	// TODO have card stats based on input name
+	// is there a better way to build a card other than
+	// by name and still have them be uniquely named?
+	// we will need a large pool of cards
 	if(name.compare("test1") == 0) {
 		attack = 1;
 		health = 2;
 		currHP = health;
 	} else if(name.compare("test2") == 0) {
 		attack = 2;
-		health = 1;
+		health = 3;
 		currHP = health;
 	}
 	ability = "does a thing";
@@ -46,7 +49,8 @@ bool Card::trigger() {
 	// TODO have the card's ability work here
 	// so that at the start and end of each turn all cards
 	// in play can have their tigger() called and their
-	// ability checked.
+	// ability checked. It should return true if the trigger
+	// conditions are met. and goes off; false otherwise.
 	return true;
 }
 

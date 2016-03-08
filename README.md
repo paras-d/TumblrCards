@@ -15,12 +15,14 @@ abilities on them? That would make the turn based aspect a lot easier to code be
 "instant" type spells. Just triggers on creatures. 
 
 ##### TODO's
-- [ ] Create generic class for a card
+- [X] Create basic class for a card
 - [ ] Figure out a way to quickly generate unique cards with abilities
 - [ ] Generate 60 card deck and player hand
+- [ ] Create basic entrance and menu system for the game
+- [ ] Layout the turn order
 - [ ] Create rules for the card game
 - [ ] Create single player game with AI
-- [ ] Create multiplayer verion
+- [ ] Create multi-player version
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 
