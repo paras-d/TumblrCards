@@ -1,5 +1,5 @@
-#ifndef _Main
-#define _Main
+#ifndef _main
+#define _main
 
 #include <iostream>
 
