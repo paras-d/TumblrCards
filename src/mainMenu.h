@@ -8,6 +8,8 @@
 #ifndef SRC_MAINMENU_H_
 #define SRC_MAINMENU_H_
 
+#include <string>
+
 class MainMenu {
 private:
 	// starts a single player game
@@ -28,6 +30,12 @@ private:
 public:
 	MainMenu();
 	virtual ~MainMenu();
+
+	// prints the menu to the terminal
+	bool printMenu();
+
+	// takes in the users input for the selection
+	bool getSelections(std::istream& stream);
 };
 
 #endif /* SRC_MAINMENU_H_ */

@@ -1,13 +1,22 @@
+/*
+ * mainMenu.cpp
+ *
+ *  Created on: Mar 8, 2016
+ *      Author: Tumblr
+ */
 #include "main.h"
+#include "mainMenu.h"
+
+using namespace std;
 
 int main(int argc, char* argv[]) {
-	cout << "~~Welcome to Tumblr Cards~~" << endl;
-	Card card1("test1");
-	cout << card1.to_string() << endl;
+	// TODO we should have cla's for testing purposes
 
-	cout << endl;
+	// starts the game
+	MainMenu menu;
+	menu.printMenu();
+	menu.getSelections(cin);
 
-	Card card2("test2");
-	cout << card2.to_string() << endl;
+
 	return 0;
 }
