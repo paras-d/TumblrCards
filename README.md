@@ -14,13 +14,13 @@ What if it's am entirely creature based game? No spells or anything but the crea
 abilities on them? That would make the turn based aspect a lot easier to code because there wouldn't be any 
 "instant" type spells. Just triggers on creatures. 
 
-##### TODO's
+#### TODO's
 - [X] Create basic class for a card
 - [ ] Figure out a way to quickly generate unique cards with abilities
 - [ ] Generate 60 card deck and player hand
 - [ ] Create basic entrance and menu system for the game
-- [ ] Layout the turn order
 - [ ] Create rules for the card game
+- [ ] Layout the turn order
 - [ ] Create single player game with AI
 - [ ] Create multi-player version
 

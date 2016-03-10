@@ -11,6 +11,8 @@ using namespace std;
 
 MainMenu::MainMenu() {
 	// TODO Auto-generated constructor stub
+	// We should print some ASCII logo here
+	// similar to the metasploit entrance.
 	cout << "~~Welcome to Tumblr Cards~~" << endl;
 }
 
@@ -38,14 +40,54 @@ void MainMenu::settings() {
 
 void MainMenu::quit() {
 	// TODO quits the game.
+	
+	// UNTESTED CODE. It will be push so I can
+	// test it when I am home from work.
+	exit (EXIT_FAILURE);
 }
 
 bool MainMenu::printMenu() {
 	// TODO Print the menu for the game
+	// I did all the printing manually so it
+	// is clear what the print should look like.
+	// She we have number based input or
+	// something more sophisticated?
+	cout << "    --Main Menu--" << endl;
+	cout << "  1) Single Player" << endl;
+        cout << "  2) Multiplayer" << endl;
+        cout << "  3) Deck Lists" << endl;
+        cout << "  4) Settings" << endl;
+	cout << "  5) Exit" << endl;
+	cout << "Enter selection: "; 
 }
 
 bool MainMenu::getSelections(istream& stream) {
 	// TODO take in the players selection and call that method.
 	string input;
 	stream >> input;
+	stringstream convert(input);
+	int selection;
+	if (!convert >> selection) {
+		// handle bad input here
+	} else {
+		switch(selectiong) {
+		case 1:
+			singlePlayer();
+			break;
+		case 2:
+			multiPlayer();
+			break;
+		case 3:
+			deckList();
+			break;
+		case 4:
+			settings():
+			break;
+		case 5:
+			quit();
+			break;
+		default:
+			//bad input here
+		}
+	}
 }
