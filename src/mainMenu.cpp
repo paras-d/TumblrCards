@@ -40,10 +40,6 @@ void MainMenu::settings() {
 
 void MainMenu::quit() {
 	// TODO quits the game.
-	
-	// UNTESTED CODE. It will be push so I can
-	// test it when I am home from work.
-	exit (EXIT_FAILURE);
 }
 
 bool MainMenu::printMenu() {
@@ -54,23 +50,21 @@ bool MainMenu::printMenu() {
 	// something more sophisticated?
 	cout << "    --Main Menu--" << endl;
 	cout << "  1) Single Player" << endl;
-        cout << "  2) Multiplayer" << endl;
-        cout << "  3) Deck Lists" << endl;
-        cout << "  4) Settings" << endl;
+    cout << "  2) Multiplayer" << endl;
+    cout << "  3) Deck Lists" << endl;
+    cout << "  4) Settings" << endl;
 	cout << "  5) Exit" << endl;
 	cout << "Enter selection: "; 
 }
 
 bool MainMenu::getSelections(istream& stream) {
 	// TODO take in the players selection and call that method.
-	string input;
-	stream >> input;
-	stringstream convert(input);
-	int selection;
-	if (!convert >> selection) {
+	int selection = 0;
+	if (!stream >> selection) {
 		// handle bad input here
+		return false;
 	} else {
-		switch(selectiong) {
+		switch(selection) {
 		case 1:
 			singlePlayer();
 			break;
@@ -81,13 +75,15 @@ bool MainMenu::getSelections(istream& stream) {
 			deckList();
 			break;
 		case 4:
-			settings():
+			settings();
 			break;
 		case 5:
 			quit();
 			break;
 		default:
 			//bad input here
+			break;
 		}
 	}
+	return true;
 }
