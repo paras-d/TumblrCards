@@ -82,7 +82,7 @@ bool MainMenu::getSelections(istream& stream) {
 			break;
 		default:
 			//bad input here
-			break;
+			return false;
 		}
 	}
 	return true;
