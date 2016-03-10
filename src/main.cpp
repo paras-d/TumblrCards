@@ -17,6 +17,5 @@ int main(int argc, char* argv[]) {
 	menu.printMenu();
 	menu.getSelections(cin);
 
-
 	return 0;
 }
