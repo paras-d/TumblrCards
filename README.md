@@ -18,11 +18,11 @@ abilities on them? That would make the turn based aspect a lot easier to code be
 - [X] Create basic class for a card
 - [ ] Figure out a way to quickly generate unique cards with abilities
 - [ ] Generate 60 card deck and player hand
-- [ ] Create basic entrance and menu system for the game
-- [ ] Create rules for the card game
-- [ ] Layout the turn order
+- [X] Create basic entrance and menu system for the game
+- [X] Create rules for the card game
+- [X] Layout the turn order
 - [ ] Create single player game with AI
-- [ ] Create multi-player version
+- [ ] Create multiplayer version
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 
