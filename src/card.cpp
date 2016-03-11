@@ -9,6 +9,8 @@
 
 using namespace std;
 
+// Default contructor. This should rarely be called
+// except for maybe when a token creature is generated
 Card::Card() {
 	// TODO Auto-generated constructor stub
 	attack = 0;
@@ -18,6 +20,8 @@ Card::Card() {
 	ability = "does a thing";
 }
 
+// This is the contructor that should be called when
+// the game creates the card base.
 Card::Card(string name) {
 	// TODO Auto-generated constructor stub
 	Card::name = name;
@@ -51,9 +55,19 @@ bool Card::trigger() {
 	// in play can have their tigger() called and their
 	// ability checked. It should return true if the trigger
 	// conditions are met. and goes off; false otherwise.
+
+	// we should save looking at this for last. Many abilities
+	// will be similar. So there must be a better way to have the
+	// trigger work given the card name, without a uniquie ability
+	// for each card.
 	return true;
 }
 
+// Prints the card name in the form:
+// NAME
+// DESCRIPTION OF ABILITY
+// (or flavor text)
+// Atk/Def 
 string Card::to_string() {
 	string ret = name + "\n";
 	ret += ability + "\n";
