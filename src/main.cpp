@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
 	// starts the game
 	MainMenu menu;
 	menu.printMenu();
-	menu.getSelections(cin);
+	while(!menu.getSelections());
 
 	return 0;
 }

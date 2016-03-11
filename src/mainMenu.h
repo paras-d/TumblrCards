@@ -35,7 +35,7 @@ public:
 	bool printMenu();
 
 	// takes in the users input for the selection
-	bool getSelections(std::istream& stream);
+	bool getSelections();
 };
 
 #endif /* SRC_MAINMENU_H_ */
