@@ -1,5 +1,5 @@
 # TumblrCards
-A text based multiplayer strategy card games written by members of the Tumblr Comp Sci community.
+A text based multiplayer strategy card game written by members of the Tumblr Comp Sci community.
 
 We are still in the idea's phase so for now I will be setting up the program to at least generate 
 a 60 card deck to be used for this game.
