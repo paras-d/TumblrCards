@@ -39,11 +39,11 @@ At the start of each game the player that takes the first turn is randomly decid
 
 At the start of each game, all players begin with a hand of 7 cards off of the top of their respective 60 card decks. Each player also starts the game with 10 life. Depending on which option is chosen by the player that goes first, you may start with 8 cards or 15 life. Each players turn order is as follows:
 
-1) Start of turn
-2) Draw Phase
-3) Casting Phase
-4) Combat Phase
-5) End of turn
+- 1) Start of turn
+- 2) Draw Phase
+- 3) Casting Phase
+- 4) Combat Phase
+- 5) End of turn
 
 Each players turn follows this same format. Each phase willl be explained in detail below.
 
