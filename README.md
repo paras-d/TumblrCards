@@ -1,10 +1,10 @@
 # TumblrCards
-A text based multiplayer strategy card games written by members of the Tumblr Comp Sci community.
+A text based multiplayer strategy card game written by members of the Tumblr Comp Sci community.
 
 We are still in the idea's phase so for now I will be setting up the program to at least generate 
 a 60 card deck to be used for this game.
 
-##### IDEAS
+#### IDEAS
 
 We could create suits categories and  have it like an RPG style - with health and energy for attacks 
 so taking it turn based, and each card in every category could have certain abilities, health's, manas of their 
@@ -30,6 +30,12 @@ abilities on them? That would make the turn based aspect a lot easier to code be
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 
 Message me with questions or visit me on Tumblr at import-os.tumblr.com
+
+### Communication
+
+This project will be using an invite only Slack channel. If you would 
+like an invite, or have any questions, you can message incomingstick 
+directly or visit his Tumblr page.
 
 ## Rule's
 
