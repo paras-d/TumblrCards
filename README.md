@@ -18,7 +18,9 @@ abilities on them? That would make the turn based aspect a lot easier to code be
 - [X] Create basic class for a card
 - [ ] Figure out a way to quickly generate unique cards with abilities
 - [ ] Create a card list for the first set
-- [ ] Generate 60 card deck and player hand
+- [ ] Create set class that will hold data for the cards to generate from
+- [ ] Create deck class that will hold 60 cards
+- [ ] Build deck editor that will allow the player to make a deck from the published cards
 - [X] Create basic entrance and menu system for the game
 - [X] Create rules for the card game
 - [X] Layout the turn order
