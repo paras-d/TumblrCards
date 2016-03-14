@@ -10,20 +10,12 @@
 using namespace std;
 
 Deck::Deck() {
-	// TODO Auto-generated constructor stub
-	size = 60;
-
-	// this needs to declare it as an array of pointers
-	// that is not what this is doing...
-	deck = new Card[size];
-
 	count = 0;
 	well_formed();
 }
 
 Deck::~Deck() {
 	// TODO Auto-generated destructor stub
-	delete [] deck;
 }
 
 // removes the top card of the deck and returns it
@@ -72,18 +64,18 @@ void Deck::add_card(int index) {
 //		A deck may not have any nullptr between 0 and count
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
-	if(count > size) return print_err("Count is larger than 60");
+	if(count > deck.size()) return print_err("Count is larger than 60");
 	for(unsigned int i = 0; i < count; i++) {
 
 		// checks to make sure count is not larger than the size of the deck
-		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
+		if(&deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		int cardCount = 1;
 		for(unsigned int j = i + 1; j < count; j++) {
 
 			// adding it here checks the integrity of the array on our first pass
-			if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
-			Card c1 = *deck[i];
-			Card c2 = *deck[j];
+			if(&deck[i] == nullptr) return print_err("Count is larger than size of deck");
+			Card c1 = deck[i];
+			Card c2 = deck[j];
 			if(c1.get_name().compare(c2.get_name()) == 0) cardCount++;
 
 			// you may not have more than 4 of any card in a deck

@@ -8,12 +8,12 @@
 #ifndef SRC_DECK_H_
 #define SRC_DECK_H_
 
+#include <array>
 #include "card.h"
 
 class Deck {
 private:
-	unsigned int size;
-	Card *deck;
+	std::array<Card, 60> deck;
 	std::string deckName;
 	unsigned int count;
 public:
