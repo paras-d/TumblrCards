@@ -10,11 +10,11 @@
 
 class SinglePlayer {
 private:
-	void startTurn();
-	void drawStep();
-	void castingPhase();
-	void combatPhase();
-	void endTurn();
+	void start_turn();
+	void draw_step();
+	void casting_phase();
+	void combat_phase();
+	void end_turn();
 public:
 	SinglePlayer();
 	virtual ~SinglePlayer();

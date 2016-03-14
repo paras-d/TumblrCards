@@ -13,13 +13,13 @@
 class MainMenu {
 private:
 	// starts a single player game
-	void singlePlayer();
+	void single_player();
 
 	// starts a multi-player game
-	void multiPlayer();
+	void multi_player();
 
 	// moves to a deck list menu
-	void deckList();
+	void deck_list();
 
 	// moves to a settings menu
 	// what settings would exist?
@@ -32,10 +32,10 @@ public:
 	virtual ~MainMenu();
 
 	// prints the menu to the terminal
-	bool printMenu();
+	bool print_menu();
 
 	// takes in the users input for the selection
-	bool getSelections();
+	bool get_selections();
 };
 
 #endif /* SRC_MAINMENU_H_ */

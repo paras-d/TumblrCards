@@ -16,23 +16,23 @@ SinglePlayer::~SinglePlayer() {
 	// TODO Auto-generated destructor stub
 }
 
-void SinglePlayer::startTurn() {
+void SinglePlayer::start_turn() {
 	// TODO everything that would happen at the start of the turn happens here
 }
 
-void SinglePlayer::drawStep() {
+void SinglePlayer::draw_step() {
 	// TODO everything that would happen at the draw step happens here
 }
 
-void SinglePlayer::castingPhase() {
+void SinglePlayer::casting_phase() {
 	// TODO everything that would happen at the casting phase happens here
 }
 
-void SinglePlayer::combatPhase() {
+void SinglePlayer::combat_phase() {
 	// TODO everything that would happen at the combat phase happens here
 }
 
-void SinglePlayer::endTurn() {
+void SinglePlayer::end_turn() {
 	// TODO everything that would happen at the end of the turn happens here
 }
 

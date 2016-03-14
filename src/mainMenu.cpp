@@ -21,17 +21,17 @@ MainMenu::~MainMenu() {
 	// TODO Auto-generated destructor stub
 }
 
-void MainMenu::singlePlayer() {
+void MainMenu::single_player() {
 	// TODO preps the game to move to single player
 	cout << "Got to singlePlayer()" << endl;
 }
 
-void MainMenu::multiPlayer() {
+void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
 	cout << "Got to multiPlayer()" << endl;
 }
 
-void MainMenu::deckList() {
+void MainMenu::deck_list() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
 	cout << "Got to deckList()" << endl;
@@ -48,7 +48,7 @@ void MainMenu::quit() {
 	cout << "Got to quit()" << endl;
 }
 
-bool MainMenu::printMenu() {
+bool MainMenu::print_menu() {
 	// TODO Print the menu for the game
 	// I did all the printing manually so it
 	// is clear what the print should look like.
@@ -64,7 +64,7 @@ bool MainMenu::printMenu() {
 	return true;
 }
 
-bool MainMenu::getSelections() {
+bool MainMenu::get_selections() {
 	// TODO take in the players selection and call that method.
 	string input;
 	cin >> input;
@@ -80,13 +80,13 @@ bool MainMenu::getSelections() {
 		cout << "entering switch now with " << selection << endl;
 		switch(selection) {
 		case 1:
-			singlePlayer();
+			single_player();
 			break;
 		case 2:
-			multiPlayer();
+			multi_player();
 			break;
 		case 3:
-			deckList();
+			deck_list();
 			break;
 		case 4:
 			settings();
