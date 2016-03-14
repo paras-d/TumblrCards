@@ -19,7 +19,7 @@ private:
 	std::string ability;
 
 	// builds card base on input name
-	void buildCard();
+	void build_card();
 public:
 	Card();
 	virtual ~Card();
@@ -38,8 +38,10 @@ public:
 	// these will need to be edited later
 	// to handle effects from other cards
 	// as well as during combat
-	int getAtk() { return attack; }
-	int getHP() { return currHP; }
+	int get_atk() { return attack; }
+	int get_hp() { return currHP; }
+
+	std::string get_name() { return name; }
 };
 
 #endif /* SRC_CARD_H_ */

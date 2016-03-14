@@ -25,14 +25,14 @@ Card::Card() {
 Card::Card(string name) {
 	// TODO Auto-generated constructor stub
 	Card::name = name;
-	buildCard();
+	build_card();
 }
 
 Card::~Card() {
 	// TODO Auto-generated destructor stub
 }
 
-void Card::buildCard() {
+void Card::build_card() {
 	// TODO have card stats based on input name
 	// is there a better way to build a card other than
 	// by name and still have them be uniquely named?
