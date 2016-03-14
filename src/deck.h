@@ -13,7 +13,7 @@
 
 class Deck {
 private:
-	std::array<Card, 60> deck;
+	std::array<Card* , 60> deck;
 	std::string deckName;
 	unsigned int count;
 public:

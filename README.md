@@ -9,29 +9,14 @@ a 60 card deck to be used for this game.
 As larger ideas are discussed in Slack they will be added here for reference,
 
 #### TODO's
-- [X] Create basic class for a card
-- [ ] Figure out a way to quickly generate unique cards with abilities
-- [ ] Create a card list for the first set
-- [ ] Create set class that will hold data for the cards to generate from
-- [ ] Create deck class that will hold 60 cards
-- [ ] Build deck editor that will allow the player to make a deck from the published cards
-- [X] Create basic entrance and menu system for the game
-- [X] Create rules for the card game
-- [X] Layout the turn order
-- [ ] Create single player game with AI
-- [ ] Create multiplayer version
 
-These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
-
-Message me with questions or visit me on Tumblr at import-os.tumblr.com
+See the CONTRIBUTING file for the list of TODO's
 
 ### Communication
 
-This project will be using an invite only Slack channel. If you would 
-like an invite, or have any questions, you can message incomingstick 
-directly or visit his Tumblr page.
+This project will be using an invite only Slack channel. If you would like an invite, or have any questions, you can message incomingstick directly or visit his Tumblr page.
 
-## Rule's
+## Rule's of the Game
 
 TumblrCards (we are working on a name) is a role-playing card game. This game is unique in its resource system. Each player begins the game with 10 health. Throughout the game your total mana to spend each turn will be equivalent to your opponents life total. To explain further, on turn one you will have 10 mana to spend on casting creatures. Any damage you do to your opponent will decrease your available mana to spend. If your opponents health is at 8, you have 8 mana to spend. If your opponent has 12 life you have 12 mana to spend.
 

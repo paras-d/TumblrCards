@@ -15,7 +15,7 @@ Deck::Deck() {
 }
 
 Deck::~Deck() {
-	// TODO Auto-generated destructor stub
+	// TODO Auto-generated destructor stuff
 }
 
 // removes the top card of the deck and returns it
@@ -74,9 +74,9 @@ bool Deck::well_formed() {
 
 			// adding it here checks the integrity of the array on our first pass
 			if(&deck[i] == nullptr) return print_err("Count is larger than size of deck");
-			Card c1 = deck[i];
-			Card c2 = deck[j];
-			if(c1.get_name().compare(c2.get_name()) == 0) cardCount++;
+			Card c1 = *deck[i];
+			Card c2 = *deck[j];
+			if(c1.get_name() == c2.get_name()) cardCount++;
 
 			// you may not have more than 4 of any card in a deck
 			if(cardCount > 4) return print_err("You may not have more than 4 of any card");
