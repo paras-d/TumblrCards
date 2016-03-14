@@ -12,7 +12,8 @@
 
 class Deck {
 private:
-	Card* deck[60];
+	unsigned int size;
+	Card *deck;
 	std::string deckName;
 	unsigned int count;
 public:
