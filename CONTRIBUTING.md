@@ -37,6 +37,7 @@ function Class::foo(arg bar) {
 function Class::my_function_name(arg variableName) {
 	// do stuff
 }
+````
 
 #### Class Naming
 ````c++
@@ -47,7 +48,10 @@ private:
 public:
 	// public variables and functions here
 };
+````
 
 #### File Naming
+````c++
 cppFile.cpp
+````
 headerFile.h
