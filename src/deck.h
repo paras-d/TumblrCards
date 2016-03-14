@@ -19,11 +19,11 @@ private:
 public:
 	Deck();
 	virtual ~Deck();
-	Card draw_card();
+	Card * draw_card();
 	Card * draw_cards(int num);
 	void shuffle();
-	void add_card();
-	void add_card(int index);
+	void add_card(Card* card);
+	void add_card(Card* card, unsigned int index);
 	bool well_formed();
 	bool print_err(std::string err);
 };

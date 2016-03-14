@@ -6,10 +6,12 @@
  */
 #include <iostream>
 #include "deck.h"
+#include "stdlib.h"
 
 using namespace std;
 
 Deck::Deck() {
+	// TODO Auto-generated constructor stuff
 	count = 0;
 	well_formed();
 }
@@ -20,9 +22,12 @@ Deck::~Deck() {
 
 // removes the top card of the deck and returns it
 // shifting all the cards up one
-Card Deck::draw_card() {
+Card * Deck::draw_card() {
 	well_formed();
-	Card ret;
+	if(count == 0) return nullptr;
+	Card* ret = deck[0];
+	for(unsigned int i = 1; i < count; i++)
+		deck[i-1] = deck[i];
 	well_formed();
 	return ret;
 }
@@ -31,7 +36,7 @@ Card Deck::draw_card() {
 // a pointer to the first index as an array. shifts all
 // the cards up num
 Card * Deck::draw_cards(int num) {
-	well_formed();
+	if(!well_formed()) return nullptr;
 	// TODO
 	well_formed();
 	return nullptr;
@@ -39,21 +44,42 @@ Card * Deck::draw_cards(int num) {
 
 // randomizes the order of the deck
 void Deck::shuffle() {
-	well_formed();
-	// TODO
+	if(!well_formed()) return;
+	// Traverses through the array swapping each index with a random other index
+	for(unsigned int i = 0; i < count; i++) {
+		unsigned int r = rand() % count;
+		Card* temp;
+		temp = deck[i];
+		deck[i] = deck[r];
+		deck[r] = temp;
+	}
 	well_formed();
 }
 
 // adds a card to the deck and then shuffles the deck
-void Deck::add_card() {
+void Deck::add_card(Card* card) {
 	if(!well_formed()) return;
+
+	// no room to add the card
+	if(count == 60) return;
+
+	// adds the card and increments count
+	card[count++] = *card;
+	shuffle();
+
 	well_formed();
 }
 
 // adds a card at the specified index. i.e 0 for the top
-void Deck::add_card(int index) {
-	well_formed();
+void Deck::add_card(Card* card, unsigned int index) {
+	if(!well_formed()) return;
+	if(index >= count) return;
 	// TODO
+	Card* temp = deck[index];
+	// deck[index] = card;
+	for(unsigned int i = index + 1; i < count; i++) {
+		// move the rest of the deck back 1
+	}
 	well_formed();
 }
 
