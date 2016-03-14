@@ -1,18 +1,12 @@
 # TumblrCards
-A text based multiplayer strategy card game written by members of the Tumblr Comp Sci community.
+A text based multiplayer strategy card game written by members of the Tumblr Computer Science community.
 
 We are still in the idea's phase so for now I will be setting up the program to at least generate 
 a 60 card deck to be used for this game.
 
 #### IDEAS
 
-We could create suits categories and  have it like an RPG style - with health and energy for attacks 
-so taking it turn based, and each card in every category could have certain abilities, health's, manas of their 
-own or something? Then att/def points?
-
-What if it's am entirely creature based game? No spells or anything but the creatures have the spell like 
-abilities on them? That would make the turn based aspect a lot easier to code because there wouldn't be any 
-"instant" type spells. Just triggers on creatures. 
+As larger ideas are discussed in Slack they will be added here for reference,
 
 #### TODO's
 - [X] Create basic class for a card
