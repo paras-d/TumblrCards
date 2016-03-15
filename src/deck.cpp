@@ -73,14 +73,25 @@ void Deck::add_card(Card* card) {
 // adds a card at the specified index. i.e 0 for the top
 void Deck::add_card(Card* card, unsigned int index) {
 	if(!well_formed()) return;
-	if(index >= count) return;
-	// TODO
-	Card* temp = deck[index];
-	// deck[index] = card;
-	for(unsigned int i = index + 1; i < count; i++) {
-		// move the rest of the deck back 1
+
+	// index can not be larger than count
+	if(index >= count - 1) return;
+
+	// no room to add the card
+	if(count == 60) return;
+
+	// moves all the cards after index down one
+	for(unsigned int i = count - 1; i > index; i--) {
+		deck[i + 1] = deck[i];
 	}
+
+	// puts the deck in at index
+	deck[index] = card;
 	well_formed();
+}
+
+unsigned int Deck::size() {
+	return count;
 }
 
 // checks the integrity of the deck and returns false with an error message

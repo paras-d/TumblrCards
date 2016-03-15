@@ -23,18 +23,18 @@ MainMenu::~MainMenu() {
 
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
-	cout << "Got to singlePlayer()" << endl;
+	cout << "Got to single_player()" << endl;
 }
 
 void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
-	cout << "Got to multiPlayer()" << endl;
+	cout << "Got to multi_player()" << endl;
 }
 
 void MainMenu::deck_list() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
-	cout << "Got to deckList()" << endl;
+	cout << "Got to deck_list()" << endl;
 }
 
 void MainMenu::settings() {

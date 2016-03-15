@@ -16,6 +16,8 @@ private:
 	std::array<Card* , 60> deck;
 	std::string deckName;
 	unsigned int count;
+	bool well_formed();
+	bool print_err(std::string err);
 public:
 	Deck();
 	virtual ~Deck();
@@ -24,8 +26,7 @@ public:
 	void shuffle();
 	void add_card(Card* card);
 	void add_card(Card* card, unsigned int index);
-	bool well_formed();
-	bool print_err(std::string err);
+	unsigned int size();
 };
 
 #endif /* SRC_DECK_H_ */

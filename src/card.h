@@ -18,12 +18,12 @@ private:
 	std::string name;
 	std::string ability;
 
-	// builds card base on input name
-	void build_card();
 public:
 	Card();
 	virtual ~Card();
-	Card(std::string name);
+
+	// builds card base on input from file
+	void build_card(std::string arg);
 
 	// should return true if the trigger goes off
 	// false if it does not

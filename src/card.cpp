@@ -20,33 +20,17 @@ Card::Card() {
 	ability = "does a thing";
 }
 
-// This is the contructor that should be called when
-// the game creates the card base.
-Card::Card(string name) {
-	// TODO Auto-generated constructor stub
-	Card::name = name;
-	build_card();
-}
-
 Card::~Card() {
 	// TODO Auto-generated destructor stub
 }
 
-void Card::build_card() {
-	// TODO have card stats based on input name
-	// is there a better way to build a card other than
-	// by name and still have them be uniquely named?
-	// we will need a large pool of cards
-	if(name.compare("test1") == 0) {
-		attack = 1;
-		health = 2;
-		currHP = health;
-	} else if(name.compare("test2") == 0) {
-		attack = 2;
-		health = 3;
-		currHP = health;
-	}
-	ability = "does a thing";
+void Card::build_card(string arg) {
+	// TODO have card stats based on
+	if(arg == "test1")
+		name = "test1";
+	else if(arg == "test2")
+		name = "test2";
+	else name = "test3";
 }
 
 bool Card::trigger() {
