@@ -1,4 +1,6 @@
-/Debug/
-/.settings/
-/.project
-/.cproject
+Debug/
+.settings/
+.project
+.cproject
+*.out
+bin/
