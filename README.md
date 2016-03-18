@@ -1,4 +1,19 @@
 # TumblrCards
+
+```
+     /:\                       (""")
+     |:|          /$$           III            TumblrCards:
+     |:|         | $$         __III__             A text based multiplayer
+     |:|        /$$$$$$     /:-.___,-:\           strategy card game.
+     |:|       |_  $$_/     \]  |:|  [/
+     |:|         | $$           |:|               Written by members of the
+ /]  |:|  [\     | $$ /$$       |:|               Tumblr Computer Science community.
+ \:-'"""`-:/     | "$$$$/       |:|
+   ""III""        \___/         |:|
+     III                        |:|
+    (___)                       \:/
+```
+
 A text based multiplayer strategy card game written by members of the Tumblr Computer Science community.
 
 We are still in the idea's phase so for now I will be setting up the program to at least generate 
