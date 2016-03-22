@@ -1,0 +1,92 @@
+This is a list of cards to be considered, tested, and implemeneted into the game.
+Thus far everything is untested and subject to change. All cards will be in the same
+form as the Card class to_string() function. If you have an idea for a card add it to
+the list! It will be tested, and possibly changed, before being implemeneted.
+
+Ooze
+1
+There is a foul stench coming from
+this green glob on the ground.
+1/1
+
+Giant Slime
+XX
+When Giant Slime dies summon
+X 1/1 Ooze
+1/X
+
+Uninformed Citizen
+1
+Somehow they managed to find their
+way to the center of a fight. Whoops!
+1/1
+
+City Bell
+3
+At the start of your turn summon an
+Uninformed Citizen.
+
+At the end your turn if you have 3 or
+more Uninformed Citizens destroy them
+and draw a card.
+0/3
+
+Treasure Hoarder
+2
+When Treasure Hoarder dies each player
+draws a card.
+2/2
+
+Metallic Dragon
+6
+When Metallic Dragon enters the battlefield
+your opponent draws a card. You draw 2 cards.
+6/6
+
+Chromatic Dragon
+6
+When Chromatic Dragon leaves the battlefield
+discard a card. Your opponent discards 2 cards.
+6/6
+
+Altar Boy
+1
+When Altar Boy enters the battlefield each
+player gains 1 life.
+1/1
+
+Priest Initiate
+5
+When Priest Initiate enters the battlefield
+each player gains 3 life.
+3/3
+
+Divine Savior
+9
+When Divine Savior enters the battlefield
+each player gains 7 life.
+7/7
+
+Angle of the Void
+5
+When Angle of the Void enters the battlefield
+your opponent gains 5 life.
+
+When Angle of the Void leaves the battlefield
+each played loses 5 life.
+5/5
+
+Castle
+10
+This fortress towers over the surrounding
+fields.
+
+Castles defense is equal to your opponents
+life total.
+0/X
+
+Malitia Captain
+4
+At the start of combat give each Uninformed
+Citizen +1/+1 until end of the turn.
+2/2
