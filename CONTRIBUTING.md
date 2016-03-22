@@ -22,6 +22,13 @@ These TODO's are very broad and this list will grow as new idea's are brought to
 
 Message me with questions or visit me on Tumblr at import-os.tumblr.com
 
+### Pull Request
+
+For something to be considered for merging in to master it must be 
+submitted as a Pull Request. All Pull Requests will be given at least 24 
+hours before being merged in to the master branch. Pull requests may 
+take longer to be merged if more needs to change.
+
 ### Programming Standards
 
 #### Code Blocks
