@@ -254,12 +254,12 @@ At the end of turn become a Preist Initiate.
 
 Preist of Prophets
 4
-//TODO Ability
+At the start of turn both players gain a life.
 3/4
 
 Preist of Mercy
 4
-//TODO Ability
+// TODO Ability
 3/4
 
 Preist of Heed
@@ -269,10 +269,11 @@ Preist of Heed
 
 Preist of Reaping
 4
-//TODO Ability
+// TODO Ability
 3/4
 
 Preist of Justice
 4
-//TODO Ability
+At the start of turn each player gets an
+Uninformed Citizen.
 3/4
