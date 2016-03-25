@@ -213,7 +213,7 @@ Citizen.
 Priest of Abaddon
 3
 Priest of Abaddon is able to attack the
-trun it is summoned.
+turn it is summoned.
 
 At the end of turn destroy Priest of
 Abaddon.
@@ -227,51 +227,56 @@ switches sides.
 
 Priest of Satan
 3
-At the end of turn Priest of Satan becomes a
+When Priest of Satan dies summon a
 copy of target creature.
 3/3
 
 Priest of Marihem
 3
-At the end of turn targer creature gets -1/-1.
+When Priest of Marihem dies all
+creatures get -1/-1.
 3/3
 
 Priest of Asmodeus
 3
-At the end of turn target creature becomes an Imp.
+When Priest of Asmodeus dies target
+creature becomes an Imp.
 3/3
 
 Priest of Pythius
 3
-At the end of turn target creatures health becomes
-equal to its attack.
+When Priest of Pythius dies all creatures
+in play swap their attack and health.
 3/3
 
 Priest of Beelzebub
 3
-At the end of turn become a Priest Initiate.
+When Priest of Beelzebub dies summon a
+Priest Initiate.
 3/3
 
 Priest of Prophets
 4
-At the start of turn both players gain a life.
+When Priest of Prophets enters the battlefield
+each player gains 7 life.
 3/4
 
 Priest of Mercy
 4
-// TODO Ability
+When Priest of Mercy enters the battlefield
+destroy target creature.
 3/4
 
 Priest of Heed
 4
-All City Bell's trigger twice at the start of turn.
+When Priest of Heed enters the battlefield
+trigger all City Bell's.
 3/4
 
 Priest of Reaping
 4
-At the start of turn if you opponent has at least 10
-cards in their graveyard they take one damage and you
-gain one life.
+When Priest of Reaping enters the battlefield your
+opponent discards a card.
 3/4
 
 Priest of Justice
