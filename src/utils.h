@@ -8,17 +8,12 @@
 #ifndef SRC_UTILS_H_
 #define SRC_UTILS_H_
 
-#include <string>
-#include <sys/ioctl.h>
-#include <iostream>
-#include <unistd.h>
-
-using namespace std;
-
 int get_console_width();
 
 int get_console_height();
 
-void print_center(string s);
+void print_center(std::string s);
+
+void clear_console();
 
 #endif /* SRC_UTILS_H_ */

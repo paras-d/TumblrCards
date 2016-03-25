@@ -5,6 +5,11 @@
  *      Author: Tumblr
  */
 
+#include <string>
+#include <sys/ioctl.h>
+#include <iostream>
+#include <unistd.h>
+#include <cstdlib>
 #include "utils.h"
 
 using namespace std;
@@ -30,4 +35,18 @@ void print_center(string s) {
 	cout << pad << s << endl;
 }
 
-
+/*
+ * This is a super naive way of clearing the screen but until I find
+ * a better resource this will do.
+ *
+ * Taken from here:
+ * https://www.daniweb.com/programming/software-development/threads/95284/clearing-screen-in-the-console
+ */
+void clear_console() {
+#ifdef WINDOWS
+  std::system ( "CLS" );
+#else
+  // Assume POSIX
+  std::system ( "clear" );
+#endif
+}
