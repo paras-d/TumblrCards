@@ -118,7 +118,7 @@ At the end of turn target creature becomes a
 
 Abaddon
 6
-Abaddon is able to attack the turn he is
+Abaddon is able to attack the turn it is
 summoned.
 
 At the end of turn Abaddon gets -1/-1.
@@ -264,12 +264,14 @@ Preist of Mercy
 
 Preist of Heed
 4
-//TODO Ability
+All City Bell's trigger twice at the start of turn.
 3/4
 
 Preist of Reaping
 4
-// TODO Ability
+At the start of turn if you opponent has at least 10
+cards in their graveyard they take one damage and you
+gain one life.
 3/4
 
 Preist of Justice
@@ -277,3 +279,27 @@ Preist of Justice
 At the start of turn each player gets an
 Uninformed Citizen.
 3/4
+
+Sewer Rat
+2
+This creature clearly hasn't eaten in a very long time.
+2/2
+
+Bear
+3
+//Come up with clever flavor text
+3/3
+
+City Guard
+3
+When City Guard enters the battlefield, if you control a 
+City Bell give it +1/+0.
+1/1
+
+Ulgaria, the Great Barbarian
+6
+Ulgaria,the Great Barbarian is able to attack the
+turn it is summoned.
+
+Ulgaria takes double damage from any source.
+8/4
