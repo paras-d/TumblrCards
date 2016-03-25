@@ -108,7 +108,7 @@ Belial
 At the end of turn, if you have one life you
 and your opponent split your life totals
 equally amongst eachother.
-5/5
+6/6
 
 Astaroth
 6
@@ -191,3 +191,89 @@ Angel of Reaping
 At the start of turn your opponent discards
 a card.
 7/7
+
+Angel of Justice
+7
+At the start of your turn target creature
+becomes a 1/1 Uninformed Citizen.
+7/7
+
+Preist of Belial
+3
+At the end of the turn Preist of Belial
+deals one dmamge to you.
+3/3
+
+Preist of Astaroth
+3
+At the end of turn destroy an Uninformed
+Citizen.
+3/3
+
+Preist of Abaddon
+3
+Preist of Abaddon is able to attack the
+trun it is summoned.
+
+At the end of turn destroy Preist of
+Abaddon.
+3/3
+
+Preist of Mammon
+3
+At the end of turn Preist of Mammon
+switches sides.
+3/3
+
+Preist of Satan
+3
+At the end of turn Preist of Satan becomes a
+copy of target creature.
+3/3
+
+Preist of Marihem
+3
+At the end of turn targer creature gets -1/-1.
+3/3
+
+Preist of Asmodeus
+3
+At the end of turn target creature becomes an Imp.
+3/3
+
+Preist of Pythius
+3
+At the end of turn target creatures health becomes
+equal to its attack.
+3/3
+
+Preist of Beelzebub
+3
+At the end of turn become a Preist Initiate.
+3/3
+
+Preist of Prophets
+4
+At the start of turn both players gain a life.
+3/4
+
+Preist of Mercy
+4
+// TODO Ability
+3/4
+
+Preist of Heed
+4
+//TODO Ability
+3/4
+
+Preist of Reaping
+4
+// TODO Ability
+3/4
+
+Preist of Justice
+4
+At the start of turn each player gets an
+Uninformed Citizen.
+3/4
