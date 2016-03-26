@@ -48,6 +48,9 @@ void MainMenu::quit() {
 
 bool MainMenu::print_menu() {
 
+    clear_console();
+    cout << endl;
+	print_center("              Welcome to:             \n");
 	print_center("    /:\\                       (\"\"\")   \n");
 	print_center("    |:|          /$$           III    \n");
 	print_center("    |:|         | $$         __III__  \n");
@@ -59,6 +62,7 @@ bool MainMenu::print_menu() {
 	print_center("  \"\"III\"\"        \\___/         |:|    \n");
 	print_center("    III                        |:|    \n");
 	print_center("   (___)                       \\:/    \n");
+	print_center("             TumblrCards              \n");
 	cout << endl << endl;
 	print_center("1) Single player     4) Settings\n");
 	print_center("2) Multiplayer       5) Exit    \n");
@@ -70,21 +74,11 @@ bool MainMenu::print_menu() {
 }
 
 bool MainMenu::get_selections() {
-	print_menu();
 	// TODO take in the players selection and call that method.
-	string input;
-	cin >> input;
-	cout << input << endl;
-	stringstream convert;
-	convert << input;
 	int selection = 0;
-	if (!convert >> selection) {
-		// handle bad input here
-		cout << selection << " is not an option." << endl;
-		return false;
-	} else {
-		cout << "entering switch now with " << selection << endl;
-		switch(selection) {
+	cin >> selection;
+
+	switch(selection) {
 		case 1:
 			single_player();
 			break;
@@ -103,7 +97,6 @@ bool MainMenu::get_selections() {
 		default:
 			//bad input here
 			return false;
-		}
 	}
 	return true;
 }

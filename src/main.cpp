@@ -25,8 +25,8 @@ int main(int argc, char* argv[]) {
 
 	// starts the game
 	MainMenu menu;
-	menu.print_menu();
-	while(!menu.get_selections());
+	do     menu.print_menu();
+	while (!menu.get_selections());
 
 	return 0;
 }
