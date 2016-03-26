@@ -4,3 +4,4 @@ Debug/
 .cproject
 *.out
 bin/
+*.cbp # CodeBlocks project
