@@ -5,9 +5,16 @@
  *      Author: Alex
  */
 
+#include <cstdlib>
 #include "utils.h"
 
 using namespace std;
+
+// TODO Make it work in Windows too and fix cases where 0 and 0 are returned
+
+void clear_console() {
+	system("clear");
+}
 
 int get_console_width() {
 	struct winsize size;
@@ -27,7 +34,7 @@ void print_center(string s) {
 
 	for (int i = 0; i < k; i++)
 		pad.append(" ");
-	cout << pad << s << endl;
+	cout << pad << s;
 }
 
 

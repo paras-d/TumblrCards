@@ -15,6 +15,8 @@
 
 using namespace std;
 
+void clear_console();
+
 int get_console_width();
 
 int get_console_height();

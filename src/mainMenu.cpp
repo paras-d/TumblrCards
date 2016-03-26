@@ -7,14 +7,12 @@
 #include <iostream>
 #include <sstream>
 #include "mainMenu.h"
+#include "utils.h"
 
 using namespace std;
 
 MainMenu::MainMenu() {
-	// TODO Auto-generated constructor stub
-	// We should print some ASCII logo here
-	// similar to the metasploit entrance.
-	cout << "~~Welcome to Tumblr Cards~~" << endl;
+	// TODO get_selections();
 }
 
 MainMenu::~MainMenu() {
@@ -49,22 +47,30 @@ void MainMenu::quit() {
 }
 
 bool MainMenu::print_menu() {
-	// TODO Print the menu for the game
-	// I did all the printing manually so it
-	// is clear what the print should look like.
-	// She we have number based input or
-	// something more sophisticated?
-	cout << "    --Main Menu--" << endl;
-	cout << "  1) Single Player" << endl;
-    cout << "  2) Multiplayer" << endl;
-    cout << "  3) Deck Lists" << endl;
-    cout << "  4) Settings" << endl;
-	cout << "  5) Exit" << endl;
-	cout << "Enter selection: ";
+
+	print_center("    /:\\                       (\"\"\")   \n");
+	print_center("    |:|          /$$           III    \n");
+	print_center("    |:|         | $$         __III__  \n");
+	print_center("    |:|        /$$$$$$     /:-.___,-:\\\n");
+	print_center("    |:|       |_  $$_/     \\]  |:|  [/\n");
+	print_center("    |:|         | $$           |:|    \n");
+	print_center("/]  |:|  [\\     | $$ /$$       |:|    \n");
+	print_center("\\:-'\"\"\"`-:/     | \"$$$$/       |:|    \n");
+	print_center("  \"\"III\"\"        \\___/         |:|    \n");
+	print_center("    III                        |:|    \n");
+	print_center("   (___)                       \\:/    \n");
+	cout << endl << endl;
+	print_center("1) Single player     4) Settings\n");
+	print_center("2) Multiplayer       5) Exit    \n");
+	print_center("3) Deck lists                   \n");
+	cout << endl;
+	print_center("Enter selection [1-5]: ");
+
 	return true;
 }
 
 bool MainMenu::get_selections() {
+	print_menu();
 	// TODO take in the players selection and call that method.
 	string input;
 	cin >> input;
