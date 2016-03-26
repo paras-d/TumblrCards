@@ -2,7 +2,7 @@
  * utils.cpp
  *
  *  Created on: Mar 23, 2016
- *      Author: Alex
+ *      Author: Tumblr
  */
 
 #include <cstdlib>
