@@ -275,8 +275,8 @@ trigger all City Bell's.
 
 Priest of Reaping
 4
-When Priest of Reaping enters the battlefield your
-opponent discards a card.
+When Priest of Reaping enters the battlefield
+your opponent discards a card.
 3/4
 
 Priest of Justice
@@ -285,9 +285,19 @@ At the start of turn each player gets an
 Uninformed Citizen.
 3/4
 
+Priest of the Void
+3
+When Priest of the Void enters the battlefield 
+your opponent gains 3 life.
+
+When Priest of the Void leaves the battlefield
+each player loses 3 life.
+3/3
+
 Sewer Rat
 2
-This creature clearly hasn't eaten in a very long time.
+This creature clearly hasn't eaten in a very
+long time.
 2/2
 
 Bear
@@ -297,14 +307,27 @@ Bear
 
 City Guard
 3
-When City Guard enters the battlefield, if you control a 
-City Bell give it +1/+0.
+When City Guard enters the battlefield, if you
+control a Castle give it +1/+0.
 1/1
 
-Ulgaria, the Great Barbarian
+Ulgaria, the Fierce
 6
-Ulgaria,the Great Barbarian is able to attack the
-turn it is summoned.
+Ulgaria,the Fierce is able to attack the turn it
+is summoned.
 
-Ulgaria takes double damage from any source.
+Ulgaria, the Fierce takes double damage from any
+source.
 8/4
+
+Void Creeper
+2
+When Void Creeper enters the battlefield return
+an opponents creature to its owners hand.
+1/1
+
+Void Stalker
+4
+When Void Stalker enters the battlefield return taget 
+creature to its owners hand.
+3/3
