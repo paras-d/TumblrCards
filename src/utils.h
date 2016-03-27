@@ -21,6 +21,6 @@ int get_console_width();
 
 int get_console_height();
 
-void print_center(string s);
+void print_center(std::string s);
 
 #endif /* SRC_UTILS_H_ */

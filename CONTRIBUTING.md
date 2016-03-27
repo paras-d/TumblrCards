@@ -25,9 +25,13 @@ Message me with questions or visit me on Tumblr at import-os.tumblr.com
 ### Pull Request
 
 For something to be considered for merging in to master it must be 
-submitted as a Pull Request. All Pull Requests will be given at least 24 
-hours before being merged in to the master branch. Pull requests may 
-take longer to be merged if more needs to change.
+submitted as a Pull Request to development first. All Pull Requests 
+will be given at least 24 hours before being merged in to the 
+development branch. Pull requests may take longer to be merged if more 
+needs to change. On every monday the development branch will have a pull 
+request made to be merged in to the master repository. This pull request 
+will sit for one week to be reviewed until it is merged in on Sunday. 
+The weekly pull request may be delayed if more changes need to be made.
 
 ### Programming Standards
 

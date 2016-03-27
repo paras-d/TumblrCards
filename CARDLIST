@@ -108,7 +108,7 @@ Belial
 At the end of turn, if you have one life you
 and your opponent split your life totals
 equally amongst eachother.
-5/5
+6/6
 
 Astaroth
 6
@@ -118,7 +118,7 @@ At the end of turn target creature becomes a
 
 Abaddon
 6
-Abaddon is able to attack the turn he is
+Abaddon is able to attack the turn it is
 summoned.
 
 At the end of turn Abaddon gets -1/-1.
@@ -191,3 +191,164 @@ Angel of Reaping
 At the start of turn your opponent discards
 a card.
 7/7
+
+Angel of Justice
+7
+At the start of your turn target creature
+becomes a 1/1 Uninformed Citizen.
+7/7
+
+Priest of Belial
+3
+At the end of the turn Priest of Belial
+deals one dmamge to you.
+3/3
+
+Priest of Astaroth
+3
+At the end of turn destroy an Uninformed
+Citizen.
+3/3
+
+Priest of Abaddon
+3
+Priest of Abaddon is able to attack the
+turn it is summoned.
+
+At the end of turn destroy Priest of
+Abaddon.
+3/3
+
+Priest of Mammon
+3
+At the end of turn Priest of Mammon
+switches sides.
+3/3
+
+Priest of Satan
+3
+When Priest of Satan dies summon a
+copy of target creature.
+3/3
+
+Priest of Marihem
+3
+When Priest of Marihem dies all
+creatures get -1/-1.
+3/3
+
+Priest of Asmodeus
+3
+When Priest of Asmodeus dies target
+creature becomes an Imp.
+3/3
+
+Priest of Pythius
+3
+When Priest of Pythius dies all creatures
+in play swap their attack and health.
+3/3
+
+Priest of Beelzebub
+3
+When Priest of Beelzebub dies summon a
+Priest Initiate.
+3/3
+
+Priest of Prophets
+4
+When Priest of Prophets enters the battlefield
+each player gains 7 life.
+3/4
+
+Priest of Mercy
+4
+When Priest of Mercy enters the battlefield
+destroy target creature.
+3/4
+
+Priest of Heed
+4
+When Priest of Heed enters the battlefield
+trigger all City Bell's.
+3/4
+
+Priest of Reaping
+4
+When Priest of Reaping enters the battlefield
+your opponent discards a card.
+3/4
+
+Priest of Justice
+4
+At the start of turn each player gets an
+Uninformed Citizen.
+3/4
+
+Priest of the Void
+3
+When Priest of the Void enters the battlefield 
+your opponent gains 3 life.
+
+When Priest of the Void leaves the battlefield
+each player loses 3 life.
+3/3
+
+Sewer Rat
+2
+This creature clearly hasn't eaten in a very
+long time.
+2/2
+
+Bear
+3
+//Come up with clever flavor text
+3/3
+
+City Guard
+3
+When City Guard enters the battlefield, if you
+control a Castle give it +1/+0.
+1/1
+
+Ulgaria, the Fierce
+6
+Ulgaria,the Fierce is able to attack the turn it
+is summoned.
+
+Ulgaria, the Fierce takes double damage from any
+source.
+8/4
+
+Void Creeper
+2
+When Void Creeper enters the battlefield return
+an opponents creature to its owners hand.
+1/1
+
+Void Stalker
+4
+When Void Stalker enters the battlefield return taget 
+creature to its owners hand.
+3/3
+
+Void Hulk
+6
+When Void Hulk entersthe battlefield destroy target
+creature.
+5/5
+
+Social Justice Warrior
+4
+Social Justice Warrior gets +1/+1 for each Social Justice
+Warrior on the field.
+
+Social Justice Warrior gets -1/-1 for each Uninformed Citizen
+on the field.
+1/1
+
+Merchant of Greed
+5
+When Merchant of Greed enters the battlefield deal 1 damage to each
+creature.
+4/4

@@ -5,16 +5,24 @@
  *      Author: Tumblr
  */
 
+#include <string>
+#include <sys/ioctl.h>
+#include <iostream>
+#include <unistd.h>
 #include <cstdlib>
 #include "utils.h"
 
 using namespace std;
 
-// TODO Make it work in Windows too and fix cases where 0 and 0 are returned
-
 void clear_console() {
-	system("clear");
+#ifdef WINDOWS
+  std::system ("CLS");
+#else
+  std::system ("clear");
+#endif
 }
+
+// TODO Make it work in Windows too and fix cases where 0 and 0 are returned
 
 int get_console_width() {
 	struct winsize size;
@@ -36,5 +44,3 @@ void print_center(string s) {
 		pad.append(" ");
 	cout << pad << s;
 }
-
-

@@ -58,7 +58,7 @@ bool MainMenu::print_menu() {
 	print_center("    |:|       |_  $$_/     \\]  |:|  [/\n");
 	print_center("    |:|         | $$           |:|    \n");
 	print_center("/]  |:|  [\\     | $$ /$$       |:|    \n");
-	print_center("\\:-'\"\"\"`-:/     | \"$$$$/       |:|    \n");
+	print_center("\\:-'''''-:/     | \"$$$$/       |:|    \n");
 	print_center("  \"\"III\"\"        \\___/         |:|    \n");
 	print_center("    III                        |:|    \n");
 	print_center("   (___)                       \\:/    \n");
