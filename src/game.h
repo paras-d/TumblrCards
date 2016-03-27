@@ -13,7 +13,7 @@
 class Game {
 private:
 	void load_content();
-	void unload_contant();
+	void unload_content();
 	void update();
 	void draw();
 	void sp_update();

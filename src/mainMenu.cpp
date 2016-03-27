@@ -25,23 +25,39 @@ void MainMenu::single_player() {
 	cout << "Got to single_player()" << endl;
 	cout << "Testing game creation now." << endl;
 	Game game("single");
+	delete &game;
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
 	cout << "Got to multi_player()" << endl;
+	cout << "Testing game creation now." << endl;
+	Game game("multi");
+	delete &game;
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::deck_list() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
 	cout << "Got to deck_list()" << endl;
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::settings() {
 	// TODO moves to a settings menu.
 	// what settings could this game have?
 	cout << "Got to settings()" << endl;
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::quit() {
