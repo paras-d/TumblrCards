@@ -16,13 +16,18 @@ private:
 	Deck playerHand;
 	Deck oppDeck;
 	Deck oppHand;
-
+	bool myTurn;
+	void start_phase();
+	void draw_phase();
+	void combat_phase();
+	void end_phase();
 
 public:
-	Game();
+	Game(Deck myDeck);
 	virtual ~Game();
-	void initialize();
-
+	void start();
+	void update(Game myGame);
+	bool end();
 };
 
 #endif /* SRC_GAME_H_ */
