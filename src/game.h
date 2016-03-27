@@ -12,22 +12,33 @@
 
 class Game {
 private:
-	Deck playerDeck;
-	Deck playerHand;
-	Deck oppDeck;
-	Deck oppHand;
-	bool myTurn;
-	void start_phase();
-	void draw_phase();
-	void combat_phase();
-	void end_phase();
+	void load_content();
+	void unload_contant();
+	void update();
+	void draw();
+	void sp_update();
+	void mp_update();
+	bool cont;
+	std::string players;
 
 public:
-	Game(Deck myDeck);
+	Game(std::string type);
 	virtual ~Game();
-	void start();
-	void update(Game myGame);
-	bool end();
+};
+
+class Player {
+private:
+	Deck deck;
+	Deck hand;
+	Deck board;
+	Deck discard;
+
+public:
+	Player();
+	virtual ~Player();
+	Player* get_state();
+	bool select_deck(Deck deck);
+	bool draw();
 };
 
 #endif /* SRC_GAME_H_ */

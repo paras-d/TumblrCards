@@ -8,6 +8,7 @@
 #include <sstream>
 #include "mainMenu.h"
 #include "utils.h"
+#include "game.h"
 
 using namespace std;
 
@@ -22,6 +23,8 @@ MainMenu::~MainMenu() {
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
 	cout << "Got to single_player()" << endl;
+	cout << "Testing game creation now." << endl;
+	Game game("single");
 }
 
 void MainMenu::multi_player() {

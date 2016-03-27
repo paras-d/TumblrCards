@@ -5,42 +5,58 @@
  *      Author: Tumblr
  */
 
+#include <string>
 #include "game.h"
 
-Game::Game(Deck myDeck) {
-	playerDeck = myDeck;
-	playerHand = playerDeck.draw_cards(7);
-	myTurn = true;
+using namespace std;
+
+Game::Game(string type) {
+	players = type;
+	if(players != "single" || players != "mutli")
+		// Throw custruction error here
+	cont = true;
 }
 
 Game::~Game() {
-	// TODO Auto-generated destructor stub
+	/*
+	 * TODO Auto-generated destructor stub
+	 */
 }
 
-void Game::start_phase() {
+void Game::load_content() {
+	/*
+	 * TODO Load needed game content here
+	 * suck as deck lists
+	 */
+}
+
+void Game::unload_contant() {
+	/*
+	 * TODO Unload game data here
+	 * this should be called at the end of the game
+	 * to prep us for deconstruction
+	 */
+}
+
+void Game::update() {
+	/*
+	 * TODO This is the running function of the game.
+	 */
+	if(cont) {
+		if(players == "single")
+			sp_update();
+		else if(players == "multi")
+			mp_update();
+	}
+}
+void Game::draw() {
 
 }
 
-void Game::draw_phase() {
+void Game::sp_update() {
 
 }
 
-void Game::combat_phase() {
-
-}
-
-void Game::end_phase() {
-
-}
-
-void Game::start() {
-
-}
-
-void Game::update(Game myGame) {
-
-}
-
-bool Game::end() {
+void Game::mp_update() {
 
 }
