@@ -90,9 +90,6 @@ each played loses 5 life.
 
 Castle
 10
-This fortress towers over the surrounding
-fields.
-
 Castles defense is equal to your opponents
 life total.
 0/X
@@ -607,3 +604,264 @@ in its name. Gain +1/-1 for each creature
 destroyed this way.
 0/6
 076
+
+Elf Native
+1
+When Elf Native enters the battlefield gain
+one extra mana this turn.
+1/1
+077
+
+Elf Priestess
+2
+Elf Priestess costs one less for each Elf
+Native you control.
+1/1
+078
+
+Elf Beastwalker
+4
+When Elf Beastwalker enters the battlefield
+gain control of a Wolf Pack your opponent
+controls.
+3/3
+079
+
+Elf Spellslinger
+3
+When Elf Spellslinger attacks, deal 1
+damage to target creature.
+3/3
+080
+
+High Priestess of Gelfind
+10
+When High Priestess of Gelfind enters the
+battlefield each player gains 10 life.
+High Priestess of Gelfind costs 1 less for
+each Elf Native you control.
+3/3
+081
+
+Huntress of Gelfind
+5
+Huntress of Gelfind does double damage to
+Barbarians.
+Whenever Huntress of Gelfind kills a Goblin
+summon an Elf Native.
+2/2
+082
+
+Diplomat of Gelfind
+3
+Diplomat of Gelfind gets +1/+0 for each
+Uninformed Citizen you control.
+Diplomat of Gelfind gets +0/+1 for each
+Elf Native you control.
+1/1
+083
+
+Masterwork Elf
+4
+When Masterwork Elf enters the battlefield
+if you control an Uninformed Citizen
+summon a City Bell.
+4/4
+084
+
+Rebel Elf
+6
+When Rebel Elf dies destroy target City Bell.
+When Rebel Elf deals damage you may destroy
+target Uninformed Citizen.
+2/2
+085
+
+Treant
+3
+When Treant enters the battlefield if you
+control at least 2 Elf Native summon another
+Treant.
+2/2
+086
+
+Forrestwalker
+4
+Each Treant you conntrol gets +1/+1 for each
+Elf Native you control.
+4/4
+087
+
+Elf Historian
+2
+When Elf Historian dies summon 2 Elf Native.
+1/1
+088
+
+Graveyard Worm
+2
+Graveyard Worm's attack and HP are equal to
+the number of creatures in your discard pile.
+X/X
+089
+
+Mercenary Gang
+5
+When Mercenary Gang enters the battlefield
+give two target creatures +1/+1.
+4/4
+090
+
+Sewer Slime
+5
+When Sewer Slime deals damage to a creature,
+destroy that creature.
+When Sewer Slime enters the battlefield
+destroy target creature an opponent controls.
+2/2
+091
+
+Vampire Stalker
+3
+When Vampire Stalker enters the battlefield
+destroy X creatures you control.
+Vampire Stalker gets +X/+X.
+1/1
+092
+
+Experimental Wizard
+2
+When an opponent summons a creature, destroy
+that creature and Experimental Wizard.
+0/2
+093
+
+Elder Crusader
+3
+When Elder Crusader dies give target creature
++1/+1, if it is an uninformed Citizen give it
++2/+2.
+2/2
+094
+
+Dark Ritualist
+4
+When a creature you control deals damage, both
+players gain that much life.
+2/2
+095
+
+Blood Binder
+4
+Whenever your opponent gains life you lose that
+much life. 
+6/6
+096
+
+097
+
+098
+
+099
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+131
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
