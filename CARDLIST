@@ -1,25 +1,29 @@
 This is a list of cards to be considered, tested, and implemeneted into the game.
 Thus far everything is untested and subject to change. All cards will be in the same
-form as the Card class to_string() function. If you have an idea for a card add it to
-the list! It will be tested, and possibly changed, before being implemeneted.
+form as the Card class to_string() function, with the addition of the card number.
+If you have an idea for a card add it to the list! It will be tested, and possibly
+changed, before being implemeneted.
 
 Ooze
 1
 There is a foul stench coming from
 this green glob on the ground.
 1/1
+001
 
 Giant Slime
 XX
 When Giant Slime dies summon
 X 1/1 Ooze
 1/X
+002
 
 Uninformed Citizen
 1
 Somehow they managed to find their
 way to the center of a fight. Whoops!
 1/1
+003
 
 City Bell
 3
@@ -30,42 +34,49 @@ At the end your turn if you have 3 or
 more Uninformed Citizens destroy them
 and draw a card.
 0/3
+004
 
 Treasure Hoarder
 2
 When Treasure Hoarder dies each player
 draws a card.
 2/2
+004
 
 Metallic Dragon
 6
 When Metallic Dragon enters the battlefield
 your opponent draws a card. You draw 2 cards.
 6/6
+005
 
 Chromatic Dragon
 6
 When Chromatic Dragon leaves the battlefield
 discard a card. Your opponent discards 2 cards.
 6/6
+006
 
 Altar Boy
 1
 When Altar Boy enters the battlefield each
 player gains 1 life.
 1/1
+007
 
 Priest Initiate
 5
 When Priest Initiate enters the battlefield
 each player gains 3 life.
 3/3
+008
 
 Divine Savior
 9
 When Divine Savior enters the battlefield
 each player gains 7 life.
 7/7
+009
 
 Angle of the Void
 5
@@ -75,6 +86,7 @@ your opponent gains 5 life.
 When Angle of the Void leaves the battlefield
 each played loses 5 life.
 5/5
+010
 
 Castle
 10
@@ -84,24 +96,28 @@ fields.
 Castles defense is equal to your opponents
 life total.
 0/X
+011
 
 Malitia Captain
 4
 At the start of combat give each Uninformed
 Citizen +1/+1 until end of the turn.
 2/2
+012
 
 Imp
 2
 When Imp enters the battlefield each player
 loses one life.
 1/1
+013
 
 Succubi
 4
 When Succubi enters the battlefield you gain
 2 life and your opponenet loses 2 life.
 2/2
+014
 
 Belial
 6
@@ -109,12 +125,14 @@ At the end of turn, if you have one life you
 and your opponent split your life totals
 equally amongst eachother.
 6/6
+015
 
 Astaroth
 6
 At the end of turn target creature becomes a
 1/1 Uninformed Citizen
 6/6
+016
 
 Abaddon
 6
@@ -123,24 +141,28 @@ summoned.
 
 At the end of turn Abaddon gets -1/-1.
 6/6
+017
 
 Mammon
 6
 At the end of turn gain a random creature
 switches sides.
 6/6
+018
 
 Satan
 6
 At the end of turn Satan becomes a copy of
 target creature and gains this ability.
 6/6
+019
 
 Merihem
 6
 At the end of turn all creatures except for
 Marihem get -1/-1.
 6/6
+020
 
 Asmodeus
 6
@@ -148,12 +170,14 @@ At the start of turn summon a Succubi.
 
 At the end of turn summon an Imp.
 6/6
+021
 
 Pythius
 6
 At the end of turn target creature swaps its
 attack and health.
 6/6
+022
 
 Beelzebub
 6
@@ -161,54 +185,63 @@ At the end of turn Beelzebub becomes a
 Prophet and gains the ability "At the start of
 turn Prophet becomes a 6/6 Beelzebub."
 6/6
+023
 
 Prophet
 7
 When prophet enters the battlefield gain
 7 life.
 7/7
+024
 
 Angel of Prophets
 7
 At the start of turn gain 4 life.
 At the end of turn gain 3 life.
 7/7
+025
 
 Angel of Mercy
 7
 At the start of turn destroy all creatures
 except one, other than Angel of Mercy.
 7/7
+026
 
 Angel of Heed
 7
 When Angel of Heed enters the battlefield
 summon a City Bell.
 7/7
+027
 
 Angel of Reaping
 7
 At the start of turn your opponent discards
 a card.
 7/7
+028
 
 Angel of Justice
 7
 At the start of your turn target creature
 becomes a 1/1 Uninformed Citizen.
 7/7
+029
 
 Priest of Belial
 3
 At the end of the turn Priest of Belial
 deals one dmamge to you.
 3/3
+030
 
 Priest of Astaroth
 3
 At the end of turn destroy an Uninformed
 Citizen.
 3/3
+031
 
 Priest of Abaddon
 3
@@ -218,72 +251,84 @@ turn it is summoned.
 At the end of turn destroy Priest of
 Abaddon.
 3/3
+031
 
 Priest of Mammon
 3
 At the end of turn Priest of Mammon
 switches sides.
 3/3
+032
 
 Priest of Satan
 3
 When Priest of Satan dies summon a
 copy of target creature.
 3/3
+033
 
 Priest of Marihem
 3
 When Priest of Marihem dies all
 creatures get -1/-1.
 3/3
+034
 
 Priest of Asmodeus
 3
 When Priest of Asmodeus dies target
 creature becomes an Imp.
 3/3
+035
 
 Priest of Pythius
 3
 When Priest of Pythius dies all creatures
 in play swap their attack and health.
 3/3
+036
 
 Priest of Beelzebub
 3
 When Priest of Beelzebub dies summon a
 Priest Initiate.
 3/3
+037
 
 Priest of Prophets
 4
 When Priest of Prophets enters the battlefield
 each player gains 7 life.
 3/4
+038
 
 Priest of Mercy
 4
 When Priest of Mercy enters the battlefield
 destroy target creature.
 3/4
+039
 
 Priest of Heed
 4
 When Priest of Heed enters the battlefield
 trigger all City Bell's.
 3/4
+040
 
 Priest of Reaping
 4
 When Priest of Reaping enters the battlefield
 your opponent discards a card.
 3/4
+041
 
 Priest of Justice
 4
 At the start of turn each player gets an
 Uninformed Citizen.
 3/4
+042
 
 Priest of the Void
 3
@@ -293,23 +338,27 @@ your opponent gains 3 life.
 When Priest of the Void leaves the battlefield
 each player loses 3 life.
 3/3
+043
 
 Sewer Rat
 2
 This creature clearly hasn't eaten in a very
 long time.
 2/2
+043
 
 Bear
 3
 //Come up with clever flavor text
 3/3
+044
 
 City Guard
 3
 When City Guard enters the battlefield, if you
 control a Castle give it +1/+0.
 1/1
+045
 
 Ulgaria, the Fierce
 6
@@ -319,24 +368,28 @@ is summoned.
 Ulgaria, the Fierce takes double damage from any
 source.
 8/4
+046
 
 Void Creeper
 2
 When Void Creeper enters the battlefield return
 an opponents creature to its owners hand.
 1/1
+047
 
 Void Stalker
 4
 When Void Stalker enters the battlefield return taget 
 creature to its owners hand.
 3/3
+048
 
 Void Hulk
 6
 When Void Hulk entersthe battlefield destroy target
 creature.
 5/5
+049
 
 Social Justice Warrior
 4
@@ -345,10 +398,18 @@ Warrior on the field.
 
 Social Justice Warrior gets -1/-1 for each Uninformed Citizen
 on the field.
-1/1
+1/4
+050
 
 Merchant of Greed
 5
-When Merchant of Greed enters the battlefield deal 1 damage to each
-creature.
+When Merchant of Greed enters the battlefield deal X damage to each
+creature where X is the number of creatures you control.
 4/4
+051
+
+Arolian Goliath
+6
+When Arolian Goliath deals damage to a player you lose that much life.
+6/6
+052
