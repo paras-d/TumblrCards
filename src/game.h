@@ -9,6 +9,7 @@
 #define SRC_GAME_H_
 
 #include "deck.h"
+#include "player.h"
 
 class Game {
 private:
@@ -20,25 +21,12 @@ private:
 	void mp_update();
 	bool cont;
 	std::string players;
+	Player player;
+	Player opponent;
 
 public:
 	Game(std::string type);
 	virtual ~Game();
-};
-
-class Player {
-private:
-	Deck deck;
-	Deck hand;
-	Deck board;
-	Deck discard;
-
-public:
-	Player();
-	virtual ~Player();
-	Player* get_state();
-	bool select_deck(Deck deck);
-	bool draw();
 };
 
 #endif /* SRC_GAME_H_ */

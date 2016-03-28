@@ -35,6 +35,7 @@ void Game::load_content() {
 	 * suck as deck lists
 	 */
 	cout << "loading content here" << endl;
+	update();
 }
 
 void Game::unload_content() {
@@ -53,7 +54,7 @@ void Game::update() {
 	 */
 	draw();
 
-	cout << "enter exit to exit" << endl;
+	cout << "enter exit to exit: " << endl;
 	string in;
 	cin >> in;
 	if(in == "exit")

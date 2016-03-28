@@ -24,5 +24,7 @@ int main(int argc, char* argv[]) {
 	do     menu.print_menu();
 	while (!menu.get_selections());
 
+	cout << "Exiting the game now" << endl;
+
 	return 0;
 }

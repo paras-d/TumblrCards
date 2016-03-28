@@ -22,10 +22,9 @@ MainMenu::~MainMenu() {
 
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
-	cout << "Got to single_player()" << endl;
-	cout << "Testing game creation now." << endl;
 	Game game("single");
-	delete &game;
+	//delete &game; // TODO I want to be able to delete the game from memory here
+					// however after calling delete it exits the program entirely
 
 	do     print_menu();
 	while (!get_selections());
@@ -36,8 +35,8 @@ void MainMenu::multi_player() {
 	cout << "Got to multi_player()" << endl;
 	cout << "Testing game creation now." << endl;
 	Game game("multi");
-	delete &game;
-
+	//delete &game; // TODO I want to be able to delete the game from memory here
+					// however after calling delete it exits the program entirely
 	do     print_menu();
 	while (!get_selections());
 }
