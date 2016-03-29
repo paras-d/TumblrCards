@@ -297,8 +297,8 @@ Priest Initiate.
 
 Priest of Prophets
 4
-When Priest of Prophets enters the battlefield
-each player gains 7 life.
+When Priest of Prophets enters the
+battlefield each player gains 7 life.
 3/4
 038
 
@@ -332,84 +332,225 @@ Uninformed Citizen.
 
 Priest of the Void
 3
-When Priest of the Void enters the battlefield 
-your opponent gains 3 life.
+When Priest of the Void enters the
+battlefield your opponent gains 3 life.
 
-When Priest of the Void leaves the battlefield
-each player loses 3 life.
+When Priest of the Void leaves the
+battlefield each player loses 3 life.
 3/3
 043
 
 Sewer Rat
 2
-This creature clearly hasn't eaten in a very
-long time.
+This creature clearly hasn't eaten in a
+very long time.
 2/2
 043
 
 Bear
 3
-//Come up with clever flavor text
+This guy is Angry. Don't piss him off.
 3/3
 044
 
 City Guard
 3
-When City Guard enters the battlefield, if you
-control a Castle give it +1/+0.
+When City Guard enters the battlefield, if
+you control a Castle give it +1/+0.
 1/1
 045
 
 Ulgaria, the Fierce
 6
-Ulgaria,the Fierce is able to attack the turn it
-is summoned.
+Ulgaria,the Fierce is able to attack the
+turn it is summoned.
 
-Ulgaria, the Fierce takes double damage from any
-source.
+Ulgaria, the Fierce takes double damage
+from any source.
 8/4
 046
 
 Void Creeper
 2
-When Void Creeper enters the battlefield return
-an opponents creature to its owners hand.
+When Void Creeper enters the battlefield
+return an opponents creature to its owners
+hand.
 1/1
 047
 
 Void Stalker
 4
-When Void Stalker enters the battlefield return taget 
-creature to its owners hand.
+When Void Stalker enters the battlefield
+return taget creature to its owners hand.
 3/3
 048
 
 Void Hulk
 6
-When Void Hulk entersthe battlefield destroy target
-creature.
+When Void Hulk entersthe battlefield
+destroy target creature.
 5/5
 049
 
 Social Justice Warrior
 4
-Social Justice Warrior gets +1/+1 for each Social Justice
-Warrior on the field.
+Social Justice Warrior gets +1/+1 for each
+Social Justice Warrior on the field.
 
-Social Justice Warrior gets -1/-1 for each Uninformed Citizen
-on the field.
+Social Justice Warrior gets -1/-1 for each
+Uninformed Citizen on the field.
 1/4
 050
 
 Merchant of Greed
 5
-When Merchant of Greed enters the battlefield deal X damage to each
-creature where X is the number of creatures you control.
+When Merchant of Greed enters the
+battlefield deal X damage to each creature
+where X is the number of creatures
+you control.
 4/4
 051
 
 Arolian Goliath
-6
-When Arolian Goliath deals damage to a player you lose that much life.
+3
+When Arolian Goliath deals damage to a
+player you gain that much life.
 6/6
 052
+
+Mountain Troll
+3
+When Mountain Troll enters the battlefield each
+player discards a card and then draws a card.
+2/1
+053
+
+Goblin
+1
+This little guy smells like he hasn't
+bathed ever. He looks like it too.
+1/1
+054
+
+Goblin Marauder
+2
+Goblin Marauder gets +1/+0 for each other
+Goblin Marauder on the field.
+2/1
+055
+
+Goblin Brood Queen
+5
+When Goblin Brood Queen enters the
+battlefield summon a Goblin for each Goblin
+Marauder you control.
+1/1
+056
+
+Shaman of the Far Land
+4
+When Shaman of the Far Land dies summon a
+Goblin Marauder for each damage Shaman of
+the Far Land took.
+3/1
+057
+
+Shaman of the Near Land
+6
+When Shaman of the Near Land dies summon a
+Goblin Marauder for each Goblin Marauder
+you control.
+3/2
+058
+
+Hunter of the Tribe
+3
+Give each Goblin you control +0/+1.
+Give each Goblin Marauder you control +0/+2.
+2/2
+059
+
+Shaman of the Cold Land
+7
+When Shaman of the Cold Land enters the
+battlefield creaturs your opponent control
+cannont attack until the start of your next
+turn.
+6/2
+060
+
+Goblin Warlord
+8
+Give each Goblin +1/+0 for each Goblin you
+control.
+Give each Goblin and Goblin Marauder +1/+1
+for each Goblin Marauder you control. 
+8/4
+061
+
+Raging Barbarian
+5
+Raging Barbarian is able to attack the turn
+it is summoned.
+You Goblin's and Goblin Marauder's may
+attack the turn they are summoned.
+3/1
+062
+
+Wolf Pack
+1
+Wold Pack's Attack and Hit Points are equal
+to the number of Wolf Pack you control.
+Whenever a Goblin or Goblin Marauder you
+control dies, summon a Wolf Pack.
+X/X
+063
+
+Goblin Wolf Rider
+5
+When Goblin Wolf Rider enters the
+battlefield give each Wolf Pack you control
++1/+1.
+Whenever Goblin wolf Rider deals damage to a
+player summon a Goblin Wolf Rider.
+3/1
+064
+
+Goblin Broodling
+1
+Give each Goblin and Goblin Broodling you
+control +2/+2 for each Goblin Brood Queen
+you control.
+0/1
+065
+
+Goblin Mortician
+3
+When Goblin Mortician dies summon a random.
+creature that has died this turn.
+0/3
+066
+
+Leader of Goblin Burial
+6
+When Leader of Goblin Burial dies summon a
+random creature that has died this game.
+3/6
+067
+
+Tribal Leader
+10
+Double the effect of each Goblin Warlord,
+Goblin Marauder, Goblin Broodling, and Goblin
+Wolf Rider on the Battlefield.
+Tribal Leaders HP is equal to the number of
+Goblin's you control.
+2/X
+068
+
+Goblin Diety
+20
+When Goblin Diety dies summon a Tribal Leader
+for each player.
+10/10 
+069
