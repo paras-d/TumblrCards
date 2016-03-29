@@ -492,8 +492,8 @@ Raging Barbarian
 5
 Raging Barbarian is able to attack the turn
 it is summoned.
-You Goblin's and Goblin Marauder's may
-attack the turn they are summoned.
+Your Barbarians, Goblin's, and Goblin Marauder's
+may attack the turn they are summoned.
 3/1
 062
 
@@ -554,3 +554,56 @@ When Goblin Diety dies summon a Tribal Leader
 for each player.
 10/10 
 069
+
+Barbarian Rageblade
+5
+When Goblin Rageblade enters the battlefield
+deal 3 damage to a random creature.
+3/3
+070
+
+Axe-Throwing Barbarian
+4
+When Axe-Throwing Barbarian enters the
+battlefield deal 1 damage to each creature
+your opponent controls.
+4/2
+071
+
+Barbarian
+2
+It has lived in the mountains for too long. Any
+humanity has been ripped out of it. Only a
+beast of war remains.
+2/2
+072
+
+Hunting Grounds
+5
+At the start of your turn summon a Barbarian.
+At the end of your turn summon a Barbarian.
+0/7
+073
+
+Barbarian Weaponsmith
+3
+If you control a Hunting Grounds give each
+Barbarian you control +3/+0.
+2/2
+074
+
+Barbarian Warlord
+5
+Whenever a Barbarian enters the battlefield
+gain +1/+0.
+4/4
+075
+
+Master of the Hunt
+6
+When Master of the Hunter enters the
+battlefield destroy all creatures with Goblin
+in its name. Gain +1/-1 for each creature
+destroyed this way.
+0/6
+076
