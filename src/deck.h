@@ -2,7 +2,7 @@
  * deck.h
  *
  *  Created on: Mar 13, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #ifndef SRC_DECK_H_
@@ -22,7 +22,7 @@ public:
 	Deck();
 	virtual ~Deck();
 	Card * draw_card();
-	Card * draw_cards(int num);
+	Deck draw_cards(int num);
 	void shuffle();
 	void add_card(Card* card);
 	void add_card(Card* card, unsigned int index);

@@ -1,25 +1,29 @@
 This is a list of cards to be considered, tested, and implemeneted into the game.
 Thus far everything is untested and subject to change. All cards will be in the same
-form as the Card class to_string() function. If you have an idea for a card add it to
-the list! It will be tested, and possibly changed, before being implemeneted.
+form as the Card class to_string() function, with the addition of the card number.
+If you have an idea for a card add it to the list! It will be tested, and possibly
+changed, before being implemeneted.
 
 Ooze
 1
 There is a foul stench coming from
 this green glob on the ground.
 1/1
+001
 
 Giant Slime
 XX
 When Giant Slime dies summon
 X 1/1 Ooze
 1/X
+002
 
 Uninformed Citizen
 1
 Somehow they managed to find their
 way to the center of a fight. Whoops!
 1/1
+003
 
 City Bell
 3
@@ -30,42 +34,49 @@ At the end your turn if you have 3 or
 more Uninformed Citizens destroy them
 and draw a card.
 0/3
+004
 
 Treasure Hoarder
 2
 When Treasure Hoarder dies each player
 draws a card.
 2/2
+004
 
 Metallic Dragon
 6
 When Metallic Dragon enters the battlefield
 your opponent draws a card. You draw 2 cards.
 6/6
+005
 
 Chromatic Dragon
 6
 When Chromatic Dragon leaves the battlefield
 discard a card. Your opponent discards 2 cards.
 6/6
+006
 
 Altar Boy
 1
 When Altar Boy enters the battlefield each
 player gains 1 life.
 1/1
+007
 
 Priest Initiate
 5
 When Priest Initiate enters the battlefield
 each player gains 3 life.
 3/3
+008
 
 Divine Savior
 9
 When Divine Savior enters the battlefield
 each player gains 7 life.
 7/7
+009
 
 Angle of the Void
 5
@@ -75,33 +86,35 @@ your opponent gains 5 life.
 When Angle of the Void leaves the battlefield
 each played loses 5 life.
 5/5
+010
 
 Castle
 10
-This fortress towers over the surrounding
-fields.
-
 Castles defense is equal to your opponents
 life total.
 0/X
+011
 
 Malitia Captain
 4
 At the start of combat give each Uninformed
 Citizen +1/+1 until end of the turn.
 2/2
+012
 
 Imp
 2
 When Imp enters the battlefield each player
 loses one life.
 1/1
+013
 
 Succubi
 4
 When Succubi enters the battlefield you gain
 2 life and your opponenet loses 2 life.
 2/2
+014
 
 Belial
 6
@@ -109,12 +122,14 @@ At the end of turn, if you have one life you
 and your opponent split your life totals
 equally amongst eachother.
 6/6
+015
 
 Astaroth
 6
 At the end of turn target creature becomes a
 1/1 Uninformed Citizen
 6/6
+016
 
 Abaddon
 6
@@ -123,24 +138,28 @@ summoned.
 
 At the end of turn Abaddon gets -1/-1.
 6/6
+017
 
 Mammon
 6
 At the end of turn gain a random creature
 switches sides.
 6/6
+018
 
 Satan
 6
 At the end of turn Satan becomes a copy of
 target creature and gains this ability.
 6/6
+019
 
 Merihem
 6
 At the end of turn all creatures except for
 Marihem get -1/-1.
 6/6
+020
 
 Asmodeus
 6
@@ -148,12 +167,14 @@ At the start of turn summon a Succubi.
 
 At the end of turn summon an Imp.
 6/6
+021
 
 Pythius
 6
 At the end of turn target creature swaps its
 attack and health.
 6/6
+022
 
 Beelzebub
 6
@@ -161,54 +182,63 @@ At the end of turn Beelzebub becomes a
 Prophet and gains the ability "At the start of
 turn Prophet becomes a 6/6 Beelzebub."
 6/6
+023
 
 Prophet
 7
 When prophet enters the battlefield gain
 7 life.
 7/7
+024
 
 Angel of Prophets
 7
 At the start of turn gain 4 life.
 At the end of turn gain 3 life.
 7/7
+025
 
 Angel of Mercy
 7
 At the start of turn destroy all creatures
 except one, other than Angel of Mercy.
 7/7
+026
 
 Angel of Heed
 7
 When Angel of Heed enters the battlefield
 summon a City Bell.
 7/7
+027
 
 Angel of Reaping
 7
 At the start of turn your opponent discards
 a card.
 7/7
+028
 
 Angel of Justice
 7
 At the start of your turn target creature
 becomes a 1/1 Uninformed Citizen.
 7/7
+029
 
 Priest of Belial
 3
 At the end of the turn Priest of Belial
 deals one dmamge to you.
 3/3
+030
 
 Priest of Astaroth
 3
 At the end of turn destroy an Uninformed
 Citizen.
 3/3
+031
 
 Priest of Abaddon
 3
@@ -218,137 +248,659 @@ turn it is summoned.
 At the end of turn destroy Priest of
 Abaddon.
 3/3
+031
 
 Priest of Mammon
 3
 At the end of turn Priest of Mammon
 switches sides.
 3/3
+032
 
 Priest of Satan
 3
 When Priest of Satan dies summon a
 copy of target creature.
 3/3
+033
 
 Priest of Marihem
 3
 When Priest of Marihem dies all
 creatures get -1/-1.
 3/3
+034
 
 Priest of Asmodeus
 3
 When Priest of Asmodeus dies target
 creature becomes an Imp.
 3/3
+035
 
 Priest of Pythius
 3
 When Priest of Pythius dies all creatures
 in play swap their attack and health.
 3/3
+036
 
 Priest of Beelzebub
 3
 When Priest of Beelzebub dies summon a
 Priest Initiate.
 3/3
+037
 
 Priest of Prophets
 4
-When Priest of Prophets enters the battlefield
-each player gains 7 life.
+When Priest of Prophets enters the
+battlefield each player gains 7 life.
 3/4
+038
 
 Priest of Mercy
 4
 When Priest of Mercy enters the battlefield
 destroy target creature.
 3/4
+039
 
 Priest of Heed
 4
 When Priest of Heed enters the battlefield
 trigger all City Bell's.
 3/4
+040
 
 Priest of Reaping
 4
 When Priest of Reaping enters the battlefield
 your opponent discards a card.
 3/4
+041
 
 Priest of Justice
 4
 At the start of turn each player gets an
 Uninformed Citizen.
 3/4
+042
 
 Priest of the Void
 3
-When Priest of the Void enters the battlefield 
-your opponent gains 3 life.
+When Priest of the Void enters the
+battlefield your opponent gains 3 life.
 
-When Priest of the Void leaves the battlefield
-each player loses 3 life.
+When Priest of the Void leaves the
+battlefield each player loses 3 life.
 3/3
+043
 
 Sewer Rat
 2
-This creature clearly hasn't eaten in a very
-long time.
+This creature clearly hasn't eaten in a
+very long time.
 2/2
+043
 
 Bear
 3
-//Come up with clever flavor text
+This guy is Angry. Don't piss him off.
 3/3
+044
 
 City Guard
 3
-When City Guard enters the battlefield, if you
-control a Castle give it +1/+0.
+When City Guard enters the battlefield, if
+you control a Castle give it +1/+0.
 1/1
+045
 
 Ulgaria, the Fierce
 6
-Ulgaria,the Fierce is able to attack the turn it
-is summoned.
+Ulgaria,the Fierce is able to attack the
+turn it is summoned.
 
-Ulgaria, the Fierce takes double damage from any
-source.
+Ulgaria, the Fierce takes double damage
+from any source.
 8/4
+046
 
 Void Creeper
 2
-When Void Creeper enters the battlefield return
-an opponents creature to its owners hand.
+When Void Creeper enters the battlefield
+return an opponents creature to its owners
+hand.
 1/1
+047
 
 Void Stalker
 4
-When Void Stalker enters the battlefield return taget 
-creature to its owners hand.
+When Void Stalker enters the battlefield
+return taget creature to its owners hand.
 3/3
+048
 
 Void Hulk
 6
-When Void Hulk entersthe battlefield destroy target
-creature.
+When Void Hulk entersthe battlefield
+destroy target creature.
 5/5
+049
 
 Social Justice Warrior
 4
-Social Justice Warrior gets +1/+1 for each Social Justice
-Warrior on the field.
+Social Justice Warrior gets +1/+1 for each
+Social Justice Warrior on the field.
 
-Social Justice Warrior gets -1/-1 for each Uninformed Citizen
-on the field.
-1/1
+Social Justice Warrior gets -1/-1 for each
+Uninformed Citizen on the field.
+1/4
+050
 
 Merchant of Greed
 5
-When Merchant of Greed enters the battlefield deal 1 damage to each
-creature.
+When Merchant of Greed enters the
+battlefield deal X damage to each creature
+where X is the number of creatures
+you control.
 4/4
+051
+
+Arolian Goliath
+3
+When Arolian Goliath deals damage to a
+player you gain that much life.
+6/6
+052
+
+Mountain Troll
+3
+When Mountain Troll enters the battlefield each
+player discards a card and then draws a card.
+2/1
+053
+
+Goblin
+1
+This little guy smells like he hasn't
+bathed ever. He looks like it too.
+1/1
+054
+
+Goblin Marauder
+2
+Goblin Marauder gets +1/+0 for each other
+Goblin Marauder on the field.
+2/1
+055
+
+Goblin Brood Queen
+5
+When Goblin Brood Queen enters the
+battlefield summon a Goblin for each Goblin
+Marauder you control.
+1/1
+056
+
+Shaman of the Far Land
+4
+When Shaman of the Far Land dies summon a
+Goblin Marauder for each damage Shaman of
+the Far Land took.
+3/1
+057
+
+Shaman of the Near Land
+6
+When Shaman of the Near Land dies summon a
+Goblin Marauder for each Goblin Marauder
+you control.
+3/2
+058
+
+Hunter of the Tribe
+3
+Give each Goblin you control +0/+1.
+Give each Goblin Marauder you control +0/+2.
+2/2
+059
+
+Shaman of the Cold Land
+7
+When Shaman of the Cold Land enters the
+battlefield creaturs your opponent control
+cannont attack until the start of your next
+turn.
+6/2
+060
+
+Goblin Warlord
+8
+Give each Goblin +1/+0 for each Goblin you
+control.
+Give each Goblin and Goblin Marauder +1/+1
+for each Goblin Marauder you control. 
+8/4
+061
+
+Raging Barbarian
+5
+Raging Barbarian is able to attack the turn
+it is summoned.
+Your Barbarians, Goblin's, and Goblin Marauder's
+may attack the turn they are summoned.
+3/1
+062
+
+Wolf Pack
+1
+Wold Pack's Attack and Hit Points are equal
+to the number of Wolf Pack you control.
+Whenever a Goblin or Goblin Marauder you
+control dies, summon a Wolf Pack.
+X/X
+063
+
+Goblin Wolf Rider
+5
+When Goblin Wolf Rider enters the
+battlefield give each Wolf Pack you control
++1/+1.
+Whenever Goblin wolf Rider deals damage to a
+player summon a Goblin Wolf Rider.
+3/1
+064
+
+Goblin Broodling
+1
+Give each Goblin and Goblin Broodling you
+control +2/+2 for each Goblin Brood Queen
+you control.
+0/1
+065
+
+Goblin Mortician
+3
+When Goblin Mortician dies summon a random.
+creature that has died this turn.
+0/3
+066
+
+Leader of Goblin Burial
+6
+When Leader of Goblin Burial dies summon a
+random creature that has died this game.
+3/6
+067
+
+Tribal Leader
+10
+Double the effect of each Goblin Warlord,
+Goblin Marauder, Goblin Broodling, and Goblin
+Wolf Rider on the Battlefield.
+Tribal Leaders HP is equal to the number of
+Goblin's you control.
+2/X
+068
+
+Goblin Diety
+20
+When Goblin Diety dies summon a Tribal Leader
+for each player.
+10/10 
+069
+
+Barbarian Rageblade
+5
+When Goblin Rageblade enters the battlefield
+deal 3 damage to a random creature.
+3/3
+070
+
+Axe-Throwing Barbarian
+4
+When Axe-Throwing Barbarian enters the
+battlefield deal 1 damage to each creature
+your opponent controls.
+4/2
+071
+
+Barbarian
+2
+It has lived in the mountains for too long. Any
+humanity has been ripped out of it. Only a
+beast of war remains.
+2/2
+072
+
+Hunting Grounds
+5
+At the start of your turn summon a Barbarian.
+At the end of your turn summon a Barbarian.
+0/7
+073
+
+Barbarian Weaponsmith
+3
+If you control a Hunting Grounds give each
+Barbarian you control +3/+0.
+2/2
+074
+
+Barbarian Warlord
+5
+Whenever a Barbarian enters the battlefield
+gain +1/+0.
+4/4
+075
+
+Master of the Hunt
+6
+When Master of the Hunter enters the
+battlefield destroy all creatures with Goblin
+in its name. Gain +1/-1 for each creature
+destroyed this way.
+0/6
+076
+
+Elf Native
+1
+When Elf Native enters the battlefield gain
+one extra mana this turn.
+1/1
+077
+
+Elf Priestess
+2
+Elf Priestess costs one less for each Elf
+Native you control.
+1/1
+078
+
+Elf Beastwalker
+4
+When Elf Beastwalker enters the battlefield
+gain control of a Wolf Pack your opponent
+controls.
+3/3
+079
+
+Elf Spellslinger
+3
+When Elf Spellslinger attacks, deal 1
+damage to target creature.
+3/3
+080
+
+High Priestess of Gelfind
+10
+When High Priestess of Gelfind enters the
+battlefield each player gains 10 life.
+High Priestess of Gelfind costs 1 less for
+each Elf Native you control.
+3/3
+081
+
+Huntress of Gelfind
+5
+Huntress of Gelfind does double damage to
+Barbarians.
+Whenever Huntress of Gelfind kills a Goblin
+summon an Elf Native.
+2/2
+082
+
+Diplomat of Gelfind
+3
+Diplomat of Gelfind gets +1/+0 for each
+Uninformed Citizen you control.
+Diplomat of Gelfind gets +0/+1 for each
+Elf Native you control.
+1/1
+083
+
+Masterwork Elf
+4
+When Masterwork Elf enters the battlefield
+if you control an Uninformed Citizen
+summon a City Bell.
+4/4
+084
+
+Rebel Elf
+6
+When Rebel Elf dies destroy target City Bell.
+When Rebel Elf deals damage you may destroy
+target Uninformed Citizen.
+2/2
+085
+
+Treant
+3
+When Treant enters the battlefield if you
+control at least 2 Elf Native summon another
+Treant.
+2/2
+086
+
+Forrestwalker
+4
+Each Treant you conntrol gets +1/+1 for each
+Elf Native you control.
+4/4
+087
+
+Elf Historian
+2
+When Elf Historian dies summon 2 Elf Native.
+1/1
+088
+
+Graveyard Worm
+2
+Graveyard Worm's attack and HP are equal to
+the number of creatures in your discard pile.
+X/X
+089
+
+Mercenary Gang
+5
+When Mercenary Gang enters the battlefield
+give two target creatures +1/+1.
+4/4
+090
+
+Sewer Slime
+5
+When Sewer Slime deals damage to a creature,
+destroy that creature.
+When Sewer Slime enters the battlefield
+destroy target creature an opponent controls.
+2/2
+091
+
+Vampire Stalker
+3
+When Vampire Stalker enters the battlefield
+destroy X creatures you control.
+Vampire Stalker gets +X/+X.
+1/1
+092
+
+Experimental Wizard
+2
+When an opponent summons a creature, destroy
+that creature and Experimental Wizard.
+0/2
+093
+
+Elder Crusader
+3
+When Elder Crusader dies give target creature
++1/+1, if it is an uninformed Citizen give it
++2/+2.
+2/2
+094
+
+Dark Ritualist
+4
+When a creature you control deals damage, both
+players gain that much life.
+2/2
+095
+
+Blood Binder
+4
+Whenever your opponent gains life you lose that
+much life. 
+6/6
+096
+
+Alabaster Fairy
+3
+When a creature you control dies your opponent
+takes 3 damage.
+
+Alabaster Fairy cannot attack unless you have at
+least 5 other creatures.
+5/4
+097
+
+Fairy Queen
+3
+When a creature you control would die, instead
+return it to your hand.
+
+Fairy Queen cannot attack unless you have at
+least 5 other creatures.
+6/7
+098
+
+Navi, Fairy of Time
+3
+When Navi, Fairy of Time would die, instead prevent
+that damage and give Navi, Fairy of Time -1/-1.
+
+Navi, Fairy of Time cannot attack unless you have
+at least 5 other creatures.
+5/5
+099
+
+Fairy Tribunal
+3
+When Fairy Tribunal attacks destroy target creature
+an opponent controls.
+
+Fairy Tribunal cannot attack unless you have at least
+5 other creatures.
+7/1
+100
+
+Porcelain Fairy
+3
+Porcelain Fairy gets +0/+1 for each other creature you
+control.
+
+Porcelain Fairy cannot attack unless you have at least
+5 other creatures.
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+131
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
