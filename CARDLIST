@@ -805,10 +805,23 @@ control.
 
 Porcelain Fairy cannot attack unless you have at least
 5 other creatures.
+3/0
 101
 
+Fairy Godmother
+3
+When Fairy Godmother enters the battlefield put the bottom
+card of your deck in to your hand.
+
+Fairy Godmother cannot attack unless you have at least
+5 other creatures.
+5/5
 102
 
+Sewer Troll
+5
+When Sewer Troll dies your opponent discards a card.
+4/3
 103
 
 104
