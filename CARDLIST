@@ -36,13 +36,6 @@ and draw a card.
 0/3
 004
 
-Treasure Hoarder
-2
-When Treasure Hoarder dies each player
-draws a card.
-2/2
-004
-
 Metallic Dragon
 6
 When Metallic Dragon enters the battlefield
@@ -1247,3 +1240,10 @@ At the beginning of each turn, that player
 loses one life and summons a Malitia Captain.
 4/4
 150
+
+Treasure Hoarder
+2
+When Treasure Hoarder dies each player
+draws a card.
+2/2
+151
