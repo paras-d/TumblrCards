@@ -982,7 +982,7 @@ Siren Caller
 2
 When Siren Caller enters the battlefield your
 oppoenent puts the top 7 of their library
-into their discard pile
+into their discard pile.
 2/2
 122
 
@@ -991,7 +991,7 @@ Siren Mystic
 When Siren Mystic deals damage to a player,
 that player puts the top 10 cards of his or
 her libraray into his or her discard pile. 
-4/4
+2/4
 123
 
 Trapped Seafarer
@@ -1038,7 +1038,7 @@ Countess of Mer dealt.
 127
 
 Ghost of the Drowned
-3
+5
 When Ghost of the Drowned enters the
 battlefield, if you control a Trapped Seafarer
 destroy it and summon a Zombie.
@@ -1060,44 +1060,190 @@ pile.
 1/2
 129
 
+Goblin Pirates
+7
+Goblin Pirates gets +1/+1 for each Goblin you
+control.
+
+When Goblin Pirates die's summon X Zombies,
+where X is the number of Goblins you control.
+1/1
 130
 
+The Flying Dutchman
+The Flying Dutchman's HP is equal to your
+opponenets life total.
+
+Whenever a creature you control deals damage,
+your opponent puts the top card of his or her
+deck in to his or her discard pile.
+0/X
 131
 
+Royal Caravel
+2
+Royal Caravel takes one less damage from
+Zombie's.
+2/1
 132
 
+Royal Brig
+3
+When Royal Brig enters the battlefield destroy
+up to 2 Zombies an opponent controls.
+3/3
 133
 
+Royal Frigate
+10
+When Royal Frigate dies summon 2 Trapped
+Seafarer for each player.
+5/5
 134
 
+The Queen Mary
+10
+The Queen Mary deals double damage.
+
+The Queen Mary takes double damage.
+
+When the Queen Mary dies Summon The Royal
+Navy.
+5/5
 135
 
+The Royal Navy
+5
+When the Royal Navy is played from a players
+hand summon a Royal Frigate for each player.
+
+Whenever The Royal Navy takes damage summon a
+Royal Caravel.
+a
+5/5
 136
 
+Fairy Chasm
+10
+Fairy Chasm's HP is equal to your opponents
+life total.
+
+Fairy Chasm counts as 2 creatues of any name
+for any card that requires a count of creatues.
+0/X
 137
 
+The Lost Sea
+10
+The Lost Sea's HP is equal to your opponents
+life total.
+
+At the end of each players turn, that player
+must sacrifice a creature.
+0/X
 138
 
+Tribal Reservation
+10
+Tribal Resting Grounds's HP is equal to your
+opponents life total.
+
+At the beginning of each turn summon a Goblin.
+0/X
 139
 
+The World Tree
+10
+The World Tree's HP is equal to your opponents
+life total.
+
+When The World Tree enters the battlefield
+set each players life to 15.
+
+Your cards cost 2 less to play.
+0/X
 140
 
+Political Embassy
+10
+Political Embassy's HP is equal to your
+opponents life total.
+
+When Political Embassy enters the battlefield
+replace all Uninformed Citizen's on the field
+with Social Justice Warrior's.
+
+When Political Embassy dies replace all cards
+in your hand and deck with Social Justice
+Warrior's.
+0/X
 141
 
+Sacred Battleground
+10
+Sacred Battleground's HP is equal to your
+opponents life total.
+
+Whenever a Barbarian enters the battlefield
+summon another Barbarian for it's controler.
+0/X
 142
 
+City of Naara
+10
+City of Naara's HP is equal to your opponents
+life total.
+
+All creatues get +2/+2 but take twice as much
+damage from any source.
+0/X
 143
 
+Changeling
+4
+When Changeling enters the battlefield it
+becomes a copy of a random target creature.
+0/0
 144
 
+Horrid Benefactor
+5
+Whenever Horrid Benefactor survives damage,
+summon a Horrid Benefactor.
+3/3
 145
 
+Herald of Sorrows
+3
+When Herald of Sorrows attacks deal one
+damage to each creature you control.
+3/1
 146
 
+Elarian Vapire
+2
+When Elaria Vampire deals damage each player
+gains that much life.
+2/1
 147
 
+Gelfind Wall
+2
+Gelfind Wall Costs 1 more for each creature an
+opponenet controls.
+0/7
 148
 
+The Tinkler
+7
+At the beginning of each players turn, that
+player gains 3 life.
+0/3
 149
 
+The Kings Collector
+6
+At the beginning of each turn, that player
+loses one life and summons a Malitia Captain.
+4/4
 150
