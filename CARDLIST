@@ -92,6 +92,8 @@ Castle
 10
 Castles defense is equal to your opponents
 life total.
+
+Give each Uninformed Citizen you control +1/+1.
 0/X
 011
 
@@ -763,8 +765,8 @@ Alabaster Fairy
 When a creature you control dies your opponent
 takes 3 damage.
 
-Alabaster Fairy cannot attack unless you have at
-least 5 other creatures.
+Alabaster Fairy cannot attack unless you have
+at least 5 other creatures.
 5/4
 097
 
@@ -780,100 +782,282 @@ least 5 other creatures.
 
 Navi, Fairy of Time
 3
-When Navi, Fairy of Time would die, instead prevent
-that damage and give Navi, Fairy of Time -1/-1.
+When Navi, Fairy of Time would die, instead
+prevent that damage and give Navi, Fairy of
+Time -1/-1.
 
-Navi, Fairy of Time cannot attack unless you have
-at least 5 other creatures.
+Navi, Fairy of Time cannot attack unless you
+have at least 5 other creatures.
 5/5
 099
 
 Fairy Tribunal
 3
-When Fairy Tribunal attacks destroy target creature
-an opponent controls.
+When Fairy Tribunal attacks destroy target
+creature an opponent controls.
 
-Fairy Tribunal cannot attack unless you have at least
-5 other creatures.
+Fairy Tribunal cannot attack unless you have
+at least 5 other creatures.
 7/1
 100
 
 Porcelain Fairy
 3
-Porcelain Fairy gets +0/+1 for each other creature you
-control.
+Porcelain Fairy gets +0/+1 for each other
+creature you control.
 
-Porcelain Fairy cannot attack unless you have at least
-5 other creatures.
+Porcelain Fairy cannot attack unless you have
+at least 5 other creatures.
 3/0
 101
 
 Fairy Godmother
 3
-When Fairy Godmother enters the battlefield put the bottom
-card of your deck in to your hand.
+When Fairy Godmother enters the battlefield put
+the bottom card of your deck in to your hand.
 
-Fairy Godmother cannot attack unless you have at least
-5 other creatures.
+Fairy Godmother cannot attack unless you have
+at least 5 other creatures.
 5/5
 102
 
 Sewer Troll
 5
-When Sewer Troll dies your opponent discards a card.
+When Sewer Troll dies your opponent discards a
+card.
 4/3
 103
 
+Local Malitia
+5
+Local Malitia gets +1/+1 for each Uninformed
+Citizen you control.
+2/2
 104
 
+Mountains of Asaid
+10
+Mountains of Asaid's toughness is equal to
+your opponents health.
+
+Whenever a Goblin you control dies Mountains
+of Asaid gains +1/+0.
+0/X
 105
 
+Sewers of Desparia
+10
+Sewers of Desparia's toughness is equal to
+your opponents health.
+
+Whenever a creature dies deal one damage to
+your opponent and you gain one life.
+0/X
 106
 
+Child of the First
+25
+When Child of the First enters the battlefield
+each players life becomes 25. Shuffle all
+cards back in to their owners deck. Each
+player draws 7 cards. Your turn ends.
+
+You may only have one Child of the First in
+your deck.
+0/1
 107
 
+Zombie
+1
+His flesh rots. Yet, there is still life.
+1/1
 108
 
+Necrotic Ghoul
+1
+Destroy Necrotic Ghoul if your opponent has
+at least 2 creatures on their side of the
+field.
+2/1
 109
 
+Necro Initiate
+3
+When Necro Initiate dies summon a Zombie.
+2/2
 110
 
+Necromancer
+5
+When Necromaner enters the battlefield
+destroy a creature you control and summon
+2 Zombie's.
+3/3
 111
 
+Fearmancer
+7
+When Fearmancer dies summon 7 Zombie's.
+7/7
 112
 
+Burial Ground
+10
+Burial Ground's HP is equal to your opponents
+life total.
+
+Whenever a creature other than a Zombie dies,
+summon a Zombie for that creatures controler.
+0/X
 113
 
+Plaugebearer
+2
+Plaugebearer deals damage to a creatures
+attack instead of its health.
+1/2
 114
 
+Corrupt Mortician
+15
+When Corrupt Mortician dies summon X Zombies
+where X is the number of Zombies that have
+died this game.
+5/5
 115
 
+Flesh Golem
+3
+When Flesh Golem enters the battlefield
+destroy 6 Zbomies you control.
+
+If you do not control 6 Zombies, instead
+destroy Flesh Golem.
+6/6
 116
 
+Necrophile
+5
+Necrophile gets +1/+1 for each Zombie you
+control.
+1/1
 117
 
+Desicration Fiend
+4
+When Desicration Fiend enters the battlefield
+destroy all non-Zombie creatures.
+1/1
 118
 
+Garden of Elar
+10
+Garden of Elar's HP is equal to your opponents
+life total.
+
+Counter your opponents spell unelss they pay
+2 extra mana.
+0/X
 119
 
+Throne of Warlords
+10
+Throne of Warlords HP is equal to your
+opponents life total.
+
+Barbarian's you control can attack the turn
+they are summoned.
+0/X
 120
 
+Hero of Time
+20
+Your opponent has 3 turns to destroy Hero of
+Time. If they don't, destroy all other
+creatures and your opponenets life becomes 3.
+1/10
 121
 
+Siren Caller
+2
+When Siren Caller enters the battlefield your
+oppoenent puts the top 7 of their library
+into their discard pile
+2/2
 122
 
+Siren Mystic
+5
+When Siren Mystic deals damage to a player,
+that player puts the top 10 cards of his or
+her libraray into his or her discard pile. 
+4/4
 123
 
+Trapped Seafarer
+3
+When Trapped Seafarer dies each player puts
+the top 8 cards of his or her library in to
+his or her discard pile.
+3/2
 124
 
+Triton, Lord of the Sea
+12
+Triton, Lord of the Sea cannot deal damage to
+creatures.
+
+When Triton, Lord of the Sea deals damage,
+your opponent puts the top X cards of his or
+her library in to his or her discard pile,
+where X is the damage Triton, Lord of the Sea
+dealt.
+6/7
 125
 
+Kingdom of the Beautiful
+Kingdom of the Beautiful's HP is equal to your
+opponenets life total.
+
+If your opponent has no cards left in his or
+her deck, they lose the game.
+0/X
 126
 
+Countess of Mer
+6
+Countess of Mer can attack your opponent
+directly.
+
+When Countess of Mer would deal damage,
+prevent that damage and your opponent puts
+the top X cards of his or her library in to
+his or her discard pile, where X is the damage
+Countess of Mer dealt.
+4/2
 127
 
+Ghost of the Drowned
+3
+When Ghost of the Drowned enters the
+battlefield, if you control a Trapped Seafarer
+destroy it and summon a Zombie.
+
+When Ghost of the Drowned dies your opponents
+puts the top X cards of his or her libarary
+into his or her discard pile, where X is the
+number of Zombie's you control.
+2/2
 128
 
+Damned Crew
+10
+When Damned Crew dies summon 2 Zombies.
+
+Damned Crew cannot die from damage if your
+opponent has 40 or more cards in their discard
+pile.
+1/2
 129
 
 130
