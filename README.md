@@ -21,7 +21,9 @@ a 60 card deck to be used for this game.
 
 #### IDEAS
 
-As larger ideas are discussed in Slack they will be added here for reference,
+As larger ideas are discussed in Slack they will be added here for reference.
+
+As of right now there is no maximum hand size. This is subject to change during testing.
 
 #### TODO's
 
@@ -47,7 +49,7 @@ At the start of each game, all players begin with a hand of 7 cards off of the t
 4. Combat Phase
 5. End of turn
 
-Each players turn follows this same format. Each phase willl be explained in detail below.
+Each players turn follows this same format. Each phase willl be explained in detail below. If any card disagrees with the rules below, the rules on the card are to be followed.
 
 #### Start of Turn
 
@@ -56,6 +58,8 @@ Not much will happen during the beginning of each turn. The game will check for 
 #### Draw Phase
 
 During the draw phase the player currently taking their turn is given the top card of their deck and it is put in their hand. Again the game checks for any triggers that would go off when a player draws a card. After all triggers are complete the player is given the card and we move to the casting phase.
+
+If a player would draw a card and has no cards left in their deck to draw, that player shuffles his or her discard pile and puts in face down as their deck. The player does not get to draw the card they would have drawn.
 
 #### Casting Phase
 
@@ -69,4 +73,8 @@ When two creatures are fighting they deal their respective attack damage again t
 
 #### End of Turn 
 
-Not much will happen during the end of each turn. The game will check for any end of turn triggers on creatures in play, taking priority of the current players triggers first. After all triggers have finished the game will move to the next players start of turn phase.
+Not much else will happen during the end of each turn. The game will check for any end of turn triggers on creatures in play, taking priority of the current players triggers first. After all triggers have finished the game will move to the next players start of turn phase.
+
+#### Winning the Game
+
+The game is won when your opponents life total reaches 0. The game will become increasingly difficult as your opponents life approaches 0. If a card specifies another way to win (or lose!) follow that cards text.
