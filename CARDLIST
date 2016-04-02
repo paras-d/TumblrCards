@@ -71,12 +71,12 @@ each player gains 7 life.
 7/7
 009
 
-Angle of the Void
+Angel of the Void
 5
-When Angle of the Void enters the battlefield
+When Angel of the Void enters the battlefield
 your opponent gains 5 life.
 
-When Angle of the Void leaves the battlefield
+When Angel of the Void leaves the battlefield
 each played loses 5 life.
 5/5
 010
@@ -113,8 +113,8 @@ When Succubi enters the battlefield you gain
 
 Belial
 6
-At the end of turn, if you have 1 life you
-and your opponent split your life totals
+At the end of turn, if you have exactly 1 life
+you and your opponent split your life totals
 equally amongst eachother.
 6/6
 015
@@ -131,7 +131,7 @@ Abaddon
 Abaddon is able to attack the turn it is
 summoned.
 
-At the end of turn Abaddon gets -1/-1.
+At the end of turn Abaddon gets -3/-3.
 6/6
 017
 
@@ -226,7 +226,7 @@ becomes a 1/1 Uninformed Citizen.
 Priest of Belial
 3
 At the end of the turn Priest of Belial
-deals 1 dmamge to you.
+deals 1 damage to it's controler.
 3/3
 030
 
@@ -441,7 +441,7 @@ Marauder you control.
 1/1
 056
 
-Shaman of the Far Land
+Shaman of the Far
 4
 When Shaman of the Far Land dies summon a
 Goblin Marauder for each damage Shaman of
@@ -449,7 +449,7 @@ the Far Land took.
 3/1
 057
 
-Shaman of the Near Land
+Shaman of the Near
 6
 When Shaman of the Near Land dies summon a
 Goblin Marauder for each Goblin Marauder
@@ -465,7 +465,7 @@ Give each Goblin Marauder you control +0/+2.
 2/2
 059
 
-Shaman of the Cold Land
+Shaman of the Cold
 7
 When Shaman of the Cold Land enters the
 battlefield creaturs your opponent control
@@ -957,8 +957,7 @@ Garden of Elar
 Garden of Elar's HP is equal to your opponents
 life total.
 
-Counter your opponents spell unelss they pay
-2 extra mana.
+Your opponents spells cost 2 more to cast.
 0/X
 119
 
@@ -1018,6 +1017,7 @@ dealt.
 125
 
 Kingdom of the Beautiful
+10
 Kingdom of the Beautiful's HP is equal to your
 opponenets life total.
 
