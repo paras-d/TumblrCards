@@ -83,8 +83,8 @@ each played loses 5 life.
 
 Castle
 10
-Castles defense is equal to your opponents
-life total.
+Castle's HP is equal to your opponents life
+total.
 
 Give each Uninformed Citizen you control +1/+1.
 0/X
@@ -100,7 +100,7 @@ Citizen +1/+1 until end of the turn.
 Imp
 2
 When Imp enters the battlefield each player
-loses one life.
+loses 1 life.
 1/1
 013
 
@@ -113,7 +113,7 @@ When Succubi enters the battlefield you gain
 
 Belial
 6
-At the end of turn, if you have one life you
+At the end of turn, if you have 1 life you
 and your opponent split your life totals
 equally amongst eachother.
 6/6
@@ -174,22 +174,23 @@ attack and health.
 
 Beelzebub
 6
-At the end of turn Beelzebub becomes a
-Prophet and gains the ability "At the start of
+At the end of turn Beelzebub becomes a Prophet
+and gains the ability "At the start of
 turn Prophet becomes a 6/6 Beelzebub."
 6/6
 023
 
 Prophet
 7
-When prophet enters the battlefield gain
-7 life.
+When prophet enters the battlefield gain 7
+life.
 7/7
 024
 
 Angel of Prophets
 7
 At the start of turn gain 4 life.
+
 At the end of turn gain 3 life.
 7/7
 025
@@ -225,7 +226,7 @@ becomes a 1/1 Uninformed Citizen.
 Priest of Belial
 3
 At the end of the turn Priest of Belial
-deals one dmamge to you.
+deals 1 dmamge to you.
 3/3
 030
 
@@ -248,15 +249,15 @@ Abaddon.
 
 Priest of Mammon
 3
-At the end of turn Priest of Mammon
-switches sides.
+At the end of turn Priest of Mammon switches
+sides.
 3/3
 032
 
 Priest of Satan
 3
-When Priest of Satan dies summon a
-copy of target creature.
+When Priest of Satan dies summon a copy of
+target creature.
 3/3
 033
 
@@ -290,8 +291,8 @@ Priest Initiate.
 
 Priest of Prophets
 4
-When Priest of Prophets enters the
-battlefield each player gains 7 life.
+When Priest of Prophets enters the battlefield
+each player gains 7 life.
 3/4
 038
 
@@ -380,7 +381,7 @@ return taget creature to its owners hand.
 
 Void Hulk
 6
-When Void Hulk entersthe battlefield
+When Void Hulk enters the battlefield
 destroy target creature.
 5/5
 049
@@ -459,6 +460,7 @@ you control.
 Hunter of the Tribe
 3
 Give each Goblin you control +0/+1.
+
 Give each Goblin Marauder you control +0/+2.
 2/2
 059
@@ -476,6 +478,7 @@ Goblin Warlord
 8
 Give each Goblin +1/+0 for each Goblin you
 control.
+
 Give each Goblin and Goblin Marauder +1/+1
 for each Goblin Marauder you control. 
 8/4
@@ -485,6 +488,7 @@ Raging Barbarian
 5
 Raging Barbarian is able to attack the turn
 it is summoned.
+
 Your Barbarians, Goblin's, and Goblin Marauder's
 may attack the turn they are summoned.
 3/1
@@ -494,6 +498,7 @@ Wolf Pack
 1
 Wold Pack's Attack and Hit Points are equal
 to the number of Wolf Pack you control.
+
 Whenever a Goblin or Goblin Marauder you
 control dies, summon a Wolf Pack.
 X/X
@@ -536,6 +541,7 @@ Tribal Leader
 Double the effect of each Goblin Warlord,
 Goblin Marauder, Goblin Broodling, and Goblin
 Wolf Rider on the Battlefield.
+
 Tribal Leaders HP is equal to the number of
 Goblin's you control.
 2/X
@@ -550,7 +556,7 @@ for each player.
 
 Barbarian Rageblade
 5
-When Goblin Rageblade enters the battlefield
+When Barbarian Rageblade enters the battlefield
 deal 3 damage to a random creature.
 3/3
 070
@@ -604,13 +610,13 @@ destroyed this way.
 Elf Native
 1
 When Elf Native enters the battlefield gain
-one extra mana this turn.
+1 extra mana this turn.
 1/1
 077
 
 Elf Priestess
 2
-Elf Priestess costs one less for each Elf
+Elf Priestess costs 1 less for each Elf
 Native you control.
 1/1
 078
@@ -634,6 +640,7 @@ High Priestess of Gelfind
 10
 When High Priestess of Gelfind enters the
 battlefield each player gains 10 life.
+
 High Priestess of Gelfind costs 1 less for
 each Elf Native you control.
 3/3
@@ -652,6 +659,7 @@ Diplomat of Gelfind
 3
 Diplomat of Gelfind gets +1/+0 for each
 Uninformed Citizen you control.
+
 Diplomat of Gelfind gets +0/+1 for each
 Elf Native you control.
 1/1
@@ -831,8 +839,8 @@ Citizen you control.
 
 Mountains of Asaid
 10
-Mountains of Asaid's toughness is equal to
-your opponents health.
+Mountains of Asaid's HP is equal to your
+opponents life total.
 
 Whenever a Goblin you control dies Mountains
 of Asaid gains +1/+0.
@@ -841,11 +849,11 @@ of Asaid gains +1/+0.
 
 Sewers of Desparia
 10
-Sewers of Desparia's toughness is equal to
-your opponents health.
+Sewers of Desparia's HP is equal to your
+opponents life total.
 
-Whenever a creature dies deal one damage to
-your opponent and you gain one life.
+Whenever a creature dies deal 1 damage to
+your opponent and you gain 1 life.
 0/X
 106
 
@@ -1076,7 +1084,7 @@ deck in to his or her discard pile.
 
 Royal Caravel
 2
-Royal Caravel takes one less damage from
+Royal Caravel takes 1 less damage from
 Zombie's.
 2/1
 132
@@ -1209,12 +1217,12 @@ summon a Horrid Benefactor.
 
 Herald of Sorrows
 3
-When Herald of Sorrows attacks deal one
+When Herald of Sorrows attacks deal 1
 damage to each creature you control.
 3/1
 146
 
-Elarian Vapire
+Elarian Vampire
 2
 When Elaria Vampire deals damage each player
 gains that much life.
@@ -1238,7 +1246,7 @@ player gains 3 life.
 The Kings Collector
 6
 At the beginning of each turn, that player
-loses one life and summons a Malitia Captain.
+loses 1 life and summons a Malitia Captain.
 4/4
 150
 
