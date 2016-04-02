@@ -19,6 +19,21 @@ A text based multiplayer strategy card game written by members of the Tumblr Com
 We are still in the idea's phase so for now I will be setting up the program to at least generate 
 a 60 card deck to be used for this game.
 
+## Building
+CMake is used to build the project. If you're using an IDE, it may be able to detect the source tree and build settings automatically. No outside libraries are currently used, so most (if not all) systems should be good to go.
+
+To build, make sure you have the following:
+* CMake 3.0 or greater
+
+### Building on *NIX systems
+1. Make a new directory called "build" in the project root. 
+2. Move into that directory and run `cmake ..`. This will generate a makefile.
+3. Run `make`. Optionally, if you have extra CPU cycles to spare, you can use `make -jX`, where X is the number of CPUs you have.
+4. If everything built successfully, you can run it by typing `./tumblrcards` in your terminal.
+
+### Building on Windows systems
+Coming soon.
+
 #### IDEAS
 
 As larger ideas are discussed in Slack they will be added here for reference.
