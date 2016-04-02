@@ -31,8 +31,9 @@ set(CMAKE_CXX_FLAGS "-g -Wall --std=c++14")
 set(TC_SOURCES 
 		${CMAKE_SOURCE_DIR}/src/card.cpp
 		${CMAKE_SOURCE_DIR}/src/deck.cpp
+		${CMAKE_SOURCE_DIR}/src/game.cpp
 		${CMAKE_SOURCE_DIR}/src/mainMenu.cpp
-		${CMAKE_SOURCE_DIR}/src/singlePlayer.cpp
+		${CMAKE_SOURCE_DIR}/src/player.cpp
 		${CMAKE_SOURCE_DIR}/src/utils.cpp
 		${CMAKE_SOURCE_DIR}/src/main.cpp
 )
