@@ -7,14 +7,13 @@
 #include <iostream>
 #include <sstream>
 #include "mainMenu.h"
+#include "utils.h"
+#include "game.h"
 
 using namespace std;
 
 MainMenu::MainMenu() {
-	// TODO Auto-generated constructor stub
-	// We should print some ASCII logo here
-	// similar to the metasploit entrance.
-	cout << "~~Welcome to Tumblr Cards~~" << endl;
+	// TODO get_selections();
 }
 
 MainMenu::~MainMenu() {
@@ -23,24 +22,41 @@ MainMenu::~MainMenu() {
 
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
-	cout << "Got to single_player()" << endl;
+	Game game("single");
+	//delete &game; // TODO I want to be able to delete the game from memory here
+					// however after calling delete it exits the program entirely
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
 	cout << "Got to multi_player()" << endl;
+	cout << "Testing game creation now." << endl;
+	Game game("multi");
+	//delete &game; // TODO I want to be able to delete the game from memory here
+					// however after calling delete it exits the program entirely
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::deck_list() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
 	cout << "Got to deck_list()" << endl;
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::settings() {
 	// TODO moves to a settings menu.
 	// what settings could this game have?
 	cout << "Got to settings()" << endl;
+
+	do     print_menu();
+	while (!get_selections());
 }
 
 void MainMenu::quit() {
@@ -49,36 +65,38 @@ void MainMenu::quit() {
 }
 
 bool MainMenu::print_menu() {
-	// TODO Print the menu for the game
-	// I did all the printing manually so it
-	// is clear what the print should look like.
-	// She we have number based input or
-	// something more sophisticated?
-	cout << "    --Main Menu--" << endl;
-	cout << "  1) Single Player" << endl;
-    cout << "  2) Multiplayer" << endl;
-    cout << "  3) Deck Lists" << endl;
-    cout << "  4) Settings" << endl;
-	cout << "  5) Exit" << endl;
-	cout << "Enter selection: ";
+
+    clear_console();
+    cout << endl;
+	print_center("              Welcome to:             \n");
+	print_center("    /:\\                       (\"\"\")   \n");
+	print_center("    |:|          /$$           III    \n");
+	print_center("    |:|         | $$         __III__  \n");
+	print_center("    |:|        /$$$$$$     /:-.___,-:\\\n");
+	print_center("    |:|       |_  $$_/     \\]  |:|  [/\n");
+	print_center("    |:|         | $$           |:|    \n");
+	print_center("/]  |:|  [\\     | $$ /$$       |:|    \n");
+	print_center("\\:-'''''-:/     | \"$$$$/       |:|    \n");
+	print_center("  \"\"III\"\"        \\___/         |:|    \n");
+	print_center("    III                        |:|    \n");
+	print_center("   (___)                       \\:/    \n");
+	print_center("             TumblrCards              \n");
+	cout << endl << endl;
+	print_center("1) Single player     4) Settings\n");
+	print_center("2) Multiplayer       5) Exit    \n");
+	print_center("3) Deck lists                   \n");
+	cout << endl;
+	print_center("Enter selection [1-5]: ");
+
 	return true;
 }
 
 bool MainMenu::get_selections() {
 	// TODO take in the players selection and call that method.
-	string input;
-	cin >> input;
-	cout << input << endl;
-	stringstream convert;
-	convert << input;
 	int selection = 0;
-	if (!convert >> selection) {
-		// handle bad input here
-		cout << selection << " is not an option." << endl;
-		return false;
-	} else {
-		cout << "entering switch now with " << selection << endl;
-		switch(selection) {
+	cin >> selection;
+
+	switch(selection) {
 		case 1:
 			single_player();
 			break;
@@ -97,7 +115,6 @@ bool MainMenu::get_selections() {
 		default:
 			//bad input here
 			return false;
-		}
 	}
 	return true;
 }

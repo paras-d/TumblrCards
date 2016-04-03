@@ -2,8 +2,9 @@
  * deck.cpp
  *
  *  Created on: Mar 13, 2016
- *      Author: user
+ *      Author: Tumblr
  */
+
 #include <iostream>
 #include "deck.h"
 #include "stdlib.h"
@@ -35,11 +36,12 @@ Card * Deck::draw_card() {
 // removes the top num cards from the deck and returns
 // a pointer to the first index as an array. shifts all
 // the cards up num
-Card * Deck::draw_cards(int num) {
-	if(!well_formed()) return nullptr;
+Deck Deck::draw_cards(int num) {
+	Deck ret;
+	if(!well_formed()) return ret;
 	// TODO
 	well_formed();
-	return nullptr;
+	return ret;
 }
 
 // randomizes the order of the deck
