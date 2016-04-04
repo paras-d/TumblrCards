@@ -80,7 +80,7 @@ void Deck::add_card(Card* card, unsigned int index) {
 	if(index >= count - 1) return;
 
 	// no room to add the card
-	if(count == 60) return;
+	if(count == 20) return;
 
 	// moves all the cards after index down one
 	for(unsigned int i = count - 1; i > index; i--) {
@@ -103,7 +103,7 @@ unsigned int Deck::size() {
 //		A deck may not have any nullptr between 0 and count
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
-	if(count > deck.size()) return print_err("Count is larger than 60");
+	if(count > deck.size()) return print_err("Count is larger than 20");
 	for(unsigned int i = 0; i < count; i++) {
 
 		// checks to make sure count is not larger than the size of the deck
