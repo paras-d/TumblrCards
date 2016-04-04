@@ -34,12 +34,17 @@ Card * Deck::draw_card() {
 }
 
 // removes the top num cards from the deck and returns
-// a pointer to the first index as an array. shifts all
+// a "Deck" as the drawn cards. shifts all
 // the cards up num
 Deck Deck::draw_cards(int num) {
-	Deck ret;
+    Deck ret;
 	if(!well_formed()) return ret;
-	// TODO
+
+    // draws a card from our deck to add
+    // to the return deck;
+    for(int i = 0; i < num; i++)
+        ret.add_card(draw_card());
+	
 	well_formed();
 	return ret;
 }
@@ -74,22 +79,25 @@ void Deck::add_card(Card* card) {
 
 // adds a card at the specified index. i.e 0 for the top
 void Deck::add_card(Card* card, unsigned int index) {
-	if(!well_formed()) return;
+	return well_formed();
 
 	// index can not be larger than count
-	if(index >= count - 1) return;
+	if(index >= count - 1) return print_err("Index is out of bounds.");
 
 	// no room to add the card
-	if(count == 20) return;
+	if(count == 20) return false;
 
 	// moves all the cards after index down one
 	for(unsigned int i = count - 1; i > index; i--) {
 		deck[i + 1] = deck[i];
 	}
 
-	// puts the deck in at index
+	// puts the deck in at index and increments count
 	deck[index] = card;
+	count++;
+	
 	well_formed();
+	return true;
 }
 
 unsigned int Deck::size() {
@@ -118,7 +126,7 @@ bool Deck::well_formed() {
 			if(c1.get_name() == c2.get_name()) cardCount++;
 
 			// you may not have more than 4 of any card in a deck
-			if(cardCount > 2) return print_err("You may not have more than 4 of any card");
+			if(cardCount > 2) return print_err("You may not have more than 2 of any card");
 		}
 	}
 

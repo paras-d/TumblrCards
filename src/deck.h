@@ -24,8 +24,8 @@ public:
 	Card * draw_card();
 	Deck draw_cards(int num);
 	void shuffle();
-	void add_card(Card* card);
-	void add_card(Card* card, unsigned int index);
+	bool add_card(Card* card);
+	bool add_card(Card* card, unsigned int index);
 	unsigned int size();
 };
 
