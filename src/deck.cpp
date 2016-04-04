@@ -99,7 +99,7 @@ unsigned int Deck::size() {
 // checks the integrity of the deck and returns false with an error message
 // if something is wrong. Returns true otherwise.
 // Rules:
-//		A Deck may not be larger than 60 cards
+//		A Deck may not be larger than 20 cards
 //		A deck may not have any nullptr between 0 and count
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
@@ -118,7 +118,7 @@ bool Deck::well_formed() {
 			if(c1.get_name() == c2.get_name()) cardCount++;
 
 			// you may not have more than 4 of any card in a deck
-			if(cardCount > 4) return print_err("You may not have more than 4 of any card");
+			if(cardCount > 2) return print_err("You may not have more than 4 of any card");
 		}
 	}
 
