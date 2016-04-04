@@ -61,9 +61,9 @@ At the start of each game the player that takes the first turn is randomly decid
 At the start of each game, all players begin with a hand of 4 cards off of the top of their respective 20 card decks. No deck may contain more than 2 copies of any card. No deck may contain more than one copy of any card if that cards cost is 6+. Each player also starts the game with 10 life. Depending on which option is chosen by the player that goes first, you may start with 5 cards or 15 life. Each players turn order is as follows:
 
 1. Start of turn
-2. Draw Phase
-3. Casting Phase
-4. Combat Phase
+2. Casting Phase
+3. Combat Phase
+4. Draw Phase
 5. End of turn
 
 Each players turn follows this same format. Each phase willl be explained in detail below. If any card disagrees with the rules below, the rules on the card are to be followed.
