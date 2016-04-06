@@ -53,8 +53,7 @@ void Game::update() {
 	 * This will be where the player takes their turn.
 	 */
 	draw();
-
-	cout << "enter exit to exit: " << endl;
+	cout << "enter exit to exit: ";
 	string in;
 	cin >> in;
 	if(in == "exit")

@@ -124,9 +124,6 @@ bool MainMenu::get_selection() {
 			break;
 		default:
 			cout << in << " is not a valid option." << endl;
-			selection = 0;
-			do print_options();
-			while(!get_selection());
 			return false;
 	}
 	return true;
