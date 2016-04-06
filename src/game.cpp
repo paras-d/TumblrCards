@@ -52,6 +52,7 @@ void Game::update() {
 	 * TODO This is the running function of the game.
 	 * This will be where the player takes their turn.
 	 */
+	cout << "starting your turn now" << endl;
 	draw();
 	cout << "enter exit to exit: ";
 	string in;
@@ -79,9 +80,7 @@ void Game::sp_update() {
 	 * TODO Single player logic here
 	 * This will be where the AI takes their turn
 	 */
-	draw();
-
-	cout << "starting single player game" << endl;
+	cout << "sp: opponents turn starts." << endl;
 	update();
 }
 
@@ -92,6 +91,6 @@ void Game::mp_update() {
 	 */
 	draw();
 
-	cout << "starting multiplayer game" << endl;
+	cout << "mp: opponents turn starts" << endl;
 	update();
 }

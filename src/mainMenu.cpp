@@ -22,9 +22,15 @@ MainMenu::~MainMenu() {
 
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
+	cout << "Got to single_player()" << endl;
+	cout << "Testing game creation now." << endl;
+
+	/*
+	 * Remove deletes. We need to find a way to destruct
+	 * the game upon completion. As it stands games stay
+	 * on the stack until the program exits.
+	 */
 	Game game("single");
-	//delete &game; // TODO I want to be able to delete the game from memory here
-					// however after calling delete it exits the program entirely
 
 	do     print_options();
 	while (!get_selection());
@@ -34,9 +40,14 @@ void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
 	cout << "Got to multi_player()" << endl;
 	cout << "Testing game creation now." << endl;
+
+	/*
+	 * Remove deletes. We need to find a way to destruct
+	 * the game upon completion. As it stands games stay
+	 * on the stack until the program exits.
+	 */
 	Game game("multi");
-	//delete &game; // TODO I want to be able to delete the game from memory here
-					// however after calling delete it exits the program entirely
+
 	do     print_options();
 	while (!get_selection());
 }
