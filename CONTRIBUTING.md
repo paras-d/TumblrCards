@@ -8,15 +8,15 @@ Once you're ready to start programming see the Programming Standards section.
 ### TODO's
 - [X] Create basic class for a card
 - [ ] Figure out a way to quickly generate unique cards with abilities
-- [ ] Create a card list for the first set
+- [X] Create a card list for the first set
 - [ ] Create set class that will hold data for the cards to generate from
-- [X] Create deck class that will hold 60 cards
+- [X] Create deck class that will hold 20 cards
 - [ ] Build deck editor that will allow the player to make a deck from the published cards
 - [X] Create basic entrance and menu system for the game
 - [X] Create rules for the card game
 - [X] Layout the turn order
-- [ ] Create single player game with AI
-- [ ] Create multiplayer version
+- [ ] Create functioning single player game
+- [ ] Creatre functioning multiplayer game
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 
