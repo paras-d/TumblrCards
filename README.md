@@ -26,6 +26,7 @@ To build, make sure you have the following:
 * CMake 3.0 or greater
 
 ### Building on *NIX systems
+
 1. Make a new directory called "build" in the project root. 
 2. Move into that directory and run `cmake ..`. This will generate a makefile.
 3. Run `make`. Optionally, if you have extra CPU cycles to spare, you can use `make -jX`, where X is the number of CPUs you have.
