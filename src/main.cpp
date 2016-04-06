@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 	//clear_console();
 	MainMenu menu;
 	do     menu.print_menu();
-	while (!menu.get_selections());
+	while (!menu.get_selection());
 
 	cout << "Exiting the game now" << endl;
 

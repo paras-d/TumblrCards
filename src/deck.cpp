@@ -23,7 +23,7 @@ Deck::~Deck() {
 
 // removes the top card of the deck and returns it
 // shifting all the cards up one
-Card * Deck::draw_card() {
+Card* Deck::draw_card() {
 	well_formed();
 	if(count == 0) return nullptr;
 	Card* ret = deck[0];
@@ -107,12 +107,12 @@ bool Deck::well_formed() {
 	for(unsigned int i = 0; i < count; i++) {
 
 		// checks to make sure count is not larger than the size of the deck
-		if(&deck[i] == nullptr) return print_err("Count is larger than size of deck");
+		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		int cardCount = 1;
 		for(unsigned int j = i + 1; j < count; j++) {
 
 			// adding it here checks the integrity of the array on our first pass
-			if(&deck[i] == nullptr) return print_err("Count is larger than size of deck");
+			if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 			Card c1 = *deck[i];
 			Card c2 = *deck[j];
 			if(c1.get_name() == c2.get_name()) cardCount++;

@@ -25,6 +25,10 @@ private:
 	// what settings would exist?
 	void settings();
 
+	// splits the menu in to two parts
+	void print_options();
+	void print_logo();
+
 	// quits the game
 	void quit();
 public:
@@ -35,7 +39,7 @@ public:
 	bool print_menu();
 
 	// takes in the users input for the selection
-	bool get_selections();
+	bool get_selection();
 };
 
 #endif /* SRC_MAINMENU_H_ */

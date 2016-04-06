@@ -26,8 +26,8 @@ void MainMenu::single_player() {
 	//delete &game; // TODO I want to be able to delete the game from memory here
 					// however after calling delete it exits the program entirely
 
-	do     print_menu();
-	while (!get_selections());
+	do     print_options();
+	while (!get_selection());
 }
 
 void MainMenu::multi_player() {
@@ -37,8 +37,8 @@ void MainMenu::multi_player() {
 	Game game("multi");
 	//delete &game; // TODO I want to be able to delete the game from memory here
 					// however after calling delete it exits the program entirely
-	do     print_menu();
-	while (!get_selections());
+	do     print_options();
+	while (!get_selection());
 }
 
 void MainMenu::deck_list() {
@@ -46,8 +46,8 @@ void MainMenu::deck_list() {
 	// moves game to desk list editor
 	cout << "Got to deck_list()" << endl;
 
-	do     print_menu();
-	while (!get_selections());
+	do     print_options();
+	while (!get_selection());
 }
 
 void MainMenu::settings() {
@@ -55,8 +55,8 @@ void MainMenu::settings() {
 	// what settings could this game have?
 	cout << "Got to settings()" << endl;
 
-	do     print_menu();
-	while (!get_selections());
+	do     print_options();
+	while (!get_selection());
 }
 
 void MainMenu::quit() {
@@ -64,10 +64,9 @@ void MainMenu::quit() {
 	cout << "Got to quit()" << endl;
 }
 
-bool MainMenu::print_menu() {
-
-    clear_console();
-    cout << endl;
+void MainMenu::print_logo() {
+	clear_console();
+	cout << endl;
 	print_center("              Welcome to:             \n");
 	print_center("    /:\\                       (\"\"\")   \n");
 	print_center("    |:|          /$$           III    \n");
@@ -81,21 +80,32 @@ bool MainMenu::print_menu() {
 	print_center("    III                        |:|    \n");
 	print_center("   (___)                       \\:/    \n");
 	print_center("             TumblrCards              \n");
-	cout << endl << endl;
+	cout << endl;
+}
+
+void MainMenu::print_options() {
+	print_center("Main Menu\n");
 	print_center("1) Single player     4) Settings\n");
 	print_center("2) Multiplayer       5) Exit    \n");
 	print_center("3) Deck lists                   \n");
 	cout << endl;
 	print_center("Enter selection [1-5]: ");
+}
 
+bool MainMenu::print_menu() {
+	print_logo();
+	print_options();
 	return true;
 }
 
-bool MainMenu::get_selections() {
+bool MainMenu::get_selection() {
 	// TODO take in the players selection and call that method.
-	int selection = 0;
-	cin >> selection;
-
+	int selection = 5;
+	stringstream ss;
+	string in;
+	cin >> in;
+	ss << in;
+	ss >> selection;
 	switch(selection) {
 		case 1:
 			single_player();
@@ -113,7 +123,10 @@ bool MainMenu::get_selections() {
 			quit();
 			break;
 		default:
-			//bad input here
+			cout << in << " is not a valid option." << endl;
+			selection = 0;
+			do print_options();
+			while(!get_selection());
 			return false;
 	}
 	return true;
