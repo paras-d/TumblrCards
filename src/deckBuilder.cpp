@@ -14,7 +14,6 @@ using namespace std;
 
 DeckBuilder::DeckBuilder() {
 	// TODO Auto-generated constructor stub
-	list[0] = new Deck();
 	selected = 0;
 }
 
@@ -31,6 +30,8 @@ void DeckBuilder::start() {
 
 	// TODO add cards to deck
 	for(int i = 0; i < 20; i++) {
+		Card* card = new Card();
+		test.add_card(card);
 	}
 
 	cout << test.to_string() << endl;

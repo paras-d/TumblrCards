@@ -24,6 +24,7 @@ public:
 	Deck(const Deck &clone);
 	Card * draw_card();
 	Deck draw_cards(int num);
+	Deck* operator=(const Deck *clone);
 	Deck& operator=(const Deck &clone);
 	void shuffle();
 	bool add_card(Card* card);

@@ -11,9 +11,9 @@
 
 using namespace std;
 
-Deck::Deck() {
+Deck::Deck()
+	:count{0} {
 	// TODO Auto-generated constructor stuff
-	count = 0;
 	well_formed();
 }
 
@@ -21,19 +21,23 @@ Deck::~Deck() {
 	// TODO Auto-generated destructor stuff
 }
 
-/*
- * This is throwing a syntax error and idk why
- */
-Deck::Deck(cosnt Deck &clone) {
+Deck::Deck(const Deck &clone)
+	:count{clone.count} {
 	// TODO cloning stuff here
-	// passes clones data to here
-	count = clone.count;
+	// passes clone's data to here
 	well_formed();
+}
+
+Deck* Deck::operator=(const Deck* clone) {
+	// do set equals operations here
+	// set this equal to the clone
+	return this;
 }
 
 Deck& Deck::operator=(const Deck &clone) {
 	// do set equals operations here
-	return clone;
+	// set this equal to the clone
+	return *this;
 }
 
 // removes the top card of the deck and returns it
@@ -87,6 +91,7 @@ bool Deck::add_card(Card* card) {
 
 	// adds the card and increments count
 	card[count++] = *card;
+	cout << card->to_string() << " has been added." << endl;
 	shuffle();
 
 	well_formed();
@@ -141,7 +146,7 @@ bool Deck::well_formed() {
 			if(c1.get_name() == c2.get_name()) cardCount++;
 
 			// you may not have more than 4 of any card in a deck
-			if(cardCount > 2) return print_err("You may not have more than 2 of any card");
+			//if(cardCount > 2) return print_err("You may not have more than 2 of any card");
 		}
 	}
 
@@ -156,10 +161,10 @@ bool Deck::print_err(string err) {
 }
 
 string Deck::to_string() {
-	string ret;
+	string ret = "TESTING";
 	for(unsigned int i = 0; i < count; i++) {
-		ret += deck[i]->get_name();
-		ret += " ";
+		ret += deck[i]->to_string();
+		ret += "TESTING";
 	}
 	return ret;
 }
