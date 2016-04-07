@@ -21,7 +21,7 @@ public:
 	Player();
 	virtual ~Player();
 	Player* get_state();
-	bool select_deck(Deck deck);
+	bool select_deck(Deck selected);
 	int deck_size();
 	int hand_size();
 	Deck* get_hand();

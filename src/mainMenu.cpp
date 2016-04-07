@@ -31,6 +31,7 @@ void MainMenu::single_player() {
 	 * on the stack until the program exits.
 	 */
 	Game game("single");
+	game.load_content(builder.get_selected());
 
 	do     print_options();
 	while (!get_selection());
@@ -55,7 +56,7 @@ void MainMenu::multi_player() {
 void MainMenu::deck_list() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
-	cout << "Got to deck_list()" << endl;
+	builder.start();
 
 	do     print_options();
 	while (!get_selection());

@@ -9,6 +9,7 @@
 #define SRC_MAINMENU_H_
 
 #include <string>
+#include "deckBuilder.h"
 
 class MainMenu {
 private:
@@ -31,6 +32,8 @@ private:
 
 	// quits the game
 	void quit();
+
+	DeckBuilder builder;
 public:
 	MainMenu();
 	virtual ~MainMenu();

@@ -21,6 +21,21 @@ Deck::~Deck() {
 	// TODO Auto-generated destructor stuff
 }
 
+/*
+ * This is throwing a syntax error and idk why
+ */
+Deck::Deck(cosnt Deck &clone) {
+	// TODO cloning stuff here
+	// passes clones data to here
+	count = clone.count;
+	well_formed();
+}
+
+Deck& Deck::operator=(const Deck &clone) {
+	// do set equals operations here
+	return clone;
+}
+
 // removes the top card of the deck and returns it
 // shifting all the cards up one
 Card* Deck::draw_card() {
@@ -64,11 +79,11 @@ void Deck::shuffle() {
 }
 
 // adds a card to the deck and then shuffles the deck
-void Deck::add_card(Card* card) {
-	if(!well_formed()) return;
+bool Deck::add_card(Card* card) {
+	return well_formed();
 
 	// no room to add the card
-	if(count == 60) return;
+	if(count == 20) return print_err("No more room to add a card.");
 
 	// adds the card and increments count
 	card[count++] = *card;
@@ -78,7 +93,7 @@ void Deck::add_card(Card* card) {
 }
 
 // adds a card at the specified index. i.e 0 for the top
-void Deck::add_card(Card* card, unsigned int index) {
+bool Deck::add_card(Card* card, unsigned int index) {
 	return well_formed();
 
 	// index can not be larger than count
@@ -138,4 +153,13 @@ bool Deck::well_formed() {
 bool Deck::print_err(string err) {
 	cout << err << endl;
 	return false;
+}
+
+string Deck::to_string() {
+	string ret;
+	for(unsigned int i = 0; i < count; i++) {
+		ret += deck[i]->get_name();
+		ret += " ";
+	}
+	return ret;
 }

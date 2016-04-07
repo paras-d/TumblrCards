@@ -6,17 +6,12 @@
  */
 #include <iostream>
 #include "mainMenu.h"
-#include "utils.h"
+#include "deck.h"
 
 using namespace std;
 
 int main(int argc, char* argv[]) {
 	// TODO we should have cla's for testing purposes
-
-	// Checks for testing arguments
-	if(argc > 1) {
-		//TODO
-	}
 
 	// starts the game
 	//clear_console();

@@ -13,7 +13,6 @@
 
 class Game {
 private:
-	void load_content();
 	void unload_content();
 	void update();
 	void draw();
@@ -27,6 +26,7 @@ private:
 public:
 	Game(std::string type);
 	virtual ~Game();
+	void load_content(Deck selected);
 };
 
 #endif /* SRC_GAME_H_ */

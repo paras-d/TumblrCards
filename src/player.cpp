@@ -16,3 +16,7 @@ Player::~Player() {
 	// TODO Auto-generated destructor stub
 }
 
+bool Player::select_deck(Deck selected) {
+	deck = selected;
+	return true;
+}

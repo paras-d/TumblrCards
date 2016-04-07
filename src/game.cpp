@@ -18,8 +18,6 @@ Game::Game(string type) {
 	cont = true;
 
 	cout << "game constructed" << endl;
-
-	load_content();
 }
 
 Game::~Game() {
@@ -29,12 +27,13 @@ Game::~Game() {
 	cout << "game destructed" << endl;
 }
 
-void Game::load_content() {
+void Game::load_content(Deck selected) {
 	/*
 	 * TODO Load needed game content here
 	 * suck as deck lists
 	 */
 	cout << "loading content here" << endl;
+	player.select_deck(selected);
 	update();
 }
 
