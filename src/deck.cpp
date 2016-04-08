@@ -71,6 +71,7 @@ Deck Deck::draw_cards(int num) {
 // randomizes the order of the deck
 void Deck::shuffle() {
 	if(!well_formed()) return;
+
 	// Traverses through the array swapping each index with a random other index
 	for(unsigned int i = 0; i < count; i++) {
 		unsigned int r = rand() % count;
@@ -79,12 +80,13 @@ void Deck::shuffle() {
 		deck[i] = deck[r];
 		deck[r] = temp;
 	}
+	
 	well_formed();
 }
 
 // adds a card to the deck and then shuffles the deck
 bool Deck::add_card(Card* card) {
-	return well_formed();
+	if(!well_formed()) return false;
 
 	// no room to add the card
 	if(count == 20) return print_err("No more room to add a card.");
@@ -94,13 +96,13 @@ bool Deck::add_card(Card* card) {
 	cout << card->to_string() << " has been added." << endl;
 	shuffle();
 
-	well_formed();
+	return well_formed();
 }
 
 // adds a card at the specified index. i.e 0 for the top
 bool Deck::add_card(Card* card, unsigned int index) {
-	return well_formed();
-
+	if(!well_formed()) return false;
+	
 	// index can not be larger than count
 	if(index >= count - 1) return print_err("Index is out of bounds.");
 
@@ -133,7 +135,6 @@ bool Deck::well_formed() {
 	// may not be larger than 60 cards
 	if(count > deck.size()) return print_err("Count is larger than 20");
 	for(unsigned int i = 0; i < count; i++) {
-
 		// checks to make sure count is not larger than the size of the deck
 		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		int cardCount = 1;
@@ -145,7 +146,7 @@ bool Deck::well_formed() {
 			Card c2 = *deck[j];
 			if(c1.get_name() == c2.get_name()) cardCount++;
 
-			// you may not have more than 4 of any card in a deck
+			// you may not have more than 2 of any card in a deck
 			//if(cardCount > 2) return print_err("You may not have more than 2 of any card");
 		}
 	}
@@ -161,10 +162,10 @@ bool Deck::print_err(string err) {
 }
 
 string Deck::to_string() {
-	string ret = "TESTING";
+    string ret;
 	for(unsigned int i = 0; i < count; i++) {
 		ret += deck[i]->to_string();
-		ret += "TESTING";
+
 	}
 	return ret;
 }
