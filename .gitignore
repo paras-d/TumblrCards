@@ -7,3 +7,4 @@ bin/
 *.cbp
 *.depend
 build/
+build64/
