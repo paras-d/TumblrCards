@@ -136,19 +136,22 @@ bool Deck::well_formed() {
 	if(count > deck.size()) return print_err("Count is larger than 20");
 	for(unsigned int i = 0; i < count; i++) {
 		// checks to make sure count is not larger than the size of the deck
+		cout << i << " vs " << count << endl;
 		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
-		int cardCount = 1;
-		for(unsigned int j = i + 1; j < count; j++) {
-
+		
+		// COMENTED OUT FOR TESTING
+		//int cardCount = 1;
+		//for(unsigned int j = i + 1; j < count; j++) {
+        //
 			// adding it here checks the integrity of the array on our first pass
-			if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
-			Card c1 = *deck[i];
-			Card c2 = *deck[j];
-			if(c1.get_name() == c2.get_name()) cardCount++;
+		//	if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
+		//	Card c1 = *deck[i];
+		//	Card c2 = *deck[j];
+		//	if(c1.get_name() == c2.get_name()) cardCount++;
 
 			// you may not have more than 2 of any card in a deck
-			//if(cardCount > 2) return print_err("You may not have more than 2 of any card");
-		}
+		//	if(cardCount > 2) return print_err("You may not have more than 2 of any card");
+		//}
 	}
 
 	// if the integrity of this data structure is held, returns true

@@ -30,11 +30,10 @@ void DeckBuilder::start() {
 
 	// TODO add cards to deck
 	for(int i = 0; i < 20; i++) {
-		Card* card = new Card();
-		test.add_card(card);
+		test.add_card(new Card());
 	}
 
-	cout << test.to_string() << endl;
+	cout << test.to_string() << endl; // THE CARDS ARE NOW OUT OF SCOPE??
 
 	cout << "Enter exit to exit: ";
 	string in;
