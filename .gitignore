@@ -1,9 +1,9 @@
-Debug/
+[Dd]ebug/
 .settings/
 .project
 .cproject
 *.out
-bin/
+[Bb]in/
 *.cbp
 *.depend
-build/
+[Bb]uild/
