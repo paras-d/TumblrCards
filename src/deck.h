@@ -8,12 +8,12 @@
 #ifndef SRC_DECK_H_
 #define SRC_DECK_H_
 
-#include <array>
+#include <vector>
 #include "card.h"
 
 class Deck {
 private:
-	std::array<Card* , 20> deck;
+	std::vector<Card*> deck;
 	std::string deckName;
 	unsigned int count;
 	bool well_formed();

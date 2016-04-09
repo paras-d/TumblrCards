@@ -6,4 +6,9 @@
 [Bb]in/
 *.cbp
 *.depend
+<<<<<<< HEAD
 [Bb]uild/
+=======
+build/
+build64/
+>>>>>>> branch 'incomingstick' of https://github.com/incomingstick/TumblrCards.git

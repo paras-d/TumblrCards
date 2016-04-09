@@ -12,7 +12,7 @@
 
 class DeckBuilder {
 private:
-	std::array<Deck, 20> list;
+	std::vector<Deck> list;
 	void print_set(std::string set);
 	int selected;
 public:
