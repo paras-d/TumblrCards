@@ -92,7 +92,8 @@ bool Deck::add_card(Card* card) {
 	if(count == 20) return print_err("No more room to add a card.");
 
 	// adds the card and increments count
-	card[count++] = *card;
+	deck.push_back(card);
+	count++;
 	cout << card->to_string() << " has been added." << endl;
 	shuffle();
 
