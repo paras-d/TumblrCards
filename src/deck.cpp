@@ -19,6 +19,7 @@ Deck::Deck()
 
 Deck::~Deck() {
 	// TODO Auto-generated destructor stuff
+	cout << "Deck destructed" << endl;
 }
 
 Deck::Deck(const Deck &clone)
@@ -48,6 +49,7 @@ Card* Deck::draw_card() {
 	Card* ret = deck[0];
 	for(unsigned int i = 1; i < count; i++)
 		deck[i-1] = deck[i];
+	count--;
 	well_formed();
 	return ret;
 }
@@ -167,7 +169,7 @@ string Deck::to_string() {
     string ret;
 	for(unsigned int i = 0; i < count; i++) {
 		ret += deck[i]->get_name();
-
+		ret += " ";
 	}
 	return ret;
 }

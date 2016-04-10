@@ -26,14 +26,20 @@ void DeckBuilder::start() {
 	clear_console();
 	cout << "deck building started" << endl;
 	cout << "testing to make sure decks work" << endl;
-	Deck test;
+	Deck* test = new Deck();
 
-	// TODO add cards to deck
+	for(int i = 0; i < 20; i++)
+		test->add_card(new Card());
+
+	cout << test->to_string() << endl;
+
 	for(int i = 0; i < 20; i++) {
-		test.add_card(new Card());
+		Card* card = test->draw_card();
+		cout << card->get_name() << " drawn." << endl;
+		cout << test->to_string() << endl;
 	}
 
-	cout << test.to_string() << endl; // THE CARDS ARE NOW OUT OF SCOPE??
+	list[0] = *test;
 
 	cout << "Enter exit to exit: ";
 	string in;
