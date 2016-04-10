@@ -22,7 +22,7 @@ Deck::~Deck() {
 }
 
 Deck::Deck(const Deck &clone)
-	:count{clone.count} {
+	:count{0} {
 	// TODO cloning stuff here
 	// passes clone's data to here
 	well_formed();
@@ -134,17 +134,14 @@ unsigned int Deck::size() {
 //		A deck may not have any nullptr between 0 and count
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
-	cout << count << " vs " << deck.size() << endl;
 	if(count > deck.size()) return print_err("Count is larger than 20");
 	for(unsigned int i = 0; i < count; i++) {
 		// checks to make sure count is not larger than the size of the deck
-		cout << i << " vs " << count << endl;
 		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		
 		// COMENTED OUT FOR TESTING
 		//int cardCount = 1;
 		//for(unsigned int j = i + 1; j < count; j++) {
-        //
 			// adding it here checks the integrity of the array on our first pass
 		//	if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		//	Card c1 = *deck[i];
@@ -169,7 +166,7 @@ bool Deck::print_err(string err) {
 string Deck::to_string() {
     string ret;
 	for(unsigned int i = 0; i < count; i++) {
-		ret += deck[i]->to_string();
+		ret += deck[i]->get_name();
 
 	}
 	return ret;
