@@ -29,8 +29,8 @@ public:
 	void shuffle();
 	bool add_card(Card* card);
 	bool add_card(Card* card, unsigned int index);
-	unsigned int size();
-	std::string to_string();
+	unsigned int size() const { return count; };
+	std::string to_string() const;
 
 };
 

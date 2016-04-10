@@ -53,6 +53,7 @@ void Game::update() {
 	 */
 	cout << "starting your turn now" << endl;
 	draw();
+	cout << player.get_deck()->to_string() << endl;
 	cout << "enter exit to exit: ";
 	string in;
 	cin >> in;

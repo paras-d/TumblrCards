@@ -14,6 +14,7 @@ using namespace std;
 Deck::Deck()
 	:count{0} {
 	// TODO Auto-generated constructor stuff
+	cout << "deck constructed" << endl;
 	well_formed();
 }
 
@@ -23,7 +24,7 @@ Deck::~Deck() {
 }
 
 Deck::Deck(const Deck &clone)
-	:count{0} {
+	:count{ 0 } {
 	// TODO cloning stuff here
 	// passes clone's data to here
 	well_formed();
@@ -32,12 +33,19 @@ Deck::Deck(const Deck &clone)
 Deck* Deck::operator=(const Deck* clone) {
 	// do set equals operations here
 	// set this equal to the clone
+	count = clone->size();
+	deck = clone->deck;
+	well_formed();
 	return this;
 }
 
 Deck& Deck::operator=(const Deck &clone) {
 	// do set equals operations here
 	// set this equal to the clone
+	this = new Deck();
+	count = clone.size();
+	deck = clone.deck;
+	well_formed();
 	return *this;
 }
 
@@ -125,10 +133,6 @@ bool Deck::add_card(Card* card, unsigned int index) {
 	return true;
 }
 
-unsigned int Deck::size() {
-	return count;
-}
-
 // checks the integrity of the deck and returns false with an error message
 // if something is wrong. Returns true otherwise.
 // Rules:
@@ -165,7 +169,7 @@ bool Deck::print_err(string err) {
 	return false;
 }
 
-string Deck::to_string() {
+string Deck::to_string() const {
     string ret;
 	for(unsigned int i = 0; i < count; i++) {
 		ret += deck[i]->get_name();

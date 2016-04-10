@@ -32,13 +32,7 @@ void DeckBuilder::start() {
 		test->add_card(new Card());
 
 	cout << test->to_string() << endl;
-
-	for(int i = 0; i < 20; i++) {
-		Card* card = test->draw_card();
-		cout << card->get_name() << " drawn." << endl;
-		cout << test->to_string() << endl;
-	}
-
+	
 	list[0] = *test;
 
 	cout << "Enter exit to exit: ";

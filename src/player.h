@@ -24,7 +24,8 @@ public:
 	bool select_deck(Deck selected);
 	int deck_size();
 	int hand_size();
-	Deck* get_hand();
+	Deck* get_hand() { return &hand; };
+	Deck* get_deck() { return &deck; };
 	bool draw();
 	bool cast(int cardIndex);
 };
