@@ -30,7 +30,13 @@ void MainMenu::single_player() {
 	 * the game upon completion. As it stands games stay
 	 * on the stack until the program exits.
 	 */
+
 	Game game("single");
+	/*
+	 * Trying to pass selected deck through here
+	 * however it is a temp variable. I have tried
+	 * binding it to a const and that didn't work either.
+	 */
 	game.load_content(builder.get_selected());
 
 	do     print_options();

@@ -26,24 +26,18 @@ void DeckBuilder::start() {
 	clear_console();
 	cout << "deck building started" << endl;
 	cout << "testing to make sure decks work" << endl;
-	Deck* test = new Deck();
+	list.push_back(new Deck());
 
 	for(int i = 0; i < 20; i++)
-		test->add_card(new Card());
+		list[selected]->add_card(new Card());
 
-	cout << test->to_string() << endl;
-	
-	list[0] = *test;
+	cout << list[selected]->to_string() << endl;
 
 	cout << "Enter exit to exit: ";
 	string in;
 	cin >> in;
 	if(in != "exit")
 		start();
-}
-
-Deck DeckBuilder::get_selected() {
-	return list[selected];
 }
 
 void DeckBuilder::print_set(string set) {

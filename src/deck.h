@@ -15,7 +15,7 @@ class Deck {
 private:
 	std::vector<Card*> deck;
 	std::string deckName;
-	unsigned int count;
+	unsigned int* count;
 	bool well_formed();
 	bool print_err(std::string err);
 public:
@@ -29,7 +29,7 @@ public:
 	void shuffle();
 	bool add_card(Card* card);
 	bool add_card(Card* card, unsigned int index);
-	unsigned int size() const { return count; };
+	unsigned int size() const { return *count; };
 	std::string to_string() const;
 
 };

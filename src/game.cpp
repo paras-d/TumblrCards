@@ -27,12 +27,13 @@ Game::~Game() {
 	cout << "game destructed" << endl;
 }
 
-void Game::load_content(Deck selected) {
+void Game::load_content(const Deck selected) {
 	/*
 	 * TODO Load needed game content here
 	 * suck as deck lists
 	 */
 	cout << "loading content here" << endl;
+	cout << selected.to_string() << endl;
 	player.select_deck(selected);
 	update();
 }

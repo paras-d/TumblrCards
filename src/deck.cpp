@@ -12,7 +12,7 @@
 using namespace std;
 
 Deck::Deck()
-	:count{0} {
+	:count{ new unsigned int(0) } {
 	// TODO Auto-generated constructor stuff
 	cout << "deck constructed" << endl;
 	well_formed();
@@ -24,7 +24,7 @@ Deck::~Deck() {
 }
 
 Deck::Deck(const Deck &clone)
-	:count{ 0 } {
+	:count{ new unsigned int(0) } {
 	// TODO cloning stuff here
 	// passes clone's data to here
 	well_formed();
@@ -33,7 +33,7 @@ Deck::Deck(const Deck &clone)
 Deck* Deck::operator=(const Deck* clone) {
 	// do set equals operations here
 	// set this equal to the clone
-	count = clone->size();
+	count = new unsigned int(clone->size());
 	deck = clone->deck;
 	well_formed();
 	return this;
@@ -42,9 +42,9 @@ Deck* Deck::operator=(const Deck* clone) {
 Deck& Deck::operator=(const Deck &clone) {
 	// do set equals operations here
 	// set this equal to the clone
-	this = new Deck();
-	count = clone.size();
+	count = new unsigned int(clone.size());
 	deck = clone.deck;
+	cout << "doing Deck& Deck::operator=(const Deck &clone)" << endl;
 	well_formed();
 	return *this;
 }
@@ -53,11 +53,11 @@ Deck& Deck::operator=(const Deck &clone) {
 // shifting all the cards up one
 Card* Deck::draw_card() {
 	well_formed();
-	if(count == 0) return nullptr;
+	if(*count == 0) return nullptr;
 	Card* ret = deck[0];
-	for(unsigned int i = 1; i < count; i++)
+	for(unsigned int i = 1; i < *count; i++)
 		deck[i-1] = deck[i];
-	count--;
+	*count -= 1;
 	well_formed();
 	return ret;
 }
@@ -83,8 +83,8 @@ void Deck::shuffle() {
 	if(!well_formed()) return;
 
 	// Traverses through the array swapping each index with a random other index
-	for(unsigned int i = 0; i < count; i++) {
-		unsigned int r = rand() % count;
+	for(unsigned int i = 0; i < *count; i++) {
+		unsigned int r = rand() % *count;
 		Card* temp;
 		temp = deck[i];
 		deck[i] = deck[r];
@@ -99,12 +99,12 @@ bool Deck::add_card(Card* card) {
 	if(!well_formed()) return false;
 
 	// no room to add the card
-	if(count == 20) return print_err("No more room to add a card.");
+	if(*count == 20) return print_err("No more room to add a card.");
 
 	// adds the card and increments count
 	deck.push_back(card);
-	count++;
-	cout << card->to_string() << " has been added." << endl;
+	*count += 1;
+	cout << card->to_string() << " has been added. " << endl;
 	shuffle();
 
 	return well_formed();
@@ -115,19 +115,19 @@ bool Deck::add_card(Card* card, unsigned int index) {
 	if(!well_formed()) return false;
 	
 	// index can not be larger than count
-	if(index >= count - 1) return print_err("Index is out of bounds.");
+	if(index >= *count - 1) return print_err("Index is out of bounds.");
 
 	// no room to add the card
-	if(count == 20) return false;
+	if(*count == 20) return false;
 
 	// moves all the cards after index down one
-	for(unsigned int i = count - 1; i > index; i--) {
+	for(unsigned int i = *count - 1; i > index; i--) {
 		deck[i + 1] = deck[i];
 	}
 
 	// puts the deck in at index and increments count
 	deck[index] = card;
-	count++;
+	*count += 1;
 	
 	well_formed();
 	return true;
@@ -140,14 +140,14 @@ bool Deck::add_card(Card* card, unsigned int index) {
 //		A deck may not have any nullptr between 0 and count
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
-	if(count > deck.size()) return print_err("Count is larger than 20");
-	for(unsigned int i = 0; i < count; i++) {
+	if(*count > deck.size()) return print_err("Count is larger than 20");
+	for(unsigned int i = 0; i < *count; i++) {
 		// checks to make sure count is not larger than the size of the deck
 		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		
 		// COMENTED OUT FOR TESTING
 		//int cardCount = 1;
-		//for(unsigned int j = i + 1; j < count; j++) {
+		//for(unsigned int j = i + 1; j < *count; j++) {
 			// adding it here checks the integrity of the array on our first pass
 		//	if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		//	Card c1 = *deck[i];
@@ -171,7 +171,7 @@ bool Deck::print_err(string err) {
 
 string Deck::to_string() const {
     string ret;
-	for(unsigned int i = 0; i < count; i++) {
+	for(unsigned int i = 0; i < *count; i++) {
 		ret += deck[i]->get_name();
 		ret += " ";
 	}
