@@ -37,7 +37,9 @@ void MainMenu::single_player() {
 	 * however it is a temp variable. I have tried
 	 * binding it to a const and that didn't work either.
 	 */
-	game.load_content(builder.get_selected());
+	cout << builder.get_selected() << " " << builder.get_selected()->to_string() << endl;
+
+	game.load_content(*builder.get_selected());
 
 	do     print_options();
 	while (!get_selection());

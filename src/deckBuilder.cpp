@@ -31,7 +31,7 @@ void DeckBuilder::start() {
 	for(int i = 0; i < 20; i++)
 		list[selected]->add_card(new Card());
 
-	cout << list[selected]->to_string() << endl;
+	cout << get_selected()->to_string() << endl;
 
 	cout << "Enter exit to exit: ";
 	string in;

@@ -19,7 +19,7 @@ public:
 	DeckBuilder();
 	virtual ~DeckBuilder();
 	void start();
-	Deck get_selected() { return *list[selected]; };
+	const Deck* get_selected() { return list[selected]; };
 };
 
 #endif /* SRC_DECKBUILDER_H_ */
