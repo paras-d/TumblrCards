@@ -16,14 +16,12 @@ private:
 	Deck hand;
 	Deck board;
 	Deck discard;
-
 public:
 	Player();
 	virtual ~Player();
-	Player* get_state();
 	bool select_deck(Deck selected);
-	int deck_size();
-	int hand_size();
+	int deck_size() { return hand.size(); };
+	int hand_size() { return deck.size(); };
 	Deck* get_hand() { return &hand; };
 	Deck* get_deck() { return &deck; };
 	bool draw();

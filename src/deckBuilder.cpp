@@ -12,9 +12,9 @@
 
 using namespace std;
 
-DeckBuilder::DeckBuilder() {
+DeckBuilder::DeckBuilder()
+    :selected(0) {
 	// TODO Auto-generated constructor stub
-	selected = 0;
 }
 
 DeckBuilder::~DeckBuilder() {

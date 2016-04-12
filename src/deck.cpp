@@ -102,8 +102,6 @@ bool Deck::add_card(Card* card) {
 	// adds the card and increments count
 	deck.push_back(card);
 	*count += 1;
-	cout << card->to_string() << " has been added. " << endl;
-	shuffle();
 
 	return well_formed();
 }

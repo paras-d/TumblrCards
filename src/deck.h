@@ -22,7 +22,7 @@ public:
 	Deck();
 	virtual ~Deck();
 	Deck(const Deck &clone);
-	Card * draw_card();
+	Card* draw_card();
 	Deck draw_cards(int num);
 	Deck* operator=(const Deck *clone);
 	Deck& operator=(const Deck &clone);

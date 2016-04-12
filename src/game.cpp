@@ -31,6 +31,7 @@ void Game::load_content(const Deck selected) {
 	 * suck as deck lists
 	 */
 	player.select_deck(selected);
+	for(int i = 0; i < 5; i++) player.draw();
 	update();
 }
 
@@ -46,10 +47,21 @@ void Game::update() {
 	/*
 	 * TODO This is the running function of the game.
 	 * This will be where the player takes their turn.
+	 * The game will absolutly not print like this. I
+	 * am just doing incredibly basic output to make
+	 * sure everything is working correctly. If someone
+	 * wants to start working on making the cli UI that
+	 * would be great!
 	 */
-	cout << "starting your turn now" << endl;
+	cout << "Starting your turn now" << endl;
+    cout << "Hand: " << endl;
+    cout << player.get_hand()->to_string() << endl;
+    cout << "Casting phase" << endl;
+
+    cout << "Combat phase" << endl;
+
+    cout << "Draw phase" << endl;
 	draw();
-	cout << player.get_deck()->to_string() << endl;
 	cout << "enter exit to exit: ";
 	string in;
 	cin >> in;
@@ -87,8 +99,11 @@ void Game::mp_update() {
 
 void Game::draw() {
 	/*
-
 	 * TODO Draw the board state and players hand here.
 	 */
-	cout << "I would draw some stuff here" << endl;
+
+	if(player.hand_size() < 3)
+        while(player.hand_size() < 3)
+            player.draw();
+    else player.draw();
 }

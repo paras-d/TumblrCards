@@ -17,6 +17,24 @@ Player::~Player() {
 }
 
 bool Player::select_deck(Deck selected) {
-	deck = selected;
-	return true;
+    if(&selected != NULL) {
+	    deck = selected;
+	    return true;
+	}
+	return false;
+}
+
+bool Player::draw() {
+    hand.add_card(deck.draw_card());
+    return true;
+}
+
+bool Player::cast(int cardIndex) {
+    /* 
+     * TODO do card casting here
+     * should move the card in the players
+     * hand at the given index int the board
+     * deck.
+     */
+    return true;
 }
