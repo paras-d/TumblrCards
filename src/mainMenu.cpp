@@ -83,38 +83,11 @@ void MainMenu::quit() {
 	cout << "Got to quit()" << endl;
 }
 
-void MainMenu::print_logo() {
-	clear_console();
-	cout << endl;
-	print_center("              Welcome to:             \n");
-	print_center("    /:\\                       (\"\"\")   \n");
-	print_center("    |:|          /$$           III    \n");
-	print_center("    |:|         | $$         __III__  \n");
-	print_center("    |:|        /$$$$$$     /:-.___,-:\\\n");
-	print_center("    |:|       |_  $$_/     \\]  |:|  [/\n");
-	print_center("    |:|         | $$           |:|    \n");
-	print_center("/]  |:|  [\\     | $$ /$$       |:|    \n");
-	print_center("\\:-'''''-:/     | \"$$$$/       |:|    \n");
-	print_center("  \"\"III\"\"        \\___/         |:|    \n");
-	print_center("    III                        |:|    \n");
-	print_center("   (___)                       \\:/    \n");
-	print_center("             TumblrCards              \n");
-	cout << endl;
-}
-
-void MainMenu::print_options() {
-	print_center("Main Menu\n");
-	print_center("1) Single player     4) Settings\n");
-	print_center("2) Multiplayer       5) Exit    \n");
-	print_center("3) Deck lists                   \n");
-	cout << endl;
-	print_center("Enter selection [1-5]: ");
-}
-
 bool MainMenu::print_menu() {
-	print_logo();
-	print_options();
-	return true;
+    clear_console();
+    string screen_disp = get_display_screen("screen_main");
+    cout << screen_disp << endl;
+    return true;
 }
 
 bool MainMenu::get_selection() {
