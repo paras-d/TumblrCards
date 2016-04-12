@@ -14,19 +14,18 @@ using namespace std;
 Deck::Deck()
 	:count{ new unsigned int(0) } {
 	// TODO Auto-generated constructor stuff
-	cout << "deck constructed" << endl;
 	well_formed();
 }
 
 Deck::~Deck() {
 	// TODO Auto-generated destructor stuff
-	cout << "Deck destructed" << endl;
 }
 
 Deck::Deck(const Deck &clone)
-	:count{ new unsigned int(0) } {
+	:count{ new unsigned int(clone.size()) } {
 	// TODO cloning stuff here
 	// passes clone's data to here
+    deck = clone.deck;
 	well_formed();
 }
 
@@ -44,7 +43,6 @@ Deck& Deck::operator=(const Deck &clone) {
 	// set this equal to the clone
 	count = new unsigned int(clone.size());
 	deck = clone.deck;
-	cout << "doing Deck& Deck::operator=(const Deck &clone)" << endl;
 	well_formed();
 	return *this;
 }

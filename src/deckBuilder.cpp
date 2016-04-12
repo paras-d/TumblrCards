@@ -19,7 +19,6 @@ DeckBuilder::DeckBuilder() {
 
 DeckBuilder::~DeckBuilder() {
 	// TODO Auto-generated destructor stub
-	cout << "deckBuilder destructed" << endl;
 }
 
 void DeckBuilder::start() {
