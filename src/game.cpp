@@ -16,8 +16,6 @@ Game::Game(string type) {
 	if(players != "single" || players != "mutli")
 		// Throw custruction error here
 	cont = true;
-
-	cout << "game constructed" << endl;
 }
 
 Game::~Game() {
@@ -32,8 +30,6 @@ void Game::load_content(const Deck selected) {
 	 * TODO Load needed game content here
 	 * suck as deck lists
 	 */
-	cout << "loading content here" << endl;
-	cout << selected.to_string() << endl;
 	player.select_deck(selected);
 	update();
 }
@@ -44,7 +40,6 @@ void Game::unload_content() {
 	 * this should be called at the end of the game
 	 * to prep us for deconstruction
 	 */
-	cout << "unloading content here" << endl;
 }
 
 void Game::update() {
@@ -69,12 +64,6 @@ void Game::update() {
 	} else
 		unload_content();
 }
-void Game::draw() {
-	/*
-	 * TODO Draw the board state and players hand here.
-	 */
-	cout << "I would draw some stuff here" << endl;
-}
 
 void Game::sp_update() {
 	/*
@@ -94,4 +83,12 @@ void Game::mp_update() {
 
 	cout << "mp: opponents turn starts" << endl;
 	update();
+}
+
+void Game::draw() {
+	/*
+
+	 * TODO Draw the board state and players hand here.
+	 */
+	cout << "I would draw some stuff here" << endl;
 }
