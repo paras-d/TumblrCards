@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <sstream>
 #include "deck.h"
 #include "stdlib.h"
 
@@ -168,7 +169,11 @@ bool Deck::print_err(string err) {
 string Deck::to_string() const {
     string ret;
 	for(unsigned int i = 0; i < *count; i++) {
+		ret += std::to_string(i+1);
+		ret += ") ";
 		ret += deck[i]->get_name();
+		ret += " - ";
+		ret += std::to_string(deck[i]->get_cost());
 		ret += " ";
 	}
 	return ret;

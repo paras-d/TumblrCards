@@ -15,6 +15,7 @@ Card::Card() {
 	// TODO Auto-generated constructor stub
 	attack = 0;
 	health = 0;
+	cost = 1;
 	currHP = health;
 	name = "Void";
 	ability = "does a thing";

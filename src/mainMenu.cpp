@@ -22,14 +22,6 @@ MainMenu::~MainMenu() {
 
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
-	cout << "Got to single_player()" << endl;
-	cout << "Testing game creation now." << endl;
-
-	/*
-	 * Remove deletes. We need to find a way to destruct
-	 * the game upon completion. As it stands games stay
-	 * on the stack until the program exits.
-	 */
     if(builder.get_selected() != NULL) {
 	    Game game("single");
 	    game.load_content(*builder.get_selected());

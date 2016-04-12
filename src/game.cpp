@@ -53,11 +53,16 @@ void Game::update() {
 	 * wants to start working on making the cli UI that
 	 * would be great!
 	 */
+	cout << opponent.get_life() << endl;
+	player.set_mana(opponent.get_life());
 	cout << "Starting your turn now" << endl;
     cout << "Hand: " << endl;
-    cout << player.get_hand()->to_string() << endl;
-    cout << "Casting phase" << endl;
-
+    cout << "0) Combat " << player.get_hand()->to_string() << endl;
+    while(player.get_mana() > 0) {
+    	cout << "Cast: ";
+    	player.set_mana(player.get_mana() - 2);
+    }
+    cout << "Select a card to play" << endl;
     cout << "Combat phase" << endl;
 
     cout << "Draw phase" << endl;

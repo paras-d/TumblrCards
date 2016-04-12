@@ -7,7 +7,9 @@
 
 #include "player.h"
 
-Player::Player() {
+Player::Player()
+	:life { 10 },
+	 mana { 0 } {
 	// TODO Auto-generated constructor stub
 
 }

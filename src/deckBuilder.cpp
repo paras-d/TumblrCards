@@ -25,6 +25,7 @@ void DeckBuilder::start() {
 	clear_console();
 	cout << "deck building started" << endl;
 	cout << "testing to make sure decks work" << endl;
+
 	list.push_back(new Deck());
 
 	for(int i = 0; i < 20; i++)
@@ -43,4 +44,11 @@ void DeckBuilder::print_set(string set) {
 	if(set == "test") {
 
 	}
+}
+
+const Deck* DeckBuilder::get_selected() {
+	if(!list.empty())
+		return list[selected];
+	else
+		return nullptr;
 }
