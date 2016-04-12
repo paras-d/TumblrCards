@@ -16,9 +16,8 @@ int main(int argc, char* argv[]) {
 	// starts the game
 	//clear_console();
 	MainMenu menu;
-	do     menu.print_menu();
+	do     menu.print_menu("screen_main");
 	while (!menu.get_selection());
-
 	cout << "Exiting the game now" << endl;
 
 	return 0;

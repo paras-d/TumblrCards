@@ -6,6 +6,7 @@
  */
 #include <iostream>
 #include <sstream>
+#include <string>
 #include "mainMenu.h"
 #include "utils.h"
 #include "game.h"
@@ -40,7 +41,7 @@ void MainMenu::single_player() {
 
 	game.load_content(*builder.get_selected());
 
-	do     print_options();
+	do     print_menu("screen_main");
 	while (!get_selection());
 }
 
@@ -55,26 +56,21 @@ void MainMenu::multi_player() {
 	 * on the stack until the program exits.
 	 */
 	Game game("multi");
-
-	do     print_options();
+	do     print_menu("screen_main");
 	while (!get_selection());
 }
 
 void MainMenu::deck_list() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
-	builder.start();
-
-	do     print_options();
+	do     print_menu("screen_main");
 	while (!get_selection());
 }
 
 void MainMenu::settings() {
 	// TODO moves to a settings menu.
 	// what settings could this game have?
-	cout << "Got to settings()" << endl;
-
-	do     print_options();
+        do     print_menu("screen_settings");
 	while (!get_selection());
 }
 
@@ -83,9 +79,9 @@ void MainMenu::quit() {
 	cout << "Got to quit()" << endl;
 }
 
-bool MainMenu::print_menu() {
+bool MainMenu::print_menu(string type) {
     clear_console();
-    string screen_disp = get_display_screen("screen_main");
+    string screen_disp = get_display_screen(type);
     cout << screen_disp << endl;
     return true;
 }
