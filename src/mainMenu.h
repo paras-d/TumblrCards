@@ -39,7 +39,7 @@ public:
 	virtual ~MainMenu();
 
 	// prints the menu to the terminal
-	bool print_menu();
+	bool print_menu(std::string type);
 
 	// takes in the users input for the selection
 	bool get_selection();
