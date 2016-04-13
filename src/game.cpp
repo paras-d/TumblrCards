@@ -4,7 +4,7 @@
  *  Created on: Mar 26, 2016
  *      Author: Tumblr
  */
-
+#include <sstream>
 #include <string>
 #include <iostream>
 #include "game.h"
@@ -53,22 +53,28 @@ void Game::update() {
 	 * wants to start working on making the cli UI that
 	 * would be great!
 	 */
-	cout << opponent.get_life() << endl;
+	string in;
+	stringstream ss;
+	// sets usable mana here
 	player.set_mana(opponent.get_life());
 	cout << "Starting your turn now" << endl;
-    cout << "Hand: " << endl;
-    cout << "0) Combat " << player.get_hand()->to_string() << endl;
+	// prints hand to show what can be cast
     while(player.get_mana() > 0) {
+    	cout << "Hand: " << endl;
+    	cout << "0) Combat " << player.get_hand()->to_string() << endl;
     	cout << "Cast: ";
-    	player.set_mana(player.get_mana() - 2);
+    	cin >> in;
+    	ss << in;
+    	unsigned int choice = 0;
+    	ss >> choice;
+    	if(choice == 0) break;
+    	player.cast(choice);
     }
-    cout << "Select a card to play" << endl;
     cout << "Combat phase" << endl;
 
     cout << "Draw phase" << endl;
 	draw();
 	cout << "enter exit to exit: ";
-	string in;
 	cin >> in;
 	if(in == "exit")
 		cont = false;

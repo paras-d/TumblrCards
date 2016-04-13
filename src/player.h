@@ -32,7 +32,7 @@ public:
 	Deck* get_board() { return &board; };
 	Deck* get_discard() { return &discard; };
 	bool draw();
-	bool cast(int cardIndex);
+	bool cast(unsigned int cardIndex);
 };
 
 #endif /* SRC_PLAYER_H_ */

@@ -31,12 +31,14 @@ bool Player::draw() {
     return true;
 }
 
-bool Player::cast(int cardIndex) {
+bool Player::cast(unsigned int cardIndex) {
     /* 
      * TODO do card casting here
      * should move the card in the players
-     * hand at the given index int the board
+     * hand at the given index into the board
      * deck.
      */
+	if(cardIndex < 0 || cardIndex > hand.size() - 1) return false;
+	board.add_card(hand.get_card(cardIndex));
     return true;
 }

@@ -61,6 +61,19 @@ Card* Deck::draw_card() {
 	return ret;
 }
 
+// removes the card at the given index and returns it
+// shifting all the cards up one
+Card* Deck::get_card(unsigned int index) {
+	well_formed();
+	if(*count == 0 || index < 0 || index > *count) return nullptr;
+	Card* ret = deck[index];
+	for(unsigned int i = index; i < *count; i++)
+		deck[i-1] = deck[i];
+	*count -= 1;
+	well_formed();
+	return ret;
+}
+
 // removes the top num cards from the deck and returns
 // a "Deck" as the drawn cards. shifts all
 // the cards up num
