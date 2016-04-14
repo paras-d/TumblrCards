@@ -4,7 +4,7 @@
  *  Created on: Mar 26, 2016
  *      Author: Tumblr
  */
-
+#include <sstream>
 #include <string>
 #include <iostream>
 #include "game.h"
@@ -31,6 +31,7 @@ void Game::load_content(const Deck selected) {
 	 * suck as deck lists
 	 */
 	player.select_deck(selected);
+	for(int i = 0; i < 5; i++) player.draw();
 	update();
 }
 
@@ -46,12 +47,34 @@ void Game::update() {
 	/*
 	 * TODO This is the running function of the game.
 	 * This will be where the player takes their turn.
+	 * The game will absolutly not print like this. I
+	 * am just doing incredibly basic output to make
+	 * sure everything is working correctly. If someone
+	 * wants to start working on making the cli UI that
+	 * would be great!
 	 */
-	cout << "starting your turn now" << endl;
-	draw();
-	cout << player.get_deck()->to_string() << endl;
-	cout << "enter exit to exit: ";
 	string in;
+	stringstream ss;
+	// sets usable mana here
+	player.set_mana(opponent.get_life());
+	cout << "Starting your turn now" << endl;
+	// prints hand to show what can be cast
+    while(player.get_mana() > 0) {
+    	cout << "Hand: " << endl;
+    	cout << "0) Combat " << player.get_hand()->to_string() << endl;
+    	cout << "Cast: ";
+    	cin >> in;
+    	ss << in;
+    	unsigned int choice = 0;
+    	ss >> choice;
+    	if(choice == 0) break;
+    	player.cast(choice);
+    }
+    cout << "Combat phase" << endl;
+
+    cout << "Draw phase" << endl;
+	draw();
+	cout << "enter exit to exit: ";
 	cin >> in;
 	if(in == "exit")
 		cont = false;
@@ -86,8 +109,7 @@ void Game::mp_update() {
 }
 
 void Game::draw() {
-	/*
-
+        /*
 	 * TODO Draw the board state and players hand here.
 	 */
 	cout << "I would draw some stuff here" << endl;

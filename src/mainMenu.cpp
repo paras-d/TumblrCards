@@ -23,6 +23,11 @@ MainMenu::~MainMenu() {
 
 void MainMenu::single_player() {
 	// TODO preps the game to move to single player
+    if(builder.get_selected() != NULL) {
+	    Game game("single");
+	    game.load_content(*builder.get_selected());
+	} else cout << "No deck selected." << endl;
+	
 	cout << "Got to single_player()" << endl;
 	cout << "Testing game creation now." << endl;
 
@@ -38,8 +43,9 @@ void MainMenu::single_player() {
 	 * however it is a temp variable. I have tried
 	 * binding it to a const and that didn't work either.
 	 */
-
-	game.load_content(*builder.get_selected());
+	if(builder.get_selected() != nullptr)
+		game.load_content(*builder.get_selected());
+	else cout << "no deck selected" << endl;
 
 	do     print_menu("screen_main");
 	while (!get_selection());

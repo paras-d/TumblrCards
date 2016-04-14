@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include <sstream>
 #include "deck.h"
 #include "stdlib.h"
 
@@ -60,6 +61,19 @@ Card* Deck::draw_card() {
 	return ret;
 }
 
+// removes the card at the given index and returns it
+// shifting all the cards up one
+Card* Deck::get_card(unsigned int index) {
+	well_formed();
+	if(*count == 0 || index < 0 || index > *count) return nullptr;
+	Card* ret = deck[index];
+	for(unsigned int i = index; i < *count; i++)
+		deck[i-1] = deck[i];
+	*count -= 1;
+	well_formed();
+	return ret;
+}
+
 // removes the top num cards from the deck and returns
 // a "Deck" as the drawn cards. shifts all
 // the cards up num
@@ -102,8 +116,6 @@ bool Deck::add_card(Card* card) {
 	// adds the card and increments count
 	deck.push_back(card);
 	*count += 1;
-	cout << card->to_string() << " has been added. " << endl;
-	shuffle();
 
 	return well_formed();
 }
@@ -170,7 +182,11 @@ bool Deck::print_err(string err) {
 string Deck::to_string() const {
     string ret;
 	for(unsigned int i = 0; i < *count; i++) {
+		ret += std::to_string(i+1);
+		ret += ") ";
 		ret += deck[i]->get_name();
+		ret += " - ";
+		ret += std::to_string(deck[i]->get_cost());
 		ret += " ";
 	}
 	return ret;

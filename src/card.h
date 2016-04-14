@@ -15,6 +15,7 @@ private:
 	int attack;
 	int health;
 	int currHP;
+	int cost;
 	std::string name;
 	std::string ability;
 
@@ -40,7 +41,7 @@ public:
 	// as well as during combat
 	int get_atk() { return attack; }
 	int get_hp() { return currHP; }
-
+	int get_cost() { return cost; };
 	std::string get_name() { return name; }
 };
 

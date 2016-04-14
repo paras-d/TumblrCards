@@ -16,18 +16,23 @@ private:
 	Deck hand;
 	Deck board;
 	Deck discard;
-
+	int life;
+	int mana;
 public:
 	Player();
 	virtual ~Player();
-	Player* get_state();
 	bool select_deck(Deck selected);
-	int deck_size();
-	int hand_size();
+	int deck_size() { return hand.size(); };
+	int hand_size() { return deck.size(); };
+	int get_life() { return life; };
+	int get_mana() { return mana; };
+	void set_mana(int num) { mana = num; };
 	Deck* get_hand() { return &hand; };
 	Deck* get_deck() { return &deck; };
+	Deck* get_board() { return &board; };
+	Deck* get_discard() { return &discard; };
 	bool draw();
-	bool cast(int cardIndex);
+	bool cast(unsigned int cardIndex);
 };
 
 #endif /* SRC_PLAYER_H_ */
