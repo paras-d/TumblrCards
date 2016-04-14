@@ -10,6 +10,7 @@
 #include <iostream>
 #include <unistd.h>
 #include <cstdlib>
+#include <fstream>
 #include "utils.h"
 
 using namespace std;
@@ -36,11 +37,30 @@ int get_console_height() {
 	return size.ws_row;
 }
 
-void print_center(string s) {
-	string pad = "";
-	int k = (get_console_width() / 2) - (s.length() / 2);
+string get_display_screen(string type) {
+    // Open the assets file for the current screen
+    string   buffer;
+    string   ret = "";
+    ifstream screen_file("../src/assets/"+type);
 
-	for (int i = 0; i < k; i++)
-		pad.append(" ");
-	cout << pad << s;
+    if (screen_file.is_open()) {
+        while (getline(screen_file, buffer)) {
+            // Pad the string based on console and line length
+            // such that the text be displayed center screen
+            string pad = "";
+            int k = (get_console_width() / 2) - (buffer.length() / 2);
+            for (int i = 0; i < k; i++) {
+                pad.append(" ");
+            }
+            // Append the formatted line to the cumulative string
+            ret = ret + pad + buffer + '\n';
+        }
+        screen_file.close();
+    }
+    else {
+        // TODO: Raise an exception here, if an asset file
+        // cannot be opened then something serious has gone wrong.
+        cout << "FILE COULD NOT BE OPENED" << endl;
+    }
+    return ret;
 }

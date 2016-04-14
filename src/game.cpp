@@ -109,12 +109,8 @@ void Game::mp_update() {
 }
 
 void Game::draw() {
-	/*
+        /*
 	 * TODO Draw the board state and players hand here.
 	 */
-
-	if(player.hand_size() < 3)
-        while(player.hand_size() < 3)
-            player.draw();
-    else player.draw();
+	cout << "I would draw some stuff here" << endl;
 }
