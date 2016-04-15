@@ -53,7 +53,9 @@ string get_display_screen(string type) {
                 pad.append(" ");
             }
             // Append the formatted line to the cumulative string
-            ret = ret + pad + buffer + '\n';
+            if(screen_file.peek() != EOF)
+            	ret = ret + pad + buffer + '\n';
+            else ret = ret + pad + buffer;
         }
         screen_file.close();
     }

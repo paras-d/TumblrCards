@@ -13,8 +13,8 @@
              TumblrCards              
 
 
-1) Single player     4) Settings
-2) Multiplayer       5) Exit    
-3) Deck lists                   
+1) List Decks        4) Exit
+2) Select Deck              
+3) Edit Selected            
 
-Enter selection [1-5]: 
+Enter selection [1-4]: 

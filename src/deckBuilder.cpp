@@ -6,7 +6,7 @@
  */
 
 #include <iostream>
-#include <string>
+#include <sstream>
 #include "deckBuilder.h"
 #include "utils.h"
 
@@ -22,28 +22,62 @@ DeckBuilder::~DeckBuilder() {
 }
 
 void DeckBuilder::start() {
-	clear_console();
-	cout << "deck building started" << endl;
-	cout << "testing to make sure decks work" << endl;
+	// TODO Add any initilizing stuff here
+	// before priting menu
 
-	list.push_back(new Deck());
-
-	for(int i = 0; i < 20; i++)
-		list[selected]->add_card(new Card());
-
-	cout << get_selected()->to_string() << endl;
-
-	cout << "Enter exit to exit: ";
-	string in;
-	cin >> in;
-	if(in != "exit")
-		start();
+	do print_menu_clr("screen_builder");
+	while(!get_input());
 }
 
-void DeckBuilder::print_set(string set) {
-	if(set == "test") {
+void DeckBuilder::list_decks() {
 
+}
+
+void DeckBuilder::select_deck() {
+
+}
+
+void DeckBuilder::edit_selected() {
+
+}
+
+bool DeckBuilder::print_menu(string type) {
+    string screen_disp = get_display_screen(type);
+    cout << screen_disp << endl;
+    return true;
+}
+
+bool DeckBuilder::print_menu_clr(string type) {
+    clear_console();
+    print_menu(type);
+    return true;
+}
+
+bool DeckBuilder::get_input() {
+	// TODO take in the players selection and call that method.
+	int selection = 5;
+	stringstream ss;
+	string in;
+	cin >> in;
+	ss << in;
+	ss >> selection;
+	switch(selection) {
+		case 1:
+			list_decks();
+			break;
+		case 2:
+			select_deck();
+			break;
+		case 3:
+			edit_selected();
+			break;
+		case 4:
+			break;
+		default:
+			cout << in << " is not a valid option." << endl;
+			return false;
 	}
+	return true;
 }
 
 const Deck* DeckBuilder::get_selected() {

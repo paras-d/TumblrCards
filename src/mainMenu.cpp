@@ -14,7 +14,7 @@
 using namespace std;
 
 MainMenu::MainMenu() {
-	// TODO get_selections();
+	// TODO Auto-generated constructor stub
 }
 
 MainMenu::~MainMenu() {
@@ -26,58 +26,42 @@ void MainMenu::single_player() {
     if(builder.get_selected() != NULL) {
 	    Game game("single");
 	    game.load_content(*builder.get_selected());
-	} else cout << "No deck selected." << endl;
-	
-	cout << "Got to single_player()" << endl;
-	cout << "Testing game creation now." << endl;
 
-	/*
-	 * Remove deletes. We need to find a way to destruct
-	 * the game upon completion. As it stands games stay
-	 * on the stack until the program exits.
-	 */
+	    do     print_menu_clr("screen_main");
+		while (!get_input());
+	} else {
+		cout << "No deck selected." << endl;
 
-	Game game("single");
-	/*
-	 * Trying to pass selected deck through here
-	 * however it is a temp variable. I have tried
-	 * binding it to a const and that didn't work either.
-	 */
-	if(builder.get_selected() != nullptr)
-		game.load_content(*builder.get_selected());
-	else cout << "no deck selected" << endl;
-
-	do     print_menu("screen_main");
-	while (!get_selection());
+		do     print_menu("screen_main");
+		while (!get_input());
+	}
 }
 
 void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
-	cout << "Got to multi_player()" << endl;
-	cout << "Testing game creation now." << endl;
-
-	/*
-	 * Remove deletes. We need to find a way to destruct
-	 * the game upon completion. As it stands games stay
-	 * on the stack until the program exits.
-	 */
-	Game game("multi");
+	if(builder.get_selected() != NULL) {
+	    Game game("multi");
+	    game.load_content(*builder.get_selected());
+	} else cout << "No deck selected." << endl;
+	
 	do     print_menu("screen_main");
-	while (!get_selection());
+	while (!get_input());
 }
 
-void MainMenu::deck_list() {
+void MainMenu::deck_builder() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
-	do     print_menu("screen_main");
-	while (!get_selection());
+	builder.start();
+	
+	do     print_menu_clr("screen_main");
+	while (!get_input());
 }
 
 void MainMenu::settings() {
 	// TODO moves to a settings menu.
 	// what settings could this game have?
-        do     print_menu("screen_settings");
-	while (!get_selection());
+    do     print_menu_clr("screen_settings");
+	while (!get_input());
 }
 
 void MainMenu::quit() {
@@ -86,13 +70,18 @@ void MainMenu::quit() {
 }
 
 bool MainMenu::print_menu(string type) {
-    clear_console();
     string screen_disp = get_display_screen(type);
     cout << screen_disp << endl;
     return true;
 }
 
-bool MainMenu::get_selection() {
+bool MainMenu::print_menu_clr(string type) {
+    clear_console();
+    print_menu(type);
+    return true;
+}
+
+bool MainMenu::get_input() {
 	// TODO take in the players selection and call that method.
 	int selection = 5;
 	stringstream ss;
@@ -108,7 +97,7 @@ bool MainMenu::get_selection() {
 			multi_player();
 			break;
 		case 3:
-			deck_list();
+			deck_builder();
 			break;
 		case 4:
 			settings();
