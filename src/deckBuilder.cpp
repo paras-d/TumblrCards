@@ -40,8 +40,16 @@ void DeckBuilder::new_deck() {
 	list.push_back(new Deck(name));
 	selected = list.size() - 1;
 	cout << "I would do card selection stuff here." << endl;
+	cout << "Building you a temp deck for testing." << endl;
 	while(list[selected]->size() < 20) {
-		list[selected]->add_card(new Card());
+	    Card* temp = new Card();
+	    if(list[selected]->size() % 2 == 0)
+	        temp->build_card("test1");
+	    if(list[selected]->size() % 3 == 0)
+	        temp->build_card("test2");
+	    if(list[selected]->size() % 4 == 0)
+	        temp->build_card("test3");
+		list[selected]->add_card(temp);
 	}
 	cout << list[selected]->to_string() << endl;
 	do print_menu("screen_builder");
@@ -51,9 +59,9 @@ void DeckBuilder::new_deck() {
 void DeckBuilder::select_deck() {
 	clear_console();
 	if(!list.empty()) {
-		int i = 1;
+		unsigned int i = 1;
 		for(Deck* deck : list) {
-			if(i -1 == selected) cout << '*';
+			if(i - 1 == selected) cout << '*';
 			else cout << " ";
 			cout << i++ << ") " << deck->get_name() << endl;
 		}

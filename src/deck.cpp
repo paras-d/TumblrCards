@@ -72,6 +72,7 @@ Card* Deck::draw_card() {
 	Card* ret = deck[0];
 	for(unsigned int i = 1; i < *count; i++)
 		deck[i-1] = deck[i];
+	deck.pop_back();
 	*count -= 1;
 	well_formed();
 	return ret;
@@ -83,8 +84,9 @@ Card* Deck::get_card(unsigned int index) {
 	well_formed();
 	if(*count == 0 || index < 0 || index > *count) return nullptr;
 	Card* ret = deck[index];
-	for(unsigned int i = index; i < *count; i++)
+	for(unsigned int i = index + 1; i < *count; i++)
 		deck[i-1] = deck[i];
+	deck.pop_back();
 	*count -= 1;
 	well_formed();
 	return ret;
