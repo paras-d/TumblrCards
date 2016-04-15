@@ -22,32 +22,55 @@ DeckBuilder::~DeckBuilder() {
 }
 
 void DeckBuilder::start() {
-	// TODO Add any initializing stuff here
-	// before printing menu
+	/*
+	 * TODO Add any initializing stuff here
+	 * before printing menu. Possibly parse in
+	 * decks based on decklist files to save
+	 * decks?
+	 */
 
 	do print_menu_clr("screen_builder");
 	while(!get_input());
 }
 
-void DeckBuilder::list_decks() {
+void DeckBuilder::new_deck() {
+	print_center("Enter new deck name: ");
+	string name;
+	cin >> name;
+	list.push_back(new Deck(name));
+	selected = list.size() - 1;
+	cout << "I would do card selection stuff here." << endl;
+	while(list[selected]->size() < 20) {
+		list[selected]->add_card(new Card());
+	}
+	cout << list[selected]->to_string() << endl;
+	do print_menu("screen_builder");
+	while(!get_input());
+}
+
+void DeckBuilder::select_deck() {
 	clear_console();
 	if(!list.empty()) {
 		int i = 1;
 		for(Deck* deck : list) {
+			if(i -1 == selected) cout << '*';
+			else cout << " ";
 			cout << i++ << ") " << deck->get_name() << endl;
 		}
+		cout << "Select your primary deck: ";
+		cin >> selected;
+		if(selected < 1 || selected > list.size()) {
+			selected = 1;
+		}
+		selected--;
 	} else cout << "You don't have any decks!" << endl;
 
 	do print_menu("screen_builder");
 	while(!get_input());
 }
 
-void DeckBuilder::select_deck() {
-	do print_menu_clr("screen_builder");
-	while(!get_input());
-}
-
 void DeckBuilder::edit_selected() {
+	cout << "I would do card selection stuff here." << endl;
 	do print_menu_clr("screen_builder");
 	while(!get_input());
 }
@@ -74,7 +97,7 @@ bool DeckBuilder::get_input() {
 	ss >> selection;
 	switch(selection) {
 		case 1:
-			list_decks();
+			new_deck();
 			break;
 		case 2:
 			select_deck();

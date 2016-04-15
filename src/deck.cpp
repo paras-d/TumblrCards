@@ -13,8 +13,15 @@
 using namespace std;
 
 Deck::Deck()
-	:count{ new unsigned int(0) },
-	 deckName{ "Test" } {
+	:deckName{ "Test" },
+	 count{ new unsigned int(0) } {
+	// TODO Auto-generated constructor stuff
+	well_formed();
+}
+
+Deck::Deck(string name)
+	:deckName{ name },
+	 count{ new unsigned int(0) } {
 	// TODO Auto-generated constructor stuff
 	well_formed();
 }
@@ -24,11 +31,11 @@ Deck::~Deck() {
 }
 
 Deck::Deck(const Deck &clone)
-	:count{ new unsigned int(clone.size()) },
-	 deckName { clone.deckName } {
+	:deck{ clone.deck },
+	 deckName { clone.deckName },
+	 count{ new unsigned int(clone.size()) } {
 	// TODO cloning stuff here
 	// passes clone's data to here
-    deck = clone.deck;
 	well_formed();
 }
 

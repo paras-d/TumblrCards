@@ -20,6 +20,7 @@ private:
 	bool print_err(std::string err);
 public:
 	Deck();
+	Deck(std::string name);
 	virtual ~Deck();
 	Deck(const Deck &clone);
 	Card* draw_card();

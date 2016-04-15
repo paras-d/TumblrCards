@@ -20,10 +20,10 @@ private:
 	// prints the menu system to the terminal
 	bool print_menu_clr(std::string type);
 	bool print_menu(std::string type);
-
 	bool get_input();
+
 	void edit_selected();
-	void list_decks();
+	void new_deck();
 	void select_deck();
 public:
 	DeckBuilder();
