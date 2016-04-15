@@ -30,6 +30,7 @@ void MainMenu::single_player() {
 	    do     print_menu_clr("screen_main");
 		while (!get_input());
 	} else {
+		clear_console();
 		cout << "No deck selected." << endl;
 
 		do     print_menu("screen_main");
@@ -40,12 +41,18 @@ void MainMenu::single_player() {
 void MainMenu::multi_player() {
 	// TODO preps the game to move to multi-player
 	if(builder.get_selected() != NULL) {
-	    Game game("multi");
-	    game.load_content(*builder.get_selected());
-	} else cout << "No deck selected." << endl;
-	
-	do     print_menu("screen_main");
-	while (!get_input());
+		Game game("multi");
+		game.load_content(*builder.get_selected());
+
+	    do     print_menu_clr("screen_main");
+		while (!get_input());
+	} else {
+		clear_console();
+		cout << "No deck selected." << endl;
+
+		do     print_menu("screen_main");
+		while (!get_input());
+	}
 }
 
 void MainMenu::deck_builder() {

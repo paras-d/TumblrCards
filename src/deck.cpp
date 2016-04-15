@@ -13,7 +13,8 @@
 using namespace std;
 
 Deck::Deck()
-	:count{ new unsigned int(0) } {
+	:count{ new unsigned int(0) },
+	 deckName{ "Test" } {
 	// TODO Auto-generated constructor stuff
 	well_formed();
 }
@@ -23,7 +24,8 @@ Deck::~Deck() {
 }
 
 Deck::Deck(const Deck &clone)
-	:count{ new unsigned int(clone.size()) } {
+	:count{ new unsigned int(clone.size()) },
+	 deckName { clone.deckName } {
 	// TODO cloning stuff here
 	// passes clone's data to here
     deck = clone.deck;
@@ -46,6 +48,13 @@ Deck& Deck::operator=(const Deck &clone) {
 	deck = clone.deck;
 	well_formed();
 	return *this;
+}
+
+string Deck::get_name() {
+	string ret;
+	string size = static_cast<ostringstream*>( &(ostringstream() << *count) )->str();
+	ret = deckName + " " + size;
+	return ret;
 }
 
 // removes the top card of the deck and returns it

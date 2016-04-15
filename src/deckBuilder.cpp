@@ -22,23 +22,34 @@ DeckBuilder::~DeckBuilder() {
 }
 
 void DeckBuilder::start() {
-	// TODO Add any initilizing stuff here
-	// before priting menu
+	// TODO Add any initializing stuff here
+	// before printing menu
 
 	do print_menu_clr("screen_builder");
 	while(!get_input());
 }
 
 void DeckBuilder::list_decks() {
+	clear_console();
+	if(!list.empty()) {
+		int i = 1;
+		for(Deck* deck : list) {
+			cout << i++ << ") " << deck->get_name() << endl;
+		}
+	} else cout << "You don't have any decks!" << endl;
 
+	do print_menu("screen_builder");
+	while(!get_input());
 }
 
 void DeckBuilder::select_deck() {
-
+	do print_menu_clr("screen_builder");
+	while(!get_input());
 }
 
 void DeckBuilder::edit_selected() {
-
+	do print_menu_clr("screen_builder");
+	while(!get_input());
 }
 
 bool DeckBuilder::print_menu(string type) {
