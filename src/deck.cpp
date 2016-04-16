@@ -13,7 +13,15 @@
 using namespace std;
 
 Deck::Deck()
-	:count{ new unsigned int(0) } {
+	:deckName{ "Test" },
+	 count{ new unsigned int(0) } {
+	// TODO Auto-generated constructor stuff
+	well_formed();
+}
+
+Deck::Deck(string name)
+	:deckName{ name },
+	 count{ new unsigned int(0) } {
 	// TODO Auto-generated constructor stuff
 	well_formed();
 }
@@ -23,10 +31,11 @@ Deck::~Deck() {
 }
 
 Deck::Deck(const Deck &clone)
-	:count{ new unsigned int(clone.size()) } {
+	:deck{ clone.deck },
+	 deckName { clone.deckName },
+	 count{ new unsigned int(clone.size()) } {
 	// TODO cloning stuff here
 	// passes clone's data to here
-    deck = clone.deck;
 	well_formed();
 }
 
@@ -48,6 +57,13 @@ Deck& Deck::operator=(const Deck &clone) {
 	return *this;
 }
 
+string Deck::get_name() {
+	string ret;
+	string size = static_cast<ostringstream*>( &(ostringstream() << *count) )->str();
+	ret = deckName + " " + size;
+	return ret;
+}
+
 // removes the top card of the deck and returns it
 // shifting all the cards up one
 Card* Deck::draw_card() {
@@ -56,6 +72,7 @@ Card* Deck::draw_card() {
 	Card* ret = deck[0];
 	for(unsigned int i = 1; i < *count; i++)
 		deck[i-1] = deck[i];
+	deck.pop_back();
 	*count -= 1;
 	well_formed();
 	return ret;
@@ -67,8 +84,9 @@ Card* Deck::get_card(unsigned int index) {
 	well_formed();
 	if(*count == 0 || index < 0 || index > *count) return nullptr;
 	Card* ret = deck[index];
-	for(unsigned int i = index; i < *count; i++)
+	for(unsigned int i = index + 1; i < *count; i++)
 		deck[i-1] = deck[i];
+	deck.pop_back();
 	*count -= 1;
 	well_formed();
 	return ret;

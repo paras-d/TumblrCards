@@ -20,15 +20,11 @@ private:
 	void multi_player();
 
 	// moves to a deck list menu
-	void deck_list();
+	void deck_builder();
 
 	// moves to a settings menu
 	// what settings would exist?
 	void settings();
-
-	// splits the menu in to two parts
-	void print_options();
-	void print_logo();
 
 	// quits the game
 	void quit();
@@ -39,10 +35,11 @@ public:
 	virtual ~MainMenu();
 
 	// prints the menu to the terminal
+	bool print_menu_clr(std::string type);
 	bool print_menu(std::string type);
 
 	// takes in the users input for the selection
-	bool get_selection();
+	bool get_input();
 };
 
 #endif /* SRC_MAINMENU_H_ */

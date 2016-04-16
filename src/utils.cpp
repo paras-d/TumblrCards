@@ -37,6 +37,16 @@ int get_console_height() {
 	return size.ws_row;
 }
 
+void print_center(string input) {
+	// Pad the string based on console and line length
+	// such that the text be displayed center screen
+	string pad = "";
+	int k = (get_console_width() / 2) - (input.length() / 2);
+	for (int i = 0; i < k; i++) { pad.append(" "); }
+	// Append the formatted line to the cumulative string
+	cout << pad << input << endl;
+}
+
 string get_display_screen(string type) {
     // Open the assets file for the current screen
     string   buffer;
@@ -49,11 +59,12 @@ string get_display_screen(string type) {
             // such that the text be displayed center screen
             string pad = "";
             int k = (get_console_width() / 2) - (buffer.length() / 2);
-            for (int i = 0; i < k; i++) {
-                pad.append(" ");
-            }
+            for (int i = 0; i < k; i++) { pad.append(" "); }
+
             // Append the formatted line to the cumulative string
-            ret = ret + pad + buffer + '\n';
+            if(screen_file.peek() != EOF)
+            	ret = ret + pad + buffer + '\n';
+            else ret = ret + pad + buffer;
         }
         screen_file.close();
     }

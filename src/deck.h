@@ -20,6 +20,7 @@ private:
 	bool print_err(std::string err);
 public:
 	Deck();
+	Deck(std::string name);
 	virtual ~Deck();
 	Deck(const Deck &clone);
 	Card* draw_card();
@@ -27,6 +28,7 @@ public:
 	Deck draw_cards(int num);
 	Deck* operator=(const Deck *clone);
 	Deck& operator=(const Deck &clone);
+	std::string get_name();
 	void shuffle();
 	bool add_card(Card* card);
 	bool add_card(Card* card, unsigned int index);

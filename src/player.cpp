@@ -27,6 +27,11 @@ bool Player::select_deck(Deck selected) {
 }
 
 bool Player::draw() {
+    if(deck.size() == 0) {
+        while(discard.size() != 0)
+            deck.add_card(discard.draw_card());
+        deck.shuffle();
+    }
     hand.add_card(deck.draw_card());
     return true;
 }
@@ -38,7 +43,10 @@ bool Player::cast(unsigned int cardIndex) {
      * hand at the given index into the board
      * deck.
      */
-	if(cardIndex < 0 || cardIndex > hand.size() - 1) return false;
-	board.add_card(hand.get_card(cardIndex));
+	if(cardIndex >= hand.size()) return false;
+	Card* temp = hand.get_card(cardIndex);
+	if(temp == nullptr) return false;
+	mana -= temp->get_cost();
+	board.add_card(temp);
     return true;
 }

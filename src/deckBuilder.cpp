@@ -6,7 +6,7 @@
  */
 
 #include <iostream>
-#include <string>
+#include <sstream>
 #include "deckBuilder.h"
 #include "utils.h"
 
@@ -22,28 +22,104 @@ DeckBuilder::~DeckBuilder() {
 }
 
 void DeckBuilder::start() {
-	clear_console();
-	cout << "deck building started" << endl;
-	cout << "testing to make sure decks work" << endl;
+	/*
+	 * TODO Add any initializing stuff here
+	 * before printing menu. Possibly parse in
+	 * decks based on decklist files to save
+	 * decks?
+	 */
 
-	list.push_back(new Deck());
-
-	for(int i = 0; i < 20; i++)
-		list[selected]->add_card(new Card());
-
-	cout << get_selected()->to_string() << endl;
-
-	cout << "Enter exit to exit: ";
-	string in;
-	cin >> in;
-	if(in != "exit")
-		start();
+	do print_menu_clr("screen_builder");
+	while(!get_input());
 }
 
-void DeckBuilder::print_set(string set) {
-	if(set == "test") {
-
+void DeckBuilder::new_deck() {
+	print_center("Enter new deck name: ");
+	string name;
+	cin >> name;
+	list.push_back(new Deck(name));
+	selected = list.size() - 1;
+	cout << "I would do card selection stuff here." << endl;
+	cout << "Building you a temp deck for testing." << endl;
+	while(list[selected]->size() < 20) {
+	    Card* temp = new Card();
+	    if(list[selected]->size() % 2 == 0)
+	        temp->build_card("test1");
+	    if(list[selected]->size() % 3 == 0)
+	        temp->build_card("test2");
+	    if(list[selected]->size() % 4 == 0)
+	        temp->build_card("test3");
+		list[selected]->add_card(temp);
 	}
+	cout << list[selected]->to_string() << endl;
+	do print_menu("screen_builder");
+	while(!get_input());
+}
+
+void DeckBuilder::select_deck() {
+	clear_console();
+	if(!list.empty()) {
+		unsigned int i = 1;
+		for(Deck* deck : list) {
+			if(i - 1 == selected) cout << '*';
+			else cout << " ";
+			cout << i++ << ") " << deck->get_name() << endl;
+		}
+		cout << "Select your primary deck: ";
+		cin >> selected;
+		if(selected < 1 || selected > list.size()) {
+			selected = 1;
+		}
+		selected--;
+	} else cout << "You don't have any decks!" << endl;
+
+	do print_menu("screen_builder");
+	while(!get_input());
+}
+
+void DeckBuilder::edit_selected() {
+	cout << "I would do card selection stuff here." << endl;
+	do print_menu_clr("screen_builder");
+	while(!get_input());
+}
+
+bool DeckBuilder::print_menu(string type) {
+    string screen_disp = get_display_screen(type);
+    cout << screen_disp << endl;
+    return true;
+}
+
+bool DeckBuilder::print_menu_clr(string type) {
+    clear_console();
+    print_menu(type);
+    return true;
+}
+
+bool DeckBuilder::get_input() {
+	// TODO take in the players selection and call that method.
+	int selection = 5;
+	stringstream ss;
+	string in;
+	cin >> in;
+	ss << in;
+	ss >> selection;
+	switch(selection) {
+		case 1:
+			new_deck();
+			break;
+		case 2:
+			select_deck();
+			break;
+		case 3:
+			edit_selected();
+			break;
+		case 4:
+			break;
+		default:
+			cout << in << " is not a valid option." << endl;
+			return false;
+	}
+	return true;
 }
 
 const Deck* DeckBuilder::get_selected() {

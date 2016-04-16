@@ -8,19 +8,14 @@
 #ifndef SRC_UTILS_H_
 #define SRC_UTILS_H_
 
-#include <string>
-#include <sys/ioctl.h>
-#include <iostream>
-#include <unistd.h>
-
-using namespace std;
-
 void clear_console();
+
+void print_center(std::string print);
 
 int get_console_width();
 
 int get_console_height();
 
-string get_display_screen(string type);
+std::string get_display_screen(std::string type);
 
 #endif /* SRC_UTILS_H_ */
