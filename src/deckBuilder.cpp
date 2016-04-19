@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <sstream>
+#include <fstream>
+#include "dirent.h"
 #include "deckBuilder.h"
 #include "utils.h"
 
@@ -29,14 +31,55 @@ void DeckBuilder::start() {
 	 * decks?
 	 */
 
-	do print_menu_clr("screen_builder");
+	DIR* dir;
+	struct dirent *ent;
+	if ((dir = opendir ("../src/decklists/")) != NULL) {
+	    while ((ent = readdir (dir)) != NULL) {
+            load_deckent->d_name
+        }
+	}
+
+	do print_menu("screen_builder");
 	while(!get_input());
+}
+
+bool DeckBuilder::load_deck(std::string file) {
+    ifstream deck_file("../src/decklists/"+file);
+    if(deck_file.is_open()) {
+        Deck* deck = new Deck(file.substr(0, file.find(".lst")));
+        string line;
+        while(getline(deck_file, line)) {
+            int num;
+            stringstream ss; 
+            ss << line.substr(line.find('X')+1);
+            ss >> num;
+            for(int i = 0; i < num; i++) {
+                Card* card = new Card();
+                card->build_card(line.substr(0, line.find('X')-1));
+                deck->add_card(card);
+            }
+        }
+        list.push_back(deck);
+        selected = list.size() - 1;
+    } else return false;
+    return true;
+}
+
+bool DeckBuilder::save_deck(Deck deck) {
+    ofstream save("../src/decklists/"+deck.get_name()+".lst");
+    if(save.is_open()){
+        save << deck.to_file();
+    } else return false;
+    save.close();
+    cout << "Deck Saved!" << endl;
+    return true;
 }
 
 void DeckBuilder::new_deck() {
 	print_center("Enter new deck name: ");
 	string name;
 	cin >> name;
+	// Need to parse user input here to exclude special characters
 	list.push_back(new Deck(name));
 	selected = list.size() - 1;
 	cout << "I would do card selection stuff here." << endl;
@@ -51,7 +94,10 @@ void DeckBuilder::new_deck() {
 	        temp->build_card("test3");
 		list[selected]->add_card(temp);
 	}
-	cout << list[selected]->to_string() << endl;
+	
+	if(!save_deck(*list[selected]))
+	    cout << list[selected]->get_name() << " could not be saved." << endl;
+	
 	do print_menu("screen_builder");
 	while(!get_input());
 }

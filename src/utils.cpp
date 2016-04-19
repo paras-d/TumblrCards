@@ -49,11 +49,12 @@ void print_center(string input) {
 
 string get_display_screen(string type) {
     // Open the assets file for the current screen
-    string   buffer;
-    string   ret = "";
     ifstream screen_file("../src/assets/"+type);
-
+    string  ret = "";
+    
     if (screen_file.is_open()) {
+        string  buffer;
+        
         while (getline(screen_file, buffer)) {
             // Pad the string based on console and line length
             // such that the text be displayed center screen

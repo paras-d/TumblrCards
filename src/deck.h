@@ -33,8 +33,8 @@ public:
 	bool add_card(Card* card);
 	bool add_card(Card* card, unsigned int index);
 	unsigned int size() const { return *count; };
+	std::string to_file();
 	std::string to_string() const;
-
 };
 
 #endif /* SRC_DECK_H_ */

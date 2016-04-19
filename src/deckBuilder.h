@@ -25,6 +25,9 @@ private:
 	void edit_selected();
 	void new_deck();
 	void select_deck();
+
+	bool load_deck(std::string file);
+	bool save_deck(Deck deck);
 public:
 	DeckBuilder();
 	virtual ~DeckBuilder();

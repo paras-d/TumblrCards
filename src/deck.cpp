@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 #include "deck.h"
 #include "stdlib.h"
 
@@ -58,10 +59,7 @@ Deck& Deck::operator=(const Deck &clone) {
 }
 
 string Deck::get_name() {
-	string ret;
-	string size = static_cast<ostringstream*>( &(ostringstream() << *count) )->str();
-	ret = deckName + " " + size;
-	return ret;
+	return deckName;
 }
 
 // removes the top card of the deck and returns it
@@ -195,6 +193,26 @@ bool Deck::well_formed() {
 bool Deck::print_err(string err) {
 	cout << err << endl;
 	return false;
+}
+
+bool compare(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
+
+string Deck::to_file() {
+    string ret;
+    int num = 1;
+    sort(deck.begin(), deck.begin() + *count, compare);
+    for(unsigned int i = 0; i < *count - 1; i++) {
+        if(deck[i]->get_name() == deck[i+1]->get_name()) num++;
+        else {
+            ret += deck[i]->get_name();
+            ret += " X ";
+            ret += std::to_string(num);
+            ret += "\n";
+            num = 1;
+        }
+    }
+    shuffle();
+    return ret;
 }
 
 string Deck::to_string() const {
