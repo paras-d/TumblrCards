@@ -18,7 +18,7 @@ X 1/1 Ooze
 1/X
 002
 
-Uninformed Citizen
+Citizen of Draem
 1
 Somehow they managed to find their
 way to the center of a fight. Whoops!
@@ -27,11 +27,11 @@ way to the center of a fight. Whoops!
 
 City Bell
 3
-At the start of your turn summon an
-Uninformed Citizen.
+At the start of your turn summon a
+Citizen of Draem
 
 At the end your turn if you have 3 or
-more Uninformed Citizens destroy them
+more Citizen of Draem destroy them
 and draw a card.
 0/3
 004
@@ -86,7 +86,7 @@ Castle
 Castle's HP is equal to your opponents life
 total.
 
-Give each Uninformed Citizen you control +1/+1.
+Give each Citizen of Draemyou control +1/+1.
 0/X
 011
 
@@ -111,7 +111,7 @@ When Succubi enters the battlefield you gain
 2/2
 014
 
-Belial
+Grom, Son of Gromp
 6
 At the end of turn, if you have exactly 1 life
 you and your opponent split your life totals
@@ -119,34 +119,34 @@ equally amongst eachother.
 6/6
 015
 
-Astaroth
+Aastaroth
 6
 At the end of turn target creature becomes a
-1/1 Uninformed Citizen
-6/6
+1/1 Citizen of Draem6/6
 016
 
-Abaddon
+Addonus of the West
 6
-Abaddon is able to attack the turn it is
+Addonus is able to attack the turn it is
 summoned.
 
 At the end of turn Abaddon gets -3/-3.
 6/6
 017
 
-Mammon
+Nannom
 6
 At the end of turn gain a random creature for
-Mammon's controler. Your opponent gains control
-of Mammon.
+Nannom's controler. Your opponent gains control
+of Nannom.
 6/6
 018
 
-Satan
+Satiri, the Hidden
 6
-At the end of turn Satan becomes a copy of
-target creature and gains this ability.
+At the end of turn Satiri, the Hidden
+becomes a copy of target creature and gains
+this ability.
 6/6
 019
 
@@ -219,7 +219,7 @@ a card.
 Angel of Justice
 7
 At the start of your turn target creature
-becomes a 1/1 Uninformed Citizen.
+becomes a 1/1 Citizen of Draem
 7/7
 029
 
@@ -320,7 +320,7 @@ your opponent discards a card.
 Priest of Justice
 4
 At the start of turn each player gets an
-Uninformed Citizen.
+Citizen of Draem
 3/4
 042
 
@@ -392,7 +392,7 @@ Social Justice Warrior gets +1/+1 for each
 Social Justice Warrior on the field.
 
 Social Justice Warrior gets -1/-1 for each
-Uninformed Citizen on the field.
+Citizen of Draemon the field.
 1/4
 050
 
@@ -658,7 +658,7 @@ summon an Elf Native.
 Diplomat of Gelfind
 3
 Diplomat of Gelfind gets +1/+0 for each
-Uninformed Citizen you control.
+Citizen of Draemyou control.
 
 Diplomat of Gelfind gets +0/+1 for each
 Elf Native you control.
@@ -668,8 +668,7 @@ Elf Native you control.
 Masterwork Elf
 4
 When Masterwork Elf enters the battlefield
-if you control an Uninformed Citizen
-summon a City Bell.
+if you control an Citizen of Draemsummon a City Bell.
 4/4
 084
 
@@ -677,7 +676,7 @@ Rebel Elf
 6
 When Rebel Elf dies destroy target City Bell.
 When Rebel Elf deals damage you may destroy
-target Uninformed Citizen.
+target Citizen of Draem
 2/2
 085
 
@@ -743,7 +742,7 @@ that creature and Experimental Wizard.
 Elder Crusader
 3
 When Elder Crusader dies give target creature
-+1/+1, if it is an uninformed Citizen give it
++1/+1, if it is an Citizen of Draemgive it
 +2/+2.
 2/2
 094
@@ -1173,7 +1172,7 @@ Political Embassy's HP is equal to your
 opponents life total.
 
 When Political Embassy enters the battlefield
-replace all Uninformed Citizen's on the field
+replace all Citizen of Draems on the field
 with Social Justice Warrior's.
 
 When Political Embassy dies replace all cards
