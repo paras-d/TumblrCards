@@ -15,6 +15,7 @@ using namespace std;
 
 MainMenu::MainMenu() {
 	// TODO Auto-generated constructor stub
+	builder.load_decklists();
 }
 
 MainMenu::~MainMenu() {

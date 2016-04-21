@@ -30,23 +30,32 @@ void DeckBuilder::start() {
 	 * decks based on decklist files to save
 	 * decks?
 	 */
-
-	DIR* dir;
-	struct dirent *ent;
-	if ((dir = opendir ("../src/decklists/")) != NULL) {
-	    while ((ent = readdir (dir)) != NULL) {
-            load_deckent->d_name
-        }
-	}
+    load_decklists();
 
 	do print_menu("screen_builder");
 	while(!get_input());
+}
+
+bool DeckBuilder::load_decklists() {
+    DIR* dir;
+	struct dirent *ent;
+	if ((dir = opendir ("../src/decklists/")) != NULL) {
+	    while ((ent = readdir (dir)) != NULL) {
+	        string name = ent->d_name;
+	        if (name.find(".lst") != std::string::npos)
+                load_deck(ent->d_name);
+        }
+        return true;
+	} else return false;;
 }
 
 bool DeckBuilder::load_deck(std::string file) {
     ifstream deck_file("../src/decklists/"+file);
     if(deck_file.is_open()) {
         Deck* deck = new Deck(file.substr(0, file.find(".lst")));
+        for(Deck* check : list)
+            if(deck->get_name() == check->get_name())
+                return true;
         string line;
         while(getline(deck_file, line)) {
             int num;
@@ -77,11 +86,28 @@ bool DeckBuilder::save_deck(Deck deck) {
 
 void DeckBuilder::new_deck() {
 	print_center("Enter new deck name: ");
+    // Need to parse user input here to exclude special characters
 	string name;
 	cin >> name;
-	// Need to parse user input here to exclude special characters
-	list.push_back(new Deck(name));
-	selected = list.size() - 1;
+	for(unsigned int i = 0; i < list.size(); i++) {
+	    if(name == list[i]->get_name()) {
+	        cout << "Deck " << name << " already exists! " << list[i]->get_name() << endl;
+	        cout << "Would you like to overwright (y or n)? ";
+	        string in;
+	        cin >> in;
+	        if(in != "y" || in != "yes") {
+	            do print_menu("screen_builder");
+	            while(!get_input());
+	            return;
+	        }
+	        list[i] = new Deck(name);
+	        selected = i;
+	        break;
+	    } else if(i + 1 >= list.size()) {
+	        list.push_back(new Deck(name));
+	        selected = list.size() - 1;
+	    }
+	}
 	cout << "I would do card selection stuff here." << endl;
 	cout << "Building you a temp deck for testing." << endl;
 	while(list[selected]->size() < 20) {
@@ -93,10 +119,13 @@ void DeckBuilder::new_deck() {
 	    if(list[selected]->size() % 4 == 0)
 	        temp->build_card("test3");
 		list[selected]->add_card(temp);
+		//cout << temp->get_name() << " " << list[selected]->size() << endl;
 	}
 	
 	if(!save_deck(*list[selected]))
 	    cout << list[selected]->get_name() << " could not be saved." << endl;
+
+	cout << endl;
 	
 	do print_menu("screen_builder");
 	while(!get_input());
@@ -124,8 +153,11 @@ void DeckBuilder::select_deck() {
 }
 
 void DeckBuilder::edit_selected() {
-	cout << "I would do card selection stuff here." << endl;
-	do print_menu_clr("screen_builder");
+    clear_console();
+    if(list[selected] != nullptr) {
+	    cout << list[selected]->to_file() << endl;
+	}
+	do print_menu("screen_builder");
 	while(!get_input());
 }
 

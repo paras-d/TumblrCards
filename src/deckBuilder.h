@@ -32,6 +32,7 @@ public:
 	DeckBuilder();
 	virtual ~DeckBuilder();
 	void start();
+	bool load_decklists();
 	const Deck* get_selected();
 };
 

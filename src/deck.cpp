@@ -58,13 +58,13 @@ Deck& Deck::operator=(const Deck &clone) {
 	return *this;
 }
 
-string Deck::get_name() {
+string Deck::get_name() const {
 	return deckName;
 }
 
 // removes the top card of the deck and returns it
 // shifting all the cards up one
-Card* Deck::draw_card() {
+Card* Deck::draw_card(){
 	well_formed();
 	if(*count == 0) return nullptr;
 	Card* ret = deck[0];
@@ -202,7 +202,19 @@ string Deck::to_file() {
     int num = 1;
     sort(deck.begin(), deck.begin() + *count, compare);
     for(unsigned int i = 0; i < *count - 1; i++) {
-        if(deck[i]->get_name() == deck[i+1]->get_name()) num++;
+        // case if we are looking at the last 2 cards of the deck
+        // this will need to be edited slightly when we enforce
+        // card limits
+        if(i + 1 >= *count - 1) {
+            ret += deck[i]->get_name();
+            ret += " X ";
+            ret += std::to_string(num+1);
+            ret += "\n";
+            num = 1;
+        }
+        // case for if we are looking at the same card as befor
+        else if(deck[i]->get_name() == deck[i+1]->get_name()) num++;
+        // case for when we have found a new card name
         else {
             ret += deck[i]->get_name();
             ret += " X ";
