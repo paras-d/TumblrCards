@@ -90,6 +90,7 @@ void DeckBuilder::new_deck() {
 	string name;
 	cin >> name;
 	for(unsigned int i = 0; i < list.size(); i++) {
+		cout << list[i]->get_name() << endl;
 	    if(name == list[i]->get_name()) {
 	        cout << "Deck " << name << " already exists! " << list[i]->get_name() << endl;
 	        cout << "Would you like to overwright (y or n)? ";

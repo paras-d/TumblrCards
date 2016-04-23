@@ -9,23 +9,23 @@ Ooze
 There is a foul stench coming from
 this green glob on the ground.
 1/1
-001
+-001-
 
-Giant Slime
+Vile Mucus
 XX
-When Giant Slime dies summon
+When Vile Mucus dies summon
 X 1/1 Ooze
 1/X
-002
+-002-
 
 Citizen of Draem
 1
 Somehow they managed to find their
 way to the center of a fight. Whoops!
 1/1
-003
+-003-
 
-City Bell
+Bell Ringer
 3
 At the start of your turn summon a
 Citizen of Draem
@@ -34,82 +34,82 @@ At the end your turn if you have 3 or
 more Citizen of Draem destroy them
 and draw a card.
 0/3
-004
+-004-
 
-Metallic Dragon
+Ataractic Naturalist
 6
-When Metallic Dragon enters the battlefield
+When Ataractic Naturalist enters the battlefield
 your opponent draws a card. You draw 2 cards.
 6/6
-005
+-005-
 
-Chromatic Dragon
+Old Istvan
 6
-When Chromatic Dragon leaves the battlefield
+When Old Istvan leaves the battlefield
 discard a card. Your opponent discards 2 cards.
 6/6
-006
+-006-
 
-Altar Boy
+Wellwisher
 1
-When Altar Boy enters the battlefield each
+When Wellwisher enters the battlefield each
 player gains 1 life.
 1/1
-007
+-007-
 
-Priest Initiate
+Gracious Benefactor
 5
 When Priest Initiate enters the battlefield
 each player gains 3 life.
 3/3
-008
+-008-
 
-Divine Savior
+Affable Conservator
 9
-When Divine Savior enters the battlefield
+When Affable Conservator enters the battlefield
 each player gains 7 life.
 7/7
-009
+-009-
 
-Angel of the Void
+Reciprocity Angel
 5
-When Angel of the Void enters the battlefield
+When Reciprocity Angel enters the battlefield
 your opponent gains 5 life.
 
-When Angel of the Void leaves the battlefield
+When Reciprocity Angel leaves the battlefield
 each played loses 5 life.
 5/5
-010
+-010-
 
 Castle
 10
 Castle's HP is equal to your opponents life
 total.
 
-Give each Citizen of Draemyou control +1/+1.
+Give each Citizen of Draem you control +1/+1.
 0/X
-011
+-011-
 
 Malitia Captain
 4
-At the start of combat give each Uninformed
-Citizen +1/+1 until end of the turn.
+At the start of combat give each Citizen of Draem
+ +1/+1 until end of the turn.
 2/2
-012
+-012-
 
 Imp
 2
 When Imp enters the battlefield each player
 loses 1 life.
 1/1
-013
+-013-
 
-Succubi
+Succubus
 4
-When Succubi enters the battlefield you gain
-2 life and your opponenet loses 2 life.
+When Succubus enters the battlefield you gain
+1 life and your opponenet loses 1 life.
 2/2
-014
+-014-
 
 Grom, Son of Gromp
 6
@@ -117,30 +117,31 @@ At the end of turn, if you have exactly 1 life
 you and your opponent split your life totals
 equally amongst eachother.
 6/6
-015
+-015-
 
-Aastaroth
+Zealous Inquisitor
 6
-At the end of turn target creature becomes a
-1/1 Citizen of Draem6/6
-016
+At the end of your turn target creature becomes a
+1/1 Citizen of Draem
+6/6
+-016-
 
-Addonus of the West
-6
-Addonus is able to attack the turn it is
+Addronus of the West
+5
+Addronus of the West is able to attack the turn it is
 summoned.
 
-At the end of turn Abaddon gets -3/-3.
-6/6
-017
+At the end of turn Addronus gets -3/-3.
+6/5
+-017-
 
 Nannom
-6
+7
 At the end of turn gain a random creature for
 Nannom's controler. Your opponent gains control
 of Nannom.
-6/6
-018
+3/6
+-018-
 
 Satiri, the Hidden
 6
@@ -148,29 +149,30 @@ At the end of turn Satiri, the Hidden
 becomes a copy of target creature and gains
 this ability.
 6/6
-019
+-019-
 
-Merihem
-6
+Virihem, The Debouched
+8
 At the end of turn all creatures except for
-Marihem get -1/-1.
+Virihem, The Debouched get -1/-1. If no other creatures 
+are in play, sacrifice Virihem, The Debouched.
 6/6
-020
+-020-
 
-Asmodeus
-6
-At the start of turn summon a Succubi.
+Tormag, Oath Sworn
+9
+At the start of turn summon a Succubus.
 
 At the end of turn summon an Imp.
 6/6
-021
+-021-
 
 Pythius
 6
 At the end of turn target creature swaps its
 attack and health.
 6/6
-022
+-022-
 
 Beelzebub
 6
@@ -178,64 +180,63 @@ At the end of turn Beelzebub becomes a Prophet
 and gains the ability "At the start of
 turn Prophet becomes a 6/6 Beelzebub."
 6/6
-023
+-023-
 
-Prophet
-7
-When prophet enters the battlefield gain 7
+Gilded Prophet
+11
+When Gilded Prophet enters the battlefield gain 7
 life.
 7/7
-024
+-024-
 
-Angel of Prophets
+Augur of Angels
 7
 At the start of turn gain 4 life.
 
-At the end of turn gain 3 life.
-7/7
-025
+At the end of turn lose 3 life.
+4/7
+-025-
 
 Angel of Mercy
 7
 At the start of turn destroy all creatures
 except one, other than Angel of Mercy.
 7/7
-026
+-026-
 
 Angel of Heed
 7
 When Angel of Heed enters the battlefield
 summon a City Bell.
 7/7
-027
+-027-
 
 Angel of Reaping
 7
 At the start of turn your opponent discards
 a card.
 7/7
-028
+-028-
 
 Angel of Justice
 7
 At the start of your turn target creature
 becomes a 1/1 Citizen of Draem
 7/7
-029
+-029-
 
 Priest of Belial
 3
 At the end of the turn Priest of Belial
 deals 1 damage to it's controler.
 3/3
-030
+-030-
 
 Priest of Astaroth
 3
-At the end of turn destroy an Uninformed
-Citizen.
+At the end of turn destroy an Citizen of Draem
 3/3
-031
+-031-
 
 Priest of Abaddon
 3
@@ -245,84 +246,84 @@ turn it is summoned.
 At the end of turn destroy Priest of
 Abaddon.
 3/3
-031
+-031-
 
 Priest of Mammon
 3
 At the end of turn Priest of Mammon switches
 sides.
 3/3
-032
+-032-
 
 Priest of Satan
 3
 When Priest of Satan dies summon a copy of
 target creature.
 3/3
-033
+-033-
 
 Priest of Marihem
 3
 When Priest of Marihem dies all
 creatures get -1/-1.
 3/3
-034
+-034-
 
 Priest of Asmodeus
 3
 When Priest of Asmodeus dies target
 creature becomes an Imp.
 3/3
-035
+-035-
 
 Priest of Pythius
 3
 When Priest of Pythius dies all creatures
 in play swap their attack and health.
 3/3
-036
+-036-
 
 Priest of Beelzebub
 3
 When Priest of Beelzebub dies summon a
 Priest Initiate.
 3/3
-037
+-037-
 
 Priest of Prophets
 4
 When Priest of Prophets enters the battlefield
 each player gains 7 life.
 3/4
-038
+-038-
 
 Priest of Mercy
 4
 When Priest of Mercy enters the battlefield
 destroy target creature.
 3/4
-039
+-039-
 
 Priest of Heed
 4
 When Priest of Heed enters the battlefield
-trigger all City Bell's.
+trigger all Bell Ringer's.
 3/4
-040
+-040-
 
 Priest of Reaping
 4
 When Priest of Reaping enters the battlefield
 your opponent discards a card.
 3/4
-041
+-041-
 
 Priest of Justice
 4
 At the start of turn each player gets an
 Citizen of Draem
 3/4
-042
+-042-
 
 Priest of the Void
 3
@@ -332,27 +333,27 @@ battlefield your opponent gains 3 life.
 When Priest of the Void leaves the
 battlefield each player loses 3 life.
 3/3
-043
+-043-
 
 Sewer Rat
 2
 This creature clearly hasn't eaten in a
 very long time.
 2/2
-043
+-043-
 
 Bear
 3
 This guy is Angry. Don't piss him off.
 3/3
-044
+-044-
 
 City Guard
 3
 When City Guard enters the battlefield, if
 you control a Castle give it +1/+0.
 1/1
-045
+-045-
 
 Ulgaria, the Fierce
 6
@@ -362,7 +363,7 @@ turn it is summoned.
 Ulgaria, the Fierce takes double damage
 from any source.
 8/4
-046
+-046-
 
 Void Creeper
 2
@@ -370,21 +371,21 @@ When Void Creeper enters the battlefield
 return an opponents creature to its owners
 hand.
 1/1
-047
+-047-
 
 Void Stalker
 4
 When Void Stalker enters the battlefield
 return taget creature to its owners hand.
 3/3
-048
+-048-
 
 Void Hulk
 6
 When Void Hulk enters the battlefield
 destroy target creature.
 5/5
-049
+-049-
 
 Social Justice Warrior
 4
@@ -394,7 +395,7 @@ Social Justice Warrior on the field.
 Social Justice Warrior gets -1/-1 for each
 Citizen of Draemon the field.
 1/4
-050
+-050-
 
 Merchant of Greed
 5
@@ -403,35 +404,35 @@ battlefield deal X damage to each creature
 where X is the number of creatures
 you control.
 4/4
-051
+-051-
 
 Arolian Goliath
 3
 When Arolian Goliath deals damage to a
 player you gain that much life.
 6/6
-052
+-052-
 
 Mountain Troll
 3
 When Mountain Troll enters the battlefield each
 player discards a card and then draws a card.
 2/1
-053
+-053-
 
 Goblin
 1
 This little guy smells like he hasn't
 bathed ever. He looks like it too.
 1/1
-054
+-054-
 
 Goblin Marauder
 2
 Goblin Marauder gets +1/+0 for each other
 Goblin Marauder on the field.
 2/1
-055
+-055-
 
 Goblin Brood Queen
 5
@@ -439,7 +440,7 @@ When Goblin Brood Queen enters the
 battlefield summon a Goblin for each Goblin
 Marauder you control.
 1/1
-056
+-056-
 
 Shaman of the Far
 4
@@ -447,7 +448,7 @@ When Shaman of the Far Land dies summon a
 Goblin Marauder for each damage Shaman of
 the Far Land took.
 3/1
-057
+-057-
 
 Shaman of the Near
 6
@@ -455,7 +456,7 @@ When Shaman of the Near Land dies summon a
 Goblin Marauder for each Goblin Marauder
 you control.
 3/2
-058
+-058-
 
 Hunter of the Tribe
 3
@@ -463,7 +464,7 @@ Give each Goblin you control +0/+1.
 
 Give each Goblin Marauder you control +0/+2.
 2/2
-059
+-059-
 
 Shaman of the Cold
 7
@@ -472,7 +473,7 @@ battlefield creaturs your opponent control
 cannont attack until the start of your next
 turn.
 6/2
-060
+-060-
 
 Goblin Warlord
 8
@@ -482,7 +483,7 @@ control.
 Give each Goblin and Goblin Marauder +1/+1
 for each Goblin Marauder you control. 
 8/4
-061
+-061-
 
 Raging Barbarian
 5
@@ -492,7 +493,7 @@ it is summoned.
 Your Barbarians, Goblin's, and Goblin Marauder's
 may attack the turn they are summoned.
 3/1
-062
+-062-
 
 Wolf Pack
 1
@@ -502,7 +503,7 @@ to the number of Wolf Pack you control.
 Whenever a Goblin or Goblin Marauder you
 control dies, summon a Wolf Pack.
 X/X
-063
+-063-
 
 Goblin Wolf Rider
 5
@@ -512,7 +513,7 @@ battlefield give each Wolf Pack you control
 Whenever Goblin wolf Rider deals damage to a
 player summon a Goblin Wolf Rider.
 3/1
-064
+-064-
 
 Goblin Broodling
 1
@@ -520,21 +521,21 @@ Give each Goblin and Goblin Broodling you
 control +2/+2 for each Goblin Brood Queen
 you control.
 0/1
-065
+-065-
 
 Goblin Mortician
 3
 When Goblin Mortician dies summon a random.
 creature that has died this turn.
 0/3
-066
+-066
 
 Leader of Goblin Burial
 6
 When Leader of Goblin Burial dies summon a
 random creature that has died this game.
 3/6
-067
+-067-
 
 Tribal Leader
 10
@@ -545,21 +546,21 @@ Wolf Rider on the Battlefield.
 Tribal Leaders HP is equal to the number of
 Goblin's you control.
 2/X
-068
+-068-
 
 Goblin Diety
 20
 When Goblin Diety dies summon a Tribal Leader
 for each player.
 10/10 
-069
+-069-
 
 Barbarian Rageblade
 5
 When Barbarian Rageblade enters the battlefield
 deal 3 damage to a random creature.
 3/3
-070
+-070-
 
 Axe-Throwing Barbarian
 4
@@ -567,7 +568,7 @@ When Axe-Throwing Barbarian enters the
 battlefield deal 1 damage to each creature
 your opponent controls.
 4/2
-071
+-071-
 
 Barbarian
 2
@@ -575,28 +576,28 @@ It has lived in the mountains for too long. Any
 humanity has been ripped out of it. Only a
 beast of war remains.
 2/2
-072
+-072-
 
 Hunting Grounds
 5
 At the start of your turn summon a Barbarian.
 At the end of your turn summon a Barbarian.
 0/7
-073
+-073-
 
 Barbarian Weaponsmith
 3
 If you control a Hunting Grounds give each
 Barbarian you control +3/+0.
 2/2
-074
+-074-
 
 Barbarian Warlord
 5
 Whenever a Barbarian enters the battlefield
 gain +1/+0.
 4/4
-075
+-075-
 
 Master of the Hunt
 6
@@ -605,21 +606,21 @@ battlefield destroy all creatures with Goblin
 in its name. Gain +1/-1 for each creature
 destroyed this way.
 0/6
-076
+-076-
 
 Elf Native
 1
 When Elf Native enters the battlefield gain
 1 extra mana this turn.
 1/1
-077
+-077-
 
 Elf Priestess
 2
 Elf Priestess costs 1 less for each Elf
 Native you control.
 1/1
-078
+-078-
 
 Elf Beastwalker
 4
@@ -627,14 +628,14 @@ When Elf Beastwalker enters the battlefield
 gain control of a Wolf Pack your opponent
 controls.
 3/3
-079
+-079-
 
 Elf Spellslinger
 3
 When Elf Spellslinger attacks, deal 1
 damage to target creature.
 3/3
-080
+-080-
 
 High Priestess of Gelfind
 10
@@ -644,7 +645,7 @@ battlefield each player gains 10 life.
 High Priestess of Gelfind costs 1 less for
 each Elf Native you control.
 3/3
-081
+-081-
 
 Huntress of Gelfind
 5
@@ -653,7 +654,7 @@ Barbarians.
 Whenever Huntress of Gelfind kills a Goblin
 summon an Elf Native.
 2/2
-082
+-082-
 
 Diplomat of Gelfind
 3
@@ -663,22 +664,22 @@ Citizen of Draemyou control.
 Diplomat of Gelfind gets +0/+1 for each
 Elf Native you control.
 1/1
-083
+-083-
 
 Masterwork Elf
 4
 When Masterwork Elf enters the battlefield
-if you control an Citizen of Draemsummon a City Bell.
+if you control an Citizen of Draem, summon a Bell Ringer.
 4/4
-084
+-084-
 
 Rebel Elf
 6
-When Rebel Elf dies destroy target City Bell.
-When Rebel Elf deals damage you may destroy
+When Rebel Elf dies destroy target Bell Ringer.
+When Rebel Elf deals damage to anything, you may destroy
 target Citizen of Draem
 2/2
-085
+-085-
 
 Treant
 3
@@ -686,34 +687,34 @@ When Treant enters the battlefield if you
 control at least 2 Elf Native summon another
 Treant.
 2/2
-086
+-086-
 
 Forrestwalker
 4
 Each Treant you conntrol gets +1/+1 for each
 Elf Native you control.
 4/4
-087
+-087-
 
 Elf Historian
 2
 When Elf Historian dies summon 2 Elf Native.
 1/1
-088
+-088-
 
 Graveyard Worm
 2
 Graveyard Worm's attack and HP are equal to
 the number of creatures in your discard pile.
 X/X
-089
+-089-
 
 Mercenary Gang
 5
 When Mercenary Gang enters the battlefield
 give two target creatures +1/+1.
 4/4
-090
+-090-
 
 Sewer Slime
 5
@@ -722,7 +723,7 @@ destroy that creature.
 When Sewer Slime enters the battlefield
 destroy target creature an opponent controls.
 2/2
-091
+-091-
 
 Vampire Stalker
 3
@@ -730,14 +731,14 @@ When Vampire Stalker enters the battlefield
 destroy X creatures you control.
 Vampire Stalker gets +X/+X.
 1/1
-092
+-092-
 
 Experimental Wizard
 2
 When an opponent summons a creature, destroy
 that creature and Experimental Wizard.
 0/2
-093
+-093-
 
 Elder Crusader
 3
@@ -745,21 +746,21 @@ When Elder Crusader dies give target creature
 +1/+1, if it is an Citizen of Draemgive it
 +2/+2.
 2/2
-094
+-094-
 
 Dark Ritualist
 4
 When a creature you control deals damage, both
 players gain that much life.
 2/2
-095
+-095-
 
 Blood Binder
 4
 Whenever your opponent gains life you lose that
 much life. 
 6/6
-096
+-096-
 
 Alabaster Fairy
 3
@@ -769,7 +770,7 @@ takes 3 damage.
 Alabaster Fairy cannot attack unless you have
 at least 5 other creatures.
 5/4
-097
+-097-
 
 Fairy Queen
 3
@@ -779,7 +780,7 @@ return it to your hand.
 Fairy Queen cannot attack unless you have at
 least 5 other creatures.
 6/7
-098
+-098-
 
 Navi, Fairy of Time
 3
@@ -790,7 +791,7 @@ Time -1/-1.
 Navi, Fairy of Time cannot attack unless you
 have at least 5 other creatures.
 5/5
-099
+-099-
 
 Fairy Tribunal
 3
@@ -800,7 +801,7 @@ creature an opponent controls.
 Fairy Tribunal cannot attack unless you have
 at least 5 other creatures.
 7/1
-100
+-100-
 
 Porcelain Fairy
 3
@@ -810,7 +811,7 @@ creature you control.
 Porcelain Fairy cannot attack unless you have
 at least 5 other creatures.
 3/0
-101
+-101-
 
 Fairy Godmother
 3
@@ -820,21 +821,20 @@ the bottom card of your deck in to your hand.
 Fairy Godmother cannot attack unless you have
 at least 5 other creatures.
 5/5
-102
+-102-
 
 Sewer Troll
 5
 When Sewer Troll dies your opponent discards a
 card.
 4/3
-103
+-103-
 
 Local Malitia
 5
-Local Malitia gets +1/+1 for each Uninformed
-Citizen you control.
+Local Malitia gets +1/+1 for each Citizen of Draem you control.
 2/2
-104
+-104-
 
 Mountains of Asaid
 10
@@ -844,7 +844,7 @@ opponents life total.
 Whenever a Goblin you control dies Mountains
 of Asaid gains +1/+0.
 0/X
-105
+-105-
 
 Sewers of Desparia
 10
@@ -854,7 +854,7 @@ opponents life total.
 Whenever a creature dies deal 1 damage to
 your opponent and you gain 1 life.
 0/X
-106
+-106-
 
 Child of the First
 25
@@ -866,13 +866,13 @@ player draws 7 cards. Your turn ends.
 You may only have one Child of the First in
 your deck.
 0/1
-107
+-107-
 
 Zombie
 1
 His flesh rots. Yet, there is still life.
 1/1
-108
+-108-
 
 Necrotic Ghoul
 1
@@ -880,13 +880,13 @@ Destroy Necrotic Ghoul if your opponent has
 at least 2 creatures on their side of the
 field.
 2/1
-109
+-109-
 
 Necro Initiate
 3
 When Necro Initiate dies summon a Zombie.
 2/2
-110
+-110-
 
 Necromancer
 5
@@ -894,13 +894,13 @@ When Necromaner enters the battlefield
 destroy a creature you control and summon
 2 Zombie's.
 3/3
-111
+-111-
 
 Fearmancer
 7
 When Fearmancer dies summon 7 Zombie's.
 7/7
-112
+-112-
 
 Burial Ground
 10
@@ -910,14 +910,14 @@ life total.
 Whenever a creature other than a Zombie dies,
 summon a Zombie for that creatures controler.
 0/X
-113
+-113-
 
 Plaugebearer
 2
 Plaugebearer deals damage to a creatures
 attack instead of its health.
 1/2
-114
+-114-
 
 Corrupt Mortician
 15
@@ -925,7 +925,7 @@ When Corrupt Mortician dies summon X Zombies
 where X is the number of Zombies that have
 died this game.
 5/5
-115
+-115-
 
 Flesh Golem
 3
@@ -935,21 +935,21 @@ destroy 6 Zbomies you control.
 If you do not control 6 Zombies, instead
 destroy Flesh Golem.
 6/6
-116
+-116-
 
 Necrophile
 5
 Necrophile gets +1/+1 for each Zombie you
 control.
 1/1
-117
+-117-
 
 Desicration Fiend
 4
 When Desicration Fiend enters the battlefield
 destroy all non-Zombie creatures.
 1/1
-118
+-118-
 
 Garden of Elar
 10
@@ -958,7 +958,7 @@ life total.
 
 Your opponents spells cost 2 more to cast.
 0/X
-119
+-119-
 
 Throne of Warlords
 10
@@ -968,7 +968,7 @@ opponents life total.
 Barbarian's you control can attack the turn
 they are summoned.
 0/X
-120
+-120-
 
 Hero of Time
 20
@@ -976,7 +976,7 @@ Your opponent has 3 turns to destroy Hero of
 Time. If they don't, destroy all other
 creatures and your opponenets life becomes 3.
 1/10
-121
+-121-
 
 Siren Caller
 2
@@ -984,7 +984,7 @@ When Siren Caller enters the battlefield your
 oppoenent puts the top 7 of their library
 into their discard pile.
 2/2
-122
+-122-
 
 Siren Mystic
 5
@@ -992,7 +992,7 @@ When Siren Mystic deals damage to a player,
 that player puts the top 10 cards of his or
 her libraray into his or her discard pile. 
 2/4
-123
+-123-
 
 
 Trapped Seafarer
@@ -1001,7 +1001,7 @@ When Trapped Seafarer dies each player puts
 the top 8 cards of his or her library in to
 his or her discard pile.
 3/2
-124
+-124-
 
 Triton, Lord of the Sea
 12
@@ -1014,7 +1014,7 @@ her library in to his or her discard pile,
 where X is the damage Triton, Lord of the Sea
 dealt.
 6/7
-125
+-125-
 
 Kingdom of the Beautiful
 10
@@ -1024,7 +1024,7 @@ opponenets life total.
 If your opponent has no cards left in his or
 her deck, they lose the game.
 0/X
-126
+-126-
 
 Countess of Mer
 6
@@ -1037,7 +1037,7 @@ the top X cards of his or her library in to
 his or her discard pile, where X is the damage
 Countess of Mer dealt.
 4/2
-127
+-127-
 
 Ghost of the Drowned
 5
@@ -1050,7 +1050,7 @@ puts the top X cards of his or her libarary
 into his or her discard pile, where X is the
 number of Zombie's you control.
 2/2
-128
+-128-
 
 Damned Crew
 10
@@ -1060,7 +1060,7 @@ Damned Crew cannot die from damage if your
 opponent has 40 or more cards in their discard
 pile.
 1/2
-129
+-129-
 
 Goblin Pirates
 7
@@ -1070,7 +1070,7 @@ control.
 When Goblin Pirates die's summon X Zombies,
 where X is the number of Goblins you control.
 1/1
-130
+-130-
 
 The Flying Dutchman
 The Flying Dutchman's HP is equal to your
@@ -1080,28 +1080,28 @@ Whenever a creature you control deals damage,
 your opponent puts the top card of his or her
 deck in to his or her discard pile.
 0/X
-131
+-131-
 
 Royal Caravel
 2
 Royal Caravel takes 1 less damage from
 Zombie's.
 2/1
-132
+-132-
 
 Royal Brig
 3
 When Royal Brig enters the battlefield destroy
 up to 2 Zombies an opponent controls.
 3/3
-133
+-133-
 
 Royal Frigate
 10
 When Royal Frigate dies summon 2 Trapped
 Seafarer for each player.
 5/5
-134
+-134-
 
 The Queen Mary
 10
@@ -1112,7 +1112,7 @@ The Queen Mary takes double damage.
 When the Queen Mary dies Summon The Royal
 Navy.
 5/5
-135
+-135-
 
 The Royal Navy
 5
@@ -1123,7 +1123,7 @@ Whenever The Royal Navy takes damage summon a
 Royal Caravel.
 a
 5/5
-136
+-136-
 
 Fairy Chasm
 10
@@ -1133,7 +1133,7 @@ life total.
 Fairy Chasm counts as 2 creatues of any name
 for any card that requires a count of creatues.
 0/X
-137
+-137-
 
 The Lost Sea
 10
@@ -1143,7 +1143,7 @@ life total.
 At the end of each players turn, that player
 must sacrifice a creature.
 0/X
-138
+-138-
 
 Tribal Reservation
 10
@@ -1152,7 +1152,7 @@ opponents life total.
 
 At the beginning of each turn summon a Goblin.
 0/X
-139
+-139-
 
 The World Tree
 10
@@ -1164,7 +1164,7 @@ set each players life to 15.
 
 Your cards cost 2 less to play.
 0/X
-140
+-140-
 
 Political Embassy
 10
@@ -1179,7 +1179,7 @@ When Political Embassy dies replace all cards
 in your hand and deck with Social Justice
 Warrior's.
 0/X
-141
+-141-
 
 Sacred Battleground
 10
@@ -1189,7 +1189,7 @@ opponents life total.
 Whenever a Barbarian enters the battlefield
 summon another Barbarian for it's controler.
 0/X
-142
+-142-
 
 City of Naara
 10
@@ -1199,61 +1199,61 @@ life total.
 All creatues get +2/+2 but take twice as much
 damage from any source.
 0/X
-143
+-143-
 
 Changeling
 4
 When Changeling enters the battlefield it
 becomes a copy of a random target creature.
 0/0
-144
+-144-
 
 Horrid Benefactor
 5
 Whenever Horrid Benefactor survives damage,
 summon a Horrid Benefactor.
 3/3
-145
+-145-
 
 Herald of Sorrows
 3
 When Herald of Sorrows attacks deal 1
 damage to each creature you control.
 3/1
-146
+-146-
 
 Elarian Vampire
 2
 When Elaria Vampire deals damage each player
 gains that much life.
 2/1
-147
+-147-
 
 Gelfind Wall
 2
 Gelfind Wall Costs 1 more for each creature an
 opponenet controls.
 0/7
-148
+-148-
 
 The Tinkler
 7
 At the beginning of each players turn, that
 player gains 3 life.
 0/3
-149
+-149-
 
 The Kings Collector
 6
 At the beginning of each turn, that player
 loses 1 life and summons a Malitia Captain.
 4/4
-150
+-150-
 
 Treasure Hoarder
 2
 When Treasure Hoarder dies each player
 draws a card.
 2/2
-151
+-151-
 
