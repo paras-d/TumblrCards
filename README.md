@@ -48,7 +48,8 @@ To build, make sure you have the following:
 4. If everything built successfully, you can run it by typing `./tumblrcards` in your terminal.
 
 ### Building on Windows systems
-Coming soon.
+
+Coming soon. For now build using Cygwin, MinGW, Linux Subsytem for Windows, or the like.
 
 ## Rule's of the Game
 
