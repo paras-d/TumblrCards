@@ -49,7 +49,7 @@ To build, make sure you have the following:
 
 ### Building on Windows systems
 
-Coming soon. For now build using Cygwin, MinGW, Linux Subsytem for Windows, or the like.
+Coming soon. For now build using Cygwin, MinGW, Linux Subsystem for Windows, or the like.
 
 ## Rule's of the Game
 
