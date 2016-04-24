@@ -16,7 +16,7 @@ Once you're ready to start programming see the Programming Standards section.
 - [X] Create rules for the card game
 - [X] Layout the turn order
 - [ ] Create functioning single player game
-- [ ] Creatre functioning multiplayer game
+- [ ] Create functioning multiplayer game
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 
