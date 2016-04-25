@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 #include "deck.h"
 #include "stdlib.h"
 
@@ -57,16 +58,13 @@ Deck& Deck::operator=(const Deck &clone) {
 	return *this;
 }
 
-string Deck::get_name() {
-	string ret;
-	string size = static_cast<ostringstream*>( &(ostringstream() << *count) )->str();
-	ret = deckName + " " + size;
-	return ret;
+string Deck::get_name() const {
+	return deckName;
 }
 
 // removes the top card of the deck and returns it
 // shifting all the cards up one
-Card* Deck::draw_card() {
+Card* Deck::draw_card(){
 	well_formed();
 	if(*count == 0) return nullptr;
 	Card* ret = deck[0];
@@ -195,6 +193,38 @@ bool Deck::well_formed() {
 bool Deck::print_err(string err) {
 	cout << err << endl;
 	return false;
+}
+
+bool compare(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
+
+string Deck::to_file() {
+    string ret;
+    int num = 1;
+    sort(deck.begin(), deck.begin() + *count, compare);
+    for(unsigned int i = 0; i < *count - 1; i++) {
+        // case if we are looking at the last 2 cards of the deck
+        // this will need to be edited slightly when we enforce
+        // card limits
+        if(i + 1 >= *count - 1) {
+            ret += deck[i]->get_name();
+            ret += " X ";
+            ret += std::to_string(num+1);
+            ret += "\n";
+            num = 1;
+        }
+        // case for if we are looking at the same card as befor
+        else if(deck[i]->get_name() == deck[i+1]->get_name()) num++;
+        // case for when we have found a new card name
+        else {
+            ret += deck[i]->get_name();
+            ret += " X ";
+            ret += std::to_string(num);
+            ret += "\n";
+            num = 1;
+        }
+    }
+    shuffle();
+    return ret;
 }
 
 string Deck::to_string() const {

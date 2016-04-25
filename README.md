@@ -17,7 +17,7 @@
 A text based multiplayer strategy card game written by members of the Tumblr Computer Science community.
 
 We are still in the idea's phase so for now I will be setting up the program to at least generate 
-a 60 card deck to be used for this game.
+a 20 card deck to be used for this game.
 
 #### IDEAS
 
@@ -48,7 +48,8 @@ To build, make sure you have the following:
 4. If everything built successfully, you can run it by typing `./tumblrcards` in your terminal.
 
 ### Building on Windows systems
-Coming soon.
+
+Coming soon. For now build using Cygwin, MinGW, Linux Subsystem for Windows, or the like.
 
 ## Rule's of the Game
 
@@ -58,7 +59,7 @@ At the start of each game the player that takes the first turn is randomly decid
 
 ### The Game
 
-At the start of each game, all players begin with a hand of 4 cards off of the top of their respective 20 card decks. No deck may contain more than 2 copies of any card. No deck may contain more than one copy of any card if that cards cost is 6+. Each player also starts the game with 10 life. Depending on which option is chosen by the player that goes first, you may start with 5 cards or 15 life. Each players turn order is as follows:
+At the start of each game, all players begin with a hand of 4 cards off of the top of their respective 20 card decks. No deck may contain more than 2 copies of any card. No deck may contain more than one copy of any card if that cards mana cost is 6+. Each player also starts the game with 10 life. Depending on which option is chosen by the player that goes first, you may start with 5 cards or 15 life. Each players turn order is as follows:
 
 1. Start of turn
 2. Casting Phase
@@ -66,11 +67,11 @@ At the start of each game, all players begin with a hand of 4 cards off of the t
 4. Draw Phase
 5. End of turn
 
-Each players turn follows this same format. Each phase willl be explained in detail below. If any card disagrees with the rules below, the rules on the card are to be followed.
+Each players turn follows this same format. Each phase will be explained in detail below. If any card disagrees with the rules below, the rules on the card are to be followed. For a full list of cards from the release set, see the CARDLIST file.
 
 #### Start of Turn
 
-Not much will happen during the beginning of each turn. The game will check for any start of turn triggers on creatures in play, taking priority of opponents triggers first. After all triggers have finished the game will move to the draw phase.
+Not much will happen during the beginning of each turn. The game will check for any start of turn triggers on creatures in play, taking priority of opponents triggers first. After all triggers have finished the game will move to the casting phase.
 
 #### Casting Phase
 
@@ -78,7 +79,7 @@ In the casting phase the player taking their turn may play any card in their han
 
 #### Combat Phase
 
-At the bottom of creature there is an attack and defense (in the form Atk/Def). During the combat phase the player taking their turn has the opportunity to attack their opponent. However, before damage may be dealt to the opponent, the opponent must not have any creatures on their side of the field. If they have a creature, you must attack and destroy their creature before you are able to attack that player directly. This goes for all creatures your opponent controls. Each creature may only attack once per turn.
+At the bottom of each creature there is an attack and defense (in the form Atk/Def). During the combat phase the player taking their turn has the opportunity to attack their opponent. However, before damage may be dealt to the opponent, the opponent must not have any creatures on their side of the field. If they have a creature, you must attack and destroy their creature before you are able to attack that player directly. This goes for all creatures your opponent controls. Each creature may only attack once per turn.
 
 All attackers are declaired at once, so if you have to attack a creature, you may not attack that creatures controler unless a card says otherwise.
 
@@ -87,7 +88,7 @@ When two creatures are fighting they deal their respective attack damage again t
 
 #### Draw Phase
 
-During the draw phase the player currently taking their turn is given the top card of their deck until they have at least 3 cards in hand. If you already have 3 or more cards in hand, you may draw a card. There is no maximum handsize. Again the game checks for any triggers that would go off when a player draws a card, for each card drawn. After all triggers are complete the player is given the card(s) and we move to the casting phase.
+During the draw phase the player currently taking their turn is given the top card of their deck until they have at least 3 cards in hand. If you already have 3 or more cards in hand, you may draw only one card. There is no maximum handsize at this point in testing. Again the game checks for any triggers that would go off when a player draws a card, for each card drawn. After all triggers are complete the player is given the card(s) and we move to the casting phase.
 
 If a player would draw a card and has no cards left in their deck to draw, that player shuffles his or her discard pile and puts it face down as their deck. The player does not get to draw the card they would have drawn.
 

@@ -28,13 +28,13 @@ public:
 	Deck draw_cards(int num);
 	Deck* operator=(const Deck *clone);
 	Deck& operator=(const Deck &clone);
-	std::string get_name();
+	std::string get_name() const;
 	void shuffle();
 	bool add_card(Card* card);
 	bool add_card(Card* card, unsigned int index);
 	unsigned int size() const { return *count; };
+	std::string to_file();
 	std::string to_string() const;
-
 };
 
 #endif /* SRC_DECK_H_ */

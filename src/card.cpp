@@ -27,11 +27,10 @@ Card::~Card() {
 
 void Card::build_card(string arg) {
 	// TODO have card stats based on
-	if(arg == "test1")
-		name = "test1";
-	else if(arg == "test2")
-		name = "test2";
-	else name = "test3";
+	if      (arg == name)    return;
+	else if (arg == "test1") name = "test1";
+	else if (arg == "test2") name = "test2";
+	else if (arg == "test3") name = "test3";
 }
 
 bool Card::trigger() {

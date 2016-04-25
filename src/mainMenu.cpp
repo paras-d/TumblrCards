@@ -15,6 +15,7 @@ using namespace std;
 
 MainMenu::MainMenu() {
 	// TODO Auto-generated constructor stub
+	builder.load_decklists();
 }
 
 MainMenu::~MainMenu() {
@@ -44,7 +45,9 @@ void MainMenu::multi_player() {
 		Game game("multi");
 		game.load_content(*builder.get_selected());
 
-	    do     print_menu_clr("screen_main");
+		cout << "Game mode not available yet." << endl;
+
+	    do     print_menu("screen_main");
 		while (!get_input());
 	} else {
 		clear_console();
