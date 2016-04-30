@@ -74,12 +74,16 @@ string get_display_screen(string type) {
         // cannot be opened then something serious has gone wrong.
         cout << "FILE COULD NOT BE OPENED" << endl;
     }
+
+	// deletes last character to align proper output
+	ret.pop_back();
+    
     return ret;
 }
 
 bool print_menu(string type) {
     string screen_disp = get_display_screen(type);
-    cout << screen_disp << endl;
+    cout << screen_disp;
     return true;
 }
 
