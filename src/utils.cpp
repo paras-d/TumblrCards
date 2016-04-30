@@ -76,3 +76,16 @@ string get_display_screen(string type) {
     }
     return ret;
 }
+
+bool print_menu(string type) {
+    string screen_disp = get_display_screen(type);
+    cout << screen_disp << endl;
+    return true;
+}
+
+bool print_menu_clr(string type) {
+    clear_console();
+    print_menu(type);
+    return true;
+}
+

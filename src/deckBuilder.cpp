@@ -17,23 +17,11 @@ using namespace std;
 DeckBuilder::DeckBuilder()
     :selected(0) {
 	// TODO Auto-generated constructor stub
+	load_decklists();
 }
 
 DeckBuilder::~DeckBuilder() {
 	// TODO Auto-generated destructor stub
-}
-
-void DeckBuilder::start() {
-	/*
-	 * TODO Add any initializing stuff here
-	 * before printing menu. Possibly parse in
-	 * decks based on decklist files to save
-	 * decks?
-	 */
-    load_decklists();
-
-	do print_menu("screen_builder");
-	while(!get_input());
 }
 
 bool DeckBuilder::load_decklists() {
@@ -166,18 +154,6 @@ void DeckBuilder::edit_selected() {
 	}
 	do print_menu("screen_builder");
 	while(!get_input());
-}
-
-bool DeckBuilder::print_menu(string type) {
-    string screen_disp = get_display_screen(type);
-    cout << screen_disp << endl;
-    return true;
-}
-
-bool DeckBuilder::print_menu_clr(string type) {
-    clear_console();
-    print_menu(type);
-    return true;
 }
 
 bool DeckBuilder::get_input() {

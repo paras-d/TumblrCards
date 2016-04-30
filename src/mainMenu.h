@@ -10,6 +10,7 @@
 
 #include <string>
 #include "deckBuilder.h"
+#include "settings.h"
 
 class MainMenu {
 private:
@@ -23,22 +24,17 @@ private:
 	void deck_builder();
 
 	// moves to a settings menu
-	// what settings would exist?
-	void settings();
+	void settings_menu();
 
 	// quits the game
 	void quit();
 
 	DeckBuilder builder;
+	Settings settings;
 public:
 	MainMenu();
 	virtual ~MainMenu();
 
-	// prints the menu to the terminal
-	bool print_menu_clr(std::string type);
-	bool print_menu(std::string type);
-
-	// takes in the users input for the selection
 	bool get_input();
 };
 

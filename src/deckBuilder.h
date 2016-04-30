@@ -17,11 +17,6 @@ private:
 	std::vector<Deck*> list;
 	unsigned int selected;
 
-	// prints the menu system to the terminal
-	bool print_menu_clr(std::string type);
-	bool print_menu(std::string type);
-	bool get_input();
-
 	void edit_selected();
 	void new_deck();
 	void select_deck();
@@ -31,9 +26,9 @@ private:
 public:
 	DeckBuilder();
 	virtual ~DeckBuilder();
-	void start();
 	bool load_decklists();
 	const Deck* get_selected();
+	bool get_input();
 };
 
 #endif /* SRC_DECKBUILDER_H_ */
