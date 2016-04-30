@@ -41,7 +41,7 @@ void Game::load_content(const Deck selected) {
 
 	if(players == "single") {
 		/*
-		 * loads AI's deck here
+		 * TODO loads AI's deck here
 		 * For now it will just be
 		 * a copy of the players deck.
 		 */
