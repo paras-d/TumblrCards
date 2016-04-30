@@ -24,7 +24,6 @@ Game::~Game() {
 	/*
 	 * TODO Auto-generated destructor stub
 	 */
-	cout << "game destructed" << endl;
 }
 
 void Game::load_content(const Deck selected) {
