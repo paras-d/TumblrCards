@@ -23,7 +23,6 @@ MainMenu::~MainMenu() {
 }
 
 void MainMenu::single_player() {
-	// TODO preps the game to move to single player
     if(builder.get_selected() != NULL) {
 	    Game game("single");
 	    game.load_content(*builder.get_selected());
@@ -40,7 +39,6 @@ void MainMenu::single_player() {
 }
 
 void MainMenu::multi_player() {
-	// TODO preps the game to move to multi-player
 	if(builder.get_selected() != NULL) {
 		Game game("multi");
 		game.load_content(*builder.get_selected());

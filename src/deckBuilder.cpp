@@ -104,6 +104,8 @@ void DeckBuilder::new_deck() {
 	}
 
 	// Generates a testing deck until we have cards working
+	// TODO once cards are working this should move us to the
+	// deck editor
 	cout << "I would do card selection stuff here." << endl;
 	cout << "Building you a temp deck for testing." << endl;
 	while(list[selected]->size() < 20) {
@@ -148,10 +150,11 @@ void DeckBuilder::select_deck() {
 }
 
 void DeckBuilder::edit_selected() {
+	// TODO This should be code for the deck editor
+	// this just prints out the deck list for now.
     clear_console();
-    if(list[selected] != nullptr) {
+    if(list[selected] != nullptr)
 	    cout << list[selected]->to_file() << endl;
-	}
 	do print_menu("screen_builder");
 	while(!get_input());
 }
@@ -175,6 +178,7 @@ bool DeckBuilder::get_input() {
 			edit_selected();
 			break;
 		case 4:
+			// TODO anything need to be done before we exit?
 			break;
 		default:
 			cout << in << " is not a valid option." << endl;
