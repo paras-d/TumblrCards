@@ -6,17 +6,30 @@ First and foremost check the TODO's to see what needs to be done.
 Once you're ready to start programming see the Programming Standards section.
 
 ### TODO's
-- [X] Create basic class for a card
+
+#### LARGER GOALS
+- [ ] Create functioning single player game
+- [ ] Create functioning multiplayer game
+
+#### PROGRAMMING
+- [ ] Create set class (???) that will hold data for the cards to generate from
 - [ ] Figure out a way to quickly generate unique cards with abilities
+- [ ] Finish settings class and add actual settings to the game
+- [ ] Add combat methods to Card class
+- [ ] Create deck editor (as its own class?)
+- [ ] Create single player AI to play against
+- [ ] Finish Game class unload function
+- [ ] Create UI for the game itself in the draw() method.
+- [ ] Anyone feel we need a CLA for testing?
+- [ ] Finish quit() method in MainMenu class
+
+#### DONE
+- [X] Create basic class for a card
 - [X] Create a card list for the first set
-- [ ] Create set class that will hold data for the cards to generate from
 - [X] Create deck class that will hold 20 cards
-- [ ] Build deck editor that will allow the player to make a deck from the published cards
 - [X] Create basic entrance and menu system for the game
 - [X] Create rules for the card game
 - [X] Layout the turn order
-- [ ] Create functioning single player game
-- [ ] Create functioning multiplayer game
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 

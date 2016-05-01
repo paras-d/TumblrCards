@@ -49,11 +49,12 @@ void print_center(string input) {
 
 string get_display_screen(string type) {
     // Open the assets file for the current screen
-    string   buffer;
-    string   ret = "";
     ifstream screen_file("../src/assets/"+type);
-
+    string  ret = "";
+    
     if (screen_file.is_open()) {
+        string  buffer;
+        
         while (getline(screen_file, buffer)) {
             // Pad the string based on console and line length
             // such that the text be displayed center screen
@@ -73,5 +74,22 @@ string get_display_screen(string type) {
         // cannot be opened then something serious has gone wrong.
         cout << "FILE COULD NOT BE OPENED" << endl;
     }
+
+	// deletes last character to align proper output
+	ret.pop_back();
+    
     return ret;
 }
+
+bool print_menu(string type) {
+    string screen_disp = get_display_screen(type);
+    cout << screen_disp;
+    return true;
+}
+
+bool print_menu_clr(string type) {
+    clear_console();
+    print_menu(type);
+    return true;
+}
+

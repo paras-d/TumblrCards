@@ -2,7 +2,7 @@
  * player.cpp
  *
  *  Created on: Mar 28, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #include "player.h"
@@ -36,13 +36,12 @@ bool Player::draw() {
     return true;
 }
 
+/* 
+ * Move the card in the players
+ * hand at the given index into the board
+ * deck.
+ */
 bool Player::cast(unsigned int cardIndex) {
-    /* 
-     * TODO do card casting here
-     * should move the card in the players
-     * hand at the given index into the board
-     * deck.
-     */
 	if(cardIndex >= hand.size()) return false;
 	Card* temp = hand.get_card(cardIndex);
 	if(temp == nullptr) return false;

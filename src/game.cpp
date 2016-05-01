@@ -17,13 +17,13 @@ Game::Game(string type) {
 	if(players != "single" || players != "mutli")
 		// Throw custruction error here
 	cont = true;
+	myTurn = false;
 }
 
 Game::~Game() {
 	/*
 	 * TODO Auto-generated destructor stub
 	 */
-	cout << "game destructed" << endl;
 }
 
 void Game::load_content(const Deck selected) {
@@ -31,10 +31,29 @@ void Game::load_content(const Deck selected) {
 	 * TODO Load needed game content here
 	 * suck as deck lists
 	 */
+
+	 // loads in the selected deck for the player
 	player.select_deck(selected);
 	for(int i = 0; i < 5; i++) player.draw();
 	player.set_mana(opponent.get_life());
 	player.get_deck()->shuffle();
+
+	if(players == "single") {
+		/*
+		 * TODO loads AI's deck here
+		 * For now it will just be
+		 * a copy of the players deck.
+		 */
+		opponent.select_deck(selected);
+		for(int i = 0; i < 5; i++) opponent.draw();
+		opponent.set_mana(player.get_life());
+		opponent.get_deck()->shuffle();
+	}
+	else if(players == "mutli") {
+		// loads opponenets deck here
+	}
+	else { /*Something went wrong???*/ }
+	
 	update();
 }
 
@@ -54,7 +73,7 @@ void Game::update() {
 
     // Multiplayer should not play yet
 	if(players == "multi") return;
-
+	myTurn = true;
 	draw();
 	string in;
 	cin >> in;
@@ -64,18 +83,21 @@ void Game::update() {
         player.cast(choice - 1);
     	update();
     } else {
-        cout << "Combat phase" << endl;
-        cout << "Draw phase" << endl;
+        /* "Combat phase" */
+        /* "Draw phase" */
         if(player.get_hand()->size() < 3)
             while(player.get_hand()->size() < 3)
                 player.draw();
         else player.draw();
+
+        
 	    cout << "enter exit to exit: ";
 	    cin >> in;
 	    if(in == "exit")
 		    cont = false;
 
 	    if(cont) {
+	    	opponent.set_mana(player.get_life());
 		    if(players == "single")
 			    sp_update();
 		    else if(players == "multi")
@@ -90,10 +112,21 @@ void Game::sp_update() {
 	 * TODO Single player logic here
 	 * This will be where the AI takes their turn
 	 */
+	myTurn = false;
+    draw();
 
-    //draw();
-	 
-	cout << "sp: opponents turn starts." << endl;
+	if(opponent.get_mana() > 0 && opponent.get_hand()->size() > 0) {
+        opponent.cast(/* Opponent casts card here */ 0);
+    	sp_update();
+    } else {
+        /* "Combat phase" */
+        /* "Draw phase" */
+        if(opponent.get_hand()->size() < 3)
+            while(opponent.get_hand()->size() < 3)
+                opponent.draw();
+        else opponent.draw();
+    }
+    
 	player.set_mana(opponent.get_life());
 	update();
 }
@@ -103,10 +136,12 @@ void Game::mp_update() {
 	 * TODO Multiplayer game works here
 	 * This will be where the opponent takes their turn
 	 */
+	myTurn = false;
 	draw();
 
 	cout << "mp: opponents turn starts" << endl;
 	player.set_mana(opponent.get_life());
+	
 	update();
 }
 
@@ -117,7 +152,8 @@ void Game::draw() {
 	 * am just doing incredibly basic output to make
 	 * sure everything is working correctly. If someone
 	 * wants to start working on making the cli UI that
-	 * would be great!
+	 * would be great! Theoretically no output should
+	 * ever be done in the update methods.
 	 */
 	clear_console();
 	cout << "Battlefield: \n " << opponent.get_board()->to_string() << endl;
@@ -125,5 +161,5 @@ void Game::draw() {
     cout << "Mana: " << player.get_mana() << endl; 
     cout << "Hand: " << endl;
     cout << player.get_hand()->to_string() << endl;
-    cout << "Input: ";
+    if(myTurn) cout << "Input: ";
 }

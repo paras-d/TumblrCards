@@ -18,4 +18,8 @@ int get_console_height();
 
 std::string get_display_screen(std::string type);
 
+bool print_menu_clr(std::string type);
+
+bool print_menu(std::string type);
+
 #endif /* SRC_UTILS_H_ */

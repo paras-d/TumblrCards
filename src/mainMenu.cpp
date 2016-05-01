@@ -15,6 +15,7 @@ using namespace std;
 
 MainMenu::MainMenu() {
 	// TODO Auto-generated constructor stub
+	builder.load_decklists();
 }
 
 MainMenu::~MainMenu() {
@@ -22,7 +23,6 @@ MainMenu::~MainMenu() {
 }
 
 void MainMenu::single_player() {
-	// TODO preps the game to move to single player
     if(builder.get_selected() != NULL) {
 	    Game game("single");
 	    game.load_content(*builder.get_selected());
@@ -39,12 +39,13 @@ void MainMenu::single_player() {
 }
 
 void MainMenu::multi_player() {
-	// TODO preps the game to move to multi-player
 	if(builder.get_selected() != NULL) {
 		Game game("multi");
 		game.load_content(*builder.get_selected());
 
-	    do     print_menu_clr("screen_main");
+		cout << "Game mode not available yet." << endl;
+
+	    do     print_menu("screen_main");
 		while (!get_input());
 	} else {
 		clear_console();
@@ -58,34 +59,25 @@ void MainMenu::multi_player() {
 void MainMenu::deck_builder() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
-	builder.start();
-	
+	do     print_menu_clr("screen_builder");
+	while (!builder.get_input());
+
 	do     print_menu_clr("screen_main");
 	while (!get_input());
 }
 
-void MainMenu::settings() {
+void MainMenu::settings_menu() {
 	// TODO moves to a settings menu.
 	// what settings could this game have?
     do     print_menu_clr("screen_settings");
+	while (!settings.get_input());
+
+	do     print_menu_clr("screen_main");
 	while (!get_input());
 }
 
 void MainMenu::quit() {
 	// TODO quits the game.
-	cout << "Got to quit()" << endl;
-}
-
-bool MainMenu::print_menu(string type) {
-    string screen_disp = get_display_screen(type);
-    cout << screen_disp << endl;
-    return true;
-}
-
-bool MainMenu::print_menu_clr(string type) {
-    clear_console();
-    print_menu(type);
-    return true;
 }
 
 bool MainMenu::get_input() {
@@ -107,7 +99,7 @@ bool MainMenu::get_input() {
 			deck_builder();
 			break;
 		case 4:
-			settings();
+			settings_menu();
 			break;
 		case 5:
 			quit();

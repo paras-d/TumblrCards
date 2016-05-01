@@ -19,6 +19,7 @@ private:
 	void sp_update();
 	void mp_update();
 	bool cont;
+	bool myTurn;
 	std::string players;
 	Player player;
 	Player opponent;
