@@ -8,12 +8,22 @@
 #include "mainMenu.h"
 #include "deck.h"
 #include "utils.h"
+#include "console/console.h"
 
 using namespace std;
 
+int test_console();
+
 int main(int argc, char* argv[]) {
 	// TODO we should maybe have cla's for testing purposes
-
+    if(argc > 1) {
+        string arg;
+        for(int i = 0; i < argc; i++) {
+            arg = argv[i];
+            if(arg == "-c")
+                return test_console();
+        }
+    }
 	// starts the game
 	//clear_console();
 	MainMenu menu;
@@ -22,4 +32,10 @@ int main(int argc, char* argv[]) {
 	while (!menu.get_input());
 
 	return 0;
+}
+
+int test_console() {
+    Console console;
+    cout << "test" << endl;
+    return 0;
 }

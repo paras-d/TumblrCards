@@ -38,6 +38,8 @@ set(TC_SOURCES
 		${CMAKE_SOURCE_DIR}/src/main.cpp
 		${CMAKE_SOURCE_DIR}/src/deckBuilder.cpp
 		${CMAKE_SOURCE_DIR}/src/settings.cpp
+		${CMAKE_SOURCE_DIR}/src/console/console.cpp
+		${CMAKE_SOURCE_DIR}/src/console/imageMap.cpp
 )
 
 add_executable(tumblrcards ${TC_SOURCES})

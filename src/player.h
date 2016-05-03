@@ -2,7 +2,7 @@
  * player.h
  *
  *  Created on: Mar 28, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #ifndef SRC_PLAYER_H_
