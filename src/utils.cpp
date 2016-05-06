@@ -25,13 +25,13 @@ void clear_console() {
 
 // TODO Make it work in Windows too and fix cases where 0 and 0 are returned
 
-int get_console_width() {
+unsigned int get_console_width() {
 	struct winsize size;
 	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
 	return size.ws_col;
 }
 
-int get_console_height() {
+unsigned int get_console_height() {
 	struct winsize size;
 	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
 	return size.ws_row;

@@ -34,8 +34,25 @@ int main(int argc, char* argv[]) {
 	return 0;
 }
 
+int test_image_map(Console con);
+
 int test_console() {
     Console console;
-    cout << "test" << endl;
+    console.print();
+    string wait;
+    cin >> wait;
+    if(wait == "test") return test_image_map(console);
+    else if(wait != "q") return test_console();
     return 0;
+}
+
+int test_image_map(Console con) {
+	ImageMap test("test", 10, 20);
+	con.add_image(test);
+	con.print();
+    string wait;
+    cin >> wait;
+    if(wait == "test") return test_image_map(con);
+    else if(wait != "q") return test_console();
+	return 0;
 }
