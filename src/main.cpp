@@ -47,7 +47,7 @@ int test_console() {
 }
 
 int test_image_map(Console con) {
-	ImageMap test("test", 10, 20);
+	ImageMap test("test", 10, 0);
 	con.add_image(test);
 	con.print();
     string wait;
