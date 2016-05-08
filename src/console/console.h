@@ -22,8 +22,8 @@ public:
     bool add_image(std::string image_str);
     bool add_image(std::string image_str, int x, int y);
     bool print();
-    unsigned int get_width() const { return get_console_width()-1; };;
-    unsigned int get_height() const { return get_console_height()-1; };
+    unsigned int get_width() const { return get_console_width(); };;
+    unsigned int get_height() const { return get_console_height(); };
 };
 
 #endif /* SRC_CONSOLE_H_ */

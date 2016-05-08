@@ -7,6 +7,7 @@
 
 #include <string>
 #include <vector>
+#include <iostream>
 #include "imageMap.h"
 
 using namespace std;
@@ -31,17 +32,27 @@ ImageMap::~ImageMap() {
 
 void ImageMap::set_image(string image) {
     map.clear();
-    vector<char> beg_row;
-    map.push_back(beg_row);
+    map.push_back(vector<char>());
     int curr_row = 0;
     for(char& c : image) {
         // TODO parse string in to 2D vector
         if(c == '\n') {
-            vector<char> row;
-            map.push_back(row);
+            map.push_back(vector<char>());
             curr_row++;
             continue;
         }
         map[curr_row].push_back(c);
     }
+
+    if(image != to_string()) cout << "Parse Error!" << endl;
+}
+
+string ImageMap::to_string() {
+	string ret = "";
+	for(vector<char> row : map) {
+		for(char& col : row)
+			ret = ret + col;
+		ret = ret + "\n";
+	}
+	return ret;
 }

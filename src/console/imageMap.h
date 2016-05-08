@@ -24,6 +24,7 @@ public:
     void set_x(int new_x = 0) { x_coord = new_x; };
     void set_y(int new_y = 0) { y_coord = new_y; };
     void set_pos(int new_x, int new_y) { x_coord = new_x; y_coord = new_y; };
+    std::string to_string();
 };
 
 #endif /* SRC_IMAGEMAP_H_ */

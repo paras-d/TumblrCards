@@ -29,13 +29,13 @@ Console::~Console() {
 bool Console::add_image(ImageMap image) {
     images.push_back(image);
     vector<vector<char>> map = image.get_map();
-    unsigned int height = map.size() + image.get_y();
-    for(unsigned int y = image.get_y(); y < height; y++) {
-    	if(y >= get_height() - 1) break;
-    	unsigned int width = map[y].size() + image.get_x();
-		for(unsigned int x = image.get_x(); x < width; x++) {
-			if(x >= get_width()) break;
-			console[y][x] = map[y][x];
+    for(unsigned int y = 0; y < map.size(); y++) {
+   		unsigned int con_y = y + image.get_y();
+   		//if(con_y >= get_width()) break;
+		for(unsigned int x = 0; x < map[y].size(); x++) {
+			unsigned int con_x = x + image.get_x();
+			//if(con_x >= get_height()) break;
+			console[con_y][con_x] = map[y][x];
     	}
     }
     return true;

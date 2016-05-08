@@ -18,6 +18,8 @@ unsigned int get_console_height();
 
 std::string get_display_screen(std::string type);
 
+std::string load_file(std::string fileName);
+
 bool print_menu_clr(std::string type);
 
 bool print_menu(std::string type);
