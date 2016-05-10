@@ -14,55 +14,81 @@ using namespace std;
 
 Console::Console() {
 	// TODO Auto-generated constructor stub
-    for(unsigned int i = 0; i < get_height()-1; i++) {
-        vector<char>* row = new vector<char>();
-        for(unsigned int j = 0; j < get_width(); j++)
-            row->push_back(' ');
-        console.push_back(*row);
-    }
+
+	clear();
 }
 
 Console::~Console() {
 	// TODO Auto-generated destructor stub
 }
 
-bool Console::add_image(ImageMap image) {
+bool Console::add_image(ImageMap* image) {
     images.push_back(image);
-    vector<vector<char>> map = image.get_map();
-    for(unsigned int y = 0; y < map.size(); y++) {
-   		unsigned int con_y = y + image.get_y();
-   		//if(con_y >= get_width()) break;
-		for(unsigned int x = 0; x < map[y].size(); x++) {
-			unsigned int con_x = x + image.get_x();
-			//if(con_x >= get_height()) break;
-			console[con_y][con_x] = map[y][x];
-    	}
-    }
+    update();
     return true;
 }
 
 bool Console::add_image(string image_str) {
-    ImageMap image(image_str);
+    ImageMap* image = new ImageMap(image_str);
     add_image(image);
     return true;
 }
 
 bool Console::add_image(string image_str, int x, int y) {
-    ImageMap image(image_str, x, y);
+    ImageMap* image = new ImageMap(image_str, x, y);
     add_image(image);
     return true;
 }
 
-bool Console::print() {
-	string ret;
-	for(vector<char> row : console) {
-		for(char col : row)
-			ret += col;
-		ret += '\n';
-	}
+void Console::print() {
 	clear_console();
 	clear_console(); // Console needs to clear twice???
-	cout << ret;
+	for(vector<char> row : console) {
+		for(char col : row)
+			cout << col;
+		cout << endl;
+	}
 	cout << "Input: ";
-    return true;
+}
+
+void Console::clear() { 
+    console.clear();
+    images.clear();
+
+    // Fills our screen with empty space
+    for(unsigned int i = 0; i < get_height()-1; i++) {
+        vector<char>* row = new vector<char>();
+        for(unsigned int j = 0; j < get_width(); j++)
+            row->push_back(' ');
+        console.push_back(*row);
+    }
+};
+
+void Console::update() {
+    // creates temp vector to store images to be printed
+    vector<ImageMap> temp;
+    for(ImageMap* image : images)
+        temp.push_back(*image);
+        
+    // then uses the clear function to reset our screen
+    clear();
+    
+    // finally moves images back to our list of images
+    for(ImageMap image : temp) {
+        images.push_back(new ImageMap(image));
+    }
+
+    // adds all of the images back to console at their current pos
+    for(ImageMap* image : images) {
+        vector<vector<char>> map = image->get_map();
+        for(unsigned int y = 0; y < map.size(); y++) {
+   		    unsigned int con_y = y + image->get_y();
+   		    if(con_y >= get_width()) break;
+		    for(unsigned int x = 0; x < map[y].size(); x++) {
+		    	unsigned int con_x = x + image->get_x();
+		    	if(con_x >= get_height()) break;
+		    	console[con_y][con_x] = map[y][x];
+    	    }
+        }
+    }
 }

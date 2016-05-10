@@ -101,7 +101,7 @@ string load_file(string file) {
     }
 
 	// deletes last character to align proper output
-	ret.pop_back();
+	//ret.pop_back();
     
     return ret;
 }

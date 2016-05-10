@@ -21,8 +21,8 @@ private:
 public:
 	Deck();
 	Deck(std::string name);
-	virtual ~Deck();
 	Deck(const Deck &clone);
+	virtual ~Deck();
 	Card* draw_card();
 	Card* get_card(unsigned int index);
 	Deck draw_cards(int num);

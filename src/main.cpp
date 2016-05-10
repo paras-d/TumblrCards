@@ -24,6 +24,7 @@ int main(int argc, char* argv[]) {
                 return test_console();
         }
     }
+
 	// starts the game
 	//clear_console();
 	MainMenu menu;
@@ -36,11 +37,12 @@ int main(int argc, char* argv[]) {
 
 
 int test_console() {
-	ImageMap test(load_file("card_template"));
+	ImageMap* test = new ImageMap(load_file("card_template"), 0, 0);
     Console console;
     console.add_image(test);
+    test->set_y(5);
+    console.update();
     console.print();
-    //cout << test.to_string();
     string wait;
     cin >> wait;
     if(wait != "q") return test_console();

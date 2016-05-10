@@ -16,13 +16,14 @@ private:
 public:
     ImageMap(std::string image);
     ImageMap(std::string image, int x_pos, int y_pos);
+    ImageMap(const ImageMap &clone);
     virtual ~ImageMap();
     std::vector<std::vector<char>> get_map() const { return map; };
     void set_image(std::string image);
     int get_x() const { return x_coord; };
-    int get_y() const { return x_coord; };
-    void set_x(int new_x = 0) { x_coord = new_x; };
-    void set_y(int new_y = 0) { y_coord = new_y; };
+    int get_y() const { return y_coord; };
+    void set_x(int new_x) { x_coord = new_x; };
+    void set_y(int new_y) { y_coord = new_y; };
     void set_pos(int new_x, int new_y) { x_coord = new_x; y_coord = new_y; };
     std::string to_string();
 };

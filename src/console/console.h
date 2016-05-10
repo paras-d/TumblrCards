@@ -14,15 +14,17 @@
 class Console {
 private:
     std::vector<std::vector<char>> console;
-    std::vector<ImageMap> images;
+    std::vector<ImageMap*> images;
 public:
 	Console();
 	virtual ~Console();
-    bool add_image(ImageMap image);
+    bool add_image(ImageMap* image);
     bool add_image(std::string image_str);
     bool add_image(std::string image_str, int x, int y);
-    bool print();
-    unsigned int get_width() const { return get_console_width(); };;
+    void print();
+    void update();
+    void clear();
+    unsigned int get_width() const { return get_console_width(); };
     unsigned int get_height() const { return get_console_height(); };
 };
 

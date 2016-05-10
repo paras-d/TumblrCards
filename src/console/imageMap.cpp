@@ -26,6 +26,13 @@ ImageMap::ImageMap(string image, int x_pos, int y_pos)
 	set_image(image);
 }
 
+ImageMap::ImageMap(const ImageMap &clone)
+    :map { clone.get_map() },
+     x_coord { clone.get_x() },
+     y_coord { clone.get_y() } {
+	// TODO Auto-generated constructor stub
+}
+
 ImageMap::~ImageMap() {
 	// TODO Auto-generated destructor stub
 }
@@ -40,11 +47,9 @@ void ImageMap::set_image(string image) {
             map.push_back(vector<char>());
             curr_row++;
             continue;
-        }
+        } else if ((int)c == 13) continue;
         map[curr_row].push_back(c);
     }
-
-    if(image != to_string()) cout << "Parse Error!" << endl;
 }
 
 string ImageMap::to_string() {
@@ -54,5 +59,6 @@ string ImageMap::to_string() {
 			ret = ret + col;
 		ret = ret + "\n";
 	}
+    ret.pop_back();
 	return ret;
 }
