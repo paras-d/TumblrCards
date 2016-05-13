@@ -8,7 +8,7 @@
 #ifndef SRC_CONSOLE_H_
 #define SRC_CONSOLE_H_
 
-#include "../utils.h"
+#include "utils.h"
 #include "imageMap.h"
 
 class Console {

@@ -12,6 +12,13 @@
 
 using namespace std;
 
+ImageMap::ImageMap()
+    :x_coord { 0 },
+     y_coord { 0 } {
+	// TODO Auto-generated constructor stub
+	set_image(" ");
+}
+
 ImageMap::ImageMap(string image)
     :x_coord { 0 },
      y_coord { 0 } {

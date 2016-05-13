@@ -57,25 +57,25 @@ void Console::clear() {
 
     // Fills our screen with empty space
     for(unsigned int i = 0; i < get_height()-1; i++) {
-        vector<char>* row = new vector<char>();
+        vector<char> row;
         for(unsigned int j = 0; j < get_width(); j++)
-            row->push_back(' ');
-        console.push_back(*row);
+            row.push_back(' ');
+        console.push_back(row);
     }
 };
 
 void Console::update() {
     // creates temp vector to store images to be printed
-    vector<ImageMap> temp;
+    vector<ImageMap*> temp;
     for(ImageMap* image : images)
-        temp.push_back(*image);
+        temp.push_back(image);
         
     // then uses the clear function to reset our screen
     clear();
     
     // finally moves images back to our list of images
-    for(ImageMap image : temp) {
-        images.push_back(new ImageMap(image));
+    for(ImageMap* image : temp) {
+        images.push_back(image);
     }
 
     // adds all of the images back to console at their current pos
@@ -83,10 +83,10 @@ void Console::update() {
         vector<vector<char>> map = image->get_map();
         for(unsigned int y = 0; y < map.size(); y++) {
    		    unsigned int con_y = y + image->get_y();
-   		    if(con_y >= get_width()) break;
+   		    if(con_y >= get_height()-1) break;
 		    for(unsigned int x = 0; x < map[y].size(); x++) {
 		    	unsigned int con_x = x + image->get_x();
-		    	if(con_x >= get_height()) break;
+		    	if(con_x >= get_width()) break;
 		    	console[con_y][con_x] = map[y][x];
     	    }
         }

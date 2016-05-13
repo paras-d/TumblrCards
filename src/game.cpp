@@ -8,7 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include "game.h"
-#include "utils.h"
+#include "console/utils.h"
 
 using namespace std;
 
