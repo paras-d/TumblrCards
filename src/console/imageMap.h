@@ -31,6 +31,13 @@ public:
     void set_y(int new_y = 0) { y_coord = new_y; };
     void set_pos(int new_x, int new_y) { set_x(new_x); set_y(new_y); };
     std::string to_string();
+    
+    /* 
+	 * parse_flag sets the flag (i.e. {0}) in a var string to the 
+	 * specified text while intelligently formatting the stirng
+	 * for output
+	 */
+	void parse_flag(std::string flag, std::string text, std::string align = "center");
 };
 
 #endif /* SRC_IMAGEMAP_H_ */

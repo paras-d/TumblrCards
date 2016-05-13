@@ -59,6 +59,24 @@ void ImageMap::set_image(string image) {
     }
 }
 
+void ImageMap::parse_flag(string flag, string text, string align) {
+    int found_x, found_y;
+    
+    for(unsigned int y = 0; y < map.size(); y++) {
+        for(unsigned int x = 0; x < map[y].size(); x++) {
+            char var = map[y][x];
+        }
+    }   
+     
+	if(align == "center") {
+        
+    } else if(align == "left-pad") {
+        
+    } else if(align == "right-pad") {
+        
+    }
+}
+
 string ImageMap::to_string() {
 	string ret = "";
 	for(vector<char> row : map) {

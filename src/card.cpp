@@ -2,7 +2,7 @@
  * card.cpp
  *
  *  Created on: Mar 7, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #include "card.h"
@@ -19,16 +19,6 @@ Card::Card() {
 
 Card::~Card() {
 	// TODO Auto-generated destructor stub
-}
-
-void Card::parse_flag(string flag, string* ptr, string text) {
-	unsigned int found;
-
-	// Sets name of card image to card name
-	found = ptr->find("{0}");
-	if(found != std::string::npos) {
-		ptr->replace(found, text.size(), text);
-	}
 }
 
 void Card::build_card(string arg) {
@@ -67,11 +57,13 @@ void Card::build_card(string arg) {
 		name = "Void";
 	}
 
-	string parse_card(load_file("card_template"));
+	image.set_image(load_file("card_template"));
 	
-	parse_flag("{0}", &parse_card, name);
-	
-	image.set_image(parse_card);
+	image.parse_flag("{0}", name);
+	image.parse_flag("{1}", std::to_string(cost), "right-pad");
+	image.parse_flag("{2}", ability, "left-pad");
+	image.parse_flag("{3}", std::to_string(attack));
+    image.parse_flag("{4}", std::to_string(currHP));
 }
 
 bool Card::trigger() {
