@@ -75,13 +75,13 @@ string get_display_screen(string type) {
         cout << "FILE COULD NOT BE OPENED" << endl;
     }
 
-	// deletes last character to align proper output
-	ret.pop_back();
+	// deletes last character if \n to align proper output
+	if(ret.at(ret.size()-2) == '\n') ret.pop_back();
     
     return ret;
 }
 
-string load_file(string file) {
+string load_file(string file) { 
 	// Open the assets file for the current screen
     ifstream screen_file("../src/assets/"+file);
     string  ret = "";

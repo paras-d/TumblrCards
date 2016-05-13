@@ -99,8 +99,9 @@ Deck Deck::draw_cards(int num) {
 
     // draws a card from our deck to add
     // to the return deck;
-    for(int i = 0; i < num; i++)
+    for(int i = 0; i < num; i++) {
         ret.add_card(draw_card());
+	}
 	
 	well_formed();
 	return ret;

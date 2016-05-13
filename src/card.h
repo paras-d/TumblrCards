@@ -20,6 +20,14 @@ private:
 	std::string name;
 	std::string ability;
 	ImageMap image;
+	
+	/* 
+	 * This method may get moved to utils if it is helpful
+	 * parse_flag sets the flag (i.e. {0}) in a var string to the 
+	 * specified text while inteligently formatting the stirng
+	 * for output
+	 */
+	void parse_flag(std::string flag, std::string* ptr, std::string text);
 public:
 	Card();
 	virtual ~Card();

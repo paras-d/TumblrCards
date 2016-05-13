@@ -42,7 +42,6 @@ bool Console::add_image(string image_str, int x, int y) {
 
 void Console::print() {
 	clear_console();
-	clear_console(); // Console needs to clear twice???
 	for(vector<char> row : console) {
 		for(char col : row)
 			cout << col;

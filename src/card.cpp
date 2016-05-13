@@ -21,6 +21,16 @@ Card::~Card() {
 	// TODO Auto-generated destructor stub
 }
 
+void Card::parse_flag(string flag, string* ptr, string text) {
+	unsigned int found;
+
+	// Sets name of card image to card name
+	found = ptr->find("{0}");
+	if(found != std::string::npos) {
+		ptr->replace(found, text.size(), text);
+	}
+}
+
 void Card::build_card(string arg) {
 	// TODO have card stats based on
 	// input arg. This method is not set
@@ -58,33 +68,9 @@ void Card::build_card(string arg) {
 	}
 
 	string parse_card(load_file("card_template"));
-	unsigned int found;
-
-	// Sets name of card image to card name
-	found = parse_card.find("{0}");
-	if(found != std::string::npos)
-		parse_card.replace(found, name.size(), name);
-
-	// Sets cost of card image to cost var
-	found = parse_card.find("{1}");
-	if(found != std::string::npos)
-		parse_card.replace(found, std::to_string(cost).size(), std::to_string(cost));
-
-	// Sets ability of card image to ability var
-	found = parse_card.find("{2}");
-	if(found != std::string::npos)
-		parse_card.replace(found, ability.size(), ability);
-
-	// Sets cost of card image to cost var
-	found = parse_card.find("{4}");
-	if(found != std::string::npos)
-		parse_card.replace(found, std::to_string(attack).size(), std::to_string(attack));
-
-	// Sets cost of card image to cost var
-	found = parse_card.find("{5}");
-	if(found != std::string::npos)
-		parse_card.replace(found, std::to_string(currHP).size(), std::to_string(currHP));
-
+	
+	parse_flag("{0}", &parse_card, name);
+	
 	image.set_image(parse_card);
 }
 
