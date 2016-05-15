@@ -19,11 +19,8 @@ Player::~Player() {
 }
 
 bool Player::select_deck(Deck selected) {
-    if(&selected != NULL) {
-	    deck = selected;
-	    return true;
-	}
-	return false;
+	deck = selected;
+	return true;
 }
 
 bool Player::draw() {

@@ -110,12 +110,15 @@ void DeckBuilder::new_deck() {
 	cout << "Building you a temp deck for testing." << endl;
 	while(list[selected]->size() < 20) {
 	    Card* temp = new Card();
-	    if(list[selected]->size() % 2 == 0)
+	    if(list[selected]->size() % 2 == 0) {
 	        temp->build_card("test1");
-	    if(list[selected]->size() % 3 == 0)
+		}
+	    if(list[selected]->size() % 3 == 0) {
 	        temp->build_card("test2");
-	    if(list[selected]->size() % 4 == 0)
+		}
+	    if(list[selected]->size() % 4 == 0) {
 	        temp->build_card("test3");
+		}
 		list[selected]->add_card(temp);
 	}
 	
