@@ -60,12 +60,16 @@ void ImageMap::set_image(string image) {
 }
 
 void ImageMap::parse_flag(string flag, string text, string align) {
+    int found = to_string().find(flag);
     int found_x, found_y;
     
-    // TODO Find the location of the flag
+    found_x = found % get_width();  // I have not checked this viability yet
+    found_y = found % get_height(); // This could be completely wrong.
+                                    // SHould work in theory
     
 	if(align == "center") {
         // TODO Align the text centered on the flag
+        int text_center = text.size() / 2;
     } else if(align == "left-pad") {
         // TODO Align the the first char of text with
         // the '{' of the flag
