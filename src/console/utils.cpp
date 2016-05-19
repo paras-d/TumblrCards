@@ -15,6 +15,8 @@
 
 using namespace std;
 
+// TODO Make it work in Windows too and fix cases
+// where 0 and 0 are returned
 void clear_console() {
 #ifdef WINDOWS
   std::system ("CLS");
@@ -23,7 +25,16 @@ void clear_console() {
 #endif
 }
 
-// TODO Make it work in Windows too and fix cases where 0 and 0 are returned
+
+void print_center(string input) {
+	// Pad the string based on console and line length
+	// such that the text be displayed center screen
+	string pad = "";
+	int k = (get_console_width() / 2) - (input.length() / 2);
+	for (int i = 0; i < k; i++) { pad.append(" "); }
+	// Append the formatted line to the cumulative string
+	cout << pad << input << endl;
+}
 
 size_t get_console_width() {
 	struct winsize size;
@@ -35,16 +46,6 @@ size_t get_console_height() {
 	struct winsize size;
 	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
 	return size.ws_row;
-}
-
-void print_center(string input) {
-	// Pad the string based on console and line length
-	// such that the text be displayed center screen
-	string pad = "";
-	int k = (get_console_width() / 2) - (input.length() / 2);
-	for (int i = 0; i < k; i++) { pad.append(" "); }
-	// Append the formatted line to the cumulative string
-	cout << pad << input << endl;
 }
 
 string get_display_screen(string type) {
@@ -106,6 +107,29 @@ string load_file(string file) {
     return ret;
 }
 
+string leftpad(string str, int len, char ch) {
+   // doesn't need to pad
+   len = len - str.size();
+   if (len <= 0) return str;
+
+   while (len--) {
+       str = ch + str;
+   }
+   
+   return str;
+}
+
+string rightpad(string str, int len = str.size(), char ch = ' ') {
+    // doesn't need to pad
+    len = len - str.size();
+    if (len <= 0) return str;
+    
+    while (len--) {
+        str = ch + str;
+    }
+    
+    return str;
+}
 bool print_menu(string type) {
     string screen_disp = get_display_screen(type);
     cout << screen_disp;

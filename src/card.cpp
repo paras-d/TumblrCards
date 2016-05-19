@@ -59,11 +59,11 @@ void Card::build_card(string arg) {
 
 	image.set_image(load_file("card_template"));
 	
-	image.parse_flag("{0}", name);
+	image.parse_flag("{0}", name, "left-pad");
 	image.parse_flag("{1}", std::to_string(cost), "right-pad");
 	image.parse_flag("{2}", ability, "left-pad");
-	image.parse_flag("{3}", std::to_string(attack));
-    image.parse_flag("{4}", std::to_string(currHP));
+	image.parse_flag("{3}", std::to_string(attack), "right-pad");
+    image.parse_flag("{4}", std::to_string(currHP), "left-pad");
 }
 
 bool Card::trigger() {
