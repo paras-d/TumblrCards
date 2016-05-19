@@ -77,7 +77,7 @@ string get_display_screen(string type) {
     }
 
 	// deletes last character if \n to align proper output
-	if(ret.at(ret.size()-2) == '\n') ret.pop_back();
+	if(ret[ret.size()-2] == '\n') ret.pop_back();
     
     return ret;
 }
@@ -102,34 +102,39 @@ string load_file(string file) {
     }
 
 	// deletes last character to align proper output
-	//ret.pop_back();
+	if(ret[ret.size()-2] == '\n') ret.pop_back();
     
     return ret;
 }
 
 string leftpad(string str, int len, char ch) {
    // doesn't need to pad
+   int i = -1;
+   
    len = len - str.size();
    if (len <= 0) return str;
 
-   while (len--) {
+   while (++i < len) {
        str = ch + str;
    }
    
    return str;
 }
 
-string rightpad(string str, int len = str.size(), char ch = ' ') {
+string rightpad(string str, int len, char ch) {
     // doesn't need to pad
+    int i = -1;
+    
     len = len - str.size();
     if (len <= 0) return str;
     
-    while (len--) {
-        str = ch + str;
-    }
+    while (++i < len) {
+       str = ch + str;
+   }
     
     return str;
 }
+
 bool print_menu(string type) {
     string screen_disp = get_display_screen(type);
     cout << screen_disp;
