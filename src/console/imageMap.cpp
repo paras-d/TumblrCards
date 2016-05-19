@@ -60,12 +60,16 @@ void ImageMap::set_image(string image) {
 }
 
 void ImageMap::parse_flag(string flag, string text, string align) {
-    int found = to_string().find(flag);
-    int found_x, found_y;
+    size_t found = to_string().find(flag);
     
-    found_x = found % get_width();  // I have not checked this viability yet
-    found_y = found % get_height(); // This could be completely wrong.
-                                    // SHould work in theory
+    // String not found
+    if(found == string::npos) return;
+    
+    int found_y = found / get_width();
+    int found_x = found - (found_y * get_width());
+    
+    // Something went wrong???
+    if(map[found_y][found_x] != flag.at(0)) return;
     
 	if(align == "center") {
         // TODO Align the text centered on the flag
@@ -73,9 +77,17 @@ void ImageMap::parse_flag(string flag, string text, string align) {
     } else if(align == "left-pad") {
         // TODO Align the the first char of text with
         // the '{' of the flag
+        for(size_t i = 0; i < text.size(); i++) {
+            if(i > map[found_y].size()) break;
+            map[found_y][found_x + i] = text.at(i);
+        }
     } else if(align == "right-pad") {
         // TODO Align the the last char of text with
         // the '}' of the flag
+        for(size_t i = 0; i < text.size(); i++) {
+            if(map[found_y].size() - i < 0) break;
+            map[found_y][found_x + i] = text.at(i);
+        }
     }
 }
 

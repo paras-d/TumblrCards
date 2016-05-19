@@ -79,7 +79,7 @@ void DeckBuilder::new_deck() {
 	string name;
 	string in;
 	cin >> name;
-	unsigned int i = 0;
+	size_t i = 0;
 
 	// Checks to see if the entered name already matches a deck
 	for(Deck* deck : list) {
@@ -134,7 +134,7 @@ void DeckBuilder::new_deck() {
 void DeckBuilder::select_deck() {
 	clear_console();
 	if(!list.empty()) {
-		unsigned int i = 1;
+		size_t i = 1;
 		for(Deck* deck : list) {
 			if(i - 1 == selected) cout << '*';
 			else cout << " ";

@@ -12,9 +12,9 @@ void clear_console();
 
 void print_center(std::string print);
 
-unsigned int get_console_width();
+size_t get_console_width();
 
-unsigned int get_console_height();
+size_t get_console_height();
 
 std::string get_display_screen(std::string type);
 

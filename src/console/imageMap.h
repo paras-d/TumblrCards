@@ -37,7 +37,9 @@ public:
 	 * specified text while intelligently formatting the stirng
 	 * for output
 	 */
-	void parse_flag(std::string flag, std::string text, std::string align = "center");
+	void parse_flag(std::string flag = "{0}",
+                    std::string text = "",
+                    std::string align = "center");
 };
 
 #endif /* SRC_IMAGEMAP_H_ */

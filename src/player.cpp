@@ -38,7 +38,7 @@ bool Player::draw() {
  * hand at the given index into the board
  * deck.
  */
-bool Player::cast(unsigned int cardIndex) {
+bool Player::cast(size_t cardIndex) {
 	if(cardIndex >= hand.size()) return false;
 	Card* temp = hand.get_card(cardIndex);
 	if(temp == nullptr) return false;

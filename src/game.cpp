@@ -77,7 +77,7 @@ void Game::update() {
 	draw();
 	string in;
 	cin >> in;
-	unsigned int choice = 0;
+	size_t choice = 0;
 	istringstream(in) >> choice;
     if(player.get_mana() > 0 && choice != 0) {
         player.cast(choice - 1);

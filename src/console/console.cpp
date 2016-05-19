@@ -55,9 +55,9 @@ void Console::clear() {
     images.clear();
 
     // Fills our screen with empty space
-    for(unsigned int i = 0; i < get_height()-1; i++) {
+    for(size_t i = 0; i < get_height()-1; i++) {
         vector<char> row;
-        for(unsigned int j = 0; j < get_width(); j++)
+        for(size_t j = 0; j < get_width(); j++)
             row.push_back(' ');
         console.push_back(row);
     }
@@ -80,11 +80,11 @@ void Console::update() {
     // adds all of the images back to console at their current pos
     for(ImageMap* image : images) {
         vector<vector<char>> map = image->get_map();
-        for(unsigned int y = 0; y < map.size(); y++) {
-   		    unsigned int con_y = y + image->get_y();
+        for(size_t y = 0; y < map.size(); y++) {
+   		    size_t con_y = y + image->get_y();
    		    if(con_y >= get_height()-1) break;
-		    for(unsigned int x = 0; x < map[y].size(); x++) {
-		    	unsigned int con_x = x + image->get_x();
+		    for(size_t x = 0; x < map[y].size(); x++) {
+		    	size_t con_x = x + image->get_x();
 		    	if(con_x >= get_width()) break;
 		    	console[con_y][con_x] = map[y][x];
     	    }

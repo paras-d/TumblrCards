@@ -15,7 +15,7 @@ private:
 	// list contains all of the build decks
 	// selected is the deck we will work with
 	std::vector<Deck*> list;
-	unsigned int selected;
+	size_t selected;
 
 	void edit_selected();
 	void new_deck();
