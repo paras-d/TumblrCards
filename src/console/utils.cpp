@@ -129,7 +129,7 @@ string rightpad(string str, int len, char ch) {
     if (len <= 0) return str;
     
     while (++i < len) {
-       str = ch + str;
+       str = str + ch;
    }
     
     return str;

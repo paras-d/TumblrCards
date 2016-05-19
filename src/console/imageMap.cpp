@@ -74,13 +74,17 @@ void ImageMap::parse_flag(string flag, string text, string align) {
     
 	if(align == "center") {
         // TODO Align the text centered on the flag
-        //int text_center = text.size() / 2;
+        
+        // do left-pad here if smaller than flag
+        text = leftpad(text, flag.size());
+        
+        found_x = found_x - (text.size() / 2) + (flag.size() / 2);
         
         for(size_t i = 0; i < text.size(); i++) {
             if(i > map[found_y].size()) break;
-            int center_x = (found_x + i) - (text.size() / 2);
-            if(center_x < 0) continue;
-            map[found_y][center_x] = text[i];
+            if(found_x + i < 0) continue;
+            
+            map[found_y][found_x + i] = text[i];
         }
     } else if(align == "left-pad") {
         // TODO Align the the last char of text with
@@ -100,9 +104,10 @@ void ImageMap::parse_flag(string flag, string text, string align) {
         // do right-pad here if smaller than flag
         text = rightpad(text, flag.size());
         
+        found_x += flag.size() - 1;
+        
         for(size_t i = 0; i < text.size(); i++) {
-            if(map[found_y].size() - i < 0) break;
-            map[found_y][found_x - i] = text[text.size() - i + 1];
+            map[found_y][found_x - i] = text[text.size() - i - 1];
         }
     }
 }
