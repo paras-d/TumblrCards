@@ -2,7 +2,7 @@
  * player.h
  *
  *  Created on: Mar 28, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #ifndef SRC_PLAYER_H_
@@ -32,7 +32,7 @@ public:
 	Deck* get_board() { return &board; };
 	Deck* get_discard() { return &discard; };
 	bool draw();
-	bool cast(unsigned int cardIndex);
+	bool cast(size_t cardIndex);
 };
 
 #endif /* SRC_PLAYER_H_ */

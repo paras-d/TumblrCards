@@ -15,6 +15,8 @@
 
 using namespace std;
 
+// TODO Make it work in Windows too and fix cases
+// where 0 and 0 are returned
 void clear_console() {
 #ifdef WINDOWS
   std::system ("CLS");
@@ -23,19 +25,6 @@ void clear_console() {
 #endif
 }
 
-// TODO Make it work in Windows too and fix cases where 0 and 0 are returned
-
-int get_console_width() {
-	struct winsize size;
-	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
-	return size.ws_col;
-}
-
-int get_console_height() {
-	struct winsize size;
-	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
-	return size.ws_row;
-}
 
 void print_center(string input) {
 	// Pad the string based on console and line length
@@ -45,6 +34,18 @@ void print_center(string input) {
 	for (int i = 0; i < k; i++) { pad.append(" "); }
 	// Append the formatted line to the cumulative string
 	cout << pad << input << endl;
+}
+
+size_t get_console_width() {
+	struct winsize size;
+	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
+	return size.ws_col;
+}
+
+size_t get_console_height() {
+	struct winsize size;
+	ioctl(STDOUT_FILENO,TIOCGWINSZ,&size);
+	return size.ws_row;
 }
 
 string get_display_screen(string type) {
@@ -75,10 +76,63 @@ string get_display_screen(string type) {
         cout << "FILE COULD NOT BE OPENED" << endl;
     }
 
-	// deletes last character to align proper output
-	ret.pop_back();
+	// deletes last character if \n to align proper output
+	if(ret[ret.size()-2] == '\n') ret.pop_back();
     
     return ret;
+}
+
+string load_file(string file) { 
+	// Open the assets file for the current screen
+    ifstream screen_file("../src/assets/"+file);
+    string  ret = "";
+    
+    if (screen_file.is_open()) {
+        string  buffer;
+        
+        while (getline(screen_file, buffer)) {
+            ret = ret + buffer + '\n';
+        }
+        screen_file.close();
+    }
+    else {
+        // TODO: Raise an exception here, if an asset file
+        // cannot be opened then something serious has gone wrong.
+        cout << "FILE COULD NOT BE OPENED" << endl;
+    }
+
+	// deletes last character to align proper output
+	if(ret[ret.size()-2] == '\n') ret.pop_back();
+    
+    return ret;
+}
+
+string leftpad(string str, int len, char ch) {
+   // doesn't need to pad
+   int i = -1;
+   
+   len = len - str.size();
+   if (len <= 0) return str;
+
+   while (++i < len) {
+       str = ch + str;
+   }
+   
+   return str;
+}
+
+string rightpad(string str, int len, char ch) {
+    // doesn't need to pad
+    int i = -1;
+    
+    len = len - str.size();
+    if (len <= 0) return str;
+    
+    while (++i < len) {
+       str = str + ch;
+   }
+    
+    return str;
 }
 
 bool print_menu(string type) {

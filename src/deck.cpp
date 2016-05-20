@@ -15,14 +15,14 @@ using namespace std;
 
 Deck::Deck()
 	:deckName{ "Test" },
-	 count{ new unsigned int(0) } {
+	 count{ new size_t(0) } {
 	// TODO Auto-generated constructor stuff
 	well_formed();
 }
 
 Deck::Deck(string name)
 	:deckName{ name },
-	 count{ new unsigned int(0) } {
+	 count{ new size_t(0) } {
 	// TODO Auto-generated constructor stuff
 	well_formed();
 }
@@ -34,7 +34,7 @@ Deck::~Deck() {
 Deck::Deck(const Deck &clone)
 	:deck{ clone.deck },
 	 deckName { clone.deckName },
-	 count{ new unsigned int(clone.size()) } {
+	 count{ new size_t(clone.size()) } {
 	// TODO cloning stuff here
 	// passes clone's data to here
 	well_formed();
@@ -43,7 +43,7 @@ Deck::Deck(const Deck &clone)
 Deck* Deck::operator=(const Deck* clone) {
 	// do set equals operations here
 	// set this equal to the clone
-	count = new unsigned int(clone->size());
+	count = new size_t(clone->size());
 	deck = clone->deck;
 	well_formed();
 	return this;
@@ -52,7 +52,7 @@ Deck* Deck::operator=(const Deck* clone) {
 Deck& Deck::operator=(const Deck &clone) {
 	// do set equals operations here
 	// set this equal to the clone
-	count = new unsigned int(clone.size());
+	count = new size_t(clone.size());
 	deck = clone.deck;
 	well_formed();
 	return *this;
@@ -68,7 +68,7 @@ Card* Deck::draw_card(){
 	well_formed();
 	if(*count == 0) return nullptr;
 	Card* ret = deck[0];
-	for(unsigned int i = 1; i < *count; i++)
+	for(size_t i = 1; i < *count; i++)
 		deck[i-1] = deck[i];
 	deck.pop_back();
 	*count -= 1;
@@ -78,11 +78,11 @@ Card* Deck::draw_card(){
 
 // removes the card at the given index and returns it
 // shifting all the cards up one
-Card* Deck::get_card(unsigned int index) {
+Card* Deck::get_card(size_t index) {
 	well_formed();
 	if(*count == 0 || index < 0 || index > *count) return nullptr;
 	Card* ret = deck[index];
-	for(unsigned int i = index + 1; i < *count; i++)
+	for(size_t i = index + 1; i < *count; i++)
 		deck[i-1] = deck[i];
 	deck.pop_back();
 	*count -= 1;
@@ -99,8 +99,9 @@ Deck Deck::draw_cards(int num) {
 
     // draws a card from our deck to add
     // to the return deck;
-    for(int i = 0; i < num; i++)
+    for(int i = 0; i < num; i++) {
         ret.add_card(draw_card());
+	}
 	
 	well_formed();
 	return ret;
@@ -111,8 +112,8 @@ void Deck::shuffle() {
 	if(!well_formed()) return;
 
 	// Traverses through the array swapping each index with a random other index
-	for(unsigned int i = 0; i < *count; i++) {
-		unsigned int r = rand() % *count;
+	for(size_t i = 0; i < *count; i++) {
+		size_t r = rand() % *count;
 		Card* temp;
 		temp = deck[i];
 		deck[i] = deck[r];
@@ -137,7 +138,7 @@ bool Deck::add_card(Card* card) {
 }
 
 // adds a card at the specified index. i.e 0 for the top
-bool Deck::add_card(Card* card, unsigned int index) {
+bool Deck::add_card(Card* card, size_t index) {
 	if(!well_formed()) return false;
 	
 	// index can not be larger than count
@@ -147,7 +148,7 @@ bool Deck::add_card(Card* card, unsigned int index) {
 	if(*count == 20) return false;
 
 	// moves all the cards after index down one
-	for(unsigned int i = *count - 1; i > index; i--) {
+	for(size_t i = *count - 1; i > index; i--) {
 		deck[i + 1] = deck[i];
 	}
 
@@ -167,13 +168,13 @@ bool Deck::add_card(Card* card, unsigned int index) {
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
 	if(*count > deck.size()) return print_err("Count is larger than 20");
-	for(unsigned int i = 0; i < *count; i++) {
+	for(size_t i = 0; i < *count; i++) {
 		// checks to make sure count is not larger than the size of the deck
 		if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		
 		// COMENTED OUT FOR TESTING
 		//int cardCount = 1;
-		//for(unsigned int j = i + 1; j < *count; j++) {
+		//for(size_t j = i + 1; j < *count; j++) {
 			// adding it here checks the integrity of the array on our first pass
 		//	if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
 		//	Card c1 = *deck[i];
@@ -201,7 +202,7 @@ string Deck::to_file() {
     string ret;
     int num = 1;
     sort(deck.begin(), deck.begin() + *count, compare);
-    for(unsigned int i = 0; i < *count - 1; i++) {
+    for(size_t i = 0; i < *count - 1; i++) {
         // case if we are looking at the last 2 cards of the deck
         // this will need to be edited slightly when we enforce
         // card limits
@@ -229,7 +230,7 @@ string Deck::to_file() {
 
 string Deck::to_string() const {
     string ret;
-	for(unsigned int i = 0; i < *count; i++) {
+	for(size_t i = 0; i < *count; i++) {
 		ret += std::to_string(i+1);
 		ret += ") ";
 		ret += deck[i]->get_name();

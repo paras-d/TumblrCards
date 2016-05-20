@@ -19,11 +19,8 @@ Player::~Player() {
 }
 
 bool Player::select_deck(Deck selected) {
-    if(&selected != NULL) {
-	    deck = selected;
-	    return true;
-	}
-	return false;
+	deck = selected;
+	return true;
 }
 
 bool Player::draw() {
@@ -41,7 +38,7 @@ bool Player::draw() {
  * hand at the given index into the board
  * deck.
  */
-bool Player::cast(unsigned int cardIndex) {
+bool Player::cast(size_t cardIndex) {
 	if(cardIndex >= hand.size()) return false;
 	Card* temp = hand.get_card(cardIndex);
 	if(temp == nullptr) return false;

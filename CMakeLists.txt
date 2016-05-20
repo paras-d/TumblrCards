@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(tumblrcards)
 set(tumblrcards_VERSION_MAJOR 0)
 set(tumblrcards_VERSION_MINOR 0)
-set(tumblrcards_VERSION_TWEAK 1)
+set(tumblrcards_VERSION_TWEAK 2)
 set(tumblrcards_VERSION_SUFFIX "dev")
 add_definitions(-DVERSION_STR="v${tumblrcards_VERSION_MAJOR}.${tumblrcards_VERSION_MINOR}.${tumblrcards_VERSION_TWEAK}-${tumblrcards_VERSION_SUFFIX}")
 
@@ -34,10 +34,12 @@ set(TC_SOURCES
 		${CMAKE_SOURCE_DIR}/src/game.cpp
 		${CMAKE_SOURCE_DIR}/src/mainMenu.cpp
 		${CMAKE_SOURCE_DIR}/src/player.cpp
-		${CMAKE_SOURCE_DIR}/src/utils.cpp
 		${CMAKE_SOURCE_DIR}/src/main.cpp
 		${CMAKE_SOURCE_DIR}/src/deckBuilder.cpp
 		${CMAKE_SOURCE_DIR}/src/settings.cpp
+		${CMAKE_SOURCE_DIR}/src/console/console.cpp
+		${CMAKE_SOURCE_DIR}/src/console/imageMap.cpp
+		${CMAKE_SOURCE_DIR}/src/console/utils.cpp
 )
 
 add_executable(tumblrcards ${TC_SOURCES})

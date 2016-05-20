@@ -10,3 +10,4 @@
 [Bb]uild32/
 [Bb]uild64/
 decklists/*.lst
+.vscode

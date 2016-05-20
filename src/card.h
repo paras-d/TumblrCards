@@ -9,6 +9,7 @@
 #define SRC_CARD_H_
 
 #include <string>
+#include "console/imageMap.h"
 
 class Card {
 private:
@@ -18,7 +19,7 @@ private:
 	int cost;
 	std::string name;
 	std::string ability;
-
+	ImageMap image;
 public:
 	Card();
 	virtual ~Card();
@@ -43,6 +44,7 @@ public:
 	int get_hp() { return currHP; }
 	int get_cost() { return cost; };
 	std::string get_name() { return name; }
+	ImageMap* get_image() { return &image; };
 };
 
 #endif /* SRC_CARD_H_ */
