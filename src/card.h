@@ -2,7 +2,7 @@
  * card.h
  *
  *  Created on: Mar 7, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #ifndef SRC_CARD_H_

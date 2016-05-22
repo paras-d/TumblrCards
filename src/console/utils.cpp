@@ -107,12 +107,13 @@ string load_file(string file) {
     return ret;
 }
 
+// Example: str = "hi", len = "5", ch = '-'
+// Return: "---hi" 
 string leftpad(string str, int len, char ch) {
-   // doesn't need to pad
    int i = -1;
    
    len = len - str.size();
-   if (len <= 0) return str;
+   if (len <= 0) return str; // doesn't need to pad
 
    while (++i < len) {
        str = ch + str;
@@ -121,12 +122,13 @@ string leftpad(string str, int len, char ch) {
    return str;
 }
 
+// Example: str = "hi", len = "5", ch = '-'
+// Return: "hi---" 
 string rightpad(string str, int len, char ch) {
-    // doesn't need to pad
     int i = -1;
     
     len = len - str.size();
-    if (len <= 0) return str;
+    if (len <= 0) return str; // doesn't need to pad
     
     while (++i < len) {
        str = str + ch;
