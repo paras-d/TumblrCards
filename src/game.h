@@ -10,6 +10,7 @@
 
 #include "deck.h"
 #include "player.h"
+#include "console/console.h"
 
 class Game {
 private:
@@ -20,10 +21,11 @@ private:
 	void mp_update();
 	bool cont;
 	bool myTurn;
+	final int START_HAND = 5;
 	std::string players;
 	Player player;
 	Player opponent;
-
+	Console display;
 public:
 	Game(std::string type);
 	virtual ~Game();
