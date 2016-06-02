@@ -15,24 +15,24 @@ class Deck {
 private:
 	std::vector<Card*> deck;
 	std::string deckName;
-	unsigned int* count;
+	size_t* count;
 	bool well_formed();
 	bool print_err(std::string err);
 public:
 	Deck();
 	Deck(std::string name);
-	virtual ~Deck();
 	Deck(const Deck &clone);
+	virtual ~Deck();
 	Card* draw_card();
-	Card* get_card(unsigned int index);
+	Card* get_card(size_t index);
 	Deck draw_cards(int num);
 	Deck* operator=(const Deck *clone);
 	Deck& operator=(const Deck &clone);
 	std::string get_name() const;
 	void shuffle();
 	bool add_card(Card* card);
-	bool add_card(Card* card, unsigned int index);
-	unsigned int size() const { return *count; };
+	bool add_card(Card* card, size_t index);
+	size_t size() const { return *count; };
 	std::string to_file();
 	std::string to_string() const;
 };
