@@ -124,8 +124,8 @@ void Game::sp_update() {
         /* "Draw phase" */
         if(opponent.get_hand()->size() < 3)
             while(opponent.get_hand()->size() < 3)
-                opponent.draw();
-        else opponent.draw();
+                opponent.draw_card();
+        else opponent.draw_card();
     }
     
 	player.set_mana(opponent.get_life());
