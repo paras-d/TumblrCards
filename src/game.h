@@ -21,7 +21,7 @@ private:
 	void mp_update();
 	bool cont;
 	bool myTurn;
-	final int START_HAND = 5;
+	const int START_HAND = 5;
 	std::string players;
 	Player player;
 	Player opponent;

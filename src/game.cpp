@@ -34,7 +34,7 @@ void Game::load_content(const Deck selected) {
 
 	 // loads in the selected deck for the player
 	player.select_deck(selected);
-	for(int i = 0; i < MAX_HAND; i++) player.draw();
+	for(int i = 0; i < START_HAND; i++) player.draw();
 	player.set_mana(opponent.get_life());
 	player.get_deck()->shuffle();
 
@@ -45,7 +45,7 @@ void Game::load_content(const Deck selected) {
 		 * a copy of the players deck.
 		 */
 		opponent.select_deck(selected);
-		for(int i = 0; i < MAX_HAND; i++) opponent.draw();
+		for(int i = 0; i < START_HAND; i++) opponent.draw();
 		opponent.set_mana(player.get_life());
 		opponent.get_deck()->shuffle();
 	}
