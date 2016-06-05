@@ -35,6 +35,9 @@ void Game::load_content(const Deck selected) {
 	 // loads in the selected deck for the player
 	player.select_deck(selected);
 	while(player.get_hand()->size() < START_HAND) player.draw_card();
+	for(Card* card : player.get_hand()->get_vector()) {
+		display.add_image(card->get_image());
+	}
 	player.set_mana(opponent.get_life());
 	player.get_deck()->shuffle();
 
@@ -90,7 +93,6 @@ void Game::update() {
 			player.draw_card();
         while(player.get_hand()->size() < START_HAND)
 			player.draw_card();
-
         
 	    cout << "enter exit to exit: ";
 	    cin >> in;
@@ -156,11 +158,5 @@ void Game::draw() {
 	 * would be great! Theoretically no output should
 	 * ever be done in the update methods.
 	 */
-	clear_console();
-	cout << "Battlefield: \n " << opponent.get_board()->to_string() << endl;
-	cout << " " << player.get_board()->to_string() << endl;
-    cout << "Mana: " << player.get_mana() << endl; 
-    cout << "Hand: " << endl;
-    cout << player.get_hand()->to_string() << endl;
-    if(myTurn) cout << "Input: ";
+	 display.print();
 }
