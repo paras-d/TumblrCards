@@ -52,7 +52,7 @@ void Game::load_content(const Deck selected) {
 	else if(players == "mutli") {
 		// loads opponenets deck here
 	}
-	else { /*Something went wrong???*/ }
+	else { /* Something went wrong??? */ }
 	
 	
 	update();
@@ -86,10 +86,10 @@ void Game::update() {
     } else {
         /* "Combat phase" */
         /* "Draw phase" */
-        if(player.get_hand()->size() < 3)
-            while(player.get_hand()->size() < 3)
-                player.draw();
-        else player.draw();
+		if(player.get_hand()->size() >= START_HAND)
+			player.draw_card();
+        while(player.get_hand()->size() < START_HAND)
+			player.draw_card();
 
         
 	    cout << "enter exit to exit: ";

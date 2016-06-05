@@ -23,7 +23,7 @@ bool Player::select_deck(Deck selected) {
 	return true;
 }
 
-bool Player::draw() {
+bool Player::draw_card() {
     if(deck.size() == 0) {
         while(discard.size() != 0)
             deck.add_card(discard.draw_card());
