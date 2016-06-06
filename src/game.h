@@ -10,7 +10,7 @@
 
 #include "deck.h"
 #include "player.h"
-#include "console/console.h"
+#include "console.h"
 
 class Game {
 private:

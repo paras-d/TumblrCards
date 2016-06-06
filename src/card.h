@@ -9,7 +9,7 @@
 #define SRC_CARD_H_
 
 #include <string>
-#include "console/imageMap.h"
+#include "imageMap.h"
 
 class Card {
 private:

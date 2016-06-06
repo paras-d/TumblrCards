@@ -6,7 +6,7 @@
  */
 #include <iostream>
 #include "mainMenu.h"
-#include "console/console.h"
+#include "console.h"
 
 using namespace std;
 

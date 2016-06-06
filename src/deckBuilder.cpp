@@ -10,7 +10,7 @@
 #include <fstream>
 #include "dirent.h"
 #include "deckBuilder.h"
-#include "console/utils.h"
+#include "utils.h"
 
 using namespace std;
 
