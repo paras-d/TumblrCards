@@ -77,36 +77,42 @@ void Game::update() {
 
     // Multiplayer should not play yet
 	if(players == "multi") return;
-	myTurn = true;
+	
+	// prints the game to the console
 	draw();
+	myTurn = true;
+	
+	// takes in the players input
 	string in;
 	cin >> in;
 	size_t choice = 0;
-	istringstream(in) >> choice;
+	if(in == "exit") {
+		unload_content();
+		return;
+	}
+	else istringstream(in) >> choice;
+	
+	// parses out the players input
     if(player.get_mana() > 0 && choice != 0) {
         player.cast(choice - 1);
     	update();
     } else {
         /* "Combat phase" */
+		// TODO
+		
         /* "Draw phase" */
 		if(player.get_hand()->size() >= START_HAND)
 			player.draw_card();
-        while(player.get_hand()->size() < START_HAND)
-			player.draw_card();
-        
-	    cout << "enter exit to exit: ";
-	    cin >> in;
-	    if(in == "exit")
-		    cont = false;
+        else
+			while(player.get_hand()->size() < START_HAND)
+				player.draw_card();
 
-	    if(cont) {
-	    	opponent.set_mana(player.get_life());
-		    if(players == "single")
-			    sp_update();
-		    else if(players == "multi")
-			    mp_update();
-	    } else
-		    unload_content();
+	    opponent.set_mana(player.get_life());
+		
+		if(players == "single")
+			sp_update();
+		else if(players == "multi")
+			mp_update();
     }
 }
 
