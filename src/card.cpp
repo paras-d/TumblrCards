@@ -6,7 +6,7 @@
  */
 
 #include "card.h"
-#include "console/utils.h"
+#include "utils.h"
 
 using namespace std;
 
