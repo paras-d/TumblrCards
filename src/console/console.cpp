@@ -12,12 +12,16 @@
 
 using namespace std;
 
+/*
+ * Default constructor of Console class
+ */
 Console::Console() {
-	// TODO Auto-generated constructor stub
-
 	clear();
 }
 
+/*
+ * Default destructor of Console class
+ */
 Console::~Console() {
 	// TODO Auto-generated destructor stub
 }
@@ -25,28 +29,33 @@ Console::~Console() {
 bool Console::add_image(ImageMap* image) {
     images.push_back(image);
     update();
+
     return true;
 }
 
 bool Console::add_image(string image_str) {
     ImageMap* image = new ImageMap(image_str);
     add_image(image);
+
     return true;
 }
 
 bool Console::add_image(string image_str, int x, int y) {
     ImageMap* image = new ImageMap(image_str, x, y);
     add_image(image);
+
     return true;
 }
 
 void Console::print() {
 	clear_console();
+
 	for(vector<char> row : console) {
 		for(char col : row)
 			cout << col;
 		cout << endl;
 	}
+
 	cout << "Input: ";
 }
 
