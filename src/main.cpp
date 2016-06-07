@@ -15,14 +15,9 @@ int test1();
 int main(int argc, char* argv[]) {
     if(argc > 1) {
         // TODO we should maybe have cla's for testing purposes
-        for(int i = 0; i < argc; i++) {
-        	string var = argv[i];
-        	if(var == "-c") return test1();
-        }
     }
 
 	// starts the game
-	//clear_console();
 	MainMenu menu;
 	
 	do    print_menu_clr("screen_main");
@@ -30,13 +25,3 @@ int main(int argc, char* argv[]) {
 
 	return 0;
 }
-
-int test1() {
-	Card card;
-	Console console;
-	console.add_image(card.get_image());
-	console.print();
-	cout << endl;
-	return 0;
-}
-
