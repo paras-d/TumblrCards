@@ -13,6 +13,9 @@
 
 using namespace std;
 
+/*
+ * Default Deck constructor
+ */
 Deck::Deck()
 	:deckName{ "Test" },
 	 count{ new size_t(0) } {
@@ -20,6 +23,9 @@ Deck::Deck()
 	well_formed();
 }
 
+/*
+ * Creates a new Deck with the given name
+ */
 Deck::Deck(string name)
 	:deckName{ name },
 	 count{ new size_t(0) } {
@@ -27,10 +33,17 @@ Deck::Deck(string name)
 	well_formed();
 }
 
+/*
+ * Default Deck destructor
+ */
 Deck::~Deck() {
 	// TODO Auto-generated destructor stuff
 }
 
+/*
+ * Clone constructore Sets all attributes of this
+ * Deck to the clone
+ */
 Deck::Deck(const Deck &clone)
 	:deck{ clone.deck },
 	 deckName { clone.deckName },
@@ -40,6 +53,10 @@ Deck::Deck(const Deck &clone)
 	well_formed();
 }
 
+/*
+ * Sets all attriubutes of this Deck to the clone
+ * at the given Deck pointer
+ */
 Deck* Deck::operator=(const Deck* clone) {
 	// do set equals operations here
 	// set this equal to the clone
@@ -49,6 +66,9 @@ Deck* Deck::operator=(const Deck* clone) {
 	return this;
 }
 
+/*
+ * Sets all attriubutes of this Deck to the clone
+ */
 Deck& Deck::operator=(const Deck &clone) {
 	// do set equals operations here
 	// set this equal to the clone
@@ -58,12 +78,17 @@ Deck& Deck::operator=(const Deck &clone) {
 	return *this;
 }
 
+/*
+ * Returns the name of the deck as a string
+ */
 string Deck::get_name() const {
 	return deckName;
 }
 
-// removes the top card of the deck and returns it
-// shifting all the cards up one
+/* 
+ * Removes the top card of the deck and returns it
+ * shifting all the cards up one
+ */
 Card* Deck::draw_card(){
 	well_formed();
 	if(*count == 0) return nullptr;
@@ -90,9 +115,11 @@ Card* Deck::get_card(size_t index) {
 	return ret;
 }
 
-// removes the top num cards from the deck and returns
-// a "Deck" as the drawn cards. shifts all
-// the cards up num
+/*
+ * removes the top num cards from the deck and returns
+ * a "Deck" as the drawn cards. shifts all
+ * the cards up num
+ */
 Deck Deck::draw_cards(int num) {
     Deck ret;
 	if(!well_formed()) return ret;
@@ -107,7 +134,9 @@ Deck Deck::draw_cards(int num) {
 	return ret;
 }
 
-// randomizes the order of the deck
+/*
+ * Simulates the act of shuffling a deck
+ */
 void Deck::shuffle() {
 	if(!well_formed()) return;
 
@@ -123,7 +152,9 @@ void Deck::shuffle() {
 	well_formed();
 }
 
-// adds a card to the deck and then shuffles the deck
+/* 
+ * Adds a card to the deck and then shuffles the deck
+ */
 bool Deck::add_card(Card* card) {
 	if(!well_formed()) return false;
 
@@ -137,7 +168,9 @@ bool Deck::add_card(Card* card) {
 	return well_formed();
 }
 
-// adds a card at the specified index. i.e 0 for the top
+/*
+ * Adds a card at the specified index. i.e 0 for the top
+ */
 bool Deck::add_card(Card* card, size_t index) {
 	if(!well_formed()) return false;
 	
@@ -160,11 +193,13 @@ bool Deck::add_card(Card* card, size_t index) {
 	return true;
 }
 
-// checks the integrity of the deck and returns false with an error message
-// if something is wrong. Returns true otherwise.
-// Rules:
-//		A Deck may not be larger than 20 cards
-//		A deck may not have any nullptr between 0 and count
+/*
+ * checks the integrity of the deck and returns false with an error message
+ * if something is wrong. Returns true otherwise.
+ * Rules:
+ *		A Deck may not be larger than 20 cards
+ *		A deck may not have any nullptr between 0 and count
+ */
 bool Deck::well_formed() {
 	// may not be larger than 60 cards
 	if(*count > deck.size()) return print_err("Count is larger than 20");
@@ -196,12 +231,18 @@ bool Deck::print_err(string err) {
 	return false;
 }
 
-bool compare(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
+/*
+ * Compares the given cards to check for equlaity
+ */
+bool eqlual(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
 
+/*
+ * Convers the deck to a deck list file saved in the ../decklists folder 
+ */
 string Deck::to_file() {
     string ret;
     int num = 1;
-    sort(deck.begin(), deck.begin() + *count, compare);
+    sort(deck.begin(), deck.begin() + *count, equal);
     for(size_t i = 0; i < *count - 1; i++) {
         // case if we are looking at the last 2 cards of the deck
         // this will need to be edited slightly when we enforce
@@ -228,6 +269,9 @@ string Deck::to_file() {
     return ret;
 }
 
+/*
+ * Convers the Deck to a string 
+ */
 string Deck::to_string() const {
     string ret;
 	for(size_t i = 0; i < *count; i++) {
