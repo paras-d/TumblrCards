@@ -13,6 +13,9 @@
 
 using namespace std;
 
+/*
+ * Default ImageMap constructor with a blank image
+ */
 ImageMap::ImageMap()
     :x_coord { 0 },
      y_coord { 0 } {
@@ -20,6 +23,10 @@ ImageMap::ImageMap()
 	set_image(" ");
 }
 
+/*
+ * Creates an ImageMap object with the given image string
+ * at the (0, 0) position
+ */
 ImageMap::ImageMap(string image)
     :x_coord { 0 },
      y_coord { 0 } {
@@ -27,6 +34,10 @@ ImageMap::ImageMap(string image)
 	set_image(image);
 }
 
+/*
+ * Creates an image map object with the given image string
+ * at the given (x_pos, y_pos) psoition
+ */
 ImageMap::ImageMap(string image, int x_pos, int y_pos)
     :x_coord { x_pos },
      y_coord { y_pos } {
@@ -34,6 +45,9 @@ ImageMap::ImageMap(string image, int x_pos, int y_pos)
 	set_image(image);
 }
 
+/*
+ * ImageMap clone constructor
+ */
 ImageMap::ImageMap(const ImageMap &clone)
     :map { clone.get_map() },
      x_coord { clone.get_x() },
@@ -41,10 +55,17 @@ ImageMap::ImageMap(const ImageMap &clone)
 	// TODO Auto-generated constructor stub
 }
 
+/*
+ * Defaut ImageMap destructor
+ */
 ImageMap::~ImageMap() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Replaces the current image with the given image
+ * string.
+ */
 void ImageMap::set_image(string image) {
     map.clear();
     map.push_back(vector<char>());
@@ -60,6 +81,10 @@ void ImageMap::set_image(string image) {
     }
 }
 
+/*
+ * Replases the flag in the ImageMap with the given
+ * text and alignment
+ */
 void ImageMap::parse_flag(string flag, string text, string align) {
     size_t found = to_string().find(flag);
     
@@ -112,6 +137,9 @@ void ImageMap::parse_flag(string flag, string text, string align) {
     }
 }
 
+/*
+ * Converts the ImageMap back to a string
+ */
 string ImageMap::to_string() {
 	string ret = "";
 	for(vector<char> row : map) {

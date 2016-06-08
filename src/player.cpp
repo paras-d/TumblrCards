@@ -24,12 +24,18 @@ bool Player::select_deck(Deck selected) {
 }
 
 bool Player::draw_card() {
-    if(deck.size() == 0) {
-        while(discard.size() != 0)
+    if(deck.size() <= 0) {
+        while(discard.size() > 0) {
             deck.add_card(discard.draw_card());
+		}
+
         deck.shuffle();
     }
-    hand.add_card(deck.draw_card());
+
+	Card* temp = deck.draw_card();
+	if(temp == nullptr) return false;
+	hand.add_card(temp);
+
     return true;
 }
 
