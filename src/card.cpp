@@ -10,17 +10,25 @@
 
 using namespace std;
 
-// Default contructor. This should rarely be called
-// except for maybe when a token creature is generated
+/*
+ * Default construcctor
+ */
 Card::Card() {
 	// TODO Auto-generated constructor stub
 	build_card("void");
 }
 
+/*
+ * Default destructor
+ */
 Card::~Card() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Builds tthe card passed on the passed name argument.
+ * THis is not optimal and is subject to change.
+ */
 void Card::build_card(string arg) {
 	// TODO have card stats based on
 	// input arg. This method is not set
@@ -66,6 +74,9 @@ void Card::build_card(string arg) {
     image.parse_flag("{4}", std::to_string(currHP), "right-pad");
 }
 
+/*
+ * See comments below
+ */
 bool Card::trigger() {
 	// TODO have the card's ability work here
 	// so that at the start and end of each turn all cards
@@ -80,11 +91,13 @@ bool Card::trigger() {
 	return true;
 }
 
-// Prints the card name in the form:
-// NAME
-// DESCRIPTION OF ABILITY
-// (or flavor text)
-// Atk/Def 
+/*
+ * Prints the card name in the form:
+ * NAME
+ * DESCRIPTION OF ABILITY
+ * (or flavor text)
+ * Atk/Def 
+ */
 string Card::to_string() {
 	string ret = name + "\n";
 	ret += ability + "\n";

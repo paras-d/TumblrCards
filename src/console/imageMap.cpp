@@ -20,7 +20,7 @@ ImageMap::ImageMap()
     :x_coord { 0 },
      y_coord { 0 } {
 	// TODO Auto-generated constructor stub
-	set_image(" ");
+	set_image("");
 }
 
 /*
