@@ -10,16 +10,15 @@
 
 using namespace std;
 
-int test1();
-
 int main(int argc, char* argv[]) {
     if(argc > 1) {
-        // TODO we should maybe have cla's for testing purposes
+        // TODO we should have cla's for testing purposes
     }
 
-	// starts the game
+	// Creats the main menu to start the game
 	MainMenu menu;
 	
+	// Displays main menu
 	do    print_menu_clr("screen_main");
 	while (!menu.get_input());
 
