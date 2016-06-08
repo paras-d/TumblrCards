@@ -234,7 +234,7 @@ bool Deck::print_err(string err) {
 /*
  * Compares the given cards to check for equlaity
  */
-bool eqlual(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
+bool equals(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
 
 /*
  * Convers the deck to a deck list file saved in the ../decklists folder 
@@ -242,7 +242,7 @@ bool eqlual(Card* a, Card* b) { return (a->get_name() < b->get_name()); }
 string Deck::to_file() {
     string ret;
     int num = 1;
-    sort(deck.begin(), deck.begin() + *count, equal);
+    sort(deck.begin(), deck.begin() + *count, equals);
     for(size_t i = 0; i < *count - 1; i++) {
         // case if we are looking at the last 2 cards of the deck
         // this will need to be edited slightly when we enforce
