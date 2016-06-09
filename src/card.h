@@ -2,14 +2,14 @@
  * card.h
  *
  *  Created on: Mar 7, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #ifndef SRC_CARD_H_
 #define SRC_CARD_H_
 
 #include <string>
-#include "console/imageMap.h"
+#include "imageMap.h"
 
 class Card {
 private:

@@ -2,7 +2,7 @@
  * deckBuilder.cpp
  *
  *  Created on: Apr 6, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #include <iostream>
@@ -10,26 +10,41 @@
 #include <fstream>
 #include "dirent.h"
 #include "deckBuilder.h"
-#include "console/utils.h"
+#include "utils.h"
 
 using namespace std;
 
+/*
+ * Default DeckBuilder constructor
+ */
 DeckBuilder::DeckBuilder()
     :selected(0) {
 	// TODO Auto-generated constructor stub
 	load_decklists();
 }
 
+/*
+ * Default DeckBuilder destructor
+ */
 DeckBuilder::~DeckBuilder() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Gets the file names of all .lst files in the
+ * ../decklists folder
+ */
 bool DeckBuilder::load_decklists() {
     DIR* dir;
 	struct dirent *ent;
+
+	// proceeds only if direcotry is opened
 	if ((dir = opendir ("../decklists/")) != NULL) {
+		// gets name of each file
 	    while ((ent = readdir (dir)) != NULL) {
 	        string name = ent->d_name;
+
+			//checks if the file is a .lst file
 	        if (name.find(".lst") != std::string::npos)
                 load_deck(ent->d_name);
         }
@@ -37,66 +52,123 @@ bool DeckBuilder::load_decklists() {
 	} else return false;;
 }
 
+/*
+ * Loads the deck in from the given .lst file
+ */
 bool DeckBuilder::load_deck(std::string file) {
     ifstream deck_file("../decklists/"+file);
+
+	// proceed if file is opened
     if(deck_file.is_open()) {
+		
+		// creats a deck of the given file name
         Deck* deck = new Deck(file.substr(0, file.find(".lst")));
+
+		// confirms the deck does not already exist
         for(Deck* check : list)
             if(deck->get_name() == check->get_name())
                 return true;
+
+
         string line;
+
+		// loads in each line of the deck list
+		// Each line should look as follows:
+		// Card Name X [Number of cards to add]
+		// i.e: Uninformed Citizen X 2
+		// See premade.lst for a full example list
         while(getline(deck_file, line)) {
             int num;
-            stringstream ss; 
+            stringstream ss;
+
+			// Gets the number of cards to add
             ss << line.substr(line.find('X')+1);
             ss >> num;
+
+			// Adds a crd of the given name for each num
             for(int i = 0; i < num; i++) {
                 Card* card = new Card();
                 card->build_card(line.substr(0, line.find('X')-1));
                 deck->add_card(card);
             }
         }
+
+		// adds the new deck to the end of the list
         list.push_back(deck);
+
+		// sets the selected deck to the last created deck
+		// We should have this be a saved value so the last
+		// selected deck is the first selected deck when the
+		// game starts
         selected = list.size() - 1;
+
     } else return false;
+	
     return true;
 }
 
+/*
+ * Saves the passed deck as a .lst file in the ../decklists folder
+ */
 bool DeckBuilder::save_deck(Deck deck) {
+	// opens the file stream to the .lst file with the decks name
     ofstream save("../decklists/"+deck.get_name()+".lst");
+
+	// proceed to write the deck to the file
     if(save.is_open()){
         save << deck.to_file();
     } else return false;
+
+	// Close the file and inform the user of a sucessful save
     save.close();
     cout << "Deck Saved!" << endl;
+
     return true;
 }
 
+/*
+ * This method creates a new deck and then saves it
+ */
 void DeckBuilder::new_deck() {
+
+	// Prompt user for name of new deck
 	print_center("Enter new deck name: ");
 	
-    // Need to parse user input here to exclude special characters
 	string name;
 	string in;
+
+	// Need to parse user input here to exclude special characters
 	cin >> name;
+
+	// Counter to check when we reach the end of our list of decks
 	size_t i = 0;
 
 	// Checks to see if the entered name already matches a deck
 	for(Deck* deck : list) {
+		// If the deck already exists, we ask to overwrite the deck list
 	    if(name == deck->get_name()) {
 	        cout << "Deck " << name << " already exists! " << deck->get_name() << endl;
 	        cout << "Would you like to overwright (y or n)? ";
 	        cin >> in;
+
+			// Overwrite the deck
 	        if(in == "y" || in == "yes") {
 	            deck = new Deck(name);
 	        	selected = i;
 	        	break;
-	        } else {
+	        }
+			// User declined overwrite, so print menu syste,
+			else {
 	        	do print_menu("screen_builder");
 	            while(!get_input());
 	            return;
 	        }
-	    } else if(i + 1 >= list.size()) {
+	    }
+
+		// Did not find the deck in our list
+		// adds deck to list and makes it the
+		// selected deck
+		else if(i + 1 >= list.size()) {
 	        list.push_back(new Deck(name));
 	        selected = list.size() - 1;
 	    }
@@ -122,15 +194,21 @@ void DeckBuilder::new_deck() {
 		list[selected]->add_card(temp);
 	}
 	
+	// Attempts to save the deck and prints error if failed
 	if(!save_deck(*list[selected]))
 	    cout << list[selected]->get_name() << " could not be saved." << endl;
 
+	// prints carriage return
 	cout << endl;
 	
+	// prints menu system
 	do print_menu("screen_builder");
 	while(!get_input());
 }
 
+/*
+ * Sets the selected deck to be used in games
+ */
 void DeckBuilder::select_deck() {
 	clear_console();
 	if(!list.empty()) {
@@ -152,6 +230,9 @@ void DeckBuilder::select_deck() {
 	while(!get_input());
 }
 
+/*
+ * Opens the deck editor on the selected deck
+ */
 void DeckBuilder::edit_selected() {
 	// TODO This should be code for the deck editor
 	// this just prints out the deck list for now.
@@ -162,6 +243,9 @@ void DeckBuilder::edit_selected() {
 	while(!get_input());
 }
 
+/*
+ * Takes in the players input for the menu system
+ */
 bool DeckBuilder::get_input() {
 	// TODO take in the players selection and call that method.
 	int selection = 5;
@@ -190,6 +274,9 @@ bool DeckBuilder::get_input() {
 	return true;
 }
 
+/*
+ * Returns a pointer to the selected deck
+ */
 const Deck* DeckBuilder::get_selected() {
 	if(!list.empty())
 		return list[selected];

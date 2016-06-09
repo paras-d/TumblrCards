@@ -12,44 +12,78 @@
 
 using namespace std;
 
+/*
+ * Default constructor of Console class
+ */
 Console::Console() {
-	// TODO Auto-generated constructor stub
-
 	clear();
 }
 
+/*
+ * Default destructor of Console class
+ */
 Console::~Console() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Adds the image to the images vector and
+ * calls the update method.
+ * returns true when completed.
+ */
 bool Console::add_image(ImageMap* image) {
     images.push_back(image);
     update();
+
     return true;
 }
 
+/*
+ * Creates an ImageMap based on the inout string
+ * and calls the add_image method.
+ * returns true when completed.
+ */
 bool Console::add_image(string image_str) {
     ImageMap* image = new ImageMap(image_str);
     add_image(image);
+
     return true;
 }
 
+/*
+ * Creates an ImageMap based on the inout string
+ * at the given (x, y) point and calls the add_image
+ * method.
+ * returns true when completed.
+ */
 bool Console::add_image(string image_str, int x, int y) {
     ImageMap* image = new ImageMap(image_str, x, y);
     add_image(image);
+
     return true;
 }
 
+/*
+ * Clears the terminal and then prints the images to the terminal
+ * Bottom line will always be "Input: ". We should change this
+ * eventually.
+ */
 void Console::print() {
 	clear_console();
+
 	for(vector<char> row : console) {
 		for(char col : row)
 			cout << col;
 		cout << endl;
 	}
+
 	cout << "Input: ";
 }
 
+/*
+ * Clears the terminal and images vector before refilling
+ * the vecotr with black space.
+ */
 void Console::clear() { 
     console.clear();
     images.clear();
@@ -63,6 +97,9 @@ void Console::clear() {
     }
 };
 
+/*
+ * Updates the console to the current ImageMap positions
+ */
 void Console::update() {
     // creates temp vector to store images to be printed
     vector<ImageMap*> temp;

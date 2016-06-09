@@ -8,10 +8,13 @@
 #include <iostream>
 #include <sstream>
 #include "game.h"
-#include "console/utils.h"
+#include "utils.h"
 
 using namespace std;
 
+/*
+ * Default Game constructor
+ */
 Game::Game(string type) {
 	players = type;
 	if(players != "single" || players != "mutli")
@@ -20,24 +23,34 @@ Game::Game(string type) {
 	myTurn = false;
 }
 
+/*
+ * Default Game Destructor
+ */
 Game::~Game() {
-	/*
-	 * TODO Auto-generated destructor stub
-	 */
+	// TODO
 }
 
+/*
+ * Load needed game content here
+ * This should always load before the game begins
+ */
 void Game::load_content(const Deck selected) {
-	/*
-	 * TODO Load needed game content here
-	 * suck as deck lists
-	 */
-
 	 // loads in the selected deck for the player
 	player.select_deck(selected);
-	for(int i = 0; i < 5; i++) player.draw();
+
+	// sets the players starting mana and shuffles the deck
 	player.set_mana(opponent.get_life());
 	player.get_deck()->shuffle();
 
+	// draws the players starting hand
+	while(player.get_hand()->size() < START_HAND) player.draw_card();
+
+	// gets the images of the cards in the players hand
+	for(Card* card : player.get_hand()->get_vector()) {
+		display.add_image(card->get_image());
+	}
+
+	// Game mode specific content loading
 	if(players == "single") {
 		/*
 		 * TODO loads AI's deck here
@@ -45,24 +58,26 @@ void Game::load_content(const Deck selected) {
 		 * a copy of the players deck.
 		 */
 		opponent.select_deck(selected);
-		for(int i = 0; i < 5; i++) opponent.draw();
+		while(player.get_hand()->size() < START_HAND) opponent.draw_card();
 		opponent.set_mana(player.get_life());
 		opponent.get_deck()->shuffle();
 	}
 	else if(players == "mutli") {
-		// loads opponenets deck here
+		// TODO loads opponenets deck here
 	}
-	else { /*Something went wrong???*/ }
+	else { /* TODO Something went wrong??? */ }
+	
 	
 	update();
 }
 
+/*
+ * Unload game data here
+ * this should be called at the end of the game
+ * to prep us for deconstruction
+ */
 void Game::unload_content() {
-	/*
-	 * TODO Unload game data here
-	 * this should be called at the end of the game
-	 * to prep us for deconstruction
-	 */
+	// TODO
 }
 
 void Game::update() {
@@ -73,93 +88,112 @@ void Game::update() {
 
     // Multiplayer should not play yet
 	if(players == "multi") return;
-	myTurn = true;
+	
+	// prints the game to the console
 	draw();
+	myTurn = true;
+	
+	// takes in the players input
 	string in;
 	cin >> in;
 	size_t choice = 0;
-	istringstream(in) >> choice;
+	if(in == "exit") {
+		unload_content();
+		return;
+	}
+	else istringstream(in) >> choice;
+	
+	// parses out the players input
     if(player.get_mana() > 0 && choice != 0) {
         player.cast(choice - 1);
     	update();
     } else {
         /* "Combat phase" */
+		// TODO
+		
         /* "Draw phase" */
-        if(player.get_hand()->size() < 3)
-            while(player.get_hand()->size() < 3)
-                player.draw();
-        else player.draw();
+		// if at starting hand only draw one card
+		if(player.get_hand()->size() > START_HAND)
+			player.draw_card();
+		
+		// draw cards until you are back to starting limit
+		while(player.get_hand()->size() < START_HAND)
+			player.draw_card();
 
-        
-	    cout << "enter exit to exit: ";
-	    cin >> in;
-	    if(in == "exit")
-		    cont = false;
-
-	    if(cont) {
-	    	opponent.set_mana(player.get_life());
-		    if(players == "single")
-			    sp_update();
-		    else if(players == "multi")
-			    mp_update();
-	    } else
-		    unload_content();
+		/* "End Turn" */
+	    opponent.set_mana(player.get_life());
+		
+		// start AI's turn
+		if(players == "single")
+			sp_update();
+		
+		// start opponenets turn
+		else if(players == "multi")
+			mp_update();
     }
 }
 
+/*
+ * TODO Single player logic here
+ * This will be where the AI takes their turn
+ */
 void Game::sp_update() {
-	/*
-	 * TODO Single player logic here
-	 * This will be where the AI takes their turn
-	 */
 	myTurn = false;
     draw();
 
+	// This is where the AI takes their turn
 	if(opponent.get_mana() > 0 && opponent.get_hand()->size() > 0) {
-        opponent.cast(/* Opponent casts card here */ 0);
+        opponent.cast(/* TODO Opponent casts card here */ 0);
     	sp_update();
     } else {
         /* "Combat phase" */
+		// TODO
+
         /* "Draw phase" */
-        if(opponent.get_hand()->size() < 3)
-            while(opponent.get_hand()->size() < 3)
-                opponent.draw();
-        else opponent.draw();
+		// if at starting hand only draw one card
+        if(opponent.get_hand()->size() > START_HAND)
+			opponent.draw_card();
+		// draw cards until you are back to starting limit
+        while(opponent.get_hand()->size() < START_HAND)
+			opponent.draw_card();
     }
     
+	/* "End Turn" */
 	player.set_mana(opponent.get_life());
+	
+	// start the players turn
 	update();
 }
 
+/*
+ * Multiplayer game works here
+ * This will be where the opponent takes their turn
+ */
 void Game::mp_update() {
-	/*
-	 * TODO Multiplayer game works here
-	 * This will be where the opponent takes their turn
-	 */
 	myTurn = false;
 	draw();
 
-	cout << "mp: opponents turn starts" << endl;
+	/* "Start Turn" */
+	// TODO
+
+	/* "Combat phase" */
+	// TODO
+
+    /* "Draw phase" */
+	// TODO
+
+	/* "End Turn" */
 	player.set_mana(opponent.get_life());
 	
+	// start the players turn
 	update();
 }
 
+/*
+ * TODO Draw the board state and players hand here.
+ * any animations should happen here, as this method
+ * is called at the start of every update call.
+ */
 void Game::draw() {
-    /*
-	 * TODO Draw the board state and players hand here.
-	 * The game will absolutly not print like this. I
-	 * am just doing incredibly basic output to make
-	 * sure everything is working correctly. If someone
-	 * wants to start working on making the cli UI that
-	 * would be great! Theoretically no output should
-	 * ever be done in the update methods.
-	 */
-	clear_console();
-	cout << "Battlefield: \n " << opponent.get_board()->to_string() << endl;
-	cout << " " << player.get_board()->to_string() << endl;
-    cout << "Mana: " << player.get_mana() << endl; 
-    cout << "Hand: " << endl;
-    cout << player.get_hand()->to_string() << endl;
-    if(myTurn) cout << "Input: ";
+	 display.print();
 }

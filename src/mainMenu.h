@@ -2,7 +2,7 @@
  * mainMenu.h
  *
  *  Created on: Mar 8, 2016
- *      Author: user
+ *      Author: Tumblr
  */
 
 #ifndef SRC_MAINMENU_H_

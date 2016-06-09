@@ -31,7 +31,7 @@ public:
 	Deck* get_deck() { return &deck; };
 	Deck* get_board() { return &board; };
 	Deck* get_discard() { return &discard; };
-	bool draw();
+	bool draw_card();
 	bool cast(size_t cardIndex);
 };
 
