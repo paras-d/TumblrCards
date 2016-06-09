@@ -12,26 +12,41 @@
 
 using namespace std;
 
+/*
+ * Default MainMenu constructor
+ */
 MainMenu::MainMenu() {
 	// TODO Auto-generated constructor stub
 	builder.load_decklists();
 }
 
+/*
+ * Default MainMenu destructor
+ */
 MainMenu::~MainMenu() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * This method is called when the player decides to
+ * play a game vs the AI
+ */
 void MainMenu::single_player() {
+	// Checks to make sure a deck is selected
     if(builder.get_selected() != NULL) {
+		// Starts a single player game
 	    Game game("single");
 	    game.load_content(*builder.get_selected());
 
+		// redisplay the main menu
 	    do     print_menu_clr("screen_main");
 		while (!get_input());
 	} else {
+		// if no deck is selected clear and inform player
 		clear_console();
 		cout << "No deck selected." << endl;
 
+		// redisplay the main menu
 		do     print_menu("screen_main");
 		while (!get_input());
 	}
@@ -47,9 +62,11 @@ void MainMenu::multi_player() {
 	    do     print_menu("screen_main");
 		while (!get_input());
 	} else {
+		// if no deck is selected clear and inform player
 		clear_console();
 		cout << "No deck selected." << endl;
 
+		// redisplay the main menu
 		do     print_menu("screen_main");
 		while (!get_input());
 	}
