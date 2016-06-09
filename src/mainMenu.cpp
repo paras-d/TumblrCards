@@ -72,6 +72,9 @@ void MainMenu::multi_player() {
 	}
 }
 
+/*
+ * Starts deck builder menu system
+ */
 void MainMenu::deck_builder() {
 	// TODO shows the list of created decks for editing
 	// moves game to desk list editor
@@ -82,6 +85,9 @@ void MainMenu::deck_builder() {
 	while (!get_input());
 }
 
+/*
+ * Starts settings menu system
+ */
 void MainMenu::settings_menu() {
 	// TODO moves to a settings menu.
 	// what settings could this game have?
@@ -92,10 +98,17 @@ void MainMenu::settings_menu() {
 	while (!get_input());
 }
 
+/*
+ * Exits the game. Do any last destruction here
+ */
 void MainMenu::quit() {
 	// TODO quits the game.
 }
 
+/*
+ * Takes in the users input and then calls the
+ * correct method
+ */
 bool MainMenu::get_input() {
 	// TODO take in the players selection and call that method.
 	int selection = 5;
