@@ -5,31 +5,34 @@ Below you will find many ways you can help.
 First and foremost check the TODO's to see what needs to be done.
 Once you're ready to start programming see the Programming Standards section.
 
+I have broken the goals and needs by the "Difficulty" of the task. Beginner tasks
+will be more specific, such as working on a certain function or method. Intermediate tasks
+will be a little broader, such as creating a specific class or utility. Advanced
+tasks will be major milestones that need to be completed. And should only be atempted
+by someone that understand the language.
+
 ### TODO's
 
-#### LARGER GOALS
-- [ ] Create functioning single player game
-- [ ] Create functioning multiplayer game
+#### BEGINNER
+- [ ] Start working on Wiki for the game
+- [ ] Fix any and all gramatical/spelling errors
+- [ ] Come up with better name than TumblrCards
+- [ ] Add flags to the Card.trigger() (i.e "ETB" for enters the battlefield) so the ability knows when to trigger.
+- [ ] Create command line arguements in main.cpp
+- [ ] Add combat methods to Card class (i.e. attack(Card* card)) that deals damage to the card arguement
 
-#### PROGRAMMING
-- [ ] Create set class (???) that will hold data for the cards to generate from
-- [ ] Figure out a way to quickly generate unique cards with abilities
-- [ ] Finish settings class and add actual settings to the game
-- [ ] Add combat methods to Card class
-- [ ] Create deck editor (as its own class?)
+#### INTERMEDIATE
+- [ ] Create shape classes (i.e Rectangle) for use in Console API for ease of creating images
+- [ ] Quickly generate unique cards for constructing decks (use best balance of security and speed)
+- [ ] Finish settings class and add actual settings to the game (i.e console size, multi-playuer server, etc.)
+- [ ] Create deck editor
 - [ ] Create single player AI to play against
 - [ ] Finish Game class unload function
-- [ ] Create UI for the game itself in the draw() method.
-- [ ] Anyone feel we need a CLA for testing?
 - [ ] Finish quit() method in MainMenu class
 
-#### DONE
-- [X] Create basic class for a card
-- [X] Create a card list for the first set
-- [X] Create deck class that will hold 20 cards
-- [X] Create basic entrance and menu system for the game
-- [X] Create rules for the card game
-- [X] Layout the turn order
+#### ADVANCED
+- [ ] Create UI for the game itself in the draw() method.
+
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.
 
