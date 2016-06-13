@@ -17,21 +17,31 @@ by someone that understand the language.
 - [ ] Start working on Wiki for the game
 - [ ] Fix any and all gramatical/spelling errors
 - [ ] Come up with better name than TumblrCards
-- [ ] Add flags to the Card.trigger() (i.e "ETB" for enters the battlefield) so the ability knows when to trigger.
+- [ ] Add string flags to the Card.trigger() (i.e "ETB" for enters the battlefield) so the ability knows when to trigger.
 - [ ] Create command line arguements in main.cpp
 - [ ] Add combat methods to Card class (i.e. attack(Card* card)) that deals damage to the card arguement
+- [ ] Finish set_pos() method in imageMapp.cpp
+- [ ] Finish intersects() method in imageMapp.cpp
+- [ ] Work on TODO methods in point.cpp
+- [ ] Work on TODO methods in rectangle.cpp
 
 #### INTERMEDIATE
 - [ ] Create shape classes (i.e Rectangle) for use in Console API for ease of creating images
 - [ ] Quickly generate unique cards for constructing decks (use best balance of security and speed)
 - [ ] Finish settings class and add actual settings to the game (i.e console size, multi-playuer server, etc.)
-- [ ] Create deck editor
+- [ ] Create deck editor classes and structure
 - [ ] Create single player AI to play against
 - [ ] Finish Game class unload function
 - [ ] Finish quit() method in MainMenu class
+- [ ] Improve speed of parse_flag() method in imageMap.cpp
+- [ ] Finish Point class
+- [ ] Finish Rectangle class
 
 #### ADVANCED
-- [ ] Create UI for the game itself in the draw() method.
+- [ ] Create UI for the game in the draw() method of game.cpp
+- [ ] Allow game to connect to a server to begin work on Multiplayer
+- [ ] Settings menu should load and save settings
+- [ ] Test balance of cards
 
 
 These TODO's are very broad and this list will grow as new idea's are brought to the table and more people begin to contribute.

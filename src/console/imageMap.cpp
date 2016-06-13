@@ -82,7 +82,7 @@ void ImageMap::set_image(string image) {
 }
 
 /*
- * Sets the position of this ImageMape to the Point pnt
+ * Sets the position of this ImageMap to the Point pnt
  */
 void set_pos(Point pnt) {
     // TODO
