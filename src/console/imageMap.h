@@ -9,6 +9,7 @@
 #define SRC_IMAGEMAP_H_
 
 #include <vector>
+#include <string>
 #include "point.h"
 
 class ImageMap {

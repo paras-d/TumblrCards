@@ -104,7 +104,6 @@ bool Rectangle::equals(Rectangle rect) {
  */
 void Rectangle::set_bounds(int x_coord, int y_coord, size_t width, size_t height) {
     // TODO
-    return false;
 }
 
 /*

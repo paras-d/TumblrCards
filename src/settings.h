@@ -19,19 +19,20 @@ class Settings {
 private:
     int dispHeight;
     int dispWidth;
-    std::string tempIPVar; // TODO This variable is a teporary.The
-                           // IP of the multiplayer sever will
-                           // go here.
-    std::string keyboard;  // TODO This variable is a teporary.The
-                           // IP of the multiplayer sever will
-                           // go here.
+
+    std::string tempIPVar; /* TODO This variable is a teporary.The
+                              IP of the multiplayer sever will
+                              go here. */
+
+    std::string keyboard;  /* TODO This variable is a teporary.The
+                              IP of the multiplayer sever will
+                              go here. */
 
 	bool load_settings();
 	bool save_settings();
 public:
 	Settings();
 	virtual ~Settings();
-
 	bool get_input();
 };
 
