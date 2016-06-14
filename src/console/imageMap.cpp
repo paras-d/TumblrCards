@@ -17,8 +17,8 @@ using namespace std;
  * Default ImageMap constructor with a blank image
  */
 ImageMap::ImageMap()
-    :x_coord { 0 },
-     y_coord { 0 } {
+    :x { 0 },
+     y { 0 } {
 	// TODO Auto-generated constructor stub
 	set_image("");
 }
@@ -28,8 +28,8 @@ ImageMap::ImageMap()
  * at the (0, 0) position
  */
 ImageMap::ImageMap(string image)
-    :x_coord { 0 },
-     y_coord { 0 } {
+    :x { 0 },
+     y { 0 } {
 	// TODO Auto-generated constructor stub
 	set_image(image);
 }
@@ -39,8 +39,8 @@ ImageMap::ImageMap(string image)
  * at the given (x_pos, y_pos) psoition
  */
 ImageMap::ImageMap(string image, int x_pos, int y_pos)
-    :x_coord { x_pos },
-     y_coord { y_pos } {
+    :x { x_pos },
+     y { y_pos } {
 	// TODO Auto-generated constructor stub
 	set_image(image);
 }
@@ -50,8 +50,8 @@ ImageMap::ImageMap(string image, int x_pos, int y_pos)
  */
 ImageMap::ImageMap(const ImageMap &clone)
     :map { clone.get_map() },
-     x_coord { clone.get_x() },
-     y_coord { clone.get_y() } {
+     x { clone.get_x() },
+     y { clone.get_y() } {
 	// TODO Auto-generated constructor stub
 }
 
@@ -79,6 +79,22 @@ void ImageMap::set_image(string image) {
         } else if ((int)c == 13) continue;
         map[curr_row].push_back(c);
     }
+}
+
+/*
+ * Sets the position of this ImageMap to the Point pnt
+ */
+void set_pos(Point pnt) {
+    // TODO
+}
+
+/*
+ * Returns true if the Rectangle of dimensions width x height and the
+ * Point (x_coord, y_coord) intersects this ImageMap object
+ */
+bool intersects(int x_coord, int y_coord, size_t width, size_t height) {
+    // TODO
+    return false;
 }
 
 /*
