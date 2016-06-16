@@ -111,13 +111,13 @@ void DeckBuilder::new_deck() {
 	while(list[selected]->size() < 20) {
 	    Card* temp = new Card();
 	    if(list[selected]->size() % 2 == 0) {
-	        temp->build_card("test1");
+	        temp->build_card("Test1");
 		}
 	    if(list[selected]->size() % 3 == 0) {
-	        temp->build_card("test2");
+	        temp->build_card("Test2");
 		}
 	    if(list[selected]->size() % 4 == 0) {
-	        temp->build_card("test3");
+	        temp->build_card("Test3");
 		}
 		list[selected]->add_card(temp);
 	}
