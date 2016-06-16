@@ -8,7 +8,7 @@ Once you're ready to start programming see the Programming Standards section.
 I have broken the goals and needs by the "Difficulty" of the task. Beginner tasks
 will be more specific, such as working on a certain function or method. Intermediate tasks
 will be a little broader, such as creating a specific class or utility. Advanced
-tasks will be major milestones that need to be completed. And should only be atempted
+tasks will be major milestones that need to be completed. And should only be attempted
 by someone that understand the language.
 
 ### TODO's
