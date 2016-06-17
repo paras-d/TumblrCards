@@ -176,13 +176,13 @@ bool Deck::well_formed() {
 		//int cardCount = 1;
 		//for(size_t j = i + 1; j < *count; j++) {
 			// adding it here checks the integrity of the array on our first pass
-		//	if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
-		//	Card c1 = *deck[i];
-		//	Card c2 = *deck[j];
-		//	if(c1.get_name() == c2.get_name()) cardCount++;
+			//if(deck[i] == nullptr) return print_err("Count is larger than size of deck");
+			//Card c1 = *deck[i];
+			//Card c2 = *deck[j];
+			//if(c1.get_name() == c2.get_name()) cardCount++;
 
 			// you may not have more than 2 of any card in a deck
-		//	if(cardCount > 2) return print_err("You may not have more than 2 of any card");
+			//if(cardCount > 2) return print_err("You may not have more than 2 of any card");
 		//}
 	}
 

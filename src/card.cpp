@@ -27,21 +27,28 @@ void Card::build_card(string arg) {
 	// in stone and can change to improve
 	// performance and build times
 	if      (arg == name)    return;
-	else if (arg == "test1") {
+	else if (arg == "Ooze") {
+		attack = 1;
+		health = 1;
+		cost = 1;
+		currHP = health;
+		ability = "There is a foul stench coming fromthis green glob on the ground.";
+		name = "Ooze";
+	} else if (arg == "Test1") {
 		attack = 4;
 		health = 2;
 		cost = 3;
 		currHP = health;
 		ability = "Does a thing.";
 		name = "Test1";
-	} else if (arg == "test2") {
+	} else if (arg == "Test2") {
 		attack = 3;
 		health = 3;
 		cost = 3;
 		currHP = health;
 		ability = "Does a thing.";
 		name = "Test2";
-	} else if (arg == "test3") {
+	} else if (arg == "Test3") {
 		attack = 2;
 		health = 2;
 		cost = 2;
