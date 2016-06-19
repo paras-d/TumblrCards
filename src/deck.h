@@ -35,6 +35,7 @@ public:
 	size_t size() const { return *count; };
 	std::string to_file();
 	std::string to_string() const;
+	std::vector<Card*> get_vector() const { return deck; };
 };
 
 #endif /* SRC_DECK_H_ */

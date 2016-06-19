@@ -13,38 +13,59 @@
 
 using namespace std;
 
+/*
+ * Default ImageMap constructor with a blank image
+ */
 ImageMap::ImageMap()
-    :x_coord { 0 },
-     y_coord { 0 } {
+    :x { 0 },
+     y { 0 } {
 	// TODO Auto-generated constructor stub
-	set_image(" ");
+	set_image("");
 }
 
+/*
+ * Creates an ImageMap object with the given image string
+ * at the (0, 0) position
+ */
 ImageMap::ImageMap(string image)
-    :x_coord { 0 },
-     y_coord { 0 } {
+    :x { 0 },
+     y { 0 } {
 	// TODO Auto-generated constructor stub
 	set_image(image);
 }
 
+/*
+ * Creates an image map object with the given image string
+ * at the given (x_pos, y_pos) psoition
+ */
 ImageMap::ImageMap(string image, int x_pos, int y_pos)
-    :x_coord { x_pos },
-     y_coord { y_pos } {
+    :x { x_pos },
+     y { y_pos } {
 	// TODO Auto-generated constructor stub
 	set_image(image);
 }
 
+/*
+ * ImageMap clone constructor
+ */
 ImageMap::ImageMap(const ImageMap &clone)
     :map { clone.get_map() },
-     x_coord { clone.get_x() },
-     y_coord { clone.get_y() } {
+     x { clone.get_x() },
+     y { clone.get_y() } {
 	// TODO Auto-generated constructor stub
 }
 
+/*
+ * Defaut ImageMap destructor
+ */
 ImageMap::~ImageMap() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Replaces the current image with the given image
+ * string.
+ */
 void ImageMap::set_image(string image) {
     map.clear();
     map.push_back(vector<char>());
@@ -60,6 +81,26 @@ void ImageMap::set_image(string image) {
     }
 }
 
+/*
+ * Sets the position of this ImageMap to the Point pnt
+ */
+void set_pos(Point pnt) {
+    // TODO
+}
+
+/*
+ * Returns true if the Rectangle of dimensions width x height and the
+ * Point (x_coord, y_coord) intersects this ImageMap object
+ */
+bool intersects(int x_coord, int y_coord, size_t width, size_t height) {
+    // TODO
+    return false;
+}
+
+/*
+ * Replases the flag in the ImageMap with the given
+ * text and alignment
+ */
 void ImageMap::parse_flag(string flag, string text, string align) {
     size_t found = to_string().find(flag);
     
@@ -112,6 +153,9 @@ void ImageMap::parse_flag(string flag, string text, string align) {
     }
 }
 
+/*
+ * Converts the ImageMap back to a string
+ */
 string ImageMap::to_string() {
 	string ret = "";
 	for(vector<char> row : map) {

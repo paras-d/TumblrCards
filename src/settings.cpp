@@ -8,16 +8,22 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include "console/utils.h"
+#include "utils.h"
 #include "settings.h"
 
 using namespace std;
 
+/*
+ * Default Settings constructor
+ */
 Settings::Settings() {
     // TODO Auto-generated constructor stub
     load_settings();
 }
 
+/*
+ * Default Settings destructor
+ */
 Settings::~Settings() {
     // TODO Auto-generated destructor stub
 }
@@ -26,6 +32,9 @@ Settings::~Settings() {
 bool Settings::load_settings() { return true; }
 bool save_settings() { return true; }
 
+/*
+ * Takes in the user input and calls the correct method
+ */
 bool Settings::get_input() {
 	// TODO take in the players selection and call that method.
 	int selection = 5;

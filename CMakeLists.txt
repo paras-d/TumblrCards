@@ -25,7 +25,7 @@ if(${GIT_FOUND} AND ${USE_GIT_VERSIONING})
 		add_definitions(-DGIT_COMMIT_STR="${GIT_COMMIT_HASH}")
 endif(${GIT_FOUND} AND ${USE_GIT_VERSIONING})
 
-include_directories("src")
+include_directories("src" "src/console")
 set(CMAKE_CXX_FLAGS "-g -Wall --std=c++14")
 
 set(TC_SOURCES 
@@ -40,6 +40,8 @@ set(TC_SOURCES
 		${CMAKE_SOURCE_DIR}/src/console/console.cpp
 		${CMAKE_SOURCE_DIR}/src/console/imageMap.cpp
 		${CMAKE_SOURCE_DIR}/src/console/utils.cpp
+		${CMAKE_SOURCE_DIR}/src/console/point.cpp
+		${CMAKE_SOURCE_DIR}/src/console/rectangle.cpp
 )
 
 add_executable(tumblrcards ${TC_SOURCES})

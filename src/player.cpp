@@ -7,6 +7,9 @@
 
 #include "player.h"
 
+/*
+ * Default Player constructor
+ */
 Player::Player()
 	:life { 10 },
 	 mana { 0 } {
@@ -14,22 +17,38 @@ Player::Player()
 
 }
 
+/*
+ * Default Player destructor
+ */
 Player::~Player() {
 	// TODO Auto-generated destructor stub
 }
 
+/*
+ * Set's the players deck to the selected deck
+ */
 bool Player::select_deck(Deck selected) {
 	deck = selected;
 	return true;
 }
 
-bool Player::draw() {
-    if(deck.size() == 0) {
-        while(discard.size() != 0)
+/*
+ * Moves a card from the players deck to the players
+ * hand.
+ */
+bool Player::draw_card() {
+    if(deck.size() <= 0) {
+        while(discard.size() > 0) {
             deck.add_card(discard.draw_card());
+		}
+
         deck.shuffle();
     }
-    hand.add_card(deck.draw_card());
+
+	Card* temp = deck.draw_card();
+	if(temp == nullptr) return false;
+	hand.add_card(temp);
+
     return true;
 }
 
