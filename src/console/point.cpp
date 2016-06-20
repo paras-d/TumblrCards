@@ -14,14 +14,16 @@ using namespace std;
  * Default Point constructor
  */
 Point::Point() {
-    // TODO
+    x = 0;
+    y = 0;
 }
 
 /*
  * Creates a Point with the given coordinates (x_coord, y_coord)
  */
 Point::Point(int x_coord, int y_coord) {
-    // TODO
+    x = x_coord;
+    y = y_coord;
 }
 
 /*
@@ -43,6 +45,9 @@ Point::~Point() {
  */
 bool Point::equals(Point pnt) {
     // TODO
+    if(pnt.x == x && point.y == y){
+        return true
+    }
     return false;
 }
 
@@ -52,6 +57,8 @@ bool Point::equals(Point pnt) {
 Point Point::get_location() {
     Point ret;
     // TODO
+    ret.x = x;
+    ret.y = y;
     return ret;
 }
 
@@ -61,6 +68,8 @@ Point Point::get_location() {
  */
 void Point::set_location(int x_coord, int y_coord) {
     // TODO
+    x = x_coord;
+    y = y_coord;
 }
 
 /*
@@ -69,6 +78,8 @@ void Point::set_location(int x_coord, int y_coord) {
  */
 void Point::set_location(Point pnt) {
     // TODO
+    x = pnt.x;
+    y = pnt.y;
 }
 
 /*
@@ -76,7 +87,7 @@ void Point::set_location(Point pnt) {
  */
 string Point::to_string() {
     string ret;
-    // TODO
+    ret = "(" + to_string(x)+ "," + to_string(y) + ")"
     return ret;
 }
 
@@ -87,4 +98,6 @@ string Point::to_string() {
  */
 void Point::translate(int dx, int dy) {
     // TODO
+    x = x + dx;
+    y = y + dy;
 }
