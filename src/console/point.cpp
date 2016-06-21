@@ -6,6 +6,7 @@
  */
 
 #include <string>
+#include <sstream>
 #include "point.h"
 
 using namespace std;
@@ -45,8 +46,8 @@ Point::~Point() {
  */
 bool Point::equals(Point pnt) {
     // TODO
-    if(pnt.x == x && point.y == y){
-        return true
+    if(pnt.x == x && pnt.y == y){
+        return true;
     }
     return false;
 }
@@ -86,9 +87,9 @@ void Point::set_location(Point pnt) {
  * Returns this Point as a string in the format (x, y).
  */
 string Point::to_string() {
-    string ret;
-    ret = "(" + to_string(x)+ "," + to_string(y) + ")"
-    return ret;
+    std::ostringstream ret;
+    ret << "(" << x << "," << y << ")";
+    return ret.str();
 }
 
 /*
