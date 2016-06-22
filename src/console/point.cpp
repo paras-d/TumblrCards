@@ -87,11 +87,15 @@ void Point::set_location(Point pnt) {
  * Returns this Point as a string in the format (x, y).
  */
 string Point::to_string() {
-    std::ostringstream ret;
-    ret << "(" << x << "," << y << ")";
-    return ret.str();
+   string ret;
+	ret += "(";
+	ret += std::to_string(x)
+	ret += ",";
+	ret += std::to_string(y)
+	ret += ")";
+	
+	return ret;
 }
-
 /*
  * Moves this Point by dx in the x direction and dy in the
  * y direction. The position of this Point becomes
