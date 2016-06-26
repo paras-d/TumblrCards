@@ -120,6 +120,12 @@ void Game::update() {
 		while(player.get_hand()->size() < START_HAND)
 			player.draw_card();
 
+		for(Card* card : player.get_hand()->get_vector()) {
+			// TODO Only adds to the display console if it is not already
+			//if(!display.contains(card->get_image()))
+			display.add_image(card->get_image());
+		}
+
 		/* "End Turn" */
 	    opponent.set_mana(player.get_life());
 		

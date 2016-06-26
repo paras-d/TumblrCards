@@ -64,6 +64,15 @@ bool Console::add_image(string image_str, int x, int y) {
 }
 
 /*
+ * Returns true if the given image is already on the console
+ * otherwise returns false
+ */
+bool Console::contains(ImageMap* image) {
+    // TODO
+    return false;
+}
+
+/*
  * Clears the terminal and then prints the images to the terminal
  * Bottom line will always be "Input: ". We should change this
  * eventually.

@@ -21,6 +21,7 @@ public:
     bool add_image(ImageMap* image);
     bool add_image(std::string image_str);
     bool add_image(std::string image_str, int x, int y);
+    bool contains(ImageMap* image);
     void print();
     void update();
     void clear();

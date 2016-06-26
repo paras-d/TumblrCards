@@ -24,6 +24,7 @@ by someone that understand the language.
 - [ ] Finish intersects() method in imageMapp.cpp
 - [ ] Work on TODO methods in point.cpp
 - [ ] Work on TODO methods in rectangle.cpp
+- [ ] Work on TODO methods in game.cpp and imageMap.cpp
 
 #### INTERMEDIATE
 - [ ] Create shape classes (i.e Rectangle) for use in Console API for ease of creating images
