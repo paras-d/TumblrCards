@@ -58,7 +58,7 @@ void Game::load_content(const Deck selected) {
 		 * a copy of the players deck.
 		 */
 		opponent.select_deck(selected);
-		while(player.get_hand()->size() < START_HAND) opponent.draw_card();
+		while(opponent.get_hand()->size() < START_HAND) opponent.draw_card();
 		opponent.set_mana(player.get_life());
 		opponent.get_deck()->shuffle();
 	}
