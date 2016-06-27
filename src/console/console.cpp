@@ -69,7 +69,7 @@ bool Console::add_image(string image_str, int x, int y) {
  */
 bool Console::contains(ImageMap* image) {
     // TODO
-    return false;
+    return true;
 }
 
 /*
