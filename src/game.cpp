@@ -58,7 +58,7 @@ void Game::load_content(const Deck selected) {
 		 * a copy of the players deck.
 		 */
 		opponent.select_deck(selected);
-		while(player.get_hand()->size() < START_HAND) opponent.draw_card();
+		while(opponent.get_hand()->size() < START_HAND) opponent.draw_card();
 		opponent.set_mana(player.get_life());
 		opponent.get_deck()->shuffle();
 	}
@@ -119,6 +119,12 @@ void Game::update() {
 		// draw cards until you are back to starting limit
 		while(player.get_hand()->size() < START_HAND)
 			player.draw_card();
+
+		for(Card* card : player.get_hand()->get_vector()) {
+			// TODO Only adds to the display console if it is not already
+			//if(!display.contains(card->get_image()))
+			display.add_image(card->get_image());
+		}
 
 		/* "End Turn" */
 	    opponent.set_mana(player.get_life());

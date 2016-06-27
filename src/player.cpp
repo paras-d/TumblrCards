@@ -6,6 +6,7 @@
  */
 
 #include "player.h"
+#include "utils.h"
 
 /*
  * Default Player constructor
@@ -41,12 +42,16 @@ bool Player::draw_card() {
         while(discard.size() > 0) {
             deck.add_card(discard.draw_card());
 		}
-
         deck.shuffle();
     }
 
 	Card* temp = deck.draw_card();
 	if(temp == nullptr) return false;
+
+	int hand_x = hand.size() * temp->get_image()->get_width();
+	int hand_y = get_console_height() - temp->get_image()->get_height();
+
+	temp->get_image()->set_pos(hand_x, hand_y);
 	hand.add_card(temp);
 
     return true;
