@@ -45,7 +45,6 @@ Point::~Point() {
  * Checks if this point is equal to the given Point pnt.
  */
 bool Point::equals(Point pnt) {
-    // TODO
     if(pnt.x == x && pnt.y == y){
         return true;
     }
@@ -57,7 +56,6 @@ bool Point::equals(Point pnt) {
  */
 Point Point::get_location() {
     Point ret;
-    // TODO
     ret.x = x;
     ret.y = y;
     return ret;
@@ -68,7 +66,6 @@ Point Point::get_location() {
  * given Point (x_coord, y_coord).
  */
 void Point::set_location(int x_coord, int y_coord) {
-    // TODO
     x = x_coord;
     y = y_coord;
 }
@@ -78,7 +75,6 @@ void Point::set_location(int x_coord, int y_coord) {
  * given Point pnt.
  */
 void Point::set_location(Point pnt) {
-    // TODO
     x = pnt.x;
     y = pnt.y;
 }
@@ -102,7 +98,6 @@ string Point::to_string() {
  * (x + dx, y + dy).
  */
 void Point::translate(int dx, int dy) {
-    // TODO
     x = x + dx;
     y = y + dy;
 }
