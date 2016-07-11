@@ -85,9 +85,9 @@ void Point::set_location(Point pnt) {
 string Point::to_string() {
    string ret;
 	ret += "(";
-	ret += std::to_string(x)
+	ret += std::to_string(x);
 	ret += ",";
-	ret += std::to_string(y)
+	ret += std::to_string(y);
 	ret += ")";
 	
 	return ret;
