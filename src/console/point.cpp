@@ -6,6 +6,7 @@
  */
 
 #include <string>
+#include <sstream>
 #include "point.h"
 
 using namespace std;
@@ -14,14 +15,16 @@ using namespace std;
  * Default Point constructor
  */
 Point::Point() {
-    // TODO
+    x = 0;
+    y = 0;
 }
 
 /*
  * Creates a Point with the given coordinates (x_coord, y_coord)
  */
 Point::Point(int x_coord, int y_coord) {
-    // TODO
+    x = x_coord;
+    y = y_coord;
 }
 
 /*
@@ -42,7 +45,9 @@ Point::~Point() {
  * Checks if this point is equal to the given Point pnt.
  */
 bool Point::equals(Point pnt) {
-    // TODO
+    if(pnt.x == x && pnt.y == y){
+        return true;
+    }
     return false;
 }
 
@@ -51,7 +56,8 @@ bool Point::equals(Point pnt) {
  */
 Point Point::get_location() {
     Point ret;
-    // TODO
+    ret.x = x;
+    ret.y = y;
     return ret;
 }
 
@@ -60,7 +66,8 @@ Point Point::get_location() {
  * given Point (x_coord, y_coord).
  */
 void Point::set_location(int x_coord, int y_coord) {
-    // TODO
+    x = x_coord;
+    y = y_coord;
 }
 
 /*
@@ -68,23 +75,29 @@ void Point::set_location(int x_coord, int y_coord) {
  * given Point pnt.
  */
 void Point::set_location(Point pnt) {
-    // TODO
+    x = pnt.x;
+    y = pnt.y;
 }
 
 /*
  * Returns this Point as a string in the format (x, y).
  */
 string Point::to_string() {
-    string ret;
-    // TODO
-    return ret;
+   string ret;
+	ret += "(";
+	ret += std::to_string(x)
+	ret += ",";
+	ret += std::to_string(y)
+	ret += ")";
+	
+	return ret;
 }
-
 /*
  * Moves this Point by dx in the x direction and dy in the
  * y direction. The position of this Point becomes
  * (x + dx, y + dy).
  */
 void Point::translate(int dx, int dy) {
-    // TODO
+    x = x + dx;
+    y = y + dy;
 }
