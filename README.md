@@ -29,7 +29,7 @@ The [`TumblrCards`](https://github.com/TumblrCommunity/TumblrCards) repository i
 * Ask a question on [GitHub Issues](https://github.com/TumblrCommunity/TumblrCards/issues) with the question tag.
 * Request a feature on [GitHub Issues](https://github.com/TumblrCommunity/TumblrCards/issues) with the enhancement tag.
 * File a bug in [GitHub Issues](https://github.com/TumblrCommunity/TumblrCards/issues) with the bug tag.
-* Message import-os [incomingstick](https://github.com/incomingstick) on [Tumblr](https://import-os.tumblr.com/ask) with questions or other feedback.
+* Message import-os [(incomingstick)](https://github.com/incomingstick) on [Tumblr](https://import-os.tumblr.com/ask) with questions or other feedback.
 
 ### Team Communication
 
