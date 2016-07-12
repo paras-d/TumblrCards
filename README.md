@@ -29,11 +29,11 @@ The [`TumblrCards`](https://github.com/TumblrCommunity/TumblrCards) repository i
 * Ask a question on [GitHub Issues](https://github.com/TumblrCommunity/TumblrCards/issues) with the question tag.
 * Request a feature on [GitHub Issues](https://github.com/TumblrCommunity/TumblrCards/issues) with the enhancement tag.
 * File a bug in [GitHub Issues](https://github.com/TumblrCommunity/TumblrCards/issues) with the bug tag.
-* Message import-os (@incomingstick) on [Tumblr](https://import-os.tumblr.com/) with questions or other feedback.
+* Message import-os [incomingstick](https://github.com/incomingstick) on [Tumblr](https://import-os.tumblr.com/) with questions or other feedback.
 
 ### Team Communication
 
-This project will be using an invite only [Slack](https://compscitumblr.slack.com) channel. If you would like an invite, or have any questions, you can message @incomingstick directly or visit his [Tumblr](https://import-os.tumblr.com/) page.
+This project will be using an invite only [Slack](https://compscitumblr.slack.com) channel. If you would like an invite, or have any questions, you can message [incomingstick](https://github.com/incomingstick) directly or visit his [Tumblr](https://import-os.tumblr.com/) page.
 
 ## Building
 
