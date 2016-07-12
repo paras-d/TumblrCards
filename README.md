@@ -51,7 +51,7 @@ To build, make sure you have the following:
 
 ### Building on Windows systems
 
-Coming soon. For now build using Cygwin, MinGW, Linux Subsystem for Windows, or the like and follow the "Building on *NIX systems" instructions above.
+Coming soon. For now build using [Cygwin](https://www.cygwin.com/), [MinGW](http://www.mingw.org/), [Windows Subsystem for Linux](https://msdn.microsoft.com/en-us/commandline/wsl/about), or the like and follow the "Building on *NIX systems" instructions above.
 
 ## License
 [Eclipse Public License - v 1.0](LICENSE)
