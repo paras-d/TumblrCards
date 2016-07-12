@@ -21,6 +21,7 @@ The [`TumblrCards`](https://github.com/TumblrCommunity/TumblrCards) repository i
 * [Submit bugs and feature requests](https://github.com/TumblrCommunity/TumblrCards/issues) and help us verify as they are checked in
 * Review [source code changes](https://github.com/TumblrCommunity/TumblrCards/pulls)
 * Review the [wiki](https://github.com/TumblrCommunity/TumblrCards/wiki) and make changes for anything from typos to new content
+* Review the [contributing](.github/CONTRIBUTING.md) page for a list of guidelines and tasks
 
 
 ## Feedback
