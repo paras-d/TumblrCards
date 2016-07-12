@@ -2,6 +2,26 @@
 
 So you want to know how you can help?? You've come to the right place!
 Below you will find many ways you can help.
+
+## Contributing Issues
+
+### Before Submitting an Issue
+First, please do a search in open issues to see if the issue or feature request has already been filed. If there is an issue add your comments to this issue.
+
+## Writing Good Bug Reports and Feature Requests
+
+File a single issue per problem and feature request, do not file combo issues.
+
+The more information you can provide, the more likely someone will be successful reproducing the issue and finding a fix. Therefore:
+
+* Provide reproducable steps, what the result of the steps was, and what you would have expected.
+* Description of what you expect to happen
+* Animated GIFs
+* Code that demonstrates the issue
+* Version of TumblrCards
+* Errors printed to the command line
+
+## Contributing Fixes
 First and foremost check the TODO's to see what needs to be done.
 Once you're ready to start programming see the Programming Standards section.
 
