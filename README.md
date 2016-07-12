@@ -40,7 +40,7 @@ This project will be using an invite only [Slack](https://compscitumblr.slack.co
 CMake is used to build the project. If you're using an IDE, it may be able to detect the source tree and build settings automatically. No outside libraries are currently used, so most (if not all) systems should be good to go.
 
 To build, make sure you have the following:
-* CMake 3.0 or greater
+* [CMake](https://cmake.org/) 3.0 or greater
 
 ### Building on *NIX systems
 
