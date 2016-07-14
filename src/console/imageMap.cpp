@@ -84,17 +84,36 @@ void ImageMap::set_image(string image) {
 /*
  * Sets the position of this ImageMap to the Point pnt
  */
-void set_pos(Point pnt) {
-    // TODO
+void ImageMap::set_pos(Point pnt) {
+    x = pnt.get_x();
+    y = pnt.get_y();
 }
 
 /*
- * Returns true if the Rectangle of dimensions width x height and the
+ * Returns true if the rectangle of dimensions width x height and the
  * Point (x_coord, y_coord) intersects this ImageMap object
  */
-bool intersects(int x_coord, int y_coord, size_t width, size_t height) {
-    // TODO
+bool ImageMap::intersects(int x_coord, int y_coord, size_t width, size_t height) {
+    // If the given rectangle's point falls within our ImageMap then
+    // we must intersect.
+    if(x_coord > x && x_coord <= (int)(x + get_width())) return true;
+    if(y_coord > y && y_coord <= (int)(y + get_height())) return true;
+
+    // If out upper left corner falls within the given rectangle then
+    // we must intersect.
+    if(x > x_coord && x <= (int)(x_coord + width)) return true;
+    if(y > y_coord && y <= (int)(y_coord + height)) return true;
+
+    // None of the conditions where met so return false.
     return false;
+}
+
+/*
+ * Returns true if the given ImageMap intersects with this
+ * ImageMap object
+ */
+bool ImageMap::intersects(ImageMap img) {
+    return  intersects(img.get_x(), img.get_y(), img.get_width(), img.get_height());
 }
 
 /*
