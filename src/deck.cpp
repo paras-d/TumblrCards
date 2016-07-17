@@ -8,8 +8,8 @@
 #include <iostream>
 #include <sstream>
 #include <algorithm>
+#include <cstdlib>
 #include "deck.h"
-#include "stdlib.h"
 
 using namespace std;
 

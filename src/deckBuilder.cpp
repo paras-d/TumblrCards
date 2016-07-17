@@ -69,7 +69,7 @@ bool DeckBuilder::load_deck(std::string file) {
             if(deck->get_name() == check->get_name())
                 return true;
 
-
+		// string to hold each line of the decklist
         string line;
 
 		// loads in each line of the deck list
