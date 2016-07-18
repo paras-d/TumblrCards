@@ -174,7 +174,6 @@ bool print_menu(string type) {
  */
 bool print_menu_clr(string type) {
     clear_console();
-    print_menu(type);
-    return true;
+    return print_menu(type);
 }
 

@@ -35,6 +35,7 @@ public:
     void set_pos(int new_x, int new_y) { set_x(new_x); set_y(new_y); };
     void set_pos(Point pnt);
     bool intersects(int x_coord, int y_coord, size_t width, size_t height);
+    bool intersects(ImageMap img);
     std::string to_string();
 	void parse_flag(std::string flag = "{0}",
                     std::string text = "",
