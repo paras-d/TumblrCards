@@ -14,7 +14,7 @@
     (___)                       \:/
 ```
 
-TumblrCards (we are working on the name) is a text based multiplayer strategy card game written by members of the Tumblr Computer Science community.
+TumblrCards (we are working on the name) is a text-based multiplayer strategy card game written by members of the Tumblr Computer Science community.
 
 The [`TumblrCards`](https://github.com/TumblrCommunity/TumblrCards) repository is where we do development and there are many ways you can participate in the project, for example:
 
