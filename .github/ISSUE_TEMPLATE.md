@@ -1,4 +1,4 @@
-- [ ] I have reveiwed the [Contributing](.github/CONTRIBUTING.md) guidelines. (Put an X between the brackets to confirm)
+- [ ] I have reviewed the [Contributing](.github/CONTRIBUTING.md) guidelines. (Put an X between the brackets to confirm)
 Please delete the the section that does not pertain to this request.
 
 ## Bug or Issue
